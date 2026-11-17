@@ -81,6 +81,18 @@ export async function replay(report: Report, onEvent: (e: ProgressEvent) => void
   ];
   for (const [step, label, log] of steps) {
     onEvent({ type: "step", step, label });
+    if (step === "research") {
+      // Replay the sources lens by lens so the live view fills in the way a real run does.
+      for (const lens of ["campaigns", "experiences", "commerce", "partnerships", "customer", "strategy"]) {
+        onEvent({ type: "activity", kind: "lens", lens, status: "active" });
+        for (const e of report.evidence.filter((x) => x.lens === lens)) {
+          onEvent({ type: "activity", kind: "read", url: e.url, domain: e.domain });
+          await new Promise((r) => setTimeout(r, Math.round(delayMs / 4)));
+        }
+        await wait();
+        onEvent({ type: "activity", kind: "lens", lens, status: "done" });
+      }
+    }
     await wait();
     onEvent({ type: "log", message: log });
   }

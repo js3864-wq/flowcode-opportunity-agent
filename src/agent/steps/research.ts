@@ -3,6 +3,7 @@ import type { EvidenceLedger } from "../evidence";
 import { LENS_SPECS, type LensSpec } from "../lenses";
 import { BudgetExceededError, type Llm } from "../llm";
 import {
+  type Activity,
   EntitySchema,
   RelationshipSchema,
   SignalsSchema,
@@ -67,8 +68,9 @@ export async function runLenses(opts: {
   entity: Entity;
   asOf: string;
   onLens?: (lens: LensSpec, status: "start" | "done" | "failed", detail?: string) => void;
+  onActivity?: (a: Activity) => void;
 }): Promise<{ lens: LensSpec; notes: string }[]> {
-  const { llm, config, ledger, entity, asOf, onLens } = opts;
+  const { llm, config, ledger, entity, asOf, onLens, onActivity } = opts;
   const results: { lens: LensSpec; notes: string }[] = [];
   const queue = [...LENS_SPECS];
 
@@ -84,6 +86,7 @@ export async function runLenses(opts: {
           ledger,
           maxUses: config.maxSearchesPerLens,
           prompt: lensPrompt(entity, lens, asOf),
+          onActivity,
         });
         results.push({ lens, notes });
         onLens?.(lens, "done");

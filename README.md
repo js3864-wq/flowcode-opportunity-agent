@@ -80,6 +80,8 @@ company name or URL
 
 In the UI the five components appear as sectors on an F1 timing screen: purple is the best possible rating, green strong, yellow middling, grey weak. A seller can see at a glance why the Vegas race-week play leads despite poor access (two days of lead time), and why Miami's fan-data play ranks lower (its evidence is from 2025).
 
+**Two views built for a seller.** While research runs, the page shows it live: six lens tiles that light up like F1 sectors, counters for searches, pages read and distinct sites, a feed of every search and page, and the sites as they are found. Each finished report opens with *Research at a glance*: where to lead (size of the prize against ease of reaching the buyer), which touchpoints each play uses, every dated signal on a timeline around today, and where the sources came from. Every mark has a hover and keyboard tooltip.
+
 **Change detection is built in.** Each run is compared with the previous report for the same company. New evidence URLs mark new signals, and plays without a close match in the last run are tagged "New since last run". This is the core of the always-on design below.
 
 ## What a play looks like
@@ -168,7 +170,7 @@ src/agent/
   render.ts          Markdown output
   source-check.ts    downloads cited pages and confirms each quote is on them
 src/lib/claude-code.ts  runs /research through the Claude Code CLI for the web app
-src/app/             Next.js UI: watchlist, report, live run (streamed)
+src/app/             Next.js UI: watchlist, report with analytics, live research view (streamed)
 .claude/skills/research/  the /research skill: the same pipeline inside Claude Code
 scripts/             run.ts (one company), batch.ts (many), build-reports.ts (research file to report)
 data/targets/        account lists for batch runs

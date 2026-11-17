@@ -1,5 +1,5 @@
 import { spawn } from "node:child_process";
-import type { ProgressEvent } from "@/agent/types";
+import { LENSES, type ProgressEvent } from "@/agent/types";
 
 /**
  * Runs the /research skill through the Claude Code CLI in headless mode, so research from the
@@ -63,9 +63,33 @@ export interface StreamState {
   searches: number;
   slug: string | null;
   readSchema: boolean;
+  currentLens: string | null;
+  sawLensMarker: boolean;
+  lensesSeen: Set<string>;
 }
 
-export const newStreamState = (): StreamState => ({ steps: new Set(), searches: 0, slug: null, readSchema: false });
+export const newStreamState = (): StreamState => ({
+  steps: new Set(),
+  searches: 0,
+  slug: null,
+  readSchema: false,
+  currentLens: null,
+  sawLensMarker: false,
+  lensesSeen: new Set(),
+});
+
+/** Fallback when the run does not announce its lens: guess it from the search terms. */
+const LENS_HINTS: [string, RegExp][] = [
+  ["partnerships", /sponsor|partner|title (deal|rights)|naming rights|official .* partner/i],
+  ["campaigns", /campaign|advert|commercial|billboard|\btv\b|broadcast|social|creator|rebrand/i],
+  ["commerce", /ticket|merch|product|packag|retail|hospitality|price|store|shop/i],
+  ["customer", /\bapp\b|loyalty|member|crm|first-party|\bqr\b|personaliz|complain|survey/i],
+  ["strategy", /extension|contract|revenue|earnings|ceo|president|strategy|expan|acquisi|lawsuit|results/i],
+  ["experiences", /event|fan|zone|tour|venue|festival|experience|attendance|race week|concert|activation/i],
+];
+export function inferLens(query: string): string | null {
+  return LENS_HINTS.find(([, re]) => re.test(query))?.[0] ?? null;
+}
 
 function domain(url: string): string {
   try {
@@ -94,19 +118,41 @@ export function interpretLine(line: string, state: StreamState): ProgressEvent[]
     step("resolve", "Starting Claude Code on your Claude plan");
   }
 
+  const enterLens = (lens: string) => {
+    if (state.currentLens === lens) return;
+    if (state.currentLens) out.push({ type: "activity", kind: "lens", lens: state.currentLens, status: "done" });
+    state.currentLens = lens;
+    state.lensesSeen.add(lens);
+    out.push({ type: "activity", kind: "lens", lens, status: "active" });
+  };
+
   if (msg.type === "assistant") {
-    const content = ((msg.message as { content?: unknown[] })?.content ?? []) as { type: string; name?: string; input?: Record<string, string> }[];
+    const content = ((msg.message as { content?: unknown[] })?.content ?? []) as { type: string; name?: string; text?: string; input?: Record<string, string> }[];
     for (const block of content) {
+      if (block.type === "text" && block.text) {
+        for (const m of block.text.matchAll(/^\s*Lens:\s*([a-z]+)/gim)) {
+          const id = m[1].toLowerCase();
+          if ((LENSES as readonly string[]).includes(id)) {
+            state.sawLensMarker = true;
+            enterLens(id);
+          }
+        }
+      }
       if (block.type !== "tool_use") continue;
       const input = block.input ?? {};
       switch (block.name) {
-        case "WebSearch":
+        case "WebSearch": {
           state.searches++;
           if (state.searches === 3) step("research", "Searching the six research lenses");
-          out.push({ type: "log", message: `Search: ${input.query ?? ""}` });
+          if (!state.sawLensMarker && state.steps.has("research")) {
+            const guess = inferLens(input.query ?? "");
+            if (guess) enterLens(guess);
+          }
+          out.push({ type: "activity", kind: "search", text: input.query ?? "", lens: state.currentLens ?? undefined });
           break;
+        }
         case "WebFetch":
-          out.push({ type: "log", message: `Reading ${domain(input.url ?? "")}` });
+          out.push({ type: "activity", kind: "read", url: input.url ?? "", domain: domain(input.url ?? "") });
           break;
         case "Read":
           if (!state.readSchema && /src[\\/]agent|data[\\/]reference/.test(input.file_path ?? "")) {
@@ -119,6 +165,8 @@ export function interpretLine(line: string, state: StreamState): ProgressEvent[]
           const m = /data[\\/]+reference[\\/]+([^\\/]+)\.json$/.exec(input.file_path ?? "");
           if (m) {
             state.slug = m[1];
+            for (const lens of state.lensesSeen) out.push({ type: "activity", kind: "lens", lens, status: "done" });
+            state.currentLens = null;
             step("signals", "Writing dated signals with sources");
             step("synthesize", "Writing ranked Flowcode plays");
           }

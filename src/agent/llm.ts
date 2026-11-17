@@ -3,7 +3,7 @@ import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
 import type * as z from "zod/v4";
 import { PRICES, PRICE_PER_SEARCH } from "./config";
 import type { EvidenceLedger } from "./evidence";
-import type { Lens } from "./types";
+import type { Activity, Lens } from "./types";
 
 type ContentBlock = Anthropic.Messages.ContentBlock;
 type MessageParam = Anthropic.Messages.MessageParam;
@@ -80,6 +80,7 @@ export class Llm {
     maxUses: number;
     allowedDomains?: string[];
     maxTokens?: number;
+    onActivity?: (a: Activity) => void;
   }): Promise<string> {
     const tool: Anthropic.Messages.WebSearchTool20250305 = {
       type: "web_search_20250305",
@@ -101,11 +102,20 @@ export class Llm {
       });
       this.record(opts.model, res.usage);
       blocks.push(...res.content);
+      for (const b of res.content) {
+        if (b.type === "server_tool_use" && b.name === "web_search") {
+          const query = (b.input as { query?: string })?.query;
+          if (query) opts.onActivity?.({ kind: "search", text: query, lens: opts.lens });
+        }
+      }
       if (res.stop_reason !== "pause_turn") break;
       messages.push({ role: "assistant", content: res.content as unknown as MessageParam["content"] });
     }
 
-    return notesFromBlocks(blocks, opts.lens, opts.ledger);
+    const before = new Set(opts.ledger.all().map((e) => e.id));
+    const notes = notesFromBlocks(blocks, opts.lens, opts.ledger);
+    for (const e of opts.ledger.all()) if (!before.has(e.id)) opts.onActivity?.({ kind: "read", url: e.url, domain: e.domain });
+    return notes;
   }
 
   /** Structured output call (no tools). Returns data validated against the zod schema. */

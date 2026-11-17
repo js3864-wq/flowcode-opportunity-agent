@@ -17,15 +17,19 @@ const asOf = "2026-11-17";
 async function run(opts: Parameters<typeof fakeMessagesApi>[0] = {}, previous: Report | null = null) {
   const { api, calls } = fakeMessagesApi(opts);
   const events: string[] = [];
+  const activity: string[] = [];
   const report = await runAgent({
     input: "Test GP",
     asOf,
     config,
     llm: new Llm(api),
     previous,
-    onEvent: (e) => events.push(e.type === "step" ? e.step : e.type),
+    onEvent: (e) => {
+      if (e.type === "activity") activity.push(e.kind === "lens" ? `lens:${e.lens}:${e.status}` : e.kind);
+      else events.push(e.type === "step" ? e.step : e.type);
+    },
   });
-  return { report, calls, events };
+  return { report, calls, events, activity };
 }
 
 describe("evidence ledger", () => {
@@ -110,7 +114,10 @@ describe("verification", () => {
 
 describe("full pipeline with a fake API", () => {
   it("produces a ranked, fully sourced report and drops unsupported ideas", async () => {
-    const { report, events } = await run({ pauseFirstLens: true });
+    const { report, events, activity } = await run({ pauseFirstLens: true });
+    expect(activity).toContain("search");
+    expect(activity).toContain("read");
+    expect(activity.filter((a) => a.startsWith("lens:") && a.endsWith(":done"))).toHaveLength(6);
 
     expect(events.filter((e) => e !== "log" && e !== "done")).toEqual(["resolve", "research", "signals", "synthesize", "factcheck", "rank"]);
     expect(events.at(-1)).toBe("done");

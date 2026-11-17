@@ -220,8 +220,15 @@ export interface Report {
   delta?: Delta;
 }
 
+/** Fine-grained research activity, for the live research view. */
+export type Activity =
+  | { kind: "lens"; lens: string; status: "active" | "done" }
+  | { kind: "search"; text: string; lens?: string }
+  | { kind: "read"; url: string; domain: string };
+
 export type ProgressEvent =
   | { type: "step"; step: string; label: string }
+  | ({ type: "activity" } & Activity)
   | { type: "log"; message: string }
   | { type: "done"; report: Report }
   | { type: "error"; message: string };

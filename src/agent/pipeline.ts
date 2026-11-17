@@ -53,8 +53,11 @@ export async function runAgent(opts: RunOptions): Promise<Report> {
       ledger,
       entity,
       asOf,
-      onLens: (lens, status, detail) =>
-        emit({ type: "log", message: `${lens.label}: ${status}${detail ? ` (${detail})` : ""}` }),
+      onLens: (lens, status, detail) => {
+        if (status === "failed") emit({ type: "log", message: `${lens.label}: failed (${detail})` });
+        emit({ type: "activity", kind: "lens", lens: lens.id, status: status === "start" ? "active" : "done" });
+      },
+      onActivity: (a) => emit({ type: "activity", ...a }),
     }),
     checkRelationship({ llm, config, ledger, entity }).catch(() => ({
       status: "none_found" as const,

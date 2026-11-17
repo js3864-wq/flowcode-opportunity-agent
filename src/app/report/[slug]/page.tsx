@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LENS_SPECS } from "@/agent/lenses";
 import { OpportunityDetail } from "@/components/OpportunityDetail";
+import { ResearchAnalytics } from "@/components/ResearchAnalytics";
 import { TimingTower } from "@/components/TimingTower";
 import { CHECK_LABEL, MODE_LABEL, formatGeneratedAt, formatLooseDate, relativeDays } from "@/lib/format";
 import { getReport } from "@/lib/store";
@@ -51,6 +52,8 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
           ))}
         </ul>
       </div>
+
+      <ResearchAnalytics report={r} />
 
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_20rem]">
         <div className="space-y-8">

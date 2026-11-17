@@ -29,7 +29,7 @@ One or two searches. Find the official website, who operates or owns it, what it
 
 ## Step 2. Research the six lenses
 
-For each lens in `src/agent/lenses.ts`, run 2 to 4 specific searches (company name plus the lens terms plus the current or next year). Prioritize the last 90 days and anything upcoming. Skip generic background.
+For each lens in `src/agent/lenses.ts`, first write one line on its own: `Lens: <id>` (for example `Lens: experiences`). The web app reads these lines to show live progress. Then run 2 to 4 specific searches (company name plus the lens terms plus the current or next year). Prioritize the last 90 days and anything upcoming. Skip generic background.
 
 Keep an evidence list as you go. Every fact you plan to use needs evidence:
 - `url`: a page you actually saw in search results or opened with WebFetch. Never construct or guess a URL.

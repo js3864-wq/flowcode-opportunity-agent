@@ -35,7 +35,19 @@ describe("Claude Code stream", () => {
       "rank",
     ]);
     expect(state.slug).toBe("heineken");
-    expect(events.some((e) => e.type === "log" && e.message === "Reading theheinekencompany.com")).toBe(true);
+    expect(events.some((e) => e.type === "activity" && e.kind === "read" && e.domain === "theheinekencompany.com")).toBe(true);
+  });
+
+  it("tracks lenses from the run's own markers", () => {
+    const state = newStreamState();
+    const text = (t: string) => line({ type: "assistant", message: { content: [{ type: "text", text: t }] } });
+    const events = [text("Lens: campaigns"), toolUse("WebSearch", { query: "x" }), text("Now the next one.\nLens: experiences"), toolUse("Write", { file_path: "/r/data/reference/a.json" })].flatMap((l) =>
+      interpretLine(l, state),
+    );
+    const lensEvents = events.filter((e) => e.type === "activity" && e.kind === "lens").map((e) => `${(e as { lens: string }).lens}:${(e as { status: string }).status}`);
+    expect(lensEvents).toEqual(["campaigns:active", "campaigns:done", "experiences:active", "campaigns:done", "experiences:done"]);
+    const search = events.find((e) => e.type === "activity" && e.kind === "search") as { lens?: string };
+    expect(search.lens).toBe("campaigns");
   });
 
   it("surfaces Claude Code errors", () => {
