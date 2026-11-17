@@ -1,12 +1,14 @@
 import { productName, proofPoint } from "@/agent/flowcode";
+import { displayRefs } from "@/agent/render";
 import type { Evidence, Opportunity, Signal } from "@/agent/types";
 import { CHANNEL_LABEL, COMPONENT_LABEL, URGENCY_LABEL, formatLooseDate } from "@/lib/format";
 import { Sectors } from "./Sectors";
 
-function SourceRefs({ ids, footnote }: { ids: string[]; footnote: Map<string, number> }) {
+function SourceRefs({ ids, footnote, evidence }: { ids: string[]; footnote: Map<string, number>; evidence: Evidence[] }) {
+  const { shown, hidden } = displayRefs(ids, evidence);
   return (
     <span className="whitespace-nowrap">
-      {ids.map((id) => (
+      {shown.map((id) => (
         <a
           key={id}
           href={`#source-${id}`}
@@ -16,6 +18,7 @@ function SourceRefs({ ids, footnote }: { ids: string[]; footnote: Map<string, nu
           [{footnote.get(id)}]
         </a>
       ))}
+      {hidden ? <span className="ml-1 text-xs text-muted">+{hidden} more</span> : null}
     </span>
   );
 }
@@ -82,7 +85,7 @@ export function OpportunityDetail({
           <h4 className="font-semibold">What&apos;s happening</h4>
           <p className="mt-1">
             {o.whatsHappening}
-            <SourceRefs ids={o.evidenceIds} footnote={footnote} />
+            <SourceRefs ids={o.evidenceIds} footnote={footnote} evidence={evidence} />
           </p>
         </section>
         <section>

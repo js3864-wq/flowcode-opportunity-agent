@@ -8,6 +8,23 @@ const URGENCY_LABEL: Record<string, string> = {
   evergreen: "Evergreen",
 };
 
+/** Up to `max` evidence ids for display, preferring one per site, in order of appearance. */
+export function displayRefs(ids: string[], evidence: { id: string; domain: string }[], max = 6): { shown: string[]; hidden: number } {
+  const byId = new Map(evidence.map((e) => [e.id, e]));
+  const shown: string[] = [];
+  const seen = new Set<string>();
+  for (const id of ids) {
+    const d = byId.get(id)?.domain;
+    if (d && !seen.has(d)) {
+      seen.add(d);
+      shown.push(id);
+    }
+    if (shown.length >= max) break;
+  }
+  for (const id of ids) if (shown.length < max && !shown.includes(id)) shown.push(id);
+  return { shown, hidden: Math.max(0, ids.length - shown.length) };
+}
+
 export function slugify(s: string): string {
   return s
     .toLowerCase()
@@ -38,7 +55,8 @@ export function toMarkdown(r: Report): string {
 
   lines.push("## Ranked opportunities", "");
   for (const o of r.opportunities) {
-    const refs = o.evidenceIds.map(ref).join("");
+    const { shown, hidden } = displayRefs(o.evidenceIds, r.evidence);
+    const refs = shown.map(ref).join("") + (hidden ? ` (+${hidden} more in the JSON report)` : "");
     const proof = proofPoint(o.proofPointId);
     lines.push(`### ${o.rank}. ${o.title} (score ${o.score.total})`);
     lines.push("");
@@ -55,7 +73,7 @@ export function toMarkdown(r: Report): string {
     const c = o.score.components;
     lines.push(`**Score:** timeliness ${c.timeliness}, fit ${c.fit}, scale ${c.scale}, evidence ${c.evidence}, access ${c.access}.`);
     if (o.caveats.length) lines.push(`**Caveats:** ${o.caveats.join(" ")}`);
-    if (o.verification.issues.length) lines.push(`**Fact-check notes:** ${o.verification.issues.join(" ")}`);
+    if (o.verification.issues.length) lines.push(`**Confirm before outreach (not in a quoted source):** ${o.verification.issues.join(" ")}`);
     lines.push("");
   }
 

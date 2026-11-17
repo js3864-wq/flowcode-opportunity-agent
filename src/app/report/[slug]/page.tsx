@@ -5,6 +5,7 @@ import { OpportunityDetail } from "@/components/OpportunityDetail";
 import { ResearchAnalytics } from "@/components/ResearchAnalytics";
 import { TimingTower } from "@/components/TimingTower";
 import { CHECK_LABEL, MODE_LABEL, formatGeneratedAt, formatLooseDate, relativeDays } from "@/lib/format";
+import { displayRefs } from "@/agent/render";
 import { getReport } from "@/lib/store";
 
 export const dynamic = "force-dynamic";
@@ -23,7 +24,7 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
 
   // Footnote numbers in order of first appearance across the ranked plays.
   const footnote = new Map<string, number>();
-  for (const o of r.opportunities) for (const id of o.evidenceIds) if (!footnote.has(id)) footnote.set(id, footnote.size + 1);
+  for (const o of r.opportunities) for (const id of displayRefs(o.evidenceIds, r.evidence).shown) if (!footnote.has(id)) footnote.set(id, footnote.size + 1);
   for (const e of r.evidence) if (!footnote.has(e.id)) footnote.set(e.id, footnote.size + 1);
   const sources = [...r.evidence].sort((a, b) => footnote.get(a.id)! - footnote.get(b.id)!);
   const newOpps = new Set(r.delta?.newOpportunityIds ?? []);

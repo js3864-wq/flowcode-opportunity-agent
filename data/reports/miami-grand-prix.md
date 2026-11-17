@@ -16,7 +16,7 @@ _As of 2026-11-17. Operated by South Florida Motorsports. Run mode: live. 108 so
 
 **Act now:** Before 2027 title signage and Fan Fest production, ahead of April 30 race week. **Pitch to:** Partnerships and sponsorship team at South Florida Motorsports, jointly with Hard Rock International's marketing team. **Unit:** The Grand Prix: the Formula 1 race weekend.
 
-**What's happening.** Hard Rock signed a multi-year naming-rights deal announced 2026-09-01, and the event becomes the Formula 1 Hard Rock Miami Grand Prix from 2027, replacing Crypto.com. Hard Rock's deal also covers branding of the Fan Fest. Hard Rock's Unity loyalty program exists, but no integration with Miami GP ticketing, the app or the Beach Club has been announced. [1][2][3][4][5][6][7][8][9][10][11][12][13][14][15]
+**What's happening.** Hard Rock signed a multi-year naming-rights deal announced 2026-09-01, and the event becomes the Formula 1 Hard Rock Miami Grand Prix from 2027, replacing Crypto.com. Hard Rock's deal also covers branding of the Fan Fest. Hard Rock's Unity loyalty program exists, but no integration with Miami GP ticketing, the app or the Beach Club has been announced. [1][2][3][4][5][6] (+9 more in the JSON report)
 
 **Why Flowcode.** Title-partner signage across the campus and Fan Fest is being redesigned now. Branded dynamic Flowcodes printed once can route to different offers across race week, the E-Prix and future years without a reprint. FlowID and Analytics would give the promoter and Hard Rock person-level proof of what the title spend delivered. The Flowcode sports benchmark shows 75% higher than average conversion for first-party data collection. Proof: Flowcode sports and entertainment benchmark, 75% higher than average conversion rate for first-party data collection (https://www.flowcode.com/blog/winning-strategies-for-fan-engagement-in-sports-with-flowcode).
 
@@ -34,7 +34,7 @@ _As of 2026-11-17. Operated by South Florida Motorsports. Run mode: live. 108 so
 
 **Act now:** Inaugural-member deadline Dec 31, then race week. **Pitch to:** Ticketing and CRM lead; merchandise lead. **Unit:** The Grand Prix: grandstand ticketing and Grandstand+.
 
-**What's happening.** Grandstand+ presented by Heineken requires auto-renewal enrollment and gives benefits including a 20% merch discount and 10% off 2028 tickets. Buyers who renew by 12/31 become inaugural members. Eight team-specific grandstands debut in 2027, and the MIA Shop shows no 2027 merchandise launch yet. [16][17][18][19][20][21][22][23][10][24][25][26][27]
+**What's happening.** Grandstand+ presented by Heineken requires auto-renewal enrollment and gives benefits including a 20% merch discount and 10% off 2028 tickets. Buyers who renew by 12/31 become inaugural members. Eight team-specific grandstands debut in 2027, and the MIA Shop shows no 2027 merchandise launch yet. [7][8][9][10][11][12] (+7 more in the JSON report)
 
 **Why Flowcode.** Team-themed grandstands are a natural place for seat-level codes that drop team merch, unlock member benefits and confirm renewals, all tied to the fan's identity. Flowcode's team builds the experiences, so the launch can be ready in time for race week. Proof: Flowcode sports and entertainment benchmark, 75% higher than average conversion rate for first-party data collection (https://www.flowcode.com/blog/winning-strategies-for-fan-engagement-in-sports-with-flowcode).
 
@@ -47,13 +47,13 @@ _As of 2026-11-17. Operated by South Florida Motorsports. Run mode: live. 108 so
 **Products:** Flowcodes, FlowHubs, FlowID & Personalization, Analytics & Integrations. **KPIs:** Membership enrollments, Merch revenue per scan, Team-affinity profiles captured, 2028 renewal rate.
 **Score:** timeliness 5, fit 4, scale 4, evidence 5, access 4.
 **Caveats:** An app QR and mobile ticketing already exist (S27); position Flowcode alongside them, not as a replacement. Ticketmaster may run ticketing; integration with it needs validating. Merch rights may sit partly with F1 Store and Fanatics.
-**Fact-check notes:** Eight team grandstands 'debuting' in 2027 is only implied by the truncated E13 list, not stated as a debut. The claim that the MIA Shop shows no 2027 merchandise launch rests on the S30 signal; E67's undated 'Just Rolled In' items do not clearly show this.
+**Confirm before outreach (not in a quoted source):** Eight team grandstands 'debuting' in 2027 is only implied by the truncated E13 list, not stated as a debut. The claim that the MIA Shop shows no 2027 merchandise launch rests on the S30 signal; E67's undated 'Just Rolled In' items do not clearly show this.
 
 ### 3. Drive in-seat upgrades and 2028 renewals across the expanded ~9,000-ticket Paddock Club (score 84)
 
 **Next 90 days:** Before the new building's fit-out and signage are finalized for race week. **Pitch to:** VP of Premium Hospitality and Paddock Club sales. **Unit:** Miami International Autodrome: Paddock Club.
 
-**What's happening.** A permanent three-storey extension takes the Paddock Club from about 6,000 to about 9,000 tickets and houses the Precision Drive Club. Paddock Club tickets went on public sale for the first time on September 24, from $16,500. The hospitality tiers range from $1,500 to $8,000. [16][22][28][29][30][31][32][33][34][35][8]
+**What's happening.** A permanent three-storey extension takes the Paddock Club from about 6,000 to about 9,000 tickets and houses the Precision Drive Club. Paddock Club tickets went on public sale for the first time on September 24, from $16,500. The hospitality tiers range from $1,500 to $8,000. [7][13][14][15][16][17] (+5 more in the JSON report)
 
 **Why Flowcode.** Roughly 3,000 new seats, many sold to members of the public rather than corporate buyers, means more guests whose behavior on site is not tied back to ticketing. A question to validate: how does the team identify and upsell these guests on race day today? Flowcodes and FlowHubs on tables, menus and screens can sell upgrades and experiences and capture 2028 intent while guests are on site. Proof: Pittsburgh Penguins, 88% conversion rate and $8,000 in revenue in 30 minutes from in-arena live reads (https://www.flowcode.com/customer-stories/pittsburgh-penguins).
 
@@ -66,13 +66,13 @@ _As of 2026-11-17. Operated by South Florida Motorsports. Run mode: live. 108 so
 **Products:** Flowcodes, FlowHubs, FlowID & Personalization, Analytics & Integrations. **KPIs:** Upgrade revenue per guest, 2028 deposit leads, Scan rate per seat, Renewal rate.
 **Score:** timeliness 4, fit 4, scale 5, evidence 5, access 4.
 **Caveats:** The opening date of the extension has not been given. The current hospitality CRM tooling is unknown.
-**Fact-check notes:** Three-storey height is not in the evidence snippets (only the 115,000 sq ft extension is shown). The increase from about 6,000 to about 9,000 tickets is not visible in the evidence snippets. The $16,500 Paddock Club price is not in any evidence snippet. The $1,500 Beach Club Deck price is only in the signal, not in the truncated E48 snippet.
+**Confirm before outreach (not in a quoted source):** Three-storey height is not in the evidence snippets (only the 115,000 sq ft extension is shown). The increase from about 6,000 to about 9,000 tickets is not visible in the evidence snippets. The $16,500 Paddock Club price is not in any evidence snippet. The $1,500 Beach Club Deck price is only in the signal, not in the truncated E48 snippet.
 
 ### 4. Monetize live performances at the revamped Hard Rock Beach Club (score 76)
 
 **Next 90 days:** During the 2027 Beach Club design process. **Pitch to:** Hard Rock entertainment and hospitality team, with promoter hospitality. **Unit:** Branded hospitality areas: Hard Rock Beach Club.
 
-**What's happening.** The Beach Club is being revamped for 2027 with live performances, cabanas with track views and food and beverage. Beach Club Deck tickets cost $1,500. Fans criticized that performance access is not sold separately and cannot be added to standard tickets. [36][5][37][38][4][29][30][39][40][41][42]
+**What's happening.** The Beach Club is being revamped for 2027 with live performances, cabanas with track views and food and beverage. Beach Club Deck tickets cost $1,500. Fans criticized that performance access is not sold separately and cannot be added to standard tickets. [18][5][19][20][4][21] (+5 more in the JSON report)
 
 **Why Flowcode.** On-stage live reads and screen calls to action can sell performance access, cabana upgrades and F&B at the moment of attention. The Penguins drove 88% conversion and $8,000 in 30 minutes from in-arena live reads. Proof: Pittsburgh Penguins, 88% conversion rate and $8,000 in revenue in 30 minutes from in-arena live reads (https://www.flowcode.com/customer-stories/pittsburgh-penguins).
 
@@ -85,13 +85,13 @@ _As of 2026-11-17. Operated by South Florida Motorsports. Run mode: live. 108 so
 **Products:** Flowcodes, FlowURLs, FlowHubs, FlowID & Personalization. **KPIs:** Revenue per live read, Add-on sales, F&B conversion, Leads captured.
 **Score:** timeliness 4, fit 5, scale 3, evidence 5, access 3.
 **Caveats:** Design and capacity have not been disclosed. Selling add-on access is a pricing-policy decision the promoter would need to make.
-**Fact-check notes:** The fan criticism that performance access is not sold separately is not directly backed; E103 is about blocked views, and E104 is official site wording rather than criticism. The $1,500 Beach Club Deck price is only in the signal, not in the truncated E48 snippet.
+**Confirm before outreach (not in a quoted source):** The fan criticism that performance access is not sold separately is not directly backed; E103 is about blocked views, and E104 is official site wording rather than criticism. The $1,500 Beach Club Deck price is only in the signal, not in the truncated E48 snippet.
 
 ### 5. Offer partners measured activation reporting across 50+ race-week activations (score 75)
 
 **Next 90 days:** During partner contracting for 2027. **Pitch to:** Head of partnerships and partner servicing. **Unit:** The Grand Prix: partnerships.
 
-**What's happening.** Reports count 32 partners and 17 to 50+ activations in 2026, including Monster reaching 25,000+ fans and Liquid I.V. sampling 97,000+ sticks. Empower joined 'for years to come' and presents the Sunrise Key fan zone. [43][44][45][46][47][9][8][10][11][5][48][49][50][51]
+**What's happening.** Reports count 32 partners and 17 to 50+ activations in 2026, including Monster reaching 25,000+ fans and Liquid I.V. sampling 97,000+ sticks. Empower joined 'for years to come' and presents the Sunrise Key fan zone. [22][23][24][25][26][27] (+8 more in the JSON report)
 
 **Why Flowcode.** Partners report reach and sample counts. A question to validate: can the promoter show partners attributable conversions and data from their activations? A shared Workspace lets each partner run governed codes while the promoter keeps oversight and a consolidated report, which helps with sponsor renewals. C3 Presents logged 1.3M+ scans across its festivals. Proof: C3 Presents (ACL, Lollapalooza, Bonnaroo), 1.3M+ audience scans across its 2024 festivals (https://www.flowcode.com/customer-stories/c3-presents).
 
@@ -104,13 +104,13 @@ _As of 2026-11-17. Operated by South Florida Motorsports. Run mode: live. 108 so
 **Products:** Workspaces & API, Flowcodes, FlowHubs, Analytics & Integrations. **KPIs:** Partner scans and leads, Partner renewal rate, Value of the activation package.
 **Score:** timeliness 4, fit 4, scale 4, evidence 4, access 4.
 **Caveats:** Some activations are run by partner agencies with their own tools.
-**Fact-check notes:** The Liquid I.V. 97,000+ sticks sampling figure has no supporting evidence snippet.
+**Confirm before outreach (not in a quoted source):** The Liquid I.V. 97,000+ sticks sampling figure has no supporting evidence snippet.
 
 ### 6. Pilot the full stack at the Feb 20, 2027 Miami E-Prix (score 68)
 
 **Next 90 days:** E-Prix on Feb 20, 2027. **Pitch to:** Autodrome events team. **Unit:** Other events on the circuit: Formula E Miami E-Prix.
 
-**What's happening.** Ticketmaster and AXS list the Google Cloud Miami E-Prix on February 20, 2027 at the autodrome, with Electric Lounge and Emotion Club hospitality. [52][53]
+**What's happening.** Ticketmaster and AXS list the Google Cloud Miami E-Prix on February 20, 2027 at the autodrome, with Electric Lounge and Emotion Club hospitality. [28][29]
 
 **Why Flowcode.** A smaller event on the same circuit is a low-risk test of signage codes, hospitality FlowHubs and CRM sync ten weeks before the Grand Prix. Flowcode's team handles the build work. Proof: Flowcode sports and entertainment benchmark, 75% higher than average conversion rate for first-party data collection (https://www.flowcode.com/blog/winning-strategies-for-fan-engagement-in-sports-with-flowcode).
 
@@ -123,7 +123,7 @@ _As of 2026-11-17. Operated by South Florida Motorsports. Run mode: live. 108 so
 **Products:** Flowcodes, FlowHubs, FlowID & Personalization, Analytics & Integrations. **KPIs:** GP tickets cross-sold, Profiles captured, Scan rate.
 **Score:** timeliness 5, fit 4, scale 2, evidence 4, access 3.
 **Caveats:** Whether South Florida Motorsports operates the E-Prix or only hosts it is not confirmed.
-**Fact-check notes:** Electric Lounge and Emotion Club hospitality listings are not visible in the E46 or E47 evidence snippets; they appear only in the signal.
+**Confirm before outreach (not in a quoted source):** Electric Lounge and Emotion Club hospitality listings are not visible in the E46 or E47 evidence snippets; they appear only in the signal.
 
 ## Follow-on leads
 
@@ -146,50 +146,26 @@ _As of 2026-11-17. Operated by South Florida Motorsports. Run mode: live. 108 so
 4. [Hard Rock secures title rights for F1's Miami GP from 2027](https://www.sportcal.com/news/hard-rock-secures-title-rights-for-f1s-miami-gp-from-2027/) (sportcal.com, 76 days ago)
 5. [Miami F1 Race Names Hard Rock Title Sponsor](https://www.browardist.com/p/miami-s-f1-spectacle-has-a-new-name) (browardist.com, 77 days ago)
 6. [Hard Rock's F1 Miami Title Deal: Casino Brands Are Rewriting Motorsport Sponsorship](https://www.sponsorflo.ai/blog/hard-rock-miami-f1-title-sponsorship-2027) (sponsorflo.ai, 74 days ago)
-7. [Hard Rock secures title rights for F1’s Miami GP - Sportcal](https://www.sportcal.com/sponsorship/hard-rock-secures-title-rights-for-f1s-miami-gp-from-2027/) (sportcal.com, 76 days ago)
-8. [Formula 1 Miami Grand Prix: See the Activation Highlights](https://www.bizbash.com/sporting-events/formula-1-miami-grand-prix-2026-50-clubs-lounges-activations-and-highlights) (bizbash.com, 188 days ago)
-9. [Formula 1 Crypto.com Miami Grand Prix Hosts Free Fan Fest on Ocean Drive](https://miamibeachjournal.org/articles/formula-1-cryptocom-miami-grand-prix-hosts-free-fan-fest-on-ocean-drive) (miamibeachjournal.org, 213 days ago)
-10. [Fan Fest](https://f1miamigp.com/fan-fest/) (f1miamigp.com, 198 days ago)
-11. [First-Ever Official F1 Fan Fest Brings the Grand Prix to Miami Beach - L'Etage Magazine](https://letagemagazine.com/first-ever-official-f1-fan-fest-brings-the-grand-prix-to-miami-beach/) (letagemagazine.com, 228 days ago)
-12. [American Express Adds to its Expansive Global Sports and Entertainment Portfolio with New Partnerships with Hard Rock Stadium, the Formula 1® Crypto.com Miami Grand Prix and the Miami Dolphins](https://www.americanexpress.com/en-us/newsroom/articles/entertainment-and-experiences/american-express-adds-to-its-expansive-global-sports-and-enterta.html) (americanexpress.com, 454 days ago)
-13. [American Express Adds to its Expansive Global Sports and Entertainment Portfolio with New Partnerships with Hard Rock Stadium, the Formula 1® Crypto.com Miami Grand Prix and the Miami Dolphins](https://www.miamidolphins.com/news/american-express-adds-to-its-expansive-global-sports-and-entertainment-portfolio-with-new-partnerships-with-hard-rock-stadium-the-formula-1-crypto-com-miami-grand-prix-and-the-miami-dolphins) (miamidolphins.com, 454 days ago)
-14. [Miami Grand Prix 2026 Reveals Hard Rock Music Lineup](https://f1miamigp.com/news/press-release/formula-1-2026-hard-rock-beach-club-lineup/) (f1miamigp.com, 229 days ago)
-15. [How Unity Works: Earn Rewards, Enjoy Experiences.](https://unity.hardrock.com/how-unity-works) (unity.hardrock.com)
-16. [2027 F1 Hard Rock Miami Grand Prix Tickets on Sale](https://f1miamigp.com/news/press-release/tickets-on-sale-2027/) (f1miamigp.com, 54 days ago)
-17. [Formula 1 Hard Rock Miami Grand Prix](https://www.miamiandbeaches.com/event/formula-1-hard-rock-miami-grand-prix/17794) (miamiandbeaches.com)
-18. [Grandstand Membership - Formula 1 Hard Rock Miami Grand Prix](https://f1miamigp.com/grandstand-membership/) (f1miamigp.com, 54 days ago)
-19. [Turn 18 Grandstand - Formula 1 Hard Rock Miami Grand Prix](https://f1miamigp.com/tickets/grandstand/turn-18/?amp=) (f1miamigp.com, 21 days ago)
-20. [Beach Grandstands - Formula 1 Hard Rock Miami Grand Prix](https://f1miamigp.com/tickets/grandstand/beach/?amp=&amp=&amp=) (f1miamigp.com, 21 days ago)
-21. [Miami Finalizes On-Track Activity for 2026 Grand Prix](https://f1miamigp.com/news/press-release/miami-finalizes-on-track-activity-for-2026-grand-prix-weekend/) (f1miamigp.com, 384 days ago)
-22. [F1 Miami - Experience the Formula 1 Hard Rock Miami Grand Prix!](https://f1miamigp.com/) (f1miamigp.com, 8 days ago)
-23. [A-Z GUIDE (FAQs) - Formula 1 Hard Rock Miami Grand Prix](https://f1miamigp.com/the-circuit/faqs/) (f1miamigp.com, 202 days ago)
-24. [How to Buy F1 Tickets for the 2027 Miami Grand Prix - GPDestinations.com](https://gpdestinations.com/miami-grand-prix-tickets/) (gpdestinations.com, 126 days ago)
-25. [MIA Shop - New Merchandise Store - F1 Miami](https://shop.f1miamigp.com/) (shop.f1miamigp.com, 204 days ago)
-26. [F1 Miami Collection, Miami Shirt, Miami Grand Prix Apparel](https://f1store3.formula1.com/en/miami/c-32087462+z-9073386-3222696164) (f1store3.formula1.com)
-27. [F1 Miami Grand Prix , F1 Racing Miami Grand Prix](https://usf1store.formula1.com/en/formula-1-merchandise/miami-grand-prix/t-10877721+c-1273818924+z-99-3814140268?sortOption=HighestPrice&_ref=p-CLP%3Am-SIDE_NAV) (usf1store.formula1.com)
-28. [Alpine F1 investor looking at Miami GP stake](https://www.the-race.com/business/outgoing-alpine-f1-investor-looking-at-miami-gp-stake/) (the-race.com, 45 days ago)
-29. [Hospitality - Formula 1 Hard Rock Miami Grand Prix](https://f1miamigp.com/tickets/hospitality/) (f1miamigp.com, 11 days ago)
-30. [Miami Grand Prix Tickets 2027](https://f1salaries.com/tickets/miami-grand-prix/) (f1salaries.com, 32 days ago)
-31. [F1 Miami GP announces major Paddock Club expansion for 2027](https://www.motorsport.com/f1/news/f1-miami-gp-announces-major-paddock-club-expansion-for-2027/10816933/) (motorsport.com, 200 days ago)
-32. [Miami Grand Prix Paddock Club hospitality space expansion - Coliseum](https://www.coliseum-online.com/miami-grand-prix-paddock-club-hospitality-space-expansion/amp/) (coliseum-online.com, 179 days ago)
-33. [F1 Miami GP announces major Paddock Club expansion for 2027 - Yahoo Sports](https://sports.yahoo.com/articles/f1-miami-gp-announces-major-154459966.html) (sports.yahoo.com, 200 days ago)
-34. [How F1 is revving up its U.S. takeover at the Miami Grand Prix - Fast Company](https://www.fastcompany.com/91533795/how-f1-is-revving-up-its-u-s-takeover-at-the-miami-grand-prix) (fastcompany.com, 202 days ago)
-35. [F1 Miami Grand Prix 2026: 275,000 fans at Hard Rock Stadium - Focus on Travel News](https://ftnnews.com/travel-news/sports/formula-1-returns-to-miami-as-275000-fans-descend-on-hard-rock-stadium-for-the-grand-prix-weekend/) (ftnnews.com, 199 days ago)
-36. [Miami GP changes title sponsor](https://www.the-race.com/business/miami-gp-changes-title-sponsor/) (the-race.com, 76 days ago)
-37. [WRE News: Miami Grand Prix to Become Formula 1 Hard Rock Miami Grand Prix in 2027 - World Red Eye](https://worldredeye.com/2026/09/wre-news-miami-grand-prix-to-become-formula-1-hard-rock-miami-grand-prix-in-2027/) (worldredeye.com, 64 days ago)
-38. [Hard Rock Lands Title Rights to F1 Miami Grand Prix Starting 2027](https://rhfnews.com/article/hard-rock-lands-title-rights-to-f1-miami-grand-prix-starting-2027) (rhfnews.com, 77 days ago)
-39. [Miami GP Fan Slams Event After Pregnant Woman Left Unable to Watch Race Despite Paying High Ticket Price - Yahoo Sports](https://sports.yahoo.com/articles/miami-gp-fan-slams-event-174537824.html) (sports.yahoo.com, 198 days ago)
-40. [Circuit de Miami](https://www.f1miamiusa.com/en/fan-zones-45) (f1miamiusa.com, 200 days ago)
-41. [influencer culture lack of fan focus](https://f1chronicle.substack.com/p/influencer-culture-lack-of-fan-focus) (f1chronicle.substack.com)
-42. [Why the 2026 Miami F1 Race Is Under Huge Pressure - Kym Illman](https://www.kymillman.com/blog/why-the-2026-miami-f1-race-is-under-huge-pressure/) (kymillman.com, 201 days ago)
-43. [Empower Takes the Wheel at Formula 1® Crypto.com Miami Grand Prix](https://www.empower.com/press-center/empower-takes-wheel-formula-1r-cryptocom-miami-grand-prix) (empower.com, 293 days ago)
-44. [www.businesswire.com](https://www.businesswire.com/news/home/20260128963618/en) (businesswire.com)
-45. [Trackside at Hard Rock Stadium - 2027 Miami Grand Prix - GPDestinations.com](https://gpdestinations.com/trackside-hard-rock-stadium-miami-grand-prix/) (gpdestinations.com, 58 days ago)
-46. [Waymo Drives Into F1 Miami Grand Prix Sponsorship Deal](https://wunderfan.com/news/waymo-accelerates-into-formula-1-with-miami-grand-prix-sponsorship-mopcd2qt) (wunderfan.com, 198 days ago)
-47. [Post - Hear Our City](https://www.hearourcity.net/formula-10.html) (hearourcity.net)
-48. [2026 F1 Miami Grand Prix: 17 Full-Throttle Brand Experiences](https://www.eventmarketer.com/article/f1-miami-2026-grand-prix-experiential/) (eventmarketer.com, 119 days ago)
-49. [TikTok Brings Top Creators, Athletes and Musicians Together to Celebrate at the F1 Miami Grand Prix - AOL](https://www.aol.com/articles/tiktok-brings-top-creators-athletes-160946358.html) (aol.com, 196 days ago)
-50. [Around Town to the Autodrome: The Ultimate 2026 F1 Miami Race Week Guide](https://dishmiami.com/life/play/autodrome-the-ultimate-2026-f1-miami-race-week-guide) (dishmiami.com, 207 days ago)
-51. [The Activation Zone: Miami Grand Prix](https://sector.world/2026/05/the-activation-zone-miami-grand-prix/) (sector.world, 196 days ago)
-52. [Buy ABB FIA Formula E World Championship Tickets](https://www.ticketmaster.com/abb-fia-formula-e-world-championship-tickets/artist/3304747) (ticketmaster.com)
-53. [Miami International Autodrome Tickets Miami Grand Prix Racing](https://www.axs.com/venues/128843/miami-international-autodrome-miami-gardens-tickets/staticDetails) (axs.com)
+7. [2027 F1 Hard Rock Miami Grand Prix Tickets on Sale](https://f1miamigp.com/news/press-release/tickets-on-sale-2027/) (f1miamigp.com, 54 days ago)
+8. [Formula 1 Hard Rock Miami Grand Prix](https://www.miamiandbeaches.com/event/formula-1-hard-rock-miami-grand-prix/17794) (miamiandbeaches.com)
+9. [How to Buy F1 Tickets for the 2027 Miami Grand Prix - GPDestinations.com](https://gpdestinations.com/miami-grand-prix-tickets/) (gpdestinations.com, 126 days ago)
+10. [MIA Shop - New Merchandise Store - F1 Miami](https://shop.f1miamigp.com/) (shop.f1miamigp.com, 204 days ago)
+11. [F1 Miami Collection, Miami Shirt, Miami Grand Prix Apparel](https://f1store3.formula1.com/en/miami/c-32087462+z-9073386-3222696164) (f1store3.formula1.com)
+12. [F1 Miami Grand Prix , F1 Racing Miami Grand Prix](https://usf1store.formula1.com/en/formula-1-merchandise/miami-grand-prix/t-10877721+c-1273818924+z-99-3814140268?sortOption=HighestPrice&_ref=p-CLP%3Am-SIDE_NAV) (usf1store.formula1.com)
+13. [Alpine F1 investor looking at Miami GP stake](https://www.the-race.com/business/outgoing-alpine-f1-investor-looking-at-miami-gp-stake/) (the-race.com, 45 days ago)
+14. [Miami Grand Prix Tickets 2027](https://f1salaries.com/tickets/miami-grand-prix/) (f1salaries.com, 32 days ago)
+15. [F1 Miami GP announces major Paddock Club expansion for 2027](https://www.motorsport.com/f1/news/f1-miami-gp-announces-major-paddock-club-expansion-for-2027/10816933/) (motorsport.com, 200 days ago)
+16. [Miami Grand Prix Paddock Club hospitality space expansion - Coliseum](https://www.coliseum-online.com/miami-grand-prix-paddock-club-hospitality-space-expansion/amp/) (coliseum-online.com, 179 days ago)
+17. [F1 Miami GP announces major Paddock Club expansion for 2027 - Yahoo Sports](https://sports.yahoo.com/articles/f1-miami-gp-announces-major-154459966.html) (sports.yahoo.com, 200 days ago)
+18. [Miami GP changes title sponsor](https://www.the-race.com/business/miami-gp-changes-title-sponsor/) (the-race.com, 76 days ago)
+19. [WRE News: Miami Grand Prix to Become Formula 1 Hard Rock Miami Grand Prix in 2027 - World Red Eye](https://worldredeye.com/2026/09/wre-news-miami-grand-prix-to-become-formula-1-hard-rock-miami-grand-prix-in-2027/) (worldredeye.com, 64 days ago)
+20. [Hard Rock Lands Title Rights to F1 Miami Grand Prix Starting 2027](https://rhfnews.com/article/hard-rock-lands-title-rights-to-f1-miami-grand-prix-starting-2027) (rhfnews.com, 77 days ago)
+21. [Hospitality - Formula 1 Hard Rock Miami Grand Prix](https://f1miamigp.com/tickets/hospitality/) (f1miamigp.com, 11 days ago)
+22. [Empower Takes the Wheel at Formula 1® Crypto.com Miami Grand Prix](https://www.empower.com/press-center/empower-takes-wheel-formula-1r-cryptocom-miami-grand-prix) (empower.com, 293 days ago)
+23. [www.businesswire.com](https://www.businesswire.com/news/home/20260128963618/en) (businesswire.com)
+24. [Trackside at Hard Rock Stadium - 2027 Miami Grand Prix - GPDestinations.com](https://gpdestinations.com/trackside-hard-rock-stadium-miami-grand-prix/) (gpdestinations.com, 58 days ago)
+25. [Waymo Drives Into F1 Miami Grand Prix Sponsorship Deal](https://wunderfan.com/news/waymo-accelerates-into-formula-1-with-miami-grand-prix-sponsorship-mopcd2qt) (wunderfan.com, 198 days ago)
+26. [Post - Hear Our City](https://www.hearourcity.net/formula-10.html) (hearourcity.net)
+27. [Formula 1 Crypto.com Miami Grand Prix Hosts Free Fan Fest on Ocean Drive](https://miamibeachjournal.org/articles/formula-1-cryptocom-miami-grand-prix-hosts-free-fan-fest-on-ocean-drive) (miamibeachjournal.org, 213 days ago)
+28. [Buy ABB FIA Formula E World Championship Tickets](https://www.ticketmaster.com/abb-fia-formula-e-world-championship-tickets/artist/3304747) (ticketmaster.com)
+29. [Miami International Autodrome Tickets Miami Grand Prix Racing](https://www.axs.com/venues/128843/miami-international-autodrome-miami-gardens-tickets/staticDetails) (axs.com)
