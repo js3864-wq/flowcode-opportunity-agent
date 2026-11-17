@@ -65,7 +65,7 @@ Writing style for every text field: plain sentences, no em dashes, no semicolons
 
 ## Step 6. Save and build
 
-1. Write the result to `data/reference/<slug>.json`, where slug is the company name in lowercase with hyphens (for example `miami-grand-prix`). Include `"producedBy": "claude-code"` and `"asOf": "<today>"`.
+1. Write the result to `data/reference/<slug>.json`, where slug is the company name in lowercase with hyphens (for example `miami-grand-prix`). If `data/reference` already has a file for this company (same name or one of its aliases, for example `united-states-grand-prix.json` for COTA), reuse that slug so the new run replaces the old one. Include `"producedBy": "claude-code"` and `"asOf": "<today>"`.
 2. Run `npm run reports -- --only <slug> --check-sources`.
 3. If it reports schema errors, fix the file and run it again. If it drops sources because their quotes were not found, either replace the quote with exact text from that page or remove the source, then run it again.
 4. Reply with the top three plays, their scores, and how many sources passed the page check. The report is now at `data/reports/<slug>.md` and in the web app (`npm run dev`).
