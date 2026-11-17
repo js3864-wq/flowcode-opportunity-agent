@@ -171,6 +171,7 @@ export interface Opportunity extends OpportunityDraft {
 
 export interface RunMeta {
   mode: "live" | "reference" | "mock";
+  profile?: "lite" | "full";
   models: { research: string; synthesis: string; fast: string };
   startedAt: string;
   durationMs: number;

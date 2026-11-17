@@ -2,8 +2,9 @@
  * npm run agent -- "Las Vegas Grand Prix"            live run (needs ANTHROPIC_API_KEY)
  * npm run agent -- "Las Vegas Grand Prix" --mock     replay the saved report, no API calls
  * npm run agent -- "f1lasvegasgp.com" --as-of 2026-11-17
+ * npm run agent -- "Las Vegas Grand Prix" --full     Sonnet + Opus profile (about $2 per company)
  */
-import { loadConfig } from "../src/agent/config";
+import { loadConfig, maxSearches } from "../src/agent/config";
 import { runAgent } from "../src/agent/pipeline";
 import { toMarkdown } from "../src/agent/render";
 import type { ProgressEvent } from "../src/agent/types";
@@ -12,6 +13,7 @@ import { loadEnv } from "./env";
 
 loadEnv();
 const args = process.argv.slice(2);
+if (args.includes("--full")) process.env.AGENT_PROFILE = "full";
 const flag = (name: string) => args.includes(`--${name}`);
 const value = (name: string) => {
   const i = args.indexOf(`--${name}`);
@@ -43,6 +45,7 @@ async function main() {
     return;
   }
 
+  console.log(`Profile ${config.profile}: up to ${maxSearches(config)} searches, spending cap $${config.maxCostUsd.toFixed(2)}.`);
   const previous = await findReport(input);
   const report = await runAgent({ input, asOf: value("as-of"), config, previous, onEvent: log });
   const { persisted } = await saveReport(report);

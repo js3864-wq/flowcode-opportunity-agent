@@ -37,7 +37,7 @@ export async function runAgent(opts: RunOptions): Promise<Report> {
   let llm = opts.llm;
   if (!llm) {
     if (!config.apiKey) throw new Error("ANTHROPIC_API_KEY is not set. Set it, or replay a saved report in mock mode.");
-    llm = Llm.fromApiKey(config.apiKey);
+    llm = Llm.fromApiKey(config.apiKey, config.maxCostUsd);
   }
   const ledger = new EvidenceLedger();
 
@@ -98,6 +98,7 @@ export async function runAgent(opts: RunOptions): Promise<Report> {
     asOf,
     run: {
       mode: "live",
+      profile: config.profile,
       models: config.models,
       startedAt: new Date(started).toISOString(),
       durationMs: Date.now() - started,

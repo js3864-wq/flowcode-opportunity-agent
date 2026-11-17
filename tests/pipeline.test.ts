@@ -202,3 +202,26 @@ describe("structured output schemas", () => {
     }
   });
 });
+
+describe("cost controls", () => {
+  it("defaults to the lite profile and switches to full on request", () => {
+    const lite = loadConfig({});
+    expect(lite.profile).toBe("lite");
+    expect(lite.models.research).toBe("claude-haiku-5-5");
+    expect(lite.maxSearchesPerLens).toBe(3);
+    expect(lite.maxCostUsd).toBe(0.75);
+    const full = loadConfig({ AGENT_PROFILE: "full" });
+    expect(full.models.synthesis).toBe("claude-opus-5-5");
+    expect(full.maxSearchesPerLens).toBe(5);
+    expect(loadConfig({ AGENT_MAX_COST_USD: "0.4" }).maxCostUsd).toBe(0.4);
+  });
+
+  it("stops before the next model call once spend passes the cap", async () => {
+    const { api, calls } = fakeMessagesApi();
+    await expect(
+      runAgent({ input: "Test GP", asOf, config, llm: new Llm(api, 0.01), onEvent: () => {} }),
+    ).rejects.toThrow(/spending cap/);
+    // The first call spends past the cap, so only a handful of calls happen, not the full run.
+    expect(calls.length).toBeLessThan(4);
+  });
+});

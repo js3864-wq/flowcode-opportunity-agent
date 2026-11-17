@@ -1,7 +1,7 @@
 import type { AgentConfig } from "../config";
 import type { EvidenceLedger } from "../evidence";
 import { LENS_SPECS, type LensSpec } from "../lenses";
-import type { Llm } from "../llm";
+import { BudgetExceededError, type Llm } from "../llm";
 import {
   EntitySchema,
   RelationshipSchema,
@@ -32,7 +32,7 @@ export async function resolveEntity(opts: {
     system: RESEARCH_SYSTEM,
     lens: "profile",
     ledger,
-    maxUses: 4,
+    maxUses: config.resolveSearches,
     prompt: `Today is ${asOf}. Identify the organization behind this input: "${input}".
 Find: official website, who operates or owns it, what it does and how it makes money, its distinct business units or properties,
 upcoming key dates in the next 12 months (events, launches, seasons, earnings), and its main audiences.`,
@@ -88,6 +88,11 @@ export async function runLenses(opts: {
         results.push({ lens, notes });
         onLens?.(lens, "done");
       } catch (err) {
+        // Over budget: stop every lens now rather than finishing the others.
+        if (err instanceof BudgetExceededError) {
+          queue.length = 0;
+          throw err;
+        }
         // One failed lens should not sink the report. The quality section shows the gap.
         results.push({ lens, notes: "" });
         onLens?.(lens, "failed", err instanceof Error ? err.message : String(err));

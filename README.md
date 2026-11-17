@@ -24,6 +24,8 @@ npm run agent -- "Las Vegas Grand Prix"    # or one company, name or URL
 npm run dev                                # http://localhost:3000
 ```
 
+Runs use the **lite** profile by default and stop at a **$0.75 spending cap per company**. Add `--full` for the Sonnet and Opus profile (about $2 per company, measured). The batch runner prints the profile, the search limit and the cap before it spends anything.
+
 Without a key, everything still works in replay mode: the web app shows the saved reports, and `npm run agent -- "COTA" --mock` replays one in the terminal. `npm test` runs the pipeline end to end against a fake API.
 
 ## How it works
@@ -82,17 +84,22 @@ Each report also lists **follow-on leads**: partner brands that are Flowcode pro
 - **Fixed research lenses over a free-roaming agent loop.** Six parallel lenses give predictable cost, consistent coverage, and reports that compare across companies. A free agent can chase threads better, but its cost and coverage vary per company, which matters more at 1,000 accounts than at one.
 - **Server-side web search over my own crawler.** Search, ranking and citations come in one API call, and citations make the evidence ledger possible. The cost is that evidence is a 150-character cited snippet, not the full page. The next step would be adding the web fetch tool for the company's own newsroom.
 - **Model judgment plus deterministic scoring.** The model is good at "how timely is this", and bad at being consistent across 1,000 reports. Keeping the weights and guardrails in code makes the ranking tunable by a sales leader without touching prompts, and repeatable for the same inputs.
-- **Model per step.** Sonnet researches and extracts, Opus does only the synthesis (one call per company), Haiku does entity extraction, the relationship check and the fact-check. All model ids are environment variables.
+- **Model per step, with two cost profiles.** In lite, Haiku reads and extracts and Sonnet writes the plays. In full, Sonnet reads and Opus writes. Haiku always does the relationship check and the fact-check. All model ids are environment variables.
 - **Precision over recall.** Plays without surviving evidence are dropped, not shown with a warning. Gaps the model infers ("no data capture described") are phrased as things to validate, and caveats are shown in a "Check before outreach" box.
 - **A file store.** Reports are JSON files in `data/reports`. That is right for a demo and wrong for scale (see below).
 - **Not built yet:** authentication, a scheduler, CRM push, web fetch, and a seller feedback loop. The design for each is below.
 
 ## Running it across thousands of companies
 
-**Cost.** A full research run is about 36 searches (at $10 per 1,000) plus tokens: Sonnet reading search results across six lenses, one Opus synthesis call, and a few Haiku calls. My estimate is roughly $1 to $1.50 per company at list prices. Every live report prints its actual cost from the API's usage numbers, so the first batch replaces this estimate with a measured one. At scale:
+**Cost.** Measured on the first live runs (Nov 17, 2026): the **full** profile cost **$2.03 per company** for Las Vegas and Miami, with 35 searches and 108 to 122 sources each. Searches were only about $0.35 of that. The rest was the research model re-reading earlier search results each time a lens searched again, which grows quickly with searches per lens. That shaped three changes:
+- **A lite default.** Haiku reads search results, Sonnet writes the plays, and each lens gets 3 searches instead of 5. Token cost for reading drops by about 20x, so search fees become most of the bill. Expect well under a dollar per company. The first lite runs will replace this estimate with a measured number, which every report prints.
+- **A hard cap per company** ($0.75 lite, $3 full, set with `AGENT_MAX_COST_USD`). The cap is checked before every model call, so a runaway company stops instead of spending.
+- **Full is opt-in** (`--full`) for accounts that justify deeper research.
+
+At scale:
 - Use the Message Batches API for scheduled refreshes. Tokens are 50% off and searches cost the same.
-- Cache the Flowcode catalog in the synthesis prompt (already marked with `cache_control`) so it is read from cache across a batch.
-- Do not re-research everything. A cheap monitor pass (Haiku, two searches, "anything new since date X?") costs a few cents and decides whether a company needs a full run. At 1,000 accounts with weekly monitoring and full runs only on change, spend lands in the low hundreds of dollars a week rather than $1,000+.
+- Try dynamic filtering (`web_search_20260318`), where the model filters results in code before they reach its context. It targets exactly the re-reading cost above, but changes how citations come back, so it needs testing against the evidence ledger first.
+- Do not re-research everything. A cheap monitor pass (Haiku, two searches, "anything new since date X?") costs a few cents and decides whether a company needs a full run. With weekly monitoring and full runs only on change, 1,000 accounts land in the low hundreds of dollars a week.
 
 **Speed.** One company takes a few minutes because the six lenses run in parallel. Across companies it is a queue problem: workers pull companies, a concurrency limit keeps the organization's web search rate limit happy, and non-urgent refreshes go through the Batches API, which trades latency for price. `npm run batch -- <file> --concurrency N` is the small version of this.
 

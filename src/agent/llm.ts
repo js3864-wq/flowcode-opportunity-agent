@@ -24,14 +24,29 @@ export interface UsageTotals {
 
 const MAX_CONTINUATIONS = 6;
 
+export class BudgetExceededError extends Error {
+  constructor(spent: number, cap: number) {
+    super(`Stopped at about $${spent.toFixed(2)}: the spending cap for one company is $${cap.toFixed(2)}. Raise AGENT_MAX_COST_USD to allow more.`);
+    this.name = "BudgetExceededError";
+  }
+}
+
 export class Llm {
   readonly usage: UsageTotals = { inputTokens: 0, outputTokens: 0, cacheReadTokens: 0, searches: 0, costUsd: 0 };
 
-  constructor(private readonly messages: MessagesApi) {}
+  constructor(
+    private readonly messages: MessagesApi,
+    private readonly budgetUsd = Number.POSITIVE_INFINITY,
+  ) {}
 
-  static fromApiKey(apiKey: string): Llm {
+  static fromApiKey(apiKey: string, budgetUsd?: number): Llm {
     const client = new Anthropic({ apiKey, maxRetries: 3, timeout: 10 * 60 * 1000 });
-    return new Llm(client.messages as unknown as MessagesApi);
+    return new Llm(client.messages as unknown as MessagesApi, budgetUsd);
+  }
+
+  /** Called before every request, so a run can never spend far past its cap. */
+  private checkBudget() {
+    if (this.usage.costUsd >= this.budgetUsd) throw new BudgetExceededError(this.usage.costUsd, this.budgetUsd);
   }
 
   private record(model: string, usage: Anthropic.Messages.Usage | undefined) {
@@ -76,6 +91,7 @@ export class Llm {
     const blocks: ContentBlock[] = [];
 
     for (let i = 0; i < MAX_CONTINUATIONS; i++) {
+      this.checkBudget();
       const res = await this.messages.create({
         model: opts.model,
         max_tokens: opts.maxTokens ?? 16000,
@@ -100,6 +116,7 @@ export class Llm {
     schema: T;
     maxTokens?: number;
   }): Promise<z.infer<T>> {
+    this.checkBudget();
     const res = await this.messages.parse({
       model: opts.model,
       max_tokens: opts.maxTokens ?? 16000,

@@ -4,12 +4,14 @@
  * npm run batch -- data/targets/us-f1.json
  * npm run batch -- data/targets/us-f1.json --concurrency 2 --skip-fresh-days 7
  * npm run batch -- data/targets/us-f1.json --mock
+ * npm run batch -- data/targets/us-f1.json --only "Circuit"    run just the matching targets
+ * npm run batch -- data/targets/us-f1.json --full              Sonnet + Opus profile (about $2 per company)
  *
  * --skip-fresh-days N  skips companies whose last live report is newer than N days. This is the
  *                      freshness policy in miniature: refresh on a schedule, not on every run.
  */
 import fs from "node:fs/promises";
-import { loadConfig } from "../src/agent/config";
+import { loadConfig, maxSearches } from "../src/agent/config";
 import { runAgent } from "../src/agent/pipeline";
 import type { Report } from "../src/agent/types";
 import { findReport, replay, saveReport } from "../src/lib/store";
@@ -24,23 +26,34 @@ interface TargetsFile {
 }
 
 const args = process.argv.slice(2);
-const file = args.find((a) => !a.startsWith("--") && !/^\d+$/.test(a));
-const num = (name: string, fallback: number) => {
+const valueOf = (name: string) => {
   const i = args.indexOf(`--${name}`);
-  return i >= 0 ? Number(args[i + 1]) : fallback;
+  return i >= 0 ? args[i + 1] : undefined;
 };
+const num = (name: string, fallback: number) => Number(valueOf(name) ?? fallback);
+const file = args.find((a, i) => !a.startsWith("--") && !(i > 0 && args[i - 1].startsWith("--") && !["--mock", "--full"].includes(args[i - 1])));
 const mock = args.includes("--mock");
+if (args.includes("--full")) process.env.AGENT_PROFILE = "full";
+const only = valueOf("only")?.toLowerCase();
 
 async function main() {
   if (!file) throw new Error("Usage: npm run batch -- <targets.json> [--concurrency N] [--skip-fresh-days N] [--mock]");
   const spec = JSON.parse(await fs.readFile(file, "utf8")) as TargetsFile;
+  if (only) spec.targets = spec.targets.filter((t) => t.input.toLowerCase().includes(only));
   const config = loadConfig();
   const concurrency = num("concurrency", 2);
   const skipFreshDays = num("skip-fresh-days", 0);
   const useMock = mock || !config.apiKey;
   if (useMock && !mock) console.log("No ANTHROPIC_API_KEY found: replaying saved reports.");
 
-  console.log(`${spec.name}: ${spec.targets.length} companies, concurrency ${concurrency}${useMock ? ", mock" : ""}\n`);
+  console.log(`${spec.name}: ${spec.targets.length} companies, concurrency ${concurrency}${useMock ? ", mock" : ""}`);
+  if (!useMock) {
+    console.log(
+      `Profile ${config.profile}: research ${config.models.research}, plays ${config.models.synthesis}, up to ${maxSearches(config)} searches per company.` +
+        `\nSpending cap $${config.maxCostUsd.toFixed(2)} per company, so at most about $${(config.maxCostUsd * spec.targets.length).toFixed(2)} for this batch.`,
+    );
+  }
+  console.log("");
   const queue = [...spec.targets];
   const rows: { input: string; status: string; report?: Report }[] = [];
 
@@ -54,8 +67,9 @@ async function main() {
         continue;
       }
       try {
+        if (useMock && !previous) throw new Error("no saved report to replay");
         const report = useMock
-          ? await replay(previous ?? (await Promise.reject(new Error("no saved report"))), () => {}, 0)
+          ? await replay(previous!, () => {}, 0)
           : await runAgent({
               input: t.input,
               asOf: spec.asOf,
@@ -88,6 +102,7 @@ async function main() {
     );
   }
   if (!useMock) console.log(`\nTotal estimated cost this batch: $${cost.toFixed(2)}`);
+  for (const r of rows.filter((r) => r.status.startsWith("failed"))) console.log(`\n${r.input}\n  ${r.status}`);
 }
 
 main().catch((err) => {
