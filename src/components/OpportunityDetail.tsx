@@ -24,7 +24,7 @@ const VERDICT: Record<Opportunity["verification"]["verdict"], string> = {
   supported: "Fact-check passed",
   partial: "Fact-check: partly supported",
   unsupported: "Fact-check failed",
-  unchecked: "Not fact-checked (reference run)",
+  unchecked: "No model fact-check on this run",
 };
 
 export function OpportunityDetail({

@@ -86,3 +86,17 @@ export function nextMoment(report: Report, now: Date): { label: string; when: st
 export function formatGeneratedAt(iso: string): string {
   return formatLooseDate(iso.slice(0, 10));
 }
+
+export const MODE_LABEL: Record<Report["run"]["mode"], string> = {
+  live: "Live API run",
+  claude_code: "Claude Code run",
+  reference: "Reference run",
+  mock: "Replay",
+};
+
+export const CHECK_LABEL = {
+  found: "quote found on page",
+  close: "quote closely matches page",
+  unreachable: "page could not be checked",
+  not_found: "quote not on page",
+} as const;

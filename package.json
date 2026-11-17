@@ -11,7 +11,7 @@
     "test": "vitest run",
     "agent": "tsx scripts/run.ts",
     "batch": "tsx scripts/batch.ts",
-    "reference": "tsx scripts/build-reference.ts"
+    "reports": "tsx scripts/build-reports.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.10.0",

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { LENS_SPECS } from "@/agent/lenses";
 import { OpportunityDetail } from "@/components/OpportunityDetail";
 import { TimingTower } from "@/components/TimingTower";
-import { formatGeneratedAt, formatLooseDate, relativeDays } from "@/lib/format";
+import { CHECK_LABEL, MODE_LABEL, formatGeneratedAt, formatLooseDate, relativeDays } from "@/lib/format";
 import { getReport } from "@/lib/store";
 
 export const dynamic = "force-dynamic";
@@ -103,7 +103,7 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
             <h2 className="font-semibold">How this report was made</h2>
             <ul className="mt-2 space-y-1 text-muted">
               <li>
-                {r.run.mode === "live" ? "Live run" : r.run.mode === "reference" ? "Reference run" : "Replay"}, as of {formatLooseDate(r.asOf)}
+                {MODE_LABEL[r.run.mode]}, as of {formatLooseDate(r.asOf)}
               </li>
               <li>
                 {r.quality.evidenceCount} sources from {r.quality.distinctDomains} sites
@@ -112,6 +112,12 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
                 {r.quality.signalsKept} signals kept, {r.quality.signalsDropped.length} dropped for missing sources
               </li>
               <li>{r.quality.opportunitiesDropped.length} plays dropped by verification</li>
+              {r.quality.sourceCheck ? (
+                <li>
+                  Page check: {r.quality.sourceCheck.found + r.quality.sourceCheck.close} quotes confirmed on their pages, {r.quality.sourceCheck.unreachable} pages could
+                  not be checked, {r.quality.sourceCheck.notFound} sources dropped
+                </li>
+              ) : null}
               {r.quality.staleSignals.length ? <li>{r.quality.staleSignals.length} signals older than 12 months</li> : null}
               {r.run.mode === "live" ? (
                 <li>
@@ -173,6 +179,7 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
                 <span className="text-muted">
                   {e.domain}
                   {e.pageAge ? `, ${formatLooseDate(e.pageAge)}` : ""}
+                  {e.check ? `, ${CHECK_LABEL[e.check.status]}` : ""}
                 </span>
                 {e.snippets.length ? <span className="block text-muted">&ldquo;{e.snippets.join("” / “")}&rdquo;</span> : null}
               </span>

@@ -40,6 +40,11 @@ export type Urgency = z.infer<typeof Urgency>;
 /* The model never writes a URL that ends up in a report.              */
 /* ------------------------------------------------------------------ */
 
+export interface SourceCheck {
+  status: "found" | "close" | "not_found" | "unreachable";
+  detail?: string;
+}
+
 export interface Evidence {
   id: string; // E1, E2, ...
   url: string;
@@ -48,6 +53,7 @@ export interface Evidence {
   snippets: string[]; // cited_text from web_search_result_location citations (max 150 chars each)
   pageAge: string | null; // from the search result block, when the API provides it
   lens: Lens;
+  check?: SourceCheck; // set by the page check on Claude Code runs (see source-check.ts)
 }
 
 /* ------------------------------------------------------------------ */
@@ -170,7 +176,7 @@ export interface Opportunity extends OpportunityDraft {
 }
 
 export interface RunMeta {
-  mode: "live" | "reference" | "mock";
+  mode: "live" | "claude_code" | "reference" | "mock";
   profile?: "lite" | "full";
   models: { research: string; synthesis: string; fast: string };
   startedAt: string;
@@ -187,6 +193,7 @@ export interface QualityReport {
   signalsDropped: { id: string; reason: string }[];
   opportunitiesDropped: { title: string; reason: string }[];
   staleSignals: string[];
+  sourceCheck?: { found: number; close: number; notFound: number; unreachable: number; dropped: string[] };
 }
 
 export interface Delta {

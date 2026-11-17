@@ -1,6 +1,7 @@
 {
   "input": "United States Grand Prix at Circuit of The Americas",
   "asOf": "2026-11-17",
+  "producedBy": "manual",
   "entity": {
     "name": "United States Grand Prix (Circuit of The Americas)",
     "website": "https://circuitoftheamericas.com",

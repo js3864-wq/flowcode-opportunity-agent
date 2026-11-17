@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Report } from "@/agent/types";
 import { RunForm } from "@/components/RunForm";
 import { Sectors } from "@/components/Sectors";
-import { formatGeneratedAt, nextMoment } from "@/lib/format";
+import { MODE_LABEL, formatGeneratedAt, nextMoment } from "@/lib/format";
 import { listReports } from "@/lib/store";
 
 export const dynamic = "force-dynamic";
@@ -64,7 +64,7 @@ export default async function Watchlist() {
                     <p className="mt-0.5 font-medium leading-snug">{top?.title ?? "No plays yet"}</p>
                     <p className="mt-2 text-sm text-muted">
                       {r.opportunities.length} plays from {r.evidence.length} sources.{" "}
-                      {r.run.mode === "live" ? `Live run, ${formatGeneratedAt(r.generatedAt)}.` : `Reference run, ${formatGeneratedAt(r.generatedAt)}.`}
+                      {MODE_LABEL[r.run.mode]}, {formatGeneratedAt(r.generatedAt)}.
                     </p>
                   </div>
                   {top ? (

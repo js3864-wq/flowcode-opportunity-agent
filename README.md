@@ -11,22 +11,36 @@ The demo account list is the three US Formula 1 races: **Las Vegas** (race week 
 [Miami Grand Prix](data/reports/miami-grand-prix.md) ·
 [United States Grand Prix at COTA](data/reports/united-states-grand-prix.md)
 
-> **About these samples.** I built this without an API key in my build environment, so the three saved reports are *reference runs*. I gathered the research with live web search on Nov 17, 2026, wrote it into the agent's exact schema (evidence, signals, opportunity drafts), and then ran it through the agent's own verification, scoring and ranking code (`npm run reference`). To regenerate them end to end with the live agent, run `npm run batch -- data/targets/us-f1.json`. Live reports overwrite the reference ones and are labeled "Live run" in the UI.
+> **About these samples.** Each report says how it was made: *Live API run* (the agent end to end on the Claude API), *Claude Code run* (the `/research` skill on a Claude plan, page-checked by code) or *Reference run* (research gathered with live web search on Nov 17, 2026 and written into the agent's schema by hand). All three kinds go through the same validation, scoring and ranking code.
 
-## Quick start
+## Two ways to run it
+
+### On your Claude plan, with Claude Code (no API key, no per-call cost)
+
+Claude Code signed in with a Pro, Max or Ultra plan uses the plan's included usage instead of API billing. The repo ships a `/research` skill that runs the same pipeline inside Claude Code.
+
+```bash
+npm install
+claude                                   # sign in with your claude.ai account
+> /research Las Vegas Grand Prix          # one company, name or URL
+> /research data/targets/us-f1.json       # every company in a targets file, one subagent each
+npm run dev                              # http://localhost:3000
+```
+
+Claude Code does the research and the judgment and writes `data/reference/<slug>.json` in the agent's exact schema. Then `npm run reports -- --check-sources` does what the API path gets from citations: it **downloads every cited page and checks that the quoted text is really on it**. A source whose quote is missing is dropped, and any play left without a source is dropped with it. Scoring, ranking and rendering are the same code as the API path.
+
+### On the Claude API (the production path)
 
 ```bash
 npm install
 cp .env.example .env.local        # add ANTHROPIC_API_KEY
-
-npm run batch -- data/targets/us-f1.json   # research all three races live (a few minutes each)
-npm run agent -- "Las Vegas Grand Prix"    # or one company, name or URL
-npm run dev                                # http://localhost:3000
+npm run agent -- "Las Vegas Grand Prix"    # one company
+npm run batch -- data/targets/us-f1.json   # many, with --concurrency and --skip-fresh-days
 ```
 
-Runs use the **lite** profile by default and stop at a **$0.75 spending cap per company**. Add `--full` for the Sonnet and Opus profile (about $2 per company, measured). The batch runner prints the profile, the search limit and the cap before it spends anything.
+API runs use the **lite** profile by default and stop at a **$0.75 spending cap per company**. Add `--full` for the Sonnet and Opus profile (about $2 per company, measured). The batch runner prints the profile, the search limit and the cap before it spends anything.
 
-Without a key, everything still works in replay mode: the web app shows the saved reports, and `npm run agent -- "COTA" --mock` replays one in the terminal. `npm test` runs the pipeline end to end against a fake API.
+Without a key, the app and `npm run agent -- "COTA" --mock` replay saved reports. `npm test` runs the pipeline against a fake API and the page check against fake pages.
 
 ## How it works
 
@@ -85,6 +99,7 @@ Each report also lists **follow-on leads**: partner brands that are Flowcode pro
 - **Server-side web search over my own crawler.** Search, ranking and citations come in one API call, and citations make the evidence ledger possible. The cost is that evidence is a 150-character cited snippet, not the full page. The next step would be adding the web fetch tool for the company's own newsroom.
 - **Model judgment plus deterministic scoring.** The model is good at "how timely is this", and bad at being consistent across 1,000 reports. Keeping the weights and guardrails in code makes the ranking tunable by a sales leader without touching prompts, and repeatable for the same inputs.
 - **Model per step, with two cost profiles.** In lite, Haiku reads and extracts and Sonnet writes the plays. In full, Sonnet reads and Opus writes. Haiku always does the relationship check and the fact-check. All model ids are environment variables.
+- **Two runtimes, one pipeline.** The API path is what scales: parallel lenses, the Batches API, spending caps, and sources that come from the API's own citations. The Claude Code path costs nothing per run on a Claude plan and is the right way to demo or research a handful of accounts, but a plan is built for ordinary individual use, not for refreshing thousands of accounts on a schedule. Its weaker spot is provenance: Claude Code writes the URLs and quotes itself, so the page check in code (`source-check.ts`) is what keeps invented sources out.
 - **Precision over recall.** Plays without surviving evidence are dropped, not shown with a warning. Gaps the model infers ("no data capture described") are phrased as things to validate, and caveats are shown in a "Check before outreach" box.
 - **A file store.** Reports are JSON files in `data/reports`. That is right for a demo and wrong for scale (see below).
 - **Not built yet:** authentication, a scheduler, CRM push, web fetch, and a seller feedback loop. The design for each is below.
@@ -149,12 +164,14 @@ src/agent/
   verify.ts          drop unsupported, dedupe, rank, diff
   flowcode.ts        products and proof points, each sourced
   render.ts          Markdown output
+  source-check.ts    downloads cited pages and confirms each quote is on them
 src/app/             Next.js UI: watchlist, report, live run (streamed)
-scripts/             run.ts (one company), batch.ts (many), build-reference.ts
+.claude/skills/research/  the /research skill: the same pipeline inside Claude Code
+scripts/             run.ts (one company), batch.ts (many), build-reports.ts (research file to report)
 data/targets/        account lists for batch runs
-data/reference/      hand-assembled research for the three races (golden set)
+data/reference/      research files from Claude Code or by hand, one per company (also the golden set)
 data/reports/        generated reports, JSON and Markdown
-tests/               full pipeline against a fake API, scoring and verification
+tests/               full pipeline against a fake API, scoring, verification, page check
 ```
 
 Stack: Next.js 16, TypeScript, Anthropic TypeScript SDK (server-side web search, structured outputs), zod, Tailwind, Vitest.
