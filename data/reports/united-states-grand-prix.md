@@ -1,128 +1,153 @@
 # United States Grand Prix (Circuit of The Americas): where Flowcode can help
 
-_As of 2026-11-17. Operated by Circuit of The Americas LLC. Run mode: reference. 13 sources, 8 signals._
+_As of 2026-11-17. Operated by Circuit of The Americas LLC. Run mode: claude_code. 18 sources, 17 signals._
 
-> Reference run. The research was gathered with live web search on Nov 17, 2026 and assembled into the agent's schema by hand. Scoring, ranking and verification ran through the agent's own code. Regenerate it end to end with: npm run batch -- data/targets/us-f1.json
+> Claude Code run. Researched by Claude Code on a Claude plan with its own web search, then validated, scored and ranked by the agent's code.
 
-**Austin set a 467,000-fan record, added a fourth race day and is becoming a year-round venue, which gives it more fans to identify than any other US race.**
+**COTA just drew a record 467,000 race fans, opens its new theme park's first holiday season on Nov 20 and now bills next year's race as the Formula 1 Pirelli United States Grand Prix, so most of its fan touchpoints are about to be redesigned.**
 
-- Record 467,000 fans in 2026 and a new Grand PrixView Thursday ticket.
-- The 'Biggest Weekend Ever' campaign ran on billboards, airport floor decals and online ads pointing to COTA's website.
-- From January 2027 COTA runs year-round: COTALAND, concerts and a members-only track.
+- Race week drew a record 467,000 fans across four days, helped by a new $20 Thursday ticket and a 'Biggest Weekend Ever' campaign on airport decals, billboards and online ads.
+- COTALAND opened in late September with 30+ rides and a target of 1.5 million visitors a year, and Peppermint in the Park runs Nov 20 to Jan 3.
+- From Jan 2 the main track becomes The Circuit, a members-only club, while MotoGP returns Apr 23-25 and the 2027 race is set for Oct 22-24.
 
 **Existing Flowcode relationship:** No public Flowcode case study found for COTA or the United States Grand Prix.
 
 ## Ranked opportunities
 
-### 1. Capture fan identity across four days and three fan villages (score 84)
+### 1. Turn COTALAND's first holiday season into the start of a year-round guest record (score 91)
 
-**Next event cycle:** 2027 race week, planned through spring. **Pitch to:** Fan experience lead, Circuit of The Americas. **Unit:** United States Grand Prix.
+**Act now:** Peppermint in the Park, Nov 20 to Jan 3, then the 2027 park season. **Pitch to:** COTALAND general manager and COTA marketing. **Unit:** COTALAND theme park.
 
-**What's happening.** COTA added a Thursday ticket, making the race a four-day event with fan villages (La Cantina, The Ranch, Lonestar Land), F1 Academy sessions, a pit lane walk and merch shopping. A record 467,000 fans attended. [1][2][3][4]
+**What's happening.** COTALAND opened in late September with more than 30 rides and expects to eventually see 1.5 million visitors a year. Its first holiday event, Peppermint in the Park, runs Nov 20 to Jan 3 with lights, rides, a Christmas market and Santa. [1][2][3][4][5]
 
-**Why Flowcode.** Each village and day is a distinct moment, and a code per village shows where fans spend time and what they buy. FlowID turns a Thursday visitor into a known fan for COTALAND, concerts and next year's race. C3 Presents' 1.3M+ scans came from the same kind of multi-stage site. Proof: C3 Presents (ACL, Lollapalooza, Bonnaroo), 1.3M+ audience scans across its 2024 festivals (https://www.flowcode.com/customer-stories/c3-presents).
-
-**The play.**
-1. One code per village, day and screen, routed to that day's schedule, food and drink, and merch.
-2. Offer a Thursday-only reward to grow the new day's audience.
-3. Capture opt-ins with FlowID and sync to COTA's CRM.
-4. Use location and time data to plan the 2027 village layout.
-
-**Products:** Flowcodes, FlowHubs, FlowID & Personalization, Analytics & Integrations. **KPIs:** Opt-ins per village and day, Merch and food revenue from scans, Thursday ticket growth.
-**Score:** timeliness 3, fit 5, scale 5, evidence 5, access 4.
-**Caveats:** F1 controls the F1 Fan Zone and has run its own QR prize draws at other races.
-
-### 2. Tie COTALAND, concerts and the race into one fan record (score 79)
-
-**Next 90 days:** Ahead of the January 2027 switch to a members-only track. **Pitch to:** COTA commercial and marketing leadership. **Unit:** COTA campus.
-
-**What's happening.** COTA is completing its move to a year-round entertainment venue. COTALAND with 30+ rides is open, the Germania Amphitheater hosts concerts, and from 2027 the main track is limited to members, select races and special events. [5][6][7][8]
-
-**Why Flowcode.** Year-round venues need one view of the guest. Codes across the theme park, amphitheater and race assets in one Workspace connect a family's COTALAND visit to their race ticket, and two-way CRM sync lets each business market to the others' audience.
+**Why Flowcode.** Theme park guests are mostly local families, the same people COTA wants at its $20 race-week Thursday and at MotoGP. Codes at the Christmas market, Santa line and ride exits feed a FlowHub, FlowID turns each scan into a known guest, and CRM sync lets COTA offer season passes, MotoGP tickets and race-week days to the same family. The Penguins saw 88% conversion from in-venue prompts. Proof: Pittsburgh Penguins, 88% conversion rate and $8,000 in revenue in 30 minutes from in-arena live reads (https://www.flowcode.com/customer-stories/pittsburgh-penguins).
 
 **The play.**
-1. Map touchpoints across COTALAND, the amphitheater and race assets.
-2. Run one Workspace with shared reporting across the three businesses.
-3. Route theme park guests to race-week family offers, and race fans to COTALAND bundles.
-4. Report cross-sell revenue every quarter.
+1. Place Flowcodes at the Santa line, the Christmas market stalls and ride exits for Peppermint in the Park.
+2. Route to a holiday photo or prize entry with opt-in, then to season passes and MotoGP family tickets.
+3. Capture FlowID and sync guests to COTA's CRM, tagged by visit date and spend.
+4. Report holiday-to-MotoGP and holiday-to-race conversion in the spring.
 
-**Products:** Workspaces & API, Flowcodes, FlowID & Personalization, Analytics & Integrations. **KPIs:** Cross-sell revenue between businesses, Share of race buyers who visited COTALAND.
-**Score:** timeliness 4, fit 4, scale 4, evidence 5, access 4.
-**Caveats:** COTALAND attendance was not found in sources.
+**Products:** Flowcodes, FlowHubs, FlowID & Personalization, Analytics & Integrations. **KPIs:** Guest opt-ins during Peppermint in the Park, Season pass and MotoGP sales from scans, Share of 2027 race buyers who first visited COTALAND.
+**Score:** timeliness 5, fit 5, scale 4, evidence 5, access 4.
+**Caveats:** Three days is short lead time. If the holiday launch is missed, pitch the 2027 park season. Actual COTALAND attendance has not been published. 1.5 million is the park's long-term expectation. Opening-weekend ride stoppages may make the park cautious about new guest-facing tools.
 
-### 3. Give every billboard and airport decal in the next campaign its own code, so each placement reports ticket sales (score 75)
+### 2. Build codes into the 2027 Pirelli race artwork before it goes to print (score 86)
 
-**Next event cycle:** 2027 campaign planning, ahead of next October's race. **Pitch to:** Marketing lead for the United States Grand Prix at COTA. **Unit:** United States Grand Prix marketing.
+**Next 90 days:** While 2027 race artwork is being designed, ahead of production. **Pitch to:** COTA marketing and creative lead for the United States Grand Prix. **Unit:** United States Grand Prix.
 
-**What's happening.** COTA's 2026 'Biggest Weekend Ever' campaign ran on airport floor decals, billboards and online ads that linked to its website, and race week drew a record 467,000 fans. [3][4]
+**What's happening.** COTA already sells the Oct 22-24, 2027 race as the Formula 1 Pirelli United States Grand Prix, after two years under the MSC Cruises name. A name change means new artwork for tickets, wayfinding, grandstand signage and merch for a race that drew a record 467,000 fans. [6][7][8][9]
 
-**Why Flowcode.** A billboard that points to a website cannot say which placement sold tickets. A Flowcode or FlowURL per placement attributes each scan to the decal, board or ad behind it, and the same codes can switch to 2027 offers without reprinting. CLEAR's 1.2M+ connections across 7,000+ airport touchpoints show the airport format works. Proof: CLEAR, 1.2M+ traveler connections across 7,000+ airport touchpoints (https://www.flowcode.com/llms.txt).
+**Why Flowcode.** A rebrand is the cheapest moment to add codes, because every asset is being redesigned anyway. Branded Flowcodes in the new artwork can change destination after printing, so one asset serves presale, race week and post-race offers, and a Workspace gives the new title partner its own scan reporting. C3 Presents drove 1.3M+ scans across multi-stage festival sites with this pattern. Proof: C3 Presents (ACL, Lollapalooza, Bonnaroo), 1.3M+ audience scans across its 2024 festivals (https://www.flowcode.com/customer-stories/c3-presents).
 
 **The play.**
-1. Assign one code per placement: each airport decal set, each billboard, each digital ad.
-2. Route to ticket offers by placement and date, with FlowID capturing who scanned.
-3. Sync scan-to-purchase data to the ticketing CRM.
-4. Move 2027 media spend toward the placements that sold.
+1. Add branded Flowcodes to the 2027 design system: ticket backs, wayfinding, grandstand boards and merch tags.
+2. Route by date: presale and hospitality now, schedule and food during race week, 2028 deposits after the flag.
+3. Set up a Workspace with separate spaces for COTA and the title partner, each with live dashboards.
+4. Report scans by asset type so the 2028 print budget follows the assets that worked.
+
+**Products:** Flowcodes, FlowHubs, Workspaces & API, Analytics & Integrations. **KPIs:** Scans per printed asset type, Presale and hospitality revenue from scans, Title partner engagement report delivered.
+**Score:** timeliness 4, fit 5, scale 5, evidence 5, access 3.
+**Caveats:** Pirelli as title partner is inferred from the 2027 event name on COTA's ticket page. No deal announcement was found. COTA's 2027 print and production schedule is not public.
+
+### 3. Give each airport decal and billboard its own code for the MotoGP and 2027 race campaigns (score 85)
+
+**Next 90 days:** MotoGP campaign in Q1 2027, then the October race campaign. **Pitch to:** COTA marketing lead. **Unit:** Marketing.
+
+**What's happening.** COTA's 'Biggest Weekend Ever' campaign ran airport floor decals, billboards and online ads that linked back to its website, and the race drew a record 467,000 fans. MotoGP returns Apr 23-25, 2027 with tickets already on sale, so its campaign is next. [8][5][9]
+
+**Why Flowcode.** A billboard that points to a website cannot say which placement sold tickets. A Flowcode or FlowURL per placement attributes each scan to the decal, board or ad behind it, and the same codes can switch from MotoGP to the October race without reprinting. CLEAR's 1.2M+ connections across 7,000+ airport touchpoints show the airport format works. Proof: CLEAR, 1.2M+ traveler connections across 7,000+ airport touchpoints (https://www.flowcode.com/llms.txt).
+
+**The play.**
+1. Assign one code per placement: each airport decal set, each billboard face, each digital ad.
+2. Route to MotoGP tickets through April, then switch the same codes to 2027 race tickets.
+3. Capture FlowID on scan and sync scan-to-purchase data to the ticketing CRM.
+4. Shift the race campaign's media budget toward the placements that sold MotoGP tickets.
 
 **Products:** Flowcodes, FlowURLs, FlowID & Personalization, Analytics & Integrations. **KPIs:** Ticket revenue per placement, Cost per ticket sold by channel, Scans per airport placement.
-**Score:** timeliness 3, fit 5, scale 4, evidence 4, access 4.
-**Caveats:** Whether COTA already tracks placements with unique URLs is not public. Ask first.
+**Score:** timeliness 4, fit 5, scale 4, evidence 5, access 4.
+**Caveats:** Whether COTA already tracks placements with unique URLs is not public. Ask first. Airport placements may need approval from the airport's media concessionaire.
 
-### 4. Help MSC prove title-sponsor ROI before it names its 2027 races (score 66)
+### 4. Measure the four-day race week village by village, starting with the $20 Thursday (score 84)
 
-**Next 90 days:** Before MSC confirms its 2027 races. **Pitch to:** COTA partnerships with MSC Cruises USA marketing. **Unit:** Partnerships.
+**Next event cycle:** 2027 race week, Oct 22-24, planned through spring. **Pitch to:** Fan experience lead, Circuit of The Americas. **Unit:** United States Grand Prix.
 
-**What's happening.** MSC Cruises title-sponsored the race for a second straight year in 2026, runs year-round sailings from Galveston and is scheduled to title-sponsor three races in 2027. [9][10]
+**What's happening.** COTA added a $20 Grand PrixView Thursday with the F1 Academy paddock, the Fan Villages and COTALAND, and hosted 7,000 local students. Race week drew a record 467,000 fans, and fans enter with barcodes in the COTA App or tickets from Ticketmaster. [4][8][9][10][11]
 
-**Why Flowcode.** Title sponsors renew on evidence. Codes on MSC trackside branding and hospitality that route to Galveston sailing offers show bookings driven by the race, which helps COTA keep the title and gives MSC a reason to expand. Proof: NFL Shop, $250 revenue per scan and 10,000 engagements in 60 seconds from one broadcast spot (https://www.flowcode.com/customer-stories/nfl-shop).
+**Why Flowcode.** The ticket scan at the gate shows who came in, not where they went or what they wanted next. A code per village and day shows where fans spend time, and FlowID turns a Thursday or Ticketmaster buyer into a known fan COTA can sell COTALAND, MotoGP and next year's race to. Sports clients see 75% higher than average conversion for first-party data with Flowcode. Proof: Flowcode sports and entertainment benchmark, 75% higher than average conversion rate for first-party data collection (https://www.flowcode.com/blog/winning-strategies-for-fan-engagement-in-sports-with-flowcode).
 
 **The play.**
-1. Co-pitch COTA and MSC on measured title assets for 2027.
-2. Route scans to Galveston sailing offers through a race-only code.
-3. Report race-attributed cruise leads and bookings to both teams.
+1. One code per Fan Village, day and screen, routed to that day's schedule, food and merch.
+2. Give Thursday visitors and student families a COTALAND or MotoGP offer behind an opt-in.
+3. Sync opt-ins to COTA's CRM, matched to COTA App and Ticketmaster buyers.
+4. Use location and time data to plan the 2027 village layout.
 
-**Products:** Flowcodes, FlowHubs, Analytics & Integrations, FlowID & Personalization. **KPIs:** Cruise leads and bookings from race codes, Title renewal for 2027.
-**Score:** timeliness 4, fit 4, scale 3, evidence 4, access 3.
-**Caveats:** Sources do not say whether Austin is among MSC's three 2027 races.
+**Products:** Flowcodes, FlowHubs, FlowID & Personalization, Analytics & Integrations. **KPIs:** Opt-ins per village and day, Thursday visitors converted to other COTA events, Merch and food revenue from scans.
+**Score:** timeliness 3, fit 5, scale 5, evidence 5, access 4.
+**Caveats:** F1 controls the F1 Fan Zone and runs its own QR prize draws through F1 Unlocked. Position Flowcode as COTA's own identity layer. Single-day buyers come through Ticketmaster, which may limit the data COTA already holds on them.
 
-### 5. Offer race-week brands a measurement kit, then sell it to them directly (score 56)
+### 5. Fill The Circuit's 300 seats with prospects identified at COTA's own events (score 69)
+
+**Next 90 days:** Club opens Jan 2, MotoGP hospitality in April. **Pitch to:** The Circuit membership director, COTA. **Unit:** The Circuit members club.
+
+**What's happening.** From January the Grand Prix track becomes The Circuit, a members-only club with year-round track access and never more than 300 members. COTA's site asks prospects to register their interest, and COTA is planning a second, shorter track partly for the people it is displacing. [12][13][14][5]
+
+**Why Flowcode.** Club sales need named, qualified prospects, and COTA already hosts them in hospitality suites at MotoGP and the race. A discreet code in premium suites and the clubhouse tour routes to a private interest page, FlowID records who scanned and where, and CRM sync puts each lead in front of the membership team the same day.
+
+**The play.**
+1. Place codes in race and MotoGP hospitality suites, the Turn 1 clubhouse tour and track-day check-in.
+2. Route premium guests to The Circuit interest page and displaced track-day drivers to the second-track waitlist.
+3. Capture FlowID with event, seat and session data, synced to the membership CRM.
+4. Report lead-to-member conversion by event.
+
+**Products:** Flowcodes, FlowHubs, FlowID & Personalization, Analytics & Integrations. **KPIs:** Qualified membership leads by event, Lead-to-member conversion, Second-track waitlist sign-ups.
+**Score:** timeliness 5, fit 3, scale 2, evidence 5, access 4.
+**Caveats:** Membership pricing was not found in official sources. Much of the club may already be sold through private networks before January.
+
+### 6. Sell race-week brands a measurement kit, then sell to them directly (score 64)
 
 **Next event cycle:** 2027 partner sales. **Pitch to:** COTA partnerships team, and brand experiential leads directly. **Unit:** Partnerships.
 
-**What's happening.** Race week in Austin drew branded activations from Red Bull (12,000+ guests), Google Gemini with McLaren, and Delta with American Express (1,200+ guests), plus AT&T, Indeed and Ford Racing inside Red Bull's fan zone. The BizBash recap does not describe attendee data capture at any of them. [3]
+**What's happening.** Red Bull Race Nights welcomed over 12,000 guests, Delta and American Express drew more than 1,200 to a pop-up, and Google Gemini with McLaren ran its own pop-up. T-Mobile brings 5G fan activations and Club Magenta to COTA, and MSC Cruises is choosing three races to sponsor in 2027. [8][15][7]
 
-**Why Flowcode.** Brands spend heavily on Austin race week, and the public recap shows no way they measured who came. COTA can bundle Flowcode measurement into official activations, and each brand is a Flowcode prospect in its own right. NFL Shop's $250 revenue per scan is the kind of number these brands want to report. Proof: NFL Shop, $250 revenue per scan and 10,000 engagements in 60 seconds from one broadcast spot (https://www.flowcode.com/customer-stories/nfl-shop).
+**Why Flowcode.** Brands spend heavily on Austin race week, and the public recap shows no way they measured who came. COTA can bundle Flowcode measurement into official partner packages, and each brand is a Flowcode prospect in its own right. NFL Shop's $250 revenue per scan is the kind of number these brands want to report. Proof: NFL Shop, $250 revenue per scan and 10,000 engagements in 60 seconds from one broadcast spot (https://www.flowcode.com/customer-stories/nfl-shop).
 
 **The play.**
-1. Package a measured-activation add-on for brands activating on and around the COTA campus.
+1. Package a measured-activation add-on for 2027 partner proposals, starting with T-Mobile and the new title partner.
 2. Give each brand its own codes and dashboard in a shared Workspace.
-3. Pass brand contacts to Flowcode sales as follow-on prospects.
-4. Publish a race-week engagement benchmark after 2027.
+3. Route scans to brand offers after a COTA opt-in, so both sides get data.
+4. Pass brand contacts to Flowcode sales as follow-on prospects.
 
-**Products:** Workspaces & API, Flowcodes, Analytics & Integrations. **KPIs:** Brands using the kit, Scans per activation, Follow-on deals.
-**Score:** timeliness 3, fit 4, scale 3, evidence 3, access 3.
-**Caveats:** Several activations were off-site (East Austin, Domain NORTHSIDE), outside COTA's control. A recap that does not mention data capture does not prove there was none.
+**Products:** Workspaces & API, Flowcodes, Analytics & Integrations, FlowID & Personalization. **KPIs:** Partners using the kit, Scans and opt-ins per partner, Partner renewals.
+**Score:** timeliness 3, fit 4, scale 3, evidence 5, access 3.
+**Caveats:** Red Bull, Delta and Google activations were off-site, outside COTA's control. A recap that does not mention data capture does not prove there was none.
 
 ## Follow-on leads
 
 | Brand | Role | Flowcode angle |
 | --- | --- | --- |
-| MSC Cruises | Title sponsor in 2025 and 2026, F1 global partner | Cruise bookings from physical touchpoints are a clean attribution story across all its F1 races. |
-| Red Bull | Ran Austin Race Nights, a free four-day fan zone with 12,000+ guests | Huge event footprint and cans as a packaging touchpoint, with no capture described in the recap. |
-| Delta Air Lines and American Express | 'Claim Your Second' pop-up with 1,200+ guests | Card and loyalty sign-ups are exactly what scan-level identity measures. |
-| Google and McLaren | Gemini x McLaren apparel pop-up | Retail pop-up plus app experience, where codes can link in-store moments to app use. |
-| AT&T | Simulators and phone customization inside Red Bull's fan zone | Telecom offers at events convert well with scan-to-offer routing. |
-| Zoox | Williams F1 team partner at all three US races, Las Vegas ride-hail partner from Nov 2026 | Needs app installs and rider trials in new cities. |
+| Pirelli | Named in the 2027 race title, Formula 1 Pirelli United States Grand Prix | A new title partner needs proof of return from day one, and tire retail is a natural scan-to-offer destination. |
+| MSC Cruises | Title sponsor in 2025 and 2026, choosing three races for 2027 | Cruise bookings from Galveston are a clean offline-to-booking attribution story across all its F1 races. |
+| T-Mobile | 5G fan activations and Club Magenta at COTA from 2026 | Telecom buyer for whom scan-to-offer attribution at a fan activation maps straight to switching campaigns. |
+| Red Bull | Ran Race Nights with 12,000+ guests and names the MotoGP race at COTA | Huge event footprint and cans as a packaging touchpoint, with no data capture described in the recap. |
+| Delta Air Lines and American Express | Race-week pop-up with 1,200+ guests | Card and loyalty sign-ups are exactly what scan-level identity measures. |
+| Google and McLaren | Gemini x McLaren race-week pop-up | Retail pop-up plus app experience, where codes can link in-store moments to app use. |
+| Zoox | Williams F1 partner active at all three US races | Needs app installs and rider trials in new cities. |
 
 ## Sources
 
-1. [COTA expands USGP weekend with 'Grand PrixView Thursday'](https://racer.com/2026/07/23/cota-expands-usgp-weekend-with-grand-prixview-thursday-) (racer.com, 2026-07-23)
-2. [COTA expands United States GP access with new Thursday ticket](https://www.the-race.com/extra/cota-expands-united-states-gp-access-with-new-thursday-ticket/) (the-race.com, 2026-07-24)
-3. [F1 Austin 2026: See the Race's Newest Activations by Delta Air Lines, Google, Red Bull, and More](https://www.bizbash.com/sporting-events/f1-austin-2026-see-the-races-newest-activations-by-delta-air-lines-google-red-bull-and-more) (bizbash.com, 2026-10)
-4. [US GP on target for record crowd](https://racer.com/2026/08/04/us-gp-on-target-for-record-crowd) (racer.com, 2026-08-04)
-5. [Inside COTA's Turn 1 clubhouse and its plans to build a second track](https://www.autosport.com/f1/news/inside-cotas-turn-1-clubhouse-and-its-plans-to-build-a-second-track/10868244/) (autosport.com, 2026-10)
-6. [COTA to Build Private Members Club, Name Turn 20 After Mario Andretti](https://www.performanceracing.com/magazine/industry-news/10-20-2025/cota-build-private-members-club-name-turn-20-after-mario-andretti) (performanceracing.com, 2025-10-20)
-7. [Ribbon cut at COTALand as thrill-seekers get first look at new theme park](https://cbsaustin.com/news/local/story/ribbon-cut-at-cotaland-as-thrill-seekers-get-first-look-at-new-theme-park) (cbsaustin.com)
-8. [Circuit of the Americas Reveals Plans For "Groundbreaking" Private Members Club](https://www.si.com/onsi/f1/news/circuit-of-the-americas-reveals-plans-for-groundbreaking-private-members-club) (si.com)
-9. [MSC Cruises returns as title sponsor of 2026 Formula 1 USA Grand Prix](https://cruisemapper.com/news/16887-msc-cruises-title-sponsor-formula-1-united-states-grand-prix) (cruisemapper.com, 2026-11-02)
-10. [MSC Cruises serves as title sponsor for Austin 2025 Grand Prix, announces continued partnership with Formula 1 for 2026 season](https://www.mscpressarea.com/en_US/press-releases/msc-cruises-serves-as-title-sponsor-for-austin-2025-grand-prix-tm-announces-conti/) (mscpressarea.com, 2025-10-20)
+1. [Ribbon cut at COTALand as thrill-seekers get first look at new theme park](https://cbsaustin.com/news/local/ribbon-cut-at-cotaland-as-thrill-seekers-get-first-look-at-new-theme-park) (cbsaustin.com, 2026-09-25)
+2. [Austin's Circuit of the Americas opens theme park with Texas' first tilt roller coaster](https://www.kut.org/austin/2026-09-28/austin-tx-cotaland-theme-park-rides-tickets-cota) (kut.org, 2026-09-28)
+3. [Peppermint in the Park Returns to Circuit of The Americas November 20 With Holiday Lights, Rides, Santa and Christmas Market](https://myneighborhoodnews.com/peppermint-in-the-park-returns-to-circuit-of-the-americas-november-20-with-holiday-lights-rides-santa-and-christmas-market) (myneighborhoodnews.com, 2026-11-04)
+4. [F1 ACADEMY to welcome 7,000 local students to landmark extra day in Austin](https://www.f1academy.com/Latest/4FYkWkYuPJNbCr6qZLhxYq/f1-academy-to-welcome-7-000-local-students-to-landmark-extra-day-in-austin) (f1academy.com, 2026-07-23)
+5. [MotoGP Red Bull Grand Prix of the Americas in Austin](https://www.austintexas.org/austin-insider-blog/post/motogp/) (austintexas.org)
+6. [Formula 1 Tickets - Buy Now Online - See All Ticket Options](https://circuitoftheamericas.com/event/f1/tickets/) (circuitoftheamericas.com)
+7. [MSC Cruises returns as title sponsor of 2026 Formula 1 USA Grand Prix](https://cruisemapper.com/news/16887-msc-cruises-title-sponsor-formula-1-united-states-grand-prix) (cruisemapper.com, 2026-11-02)
+8. [F1 Austin 2026: See the Race's Newest Activations by Delta Air Lines, Google, Red Bull, and More](https://www.bizbash.com/sporting-events/f1-austin-2026-see-the-races-newest-activations-by-delta-air-lines-google-red-bull-and-more) (bizbash.com, 2026-10-29)
+9. [Why are F1 ticket sales booming?](https://www.the-race.com/business/us-gp-chief-theory-for-f1-ticket-sales-boom/) (the-race.com, 2026-07-31)
+10. [Access Your Mobile Tickets - COTA Guidelines](https://circuitoftheamericas.com/mobile-tickets/) (circuitoftheamericas.com)
+11. [Formula 1 2025 F1 Unlocked QR Code Prize Draw: terms and conditions](https://www.formula1.com/en/information/formula-1-2025-fan-zone-qr-code-prize-draw-2-terms-and-conditions.2QTAxm7ZGICwbeFAmETmYp) (formula1.com, 2025)
+12. [Inside COTA's Turn 1 clubhouse and its plans to build a second track](https://www.autosport.com/f1/news/inside-cotas-turn-1-clubhouse-and-its-plans-to-build-a-second-track/10868244/) (autosport.com, 2026-10-25)
+13. [THE CIRCUIT - Home of the World Championships | Circuit of The Americas](https://circuitoftheamericas.com/the-circuit/) (circuitoftheamericas.com)
+14. [COTA to Build Private Members Club, Name Turn 20 After Mario Andretti](https://www.performanceracing.com/magazine/industry-news/10-20-2025/cota-build-private-members-club-name-turn-20-after-mario-andretti) (performanceracing.com, 2025-10-20)
+15. [T-Mobile Extends Partnership with Formula 1 Las Vegas Grand Prix](https://www.sportsvideo.org/?p=293836) (sportsvideo.org, 2025-11-21)

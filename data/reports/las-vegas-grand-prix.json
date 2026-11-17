@@ -2,179 +2,192 @@
   "schemaVersion": 1,
   "slug": "las-vegas-grand-prix",
   "input": "Las Vegas Grand Prix",
-  "generatedAt": "2026-11-17T20:00:00.000Z",
+  "generatedAt": "2026-11-17T21:52:57.750Z",
   "asOf": "2026-11-17",
   "run": {
-    "mode": "reference",
+    "mode": "live",
     "models": {
       "research": "claude-sonnet-5-5",
       "synthesis": "claude-opus-5-5",
       "fast": "claude-haiku-5-5"
     },
-    "startedAt": "2026-11-17T20:00:00.000Z",
-    "durationMs": 0,
+    "startedAt": "2026-11-17T21:48:57.607Z",
+    "durationMs": 240143,
     "usage": {
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "cacheReadTokens": 0,
-      "searches": 0
+      "inputTokens": 607765,
+      "outputTokens": 49819,
+      "cacheReadTokens": 3555,
+      "searches": 35
     },
-    "estCostUsd": 0,
-    "note": "Reference run. The research was gathered with live web search on Nov 17, 2026 and assembled into the agent's schema by hand. Scoring, ranking and verification ran through the agent's own code. Regenerate it end to end with: npm run batch -- data/targets/us-f1.json"
+    "estCostUsd": 2.03
   },
   "entity": {
     "name": "Las Vegas Grand Prix",
-    "website": "https://www.f1lasvegasgp.com",
-    "operator": "Las Vegas Grand Prix, Inc. (owned by Formula 1)",
-    "industry": "Live sports and entertainment",
-    "summary": "The Formula 1 Heineken Las Vegas Grand Prix is a night race on the Las Vegas Strip, promoted by Formula 1's own Las Vegas Grand Prix, Inc. It earns from tickets, hospitality, sponsorship and the year-round Grand Prix Plaza attraction.",
+    "website": "f1lasvegasgp.com",
+    "operator": "Formula 1 / Liberty Media",
+    "industry": "Motorsport events and sports entertainment",
+    "summary": "The Las Vegas Grand Prix is a Formula 1 night race held on a temporary street circuit on the Las Vegas Strip, running 50 laps of the 6.201-km Las Vegas Strip Circuit. It makes money mainly through ticket and hospitality sales, which F1 keeps as promoter, along with sponsorship from partners such as the LVCVA, Heineken and Paramount+.",
     "businessUnits": [
-      "Race weekend",
-      "Hospitality",
-      "Grand Prix Plaza",
-      "Partnerships"
+      "Event and promotion: the Las Vegas Grand Prix itself, covering ticketing and hospitality [E1][E2]",
+      "Grand Prix Plaza real estate, which generates rental income [E13][E14]",
+      "F1 Academy support series, whose season ends with the race weekend [E2][E7]"
     ],
     "keyDates": [
       {
-        "label": "2026 race week",
+        "label": "2026 race weekend begins (Nov 19–21, race Saturday Nov 21 at 20:00 local time)",
         "date": "2026-11-19",
         "isUpcoming": true
       },
       {
-        "label": "F1 Afterparty at Sphere",
-        "date": "2026-11-21",
+        "label": "F1 Academy reverse race (Nov 20) and feature race (Nov 21)",
+        "date": "2026-11-20",
         "isUpcoming": true
       },
       {
-        "label": "Zoox rides to Grand Prix Plaza begin",
-        "date": "2027",
+        "label": "Qatar (Lusail) Grand Prix, Nov 27–29, 2026",
+        "date": "2026-11-27",
         "isUpcoming": true
+      },
+      {
+        "label": "Abu Dhabi (Yas Marina) Grand Prix, Dec 4–6, 2026",
+        "date": "2026-12-04",
+        "isUpcoming": true
+      },
+      {
+        "label": "2027 Las Vegas Grand Prix (Round 23, Nov 18–20, 2027)",
+        "date": "2027-11-18",
+        "isUpcoming": true
+      },
+      {
+        "label": "Liberty Media Q3 2026 results released",
+        "date": "2026-11-05",
+        "isUpcoming": false
+      },
+      {
+        "label": "Liberty Media announced 10-year extension of the Las Vegas Grand Prix through 2037",
+        "date": "2026-06-04",
+        "isUpcoming": false
       }
     ],
     "audiences": [
-      "Visiting F1 fans",
-      "Las Vegas locals",
-      "Premium hospitality buyers",
-      "Sponsors"
+      "Ticketed attendees across all price tiers, from general admission to premium hospitality buyers [E1][E9][E10]",
+      "U.S. and global F1 viewers, with the Saturday 8pm start aimed at late-night US and early-morning European fans [E21]",
+      "Local and tourism partners including the LVCVA, Wynn, Bellagio and Caesars; Las Vegas had 38.5 million visitors in 2025 [E2][E3]",
+      "Corporate and business guests attending the F1 Business Summit [E11]",
+      "Sponsors and partner brands including Heineken, Paramount+, T-Mobile and Gordon Ramsay [E10][E12]",
+      "Investors in Liberty Media / Formula One Group [E6]"
     ],
-    "aliases": [
-      "LVGP",
-      "Formula 1 Heineken Las Vegas Grand Prix",
-      "f1lasvegasgp.com",
-      "Vegas GP"
-    ],
+    "aliases": [],
     "evidenceIds": [
+      "E1",
       "E2",
+      "E3",
+      "E4",
+      "E5",
       "E6",
-      "E14"
+      "E7",
+      "E8",
+      "E9",
+      "E10",
+      "E11",
+      "E12",
+      "E13",
+      "E14",
+      "E15",
+      "E16",
+      "E17",
+      "E18",
+      "E19",
+      "E20",
+      "E21"
     ]
   },
   "relationship": {
-    "status": "none_found",
-    "summary": "No public Flowcode case study found for the race, its promoter or Formula 1.",
-    "evidenceIds": []
+    "status": "related_account",
+    "summary": "No public Flowcode case study found for the Las Vegas Grand Prix itself, but a sibling Formula 1 event, the Miami Grand Prix weekend, has a Flowcode case study (client: Jonas Brothers team).",
+    "evidenceIds": [
+      "E22"
+    ]
   },
   "summary": {
-    "headline": "Las Vegas starts race week in two days with three connected fan zones and a new Sphere afterparty, and its CEO also runs F1's commercial team, so a win here can spread across the calendar.",
+    "headline": "With 100,000+ fans a day arriving Thursday and the race locked in through 2037, Las Vegas can use this weekend to start the 2027 buyer list, track sponsor results and sell merch, on its own data.",
     "bullets": [
-      "Race week runs Nov 19-21 with all three fan zones connected for the first time and the first official F1 Afterparty at Sphere on Nov 21.",
-      "The race is locked in through 2037 after three sell-outs and $3.2B in economic impact, with a year-round Grand Prix Plaza beside it.",
-      "New partners keep arriving: Zoox signed on Nov 5 and Sphere extended through 2030."
+      "F1 extended the Las Vegas Grand Prix through 2037 (June 4), and the LVCVA approved a $100M, 10-year sponsorship. Fixed race-week assets now pay off over a decade.",
+      "Race weekend runs Nov 19-21, with 100,000+ visitors expected each day. Premium hospitality and GA are reported sold out, Rocket Mortgage and Redfin debut on Sphere and trackside, and Apple TV streams the race free in the U.S.",
+      "Revenue beyond race night is growing. The F1 Hub at The Venetian opened Nov 7, the 2027 race is set for Nov 18-20, and Grand Prix Plaza reopens Jan 8, 2027 with new attractions while Q3 Plaza rental income dipped to $6M from $7M."
     ]
   },
   "signals": [
     {
       "id": "S1",
-      "lens": "experiences",
-      "title": "Race week Nov 19-21 with three connected fan zones",
-      "summary": "The 2026 race runs Nov 19-21 after a sold-out 2025. For the first time the West Harmon Zone connects to the East Harmon and Koval Zone by Heineken, opening access across all three fan zones.",
-      "date": "2026-11-19",
-      "isUpcoming": true,
-      "channels": [
-        "live_events",
-        "venue_signage",
-        "sponsorship"
-      ],
-      "scale": "Sold out in 2025",
-      "sponsorBrands": [
-        "Heineken"
-      ],
-      "evidenceIds": [
-        "E2",
-        "E6"
-      ]
-    },
-    {
-      "id": "S2",
       "lens": "strategy",
-      "title": "Extended through 2037 after three sell-outs",
-      "summary": "F1 signed a 10-year extension in June 2026. Every race since 2023 has sold out, with $3.2B in cumulative economic impact for Southern Nevada.",
+      "title": "F1 extends Las Vegas Grand Prix through 2037",
+      "summary": "Formula 1 announced a 10-year extension on June 4, 2026, keeping the race in Las Vegas through 2037. Clark County's commission unanimously approved a resolution on May 19, and the race stays in its November slot the week before Thanksgiving. Organizers committed to smoother setup and teardown.",
       "date": "2026-06-04",
       "isUpcoming": false,
       "channels": [
         "live_events"
       ],
-      "scale": "$3.2B cumulative economic impact, 3 sell-outs",
+      "scale": "$3.2 billion cumulative economic impact since 2023",
       "sponsorBrands": [],
       "evidenceIds": [
-        "E3",
-        "E16"
+        "E92",
+        "E93",
+        "E94"
+      ]
+    },
+    {
+      "id": "S2",
+      "lens": "partnerships",
+      "title": "LVCVA approves $100M, 10-year sponsorship of the race",
+      "summary": "The LVCVA board approved a sponsorship committing $100 million over 10 years: $10 million a year through 2037, plus about $2.5 million in ticket purchases, covering the 2028-2037 races. The LVCVA is also paying F1 $10 million for the 2026 race and the 2027 edition.",
+      "date": null,
+      "isUpcoming": false,
+      "channels": [
+        "sponsorship"
+      ],
+      "scale": "$100M over 10 years; $10M per year",
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E75",
+        "E87",
+        "E95",
+        "E3"
       ]
     },
     {
       "id": "S3",
-      "lens": "experiences",
-      "title": "Grand Prix Plaza runs as a year-round F1 attraction",
-      "summary": "Grand Prix Plaza, billed as North America's largest F1 attraction, reopened Jan 30, 2026 with an upgraded 4D theater, a new karting layout and new event spaces, giving fans year-round touchpoints with the sport.",
-      "date": "2026-01-30",
+      "lens": "partnerships",
+      "title": "Rocket Mortgage and Redfin join as three-year partners",
+      "summary": "Announced Nov 16, Rocket Companies' three-year partnership brings Rocket Mortgage and Redfin to the race as its first homeownership partners. They appear Nov 19-21 on trackside signage along the 3.8-mile circuit and on Sphere's Exosphere and LED displays.",
+      "date": "2026-11-16",
       "isUpcoming": false,
       "channels": [
+        "sponsorship",
         "venue_signage",
-        "live_events",
-        "ticketing"
+        "ooh"
       ],
       "scale": null,
-      "sponsorBrands": [],
+      "sponsorBrands": [
+        "Rocket Mortgage",
+        "Redfin",
+        "Sphere"
+      ],
       "evidenceIds": [
-        "E4",
-        "E5"
+        "E31",
+        "E76",
+        "E77"
       ]
     },
     {
       "id": "S4",
       "lens": "partnerships",
-      "title": "Sphere partnership extended to 2030, F1 Afterparty on Nov 21",
-      "summary": "Sphere and the race extended their partnership for five years in July 2026, expanding fan experiences and cross-promotion. The Backstreet Boys headline the first official F1 Afterparty inside Sphere on Nov 21, and the T-Mobile Zone at Sphere is one of the main fan areas.",
-      "date": "2026-11-21",
-      "isUpcoming": true,
-      "channels": [
-        "live_events",
-        "ooh",
-        "ticketing",
-        "sponsorship"
-      ],
-      "scale": null,
-      "sponsorBrands": [
-        "Sphere Entertainment",
-        "T-Mobile"
-      ],
-      "evidenceIds": [
-        "E1",
-        "E6",
-        "E7",
-        "E18"
-      ]
-    },
-    {
-      "id": "S5",
-      "lens": "partnerships",
-      "title": "Zoox named official autonomous ride-hail partner",
-      "summary": "Announced Nov 5, 2026: Zoox becomes the race's official autonomous ride-hail partner, with race-week activations now and rides to and from Grand Prix Plaza from 2027. Through its Williams F1 team deal, Zoox also shows up at the Austin and Miami races.",
+      "title": "Zoox named Official Autonomous Ride Hail Partner",
+      "summary": "Zoox announced a multi-year partnership on Nov 5 and will run race-week activations across Las Vegas. Starting in 2027, it plans robotaxi rides to and from Grand Prix Plaza with a dedicated pickup and drop-off zone.",
       "date": "2026-11-05",
       "isUpcoming": false,
       "channels": [
         "sponsorship",
-        "app_digital",
         "live_events"
       ],
       "scale": null,
@@ -182,17 +195,232 @@
         "Zoox"
       ],
       "evidenceIds": [
-        "E8",
-        "E17",
-        "E19"
+        "E78",
+        "E79",
+        "E80",
+        "E104"
+      ]
+    },
+    {
+      "id": "S5",
+      "lens": "partnerships",
+      "title": "F1 Business Summit on Nov 19 with Standard Chartered and SPORT BEACH",
+      "summary": "The F1 Business Summit takes place Nov 19, 2026 at Caesars Palace (The Colosseum), hosted by Heather McMahan. Standard Chartered is Presenting Partner, apparently a renewal since it was also the 2025 presenting partner. SPORT BEACH is a new partner presenting the keynote panel and roundtables, and a Post-Summit Social is at F1 Arcade.",
+      "date": "2026-11-19",
+      "isUpcoming": true,
+      "channels": [
+        "live_events",
+        "sponsorship",
+        "hospitality"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "Standard Chartered",
+        "SPORT BEACH"
+      ],
+      "evidenceIds": [
+        "E81",
+        "E82",
+        "E11",
+        "E63",
+        "E40"
       ]
     },
     {
       "id": "S6",
+      "lens": "partnerships",
+      "title": "Insight Enterprises becomes Official Event Partner",
+      "summary": "On Oct 19 Insight Enterprises signed on as official Technology Lifecycle Management Partner. The deal gives it a platform for premium experiences that bring clients, partners and Insight leaders together.",
+      "date": "2026-10-19",
+      "isUpcoming": false,
+      "channels": [
+        "sponsorship",
+        "hospitality"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "Insight Enterprises"
+      ],
+      "evidenceIds": [
+        "E83"
+      ]
+    },
+    {
+      "id": "S7",
+      "lens": "partnerships",
+      "title": "SBI Holdings signs Official Presenting Partner deal in media category",
+      "summary": "SBI Holdings signed a sponsorship agreement around June 2026 to become Official Presenting Partner in the Media Category, as part of its SBI Neo-Media Ecosystem strategy. It falls outside the 90-day window.",
+      "date": "2026-06",
+      "isUpcoming": false,
+      "channels": [
+        "sponsorship"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "SBI Holdings"
+      ],
+      "evidenceIds": [
+        "E84"
+      ]
+    },
+    {
+      "id": "S8",
+      "lens": "partnerships",
+      "title": "The Venetian signs five-year Founding Partner deal through 2030",
+      "summary": "Announced May 13, the Venetian's five-year Founding Partner agreement runs through 2030. It welcomes BWT Alpine F1 Team back for a fourth consecutive year as official home base. It again partners with Vibee (founded by Live Nation) on T-Mobile Zone ticket-and-hotel packages.",
+      "date": "2026-05-13",
+      "isUpcoming": false,
+      "channels": [
+        "hospitality",
+        "sponsorship",
+        "ticketing"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "The Venetian",
+        "BWT Alpine",
+        "Vibee",
+        "Live Nation",
+        "T-Mobile"
+      ],
+      "evidenceIds": [
+        "E85",
+        "E86"
+      ]
+    },
+    {
+      "id": "S9",
+      "lens": "campaigns",
+      "title": "Apple TV streams the race free in the U.S., with Univision simulcast",
+      "summary": "F1 has a five-year deal making Apple the exclusive U.S. broadcast partner from 2026, replacing ESPN. Apple TV streams the whole Las Vegas weekend free with no subscription needed, and Univision simulcasts with Spanish pre- and post-race programming. A creator-led altcast hosted by Michelle Khare and Justin Bell is described, but the platform was not confirmed. Apple TV is also teaming with Grindin Coffee for Strip activations.",
+      "date": "2026-11-19",
+      "isUpcoming": true,
+      "channels": [
+        "streaming_ctv",
+        "tv_broadcast",
+        "live_events"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "Apple TV",
+        "Univision",
+        "Grindin Coffee"
+      ],
+      "evidenceIds": [
+        "E27",
+        "E28",
+        "E29"
+      ]
+    },
+    {
+      "id": "S10",
+      "lens": "campaigns",
+      "title": "Qualcomm Snapdragon campaign with Kimi Antonelli timed to the race",
+      "summary": "The campaign is timed to the Nov. 21 race. It runs on F1 broadcasts outside the U.S. on Sky, on digital, and on channels including Sports Illustrated and YouTube. Apple TV exclusivity keeps brands like Snapdragon from running traditional U.S. broadcast ads around the race, and Qualcomm's CMO said creators are involved.",
+      "date": "2026-11-21",
+      "isUpcoming": true,
+      "channels": [
+        "tv_broadcast",
+        "social",
+        "app_digital"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "Qualcomm Snapdragon",
+        "Sky",
+        "Sports Illustrated",
+        "YouTube"
+      ],
+      "evidenceIds": [
+        "E30"
+      ]
+    },
+    {
+      "id": "S11",
+      "lens": "campaigns",
+      "title": "Teams and brands release Las Vegas special liveries and kits",
+      "summary": "Aston Martin will run a special AMR26 livery for the weekend, also on its garage and Lance Stroll's helmet, with CoreWeave tied in. Ferrari released images of a black-and-yellow Las Vegas kit. adidas Motorsport released 'Neon Lights' and 'After Hours' fan collections for Mercedes and Audi, priced $30 to $200.",
+      "date": "2026-11",
+      "isUpcoming": false,
+      "channels": [
+        "social",
+        "merchandise",
+        "sponsorship"
+      ],
+      "scale": "adidas pricing $30-$200",
+      "sponsorBrands": [
+        "Aston Martin",
+        "CoreWeave",
+        "Ferrari",
+        "adidas"
+      ],
+      "evidenceIds": [
+        "E32",
+        "E33",
+        "E34"
+      ]
+    },
+    {
+      "id": "S12",
       "lens": "commerce",
-      "title": "Tickets run from $50 single days to $28,885 hospitality",
-      "summary": "Single-day tickets start at $50. Hospitality ranges from Club Paris single days at $382 to the HGV Clubhouse ($3,728), the Heineken Silver Skybox ($8,377), Wynn Grid Club ($25,997) and Gordon Ramsay at F1 Garage ($28,885). Single-day hospitality launched at the 100-days-out mark.",
-      "date": "2026-03-31",
+      "title": "2026 ticket on-sale: Flamingo GA from $50 single-day and $492 three-day",
+      "summary": "Public sales opened May 7 at 10 a.m. PDT, following an American Express presale on May 5. Flamingo GA started at $50 single-day (practice) and $492 for three days, versus $150 for single-day GA in 2024. The $50 tier later sold out, and single-day GA went on sale Aug. 13 from $81. T-Mobile GA starts at $809, and payment plans ran through Sept 15.",
+      "date": "2026-05-07",
+      "isUpcoming": false,
+      "channels": [
+        "ticketing",
+        "ecommerce"
+      ],
+      "scale": "Single-day from $50 then $81; three-day from $492",
+      "sponsorBrands": [
+        "Caesars Rewards",
+        "T-Mobile",
+        "American Express"
+      ],
+      "evidenceIds": [
+        "E9",
+        "E1",
+        "E42",
+        "E43",
+        "E100",
+        "E45"
+      ]
+    },
+    {
+      "id": "S13",
+      "lens": "commerce",
+      "title": "Grandstand and hospitality pricing, including new Turn 3 Grandstand",
+      "summary": "The new Turn 3 Grandstand starts at $1,329. Other grandstands run from $925 (Heineken) to $2,051 (Heineken Silver Main). Hospitality runs from Club Paris at $2,542 to Gordon Ramsay at F1 Garage at $28,885 and Wynn Grid Club at $25,997. The Grand Prix Trio package returns from $3,178.",
+      "date": "2026-05-07",
+      "isUpcoming": false,
+      "channels": [
+        "ticketing",
+        "hospitality"
+      ],
+      "scale": "Hospitality from $2,542 to $28,885",
+      "sponsorBrands": [
+        "Heineken",
+        "T-Mobile",
+        "Gordon Ramsay",
+        "Wynn",
+        "Bellagio",
+        "Hilton Grand Vacations",
+        "Paramount+"
+      ],
+      "evidenceIds": [
+        "E9",
+        "E10",
+        "E42",
+        "E43",
+        "E1"
+      ]
+    },
+    {
+      "id": "S14",
+      "lens": "commerce",
+      "title": "Premium inventory reported sold out; Liberty says ticket revenue pacing ahead",
+      "summary": "BVM Sports reports the Paddock Club, Wynn Grid Club and Gordon Ramsay at F1 Garage are sold out, and the official pages show Gordon Ramsay and Trackside Tavern sold out. The official site four days ago listed General Admission and the Grand Prix Trio as sold out, and management said ticket revenue including hospitality is pacing ahead. A no-fee offer on GA and grandstand tickets ran through Nov. 2. No official sell-out statement was found.",
+      "date": "2026-11",
       "isUpcoming": false,
       "channels": [
         "ticketing",
@@ -200,190 +428,540 @@
       ],
       "scale": null,
       "sponsorBrands": [
-        "Heineken",
-        "HGV",
+        "Paramount+",
         "Wynn",
-        "Gordon Ramsay",
-        "T-Mobile"
+        "Gordon Ramsay"
       ],
       "evidenceIds": [
-        "E9",
-        "E10",
-        "E11",
-        "E18"
-      ]
-    },
-    {
-      "id": "S7",
-      "lens": "customer",
-      "title": "Local pushback led to lower prices and locals discounts",
-      "summary": "After complaints from locals that early tickets were too expensive, the race reduced prices, and Grand Prix Plaza offers discounts for locals.",
-      "date": "2025",
-      "isUpcoming": false,
-      "channels": [
-        "ticketing",
-        "venue_signage"
-      ],
-      "scale": null,
-      "sponsorBrands": [],
-      "evidenceIds": [
+        "E46",
+        "E88",
+        "E89",
+        "E90",
+        "E98",
+        "E44",
         "E12"
       ]
     },
     {
-      "id": "S8",
-      "lens": "strategy",
-      "title": "Vegas is F1's testing ground, run by F1's commercial chief",
-      "summary": "Emily Prazer is both CEO of Las Vegas Grand Prix, Inc. and Formula 1's chief commercial officer, and the race is described as a proving ground for strategies later rolled out across the F1 calendar.",
-      "date": "2026",
+      "id": "S15",
+      "lens": "commerce",
+      "title": "F1 Hub presented by American Express opens at The Venetian with 2026 merchandise",
+      "summary": "The 2026 collections were announced Oct 20, and the two-floor hub in the Grand Canal Shoppes opened Nov 7. New collections come from Etai LA, Greg Yuna and Off Season, with returning Disney, BAPE, LEGO, Vegas Golden Knights and F1 Academy x Hello Kitty and Friends. It also has an LVGP Collection, a Headwear Customization Lab and an Amex Card Member Area. A Hello Kitty Cafe Pit Stop and F1 Academy-Hello Kitty fan activations were also announced.",
+      "date": "2026-11-07",
       "isUpcoming": false,
-      "channels": [],
+      "channels": [
+        "merchandise",
+        "retail",
+        "live_events"
+      ],
       "scale": null,
-      "sponsorBrands": [],
+      "sponsorBrands": [
+        "American Express",
+        "Etai LA",
+        "Greg Yuna",
+        "Off Season",
+        "Disney",
+        "BAPE",
+        "LEGO",
+        "Vegas Golden Knights",
+        "Sanrio",
+        "Hello Kitty"
+      ],
       "evidenceIds": [
-        "E14",
-        "E15"
+        "E36",
+        "E47",
+        "E48",
+        "E49",
+        "E50",
+        "E51",
+        "E16",
+        "E46"
       ]
     },
     {
-      "id": "S9",
-      "lens": "partnerships",
-      "title": "Sponsors buy layered touchpoints across zones, clubs and the Strip",
-      "summary": "Brands at the race look for layered touchpoints: daytime visibility in fan zones, nighttime visibility in clubs and lounges, and integration across the Strip.",
+      "id": "S16",
+      "lens": "commerce",
+      "title": "Official online store and team merchandise pricing",
+      "summary": "The official store sells the 2026 Las Vegas Grand Prix collection, with the Suit Turn Half-Zip Hoodie at $125, Varsity Jacket $500, Adjustable Hat $55 and Chip Stack T-Shirt $55. It also lists Topps NOW cards and Puma apparel. The F1 US Store lists Puma tees at $51.50 and Ferrari replica jackets at $285, and Mercedes lists a Las Vegas cap at £45 and hoody at £85.",
       "date": null,
       "isUpcoming": false,
       "channels": [
-        "sponsorship",
-        "ooh",
-        "hospitality"
+        "ecommerce",
+        "merchandise"
       ],
       "scale": null,
-      "sponsorBrands": [],
+      "sponsorBrands": [
+        "Puma",
+        "Topps",
+        "Mercedes-AMG PETRONAS",
+        "Ferrari"
+      ],
       "evidenceIds": [
-        "E5"
+        "E52",
+        "E53",
+        "E54",
+        "E55",
+        "E56",
+        "E57"
       ]
     },
     {
-      "id": "S10",
-      "lens": "customer",
-      "title": "F1 already runs fan-zone QR prize draws",
-      "summary": "Formula 1's F1 Unlocked program ran QR-code prize draws in fan zones at several 2025 races. Entrants need an F1 Unlocked or F1.com account, so the data lands with Formula 1.",
-      "date": "2025",
-      "isUpcoming": false,
+      "id": "S17",
+      "lens": "experiences",
+      "title": "Race weekend Nov 19-21 with Saturday 8 p.m. race",
+      "summary": "The weekend runs Thursday Nov 19 to Saturday Nov 21. The F1 Academy reverse-grid race is Friday Nov 20 and its feature race Saturday 4:20-4:55 p.m. The drivers' parade is 6-6:30 p.m., the Grand Prix starts at 8 p.m., and gates close at 11 p.m.",
+      "date": "2026-11-19",
+      "isUpcoming": true,
       "channels": [
         "live_events",
-        "app_digital"
+        "ticketing"
       ],
       "scale": null,
       "sponsorBrands": [],
       "evidenceIds": [
-        "E13"
+        "E60",
+        "E61",
+        "E62",
+        "E7"
+      ]
+    },
+    {
+      "id": "S18",
+      "lens": "experiences",
+      "title": "Concert and stage lineups across T-Mobile and Heineken stages",
+      "summary": "The T-Mobile Stage at Sphere features Two Friends and Ja Rule, Disclosure and Gorgon City, and Sean Paul and Natasha Bedingfield. The Heineken Stage has the Australian Bee Gees, Icona Pop, Eli & Fur, Disco Dom and LP Giobbi, with live Q&As with all 22 drivers. Steve Aoki and MORTEN perform pre-race and Jordin Sparks sings the anthem.",
+      "date": "2026-11-19",
+      "isUpcoming": true,
+      "channels": [
+        "live_events",
+        "sponsorship"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "T-Mobile",
+        "Heineken",
+        "Sphere"
+      ],
+      "evidenceIds": [
+        "E61",
+        "E60",
+        "E11"
+      ]
+    },
+    {
+      "id": "S19",
+      "lens": "experiences",
+      "title": "Official F1 Afterparty with Backstreet Boys at Sphere",
+      "summary": "The Backstreet Boys perform at Sphere on Saturday Nov. 21 from 11:30 p.m. to 1 a.m. Sources conflict on access: one says a race ticket plus a separate afterparty ticket is needed, another says standalone tickets are public. Existing ticketholders can buy an add-on from $116.",
+      "date": "2026-11-21",
+      "isUpcoming": true,
+      "channels": [
+        "live_events",
+        "ticketing"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "Sphere"
+      ],
+      "evidenceIds": [
+        "E60",
+        "E61",
+        "E11",
+        "E91"
+      ]
+    },
+    {
+      "id": "S20",
+      "lens": "experiences",
+      "title": "2026 access changes: connected zones, single-day hospitality, hospitality deposits",
+      "summary": "The East Harmon, Koval and West Harmon zones are connected for eligible ticket holders. Single-day tickets return, select single-day hospitality is new, and hospitality deposits are new. CEO Emily Prazer said the West Harmon connection expands access for Lewis Hamilton Grandstand ticketholders, and one outlet frames the updates as a reaction to fan-access complaints.",
+      "date": null,
+      "isUpcoming": false,
+      "channels": [
+        "ticketing",
+        "live_events"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "Heineken"
+      ],
+      "evidenceIds": [
+        "E37",
+        "E11",
+        "E40",
+        "E100",
+        "E122",
+        "E38"
+      ]
+    },
+    {
+      "id": "S21",
+      "lens": "experiences",
+      "title": "Off-track fan hubs and activations across the Strip",
+      "summary": "The Mercedes-AMG PETRONAS Fan Hub is at Bellagio Drive Nov 18-21, and the Atlassian Williams Fan Zone is at New York-New York, both advertised as complimentary. Wynn runs a Racing Motors Lounge with a Red Bull Pit Stop Challenge plus a merchandise pop-up Nov 18-22. The Venetian hosts BWT Alpine, and MGM and Fontainebleau offer F1-themed programming. The Williams 'Duracell Fan Prix' tour runs in Nevada Nov 16-20.",
+      "date": "2026-11-18",
+      "isUpcoming": true,
+      "channels": [
+        "hospitality",
+        "live_events",
+        "retail",
+        "sponsorship"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "Mercedes-AMG PETRONAS",
+        "Atlassian Williams",
+        "Zoox",
+        "Wynn",
+        "Red Bull",
+        "BWT Alpine",
+        "MGM Resorts",
+        "Fontainebleau",
+        "Duracell"
+      ],
+      "evidenceIds": [
+        "E64",
+        "E65",
+        "E66",
+        "E35"
+      ]
+    },
+    {
+      "id": "S22",
+      "lens": "experiences",
+      "title": "Grand Prix Plaza: year-round attraction, closed until Jan 8, 2027",
+      "summary": "Plaza reopened Jan 30, 2026 with a redesigned F1 Drive karting track and an upgraded F1 X 4D theater. It sits within a 39-acre complex with 100,000+ sq ft of attractions and a 71,000 sq ft rooftop event space. Karting is $99 per driver ($79 locals/military). Public operations ended in early November and it reopens Jan 8, 2027 with Kids Karts, an indoor playground, a Cool Down Room and three new private event spaces.",
+      "date": "2027-01-08",
+      "isUpcoming": true,
+      "channels": [
+        "live_events",
+        "retail",
+        "hospitality"
+      ],
+      "scale": "Karting $99 per driver; 100,000+ sq ft",
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E67",
+        "E68",
+        "E69",
+        "E70",
+        "E71"
+      ]
+    },
+    {
+      "id": "S23",
+      "lens": "strategy",
+      "title": "Liberty Media Q3 2026: F1 revenue up 28%, Las Vegas demand cited",
+      "summary": "F1 Q3 revenue rose 28% to $1,115 million, with one more race, and Adjusted OIBDA rose 44% to $338 million. Other F1 revenue grew on hospitality, licensing and Grand Prix Plaza activity, while Plaza rental income was $6 million in Q3 against $7 million a year earlier. Management said Las Vegas ticket revenue including hospitality is pacing ahead.",
+      "date": "2026-11-05",
+      "isUpcoming": false,
+      "channels": [
+        "ticketing",
+        "hospitality"
+      ],
+      "scale": "F1 Q3 revenue $1,115M; Plaza rental income $6M",
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E6",
+        "E96",
+        "E97",
+        "E13",
+        "E98",
+        "E99"
+      ]
+    },
+    {
+      "id": "S24",
+      "lens": "strategy",
+      "title": "Attendance expectations and economic impact claims",
+      "summary": "The 2026 race anticipates over 100,000 visitors each day, and another outlet cites about 300,000 over the weekend. Past weekends reached 306,000 guests with 175,000 from out of state or abroad spending about $2,400 each. Three-year impact is $3.2 billion and $43 million in tax revenue; no official 2026 attendance target was found.",
+      "date": null,
+      "isUpcoming": false,
+      "channels": [
+        "live_events"
+      ],
+      "scale": "100,000+ per day; 306,000 peak weekend; $3.2B impact",
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E72",
+        "E73",
+        "E74",
+        "E94"
+      ]
+    },
+    {
+      "id": "S25",
+      "lens": "customer",
+      "title": "Owned app with Ticketmaster login and all-digital tickets",
+      "summary": "The official F1 Las Vegas app (rated 4.8 on 1.9K ratings) handles tickets, wayfinding, partner perks and a Grand Prix Plaza mode switcher. Ticketholders sign in via Ticketmaster Account Manager. All 2026 tickets are digital, screenshots are not accepted, and gates open daily at 2:30 p.m. with re-entry until 7 p.m. No loyalty program or CRM vendor was found.",
+      "date": null,
+      "isUpcoming": false,
+      "channels": [
+        "app_digital",
+        "ticketing"
+      ],
+      "scale": "4.8 rating on 1.9K ratings",
+      "sponsorBrands": [
+        "Ticketmaster",
+        "YinzCam"
+      ],
+      "evidenceIds": [
+        "E108",
+        "E109",
+        "E110",
+        "E111",
+        "E112",
+        "E113",
+        "E114",
+        "E61",
+        "E11"
+      ]
+    },
+    {
+      "id": "S26",
+      "lens": "customer",
+      "title": "Deposits and American Express presales drive first-party data capture",
+      "summary": "Fans could place a deposit through April 30 for priority access and waived fees, held in their Ticketmaster Account Manager. American Express gave Card Members a 48-hour presale from May 5 and a second presale Aug. 11-13. The sign-up form collects email and SMS opt-ins.",
+      "date": "2026-05-05",
+      "isUpcoming": false,
+      "channels": [
+        "email_crm",
+        "ticketing"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "American Express",
+        "Ticketmaster"
+      ],
+      "evidenceIds": [
+        "E9",
+        "E116",
+        "E117",
+        "E118",
+        "E11"
+      ]
+    },
+    {
+      "id": "S27",
+      "lens": "campaigns",
+      "title": "100-days-out activation, in-app Limited Drop sweepstakes and $100K community giveaway",
+      "summary": "A 20-minute in-app sweepstakes on Aug. 13 gave one winner two three-day Skybox tickets, flights and a Venetian stay. On Aug 15 Grand Prix Plaza hosted a 100-vehicle car show, a 15-foot slot machine and F1 Academy appearances with Bellagio, Fontainebleau and Venetian activations, per a trade blog. A $100K for 100 days community giveaway was also announced.",
+      "date": "2026-08-13",
+      "isUpcoming": false,
+      "channels": [
+        "app_digital",
+        "live_events",
+        "social"
+      ],
+      "scale": "$100K community giveaway",
+      "sponsorBrands": [
+        "The Venetian",
+        "Bellagio",
+        "Fontainebleau",
+        "YinzCam"
+      ],
+      "evidenceIds": [
+        "E110",
+        "E119",
+        "E39",
+        "E100"
+      ]
+    },
+    {
+      "id": "S28",
+      "lens": "campaigns",
+      "title": "LVCVA 'Pack for Vegas' campaign and influencer promotion",
+      "summary": "In May 2026 R&R Partners launched 'Pack for Vegas' for the LVCVA: six 15-second spots directed by Jody Hill, running across the NBA Playoffs, NBA Finals, WNBA All-Star game and Big Brother premiere. It is a summer destination campaign, not race-specific. The LVCVA has also used influencers to promote race weekend, including Hannah Stocking, per a January 2026 Las Vegas Sun report.",
+      "date": "2026-05",
+      "isUpcoming": false,
+      "channels": [
+        "tv_broadcast",
+        "streaming_ctv",
+        "social"
+      ],
+      "scale": "Hannah Stocking 68 million+ followers",
+      "sponsorBrands": [
+        "LVCVA",
+        "R&R Partners"
+      ],
+      "evidenceIds": [
+        "E39",
+        "E41"
+      ]
+    },
+    {
+      "id": "S29",
+      "lens": "customer",
+      "title": "Ticketing friction: app bugs, deposit complaints and queues",
+      "summary": "Google Play reviews cite crashes and a non-refundable $100 deposit with no ticket purchase, and the operator's May 3, 2026 reply acknowledged trouble applying deposits. Tickethold and reader comments report long queues, a 2,000+ early-bird queue and presale frustrations, though some of these sources are undated or older.",
+      "date": "2026-11-11",
+      "isUpcoming": false,
+      "channels": [
+        "app_digital",
+        "ticketing"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "Ticketmaster"
+      ],
+      "evidenceIds": [
+        "E120",
+        "E121",
+        "E101",
+        "E122"
+      ]
+    },
+    {
+      "id": "S30",
+      "lens": "strategy",
+      "title": "Legal and local-friction items: settlement, lawsuits, construction and hotel rates",
+      "summary": "The race and its parent agreed to pay over $3 million to settle a class action over the 2023 water valve cover incident. Business owners have sued over accessibility losses and F1 covered a $40 million repaving bill. Dismantling starts Nov. 22 and runs more than a month, and a Nov 12 survey of 11 hotels averaged $118 a night, up 14.6% since Sept. 27, while one analyst said occupancy was down 8 to 18 percentage points per night.",
+      "date": "2026-11-22",
+      "isUpcoming": true,
+      "channels": [
+        "live_events"
+      ],
+      "scale": "$3M+ settlement; $40M repaving bill; $118 average hotel rate",
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E105",
+        "E106",
+        "E107",
+        "E102",
+        "E103"
       ]
     }
   ],
   "opportunities": [
     {
-      "title": "Race-week fan capture: live, routable codes on every screen across the three connected zones",
-      "businessUnit": "Race weekend",
-      "whatsHappening": "The race runs Nov 19-21 and, for the first time, all three fan zones are connected, so fans move freely between the Koval Zone by Heineken, East Harmon and West Harmon. The first official F1 Afterparty at Sphere follows on Nov 21.",
-      "whyFlowcode": "Codes on digital screens need no print run, so they can go live this week. FlowID ties each scan to a fan the promoter owns, and routing by zone and time lets one code sell Afterparty add-ons on Friday and capture 2027 presale sign-ups after the race. C3 Presents drove 1.3M+ scans across its 2024 festivals with this pattern.",
+      "title": "Turn race-night screens and the post-race moment into the 2027 deposit and priority list",
+      "businessUnit": "Event and promotion (ticketing and hospitality)",
+      "whatsHappening": "The 2027 race is confirmed for Nov 18-20, 2027. For 2026, fans placed deposits through April 30 for priority access, and the sign-up form collects email and SMS opt-ins. This year's weekend expects 100,000+ visitors a day, with GA, the Grand Prix Trio and several hospitality products reported sold out.",
+      "whyFlowcode": "Flowcodes on venue screens and the drivers'-parade and post-race moments can send fans to a FlowHub 2027 priority sign-up. FlowID captures identity at the moment demand is highest, months before the next deposit window. NFL Shop saw 10,000 engagements in 60 seconds from one broadcast spot, the kind of moment-of-attention spike this play targets.",
       "play": [
-        "Run one Flowcode per zone on fan-zone and grandstand screens, so movement between the three zones becomes measurable.",
-        "Route by time: Afterparty add-on before Saturday's race, merch during sessions, 2027 presale and locals offers after the checkered flag.",
-        "Capture opt-in with FlowID on a FlowHub and sync to the promoter's CRM daily during race week.",
-        "Send each zone sponsor a scan report the Monday after the race."
+        "Touchpoint: one dynamic Flowcode on trackside LED and stage screens during the parade (6-6:30pm), the race finish and gates-close on Nov 21. Mirror it with a FlowURL in app push and social posts.",
+        "Routing: a FlowHub 2027 priority-list page, segmented by 2026 ticket tier (GA, grandstand, hospitality) and by 'didn't get tickets this year'.",
+        "Data: email, SMS opt-in, preferred tier and party size, synced to the ticketing CRM through Analytics & Integrations.",
+        "Follow-up: the same code destination switches after race night to a sold-out-tier waitlist and then to 2027 deposit launch, with no reprint."
       ],
       "products": [
         "flowcodes",
+        "flowurls",
         "flowhubs",
         "flowid",
         "analytics_integrations"
       ],
-      "proofPointId": "c3_presents",
+      "proofPointId": "nfl_shop",
       "touchpoints": [
-        "live_events",
         "venue_signage",
+        "live_events",
+        "app_digital",
         "ticketing",
-        "merchandise"
+        "email_crm"
       ],
       "kpis": [
-        "Opt-ins captured per zone",
-        "Afterparty add-on revenue from scans",
-        "2027 presale sign-ups"
+        "2027 priority-list sign-ups",
+        "Opt-in rate per scan",
+        "Deposit conversion from list",
+        "Sign-ups from fans without 2026 tickets"
       ],
       "timing": {
         "urgency": "now",
-        "window": "Race week, Nov 19-21 (screen content only, no print)",
-        "keyDate": "2026-11-19"
+        "window": "Race week Nov 19-21 through the 2027 deposit window",
+        "keyDate": "2026-11-21"
       },
-      "buyer": "Marketing and fan experience leads at Las Vegas Grand Prix, Inc.",
+      "buyer": "Ticketing and CRM lead, with the CEO's office (Emily Prazer) for sponsorship of the initiative",
       "signalIds": [
-        "S1",
-        "S4",
-        "S2"
+        "S12",
+        "S14",
+        "S17",
+        "S24",
+        "S26"
       ],
       "ratings": {
         "timeliness": {
           "score": 5,
-          "why": "race starts in two days"
+          "why": "Race is two days away and the 2027 cycle starts right after"
         },
         "scale": {
           "score": 5,
-          "why": "sold-out crowds three years running"
+          "why": "300K weekend attendees and premium ticket prices"
         },
         "fit": {
           "score": 5,
-          "why": "screen codes plus owned identity is the core product"
+          "why": "Core Flowcode capture-to-CRM use case"
         },
         "access": {
-          "score": 2,
-          "why": "two days of lead time"
+          "score": 3,
+          "why": "Owned screens, but no existing relationship"
         }
       },
       "caveats": [
-        "Two days is very short for procurement. If race week is missed, lead the 2027 pitch with this year's gap.",
-        "Zones carry sponsor naming (Heineken, T-Mobile), so codes may need sponsor sign-off.",
-        "F1 already runs its own fan-zone QR draws through F1 Unlocked. Position Flowcode as the promoter's identity layer, not a competing prize draw."
+        "Two days out, a race-week launch is realistic only on digital screens and app/social. Physical placements likely move to 2027.",
+        "Ticketing runs through Ticketmaster Account Manager and the YinzCam-built app. Flowcode should feed that stack, not replace it.",
+        "Validate whether a 2027 deposit or waitlist program is already planned."
       ],
       "id": "O1",
       "rank": 1,
       "evidenceIds": [
-        "E2",
-        "E6",
+        "E9",
         "E1",
+        "E42",
+        "E43",
+        "E100",
+        "E45",
+        "E46",
+        "E88",
+        "E89",
+        "E90",
+        "E98",
+        "E44",
+        "E12",
+        "E60",
+        "E61",
+        "E62",
         "E7",
-        "E18",
-        "E3",
-        "E16"
+        "E72",
+        "E73",
+        "E74",
+        "E94",
+        "E116",
+        "E117",
+        "E118",
+        "E11"
       ],
       "score": {
-        "total": 89,
+        "total": 93,
         "components": {
           "timeliness": 5,
           "scale": 5,
           "fit": 5,
           "evidence": 5,
-          "access": 2
+          "access": 3
         },
         "adjustments": [
-          "6 source domains, newest signal fresh"
+          "17 source domains, newest signal fresh"
         ]
       },
       "verification": {
-        "verdict": "unchecked",
-        "issues": []
+        "verdict": "partial",
+        "issues": [
+          "The 2027 dates of Nov 18-20, 2027 are not stated in any evidence; E3 only mentions LVCVA funding for the 2027 race.",
+          "The claim that GA and the Grand Prix Trio are sold out rests on a signal saying the official site listed them as sold out four days ago; no evidence snippet confirms it, and the signal itself notes no official sell-out statement was found.",
+          "The April 30 deposit and SMS/email sign-up form are supported only by a signal (S26), not by the evidence snippets."
+        ]
       }
     },
     {
-      "title": "Turn Grand Prix Plaza visits into 2027 race tickets",
-      "businessUnit": "Grand Prix Plaza",
-      "whatsHappening": "Grand Prix Plaza, billed as North America's largest F1 attraction, reopened Jan 30, 2026 with an upgraded 4D theater, a new karting layout and new event spaces. Zoox will run robotaxi rides to the Plaza from 2027, and the Plaza offers locals discounts after earlier pushback on ticket prices.",
-      "whyFlowcode": "People who karted or watched the 4D show in spring are the warmest 2027 ticket buyers. Public sources show no link between a Plaza visit and a race ticket, so this is worth validating. Codes on karting, theater and retail touchpoints feed a FlowHub with locals pricing and presale access, and analytics show which attraction converts. The Penguins saw 88% conversion from in-venue prompts.",
+      "title": "Connect the F1 Hub at The Venetian to the official online store so merch buyers become known customers",
+      "businessUnit": "Event and promotion (licensing and merchandise)",
+      "whatsHappening": "The two-floor F1 Hub presented by American Express opened Nov 7 in the Grand Canal Shoppes. It carries an LVGP Collection, collaborations with BAPE, LEGO, Hello Kitty and others, and a Headwear Customization Lab. The official store sells the 2026 collection at prices from $55 hats to a $500 varsity jacket, and adidas released Vegas fan collections priced $30-$200.",
+      "whyFlowcode": "Flowcodes on hub displays, hang tags and fitting areas can route shoppers to sold-out sizes, the online store and drop alerts. FlowID ties in-store browsing to post-trip online purchases. On Zach Bryan's tour, Ceremony of Roses used Flowcode to drive $1.8M in incremental merch revenue while growing the artist's CRM.",
       "play": [
-        "Place a distinct Flowcode at karting check-in, the 4D theater exit and retail.",
-        "Route locals to locals pricing and visitors to 2027 presale, with FlowID capturing who scanned.",
-        "Add a code at the Zoox pickup zone when rides start in 2027.",
-        "Report Plaza-to-ticket conversion monthly."
+        "Touchpoint: Flowcodes on hub collection displays, the Customization Lab queue and checkout bags.",
+        "Routing: a FlowHub with endless-aisle shopping, out-of-stock sizes, collab drop alerts and ship-home options.",
+        "Data: email and SMS opt-in, product interest and later online purchases, synced to the merch CRM.",
+        "Follow-up: post-race remarketing of the LVGP Collection and alerts for 2027 drops."
       ],
       "products": [
         "flowcodes",
@@ -391,153 +969,273 @@
         "flowid",
         "analytics_integrations"
       ],
-      "proofPointId": "pittsburgh_penguins",
+      "proofPointId": "ceremony_of_roses",
       "touchpoints": [
-        "venue_signage",
-        "ticketing",
         "retail",
-        "live_events"
+        "merchandise",
+        "ecommerce",
+        "email_crm"
       ],
       "kpis": [
-        "Plaza visitors captured",
-        "Plaza-to-race-ticket conversion",
-        "Locals sign-ups"
+        "Online revenue per scan",
+        "Opt-ins from hub visitors",
+        "Repeat purchase rate",
+        "Out-of-stock recovery sales"
       ],
       "timing": {
-        "urgency": "next_90_days",
-        "window": "Before the Plaza's 2027 season opens",
-        "keyDate": null
+        "urgency": "now",
+        "window": "Hub open now through race week and the post-race holiday season",
+        "keyDate": "2026-11-19"
       },
-      "buyer": "General manager, Grand Prix Plaza",
+      "buyer": "F1 licensing and consumer products / retail lead",
       "signalIds": [
-        "S3",
-        "S5",
-        "S7"
+        "S15",
+        "S16",
+        "S11"
       ],
       "ratings": {
         "timeliness": {
-          "score": 4,
-          "why": "2027 season setup happens this winter"
+          "score": 5,
+          "why": "Hub is open during peak traffic"
         },
         "scale": {
-          "score": 3,
-          "why": "smaller daily traffic than race week"
+          "score": 4,
+          "why": "High-ticket merch and heavy Strip footfall"
         },
         "fit": {
           "score": 5,
-          "why": "owned venue, clear funnel"
+          "why": "Direct match to the merch proof point"
         },
         "access": {
-          "score": 4,
-          "why": "one owned venue, one decision maker"
+          "score": 3,
+          "why": "Shared hub with Amex and licensees complicates ownership"
         }
       },
       "caveats": [
-        "The Plaza's 2027 opening date and visitor numbers were not found in sources."
+        "American Express is the hub's presenting partner, and its Card Member Area may carry its own offers. Position Flowcode alongside that, not against it.",
+        "Who operates the official online store is not in the signals. Validate before scoping the integration."
       ],
       "id": "O2",
       "rank": 2,
       "evidenceIds": [
-        "E4",
-        "E5",
-        "E8",
-        "E17",
-        "E19",
-        "E12"
+        "E36",
+        "E47",
+        "E48",
+        "E49",
+        "E50",
+        "E51",
+        "E16",
+        "E46",
+        "E52",
+        "E53",
+        "E54",
+        "E55",
+        "E56",
+        "E57",
+        "E32",
+        "E33",
+        "E34"
       ],
       "score": {
-        "total": 80,
+        "total": 88,
         "components": {
-          "timeliness": 4,
-          "scale": 3,
+          "timeliness": 5,
+          "scale": 4,
           "fit": 5,
           "evidence": 5,
-          "access": 4
+          "access": 3
         },
         "adjustments": [
-          "6 source domains, newest signal fresh"
+          "13 source domains, newest signal fresh"
         ]
       },
       "verification": {
-        "verdict": "unchecked",
-        "issues": []
+        "verdict": "partial",
+        "issues": [
+          "The price floor of $55 for hats and the $500 varsity jacket are only in a signal (S16); the store snippets do not show a price range, and 'prices from $55' is not confirmed as the lowest price.",
+          "The F1 Hub opening on Nov 7, its Grand Canal Shoppes location, the two floors, the LVGP Collection, the BAPE/LEGO/Hello Kitty collaborations and the Headwear Customization Lab are supported.",
+          "The adidas $30-$200 fan collection pricing is supported by E34."
+        ]
       }
     },
     {
-      "title": "Sell sponsors measurable touchpoints, not just signage",
-      "businessUnit": "Partnerships",
-      "whatsHappening": "Sponsors at the race buy layered touchpoints across fan zones, clubs and the Strip. Heineken holds the title, T-Mobile names a general admission zone and the Sphere zone, HGV and Wynn run hospitality, and Zoox signed on Nov 5 with race-week activations.",
-      "whyFlowcode": "Each sponsor activation can carry its own code, and analytics give the promoter a per-sponsor engagement report to use in renewals. NFL Shop shows what attribution can prove: $250 revenue per scan from one broadcast spot.",
+      "title": "Sell Backstreet Boys afterparty add-ons and open hospitality inventory through in-venue live reads",
+      "businessUnit": "Event and promotion (ticketing and hospitality)",
+      "whatsHappening": "The Backstreet Boys play the official afterparty at Sphere on Nov 21 from 11:30pm to 1am, and existing ticketholders can buy an add-on from $116. Select single-day hospitality is new for 2026. Gates close at 11pm, right before the afterparty starts.",
+      "whyFlowcode": "A dynamic Flowcode on screens during the race, plus a host live read, turns late-night intent into an immediate add-on purchase in a few taps. Each sale is attributed to the screen and moment. The Pittsburgh Penguins saw an 88% conversion rate and $8,000 in 30 minutes from in-arena live reads.",
       "play": [
-        "Bundle a measured-activation package into 2027 sponsor proposals.",
-        "Give each sponsor a Workspace with its own codes and live dashboard.",
-        "Route scans to sponsor offers after a promoter opt-in, so both sides get data.",
-        "Use the year-end report in renewal conversations."
+        "Touchpoint: Flowcode on stage and grandstand screens, plus a host live read after the checkered flag and around gates-close.",
+        "Routing: a FlowHub that sends fans to the afterparty add-on in Ticketmaster or to open single-day hospitality.",
+        "Data: purchaser identity, screen location and add-on conversion by zone.",
+        "Follow-up: retarget non-buyers with a 2027 afterparty and hospitality waitlist."
       ],
       "products": [
-        "workspaces_api",
         "flowcodes",
-        "analytics_integrations",
-        "flowid"
+        "flowhubs",
+        "analytics_integrations"
       ],
-      "proofPointId": "nfl_shop",
+      "proofPointId": "pittsburgh_penguins",
       "touchpoints": [
-        "sponsorship",
+        "venue_signage",
         "live_events",
+        "ticketing",
         "hospitality"
       ],
       "kpis": [
-        "Scans and opt-ins per sponsor",
-        "Sponsor renewal rate",
-        "Revenue from measured packages"
+        "Add-on revenue per minute",
+        "Scan-to-purchase conversion",
+        "Revenue by screen and zone"
       ],
       "timing": {
-        "urgency": "next_90_days",
-        "window": "2027 sponsor renewals and new deals",
-        "keyDate": null
+        "urgency": "now",
+        "window": "Race night, Nov 21, 8pm-11:30pm",
+        "keyDate": "2026-11-21"
       },
-      "buyer": "Partnerships team, Las Vegas Grand Prix, Inc.",
+      "buyer": "Ticketing and revenue operations, with the in-venue production team",
       "signalIds": [
-        "S9",
-        "S4",
-        "S5",
-        "S6"
+        "S19",
+        "S20",
+        "S17"
       ],
       "ratings": {
         "timeliness": {
-          "score": 4,
-          "why": "the Zoox deal shows sales are active now"
+          "score": 5,
+          "why": "Window is Saturday night"
         },
         "scale": {
-          "score": 4,
-          "why": "every sponsor is a renewal"
+          "score": 3,
+          "why": "One-night add-on revenue"
         },
         "fit": {
-          "score": 4,
-          "why": "attribution and workspaces fit"
+          "score": 5,
+          "why": "Live-read commerce is a proven Flowcode play"
         },
         "access": {
-          "score": 3,
-          "why": "needs sponsor buy-in"
+          "score": 2,
+          "why": "Very short lead time and no relationship"
         }
       },
       "caveats": [
-        "Data-sharing terms with each sponsor need legal review."
+        "Sources conflict on afterparty access (add-on versus standalone tickets). Validate the eligible audience.",
+        "Afterparty inventory may already be sold out. That is unknown.",
+        "Ticketmaster checkout is the incumbent, so Flowcode routes into it."
       ],
       "id": "O3",
       "rank": 3,
       "evidenceIds": [
-        "E5",
-        "E1",
-        "E6",
-        "E7",
-        "E18",
-        "E8",
-        "E17",
-        "E19",
-        "E9",
-        "E10",
-        "E11"
+        "E60",
+        "E61",
+        "E11",
+        "E91",
+        "E37",
+        "E40",
+        "E100",
+        "E122",
+        "E38",
+        "E62",
+        "E7"
+      ],
+      "score": {
+        "total": 79,
+        "components": {
+          "timeliness": 5,
+          "scale": 3,
+          "fit": 5,
+          "evidence": 5,
+          "access": 2
+        },
+        "adjustments": [
+          "10 source domains, newest signal fresh"
+        ]
+      },
+      "verification": {
+        "verdict": "supported",
+        "issues": [
+          "The Backstreet Boys afterparty timing (11:30pm to 1am) and the $116 add-on price rest on a signal (S19) rather than the evidence snippets, and the claim omits that sources conflict on access.",
+          "The Nov 21 date, Sphere venue, single-day hospitality being new in 2026, and the 11pm gate close are supported."
+        ]
+      }
+    },
+    {
+      "title": "Give every race partner, from Rocket Mortgage and Redfin to the LVCVA, scan-level proof of what their placement drove",
+      "businessUnit": "Event and promotion (sponsorship)",
+      "whatsHappening": "Rocket Mortgage and Redfin debut Nov 19-21 on trackside signage and on Sphere's Exosphere and LED displays under a three-year deal. The LVCVA committed $10M a year through 2037. T-Mobile and Heineken each title a stage, and the Heineken Stage hosts Q&As with all 22 drivers.",
+      "whyFlowcode": "Shared Workspaces let each partner run its own branded Flowcodes on F1-owned inventory, under F1 governance and with one analytics view. Partner renewals can then rest on attributed scans and first-party leads rather than impressions alone. Flowcode's sports benchmark shows 75% higher than average conversion for first-party data collection.",
+      "play": [
+        "Touchpoint: partner-branded Flowcodes on Sphere and trackside creative, the T-Mobile and Heineken stage screens and driver Q&A moments.",
+        "Routing: per-partner FlowHubs with offers and sweepstakes (for example, a Redfin home-search or Rocket offer page), all under one F1 Workspace.",
+        "Data: person-level scans by placement, time and zone, with F1 and the partner sharing opt-in consented leads.",
+        "Follow-up: an end-of-season partner report that supports the three-year Rocket deal and LVCVA value reviews."
+      ],
+      "products": [
+        "workspaces_api",
+        "flowcodes",
+        "flowhubs",
+        "analytics_integrations"
+      ],
+      "proofPointId": "sports_benchmark",
+      "touchpoints": [
+        "sponsorship",
+        "venue_signage",
+        "ooh",
+        "live_events"
+      ],
+      "kpis": [
+        "Scans per partner placement",
+        "Partner leads captured",
+        "Partner renewal and upsell rate",
+        "Cost per attributed lead"
+      ],
+      "timing": {
+        "urgency": "next_event_cycle",
+        "window": "Pilot on digital screens this weekend; full rollout in 2027 partner packages",
+        "keyDate": "2027-11-18"
+      },
+      "buyer": "F1 Las Vegas partnerships and sponsorship sales team",
+      "signalIds": [
+        "S2",
+        "S3",
+        "S18",
+        "S1"
+      ],
+      "ratings": {
+        "timeliness": {
+          "score": 4,
+          "why": "New multi-year deals just signed"
+        },
+        "scale": {
+          "score": 4,
+          "why": "$10M/yr LVCVA alone plus several partners"
+        },
+        "fit": {
+          "score": 4,
+          "why": "Workspaces and attribution built for multi-partner use"
+        },
+        "access": {
+          "score": 3,
+          "why": "Partnerships team owns inventory, but there is no existing relationship"
+        }
+      },
+      "caveats": [
+        "Sphere's displays may be controlled by Sphere, so creative changes need its sign-off (inferred).",
+        "Partner agreements may restrict data sharing. Validate the terms."
+      ],
+      "id": "O4",
+      "rank": 4,
+      "evidenceIds": [
+        "E75",
+        "E87",
+        "E95",
+        "E3",
+        "E31",
+        "E76",
+        "E77",
+        "E61",
+        "E60",
+        "E11",
+        "E92",
+        "E93",
+        "E94"
       ],
       "score": {
         "total": 75,
@@ -553,108 +1251,24 @@
         ]
       },
       "verification": {
-        "verdict": "unchecked",
-        "issues": []
-      }
-    },
-    {
-      "title": "Pilot in Vegas, roll out across F1: a promoter-owned fan identity layer",
-      "businessUnit": "Las Vegas Grand Prix, Inc. and F1 commercial",
-      "whatsHappening": "Emily Prazer runs the Las Vegas race and is also Formula 1's chief commercial officer, and the race is described as a proving ground for strategies later used across the F1 calendar. The race is contracted through 2037.",
-      "whyFlowcode": "A win in Vegas can travel to the whole calendar. Workspaces let F1, each promoter and each sponsor run their own codes under one governance layer with shared reporting, which suits a multi-party event. A pilot with a written success bar matches how Vegas already tests ideas.",
-      "play": [
-        "Propose a 2027 Las Vegas pilot with a written success bar: opt-ins and attributed ticket and hospitality revenue.",
-        "Set up a Workspace with separate spaces for the promoter, F1 and each title or zone sponsor.",
-        "Standardize placement and reporting so the playbook can be copied to Miami and Austin.",
-        "Review results with the F1 commercial team after race week."
-      ],
-      "products": [
-        "workspaces_api",
-        "flowcodes",
-        "flowid",
-        "analytics_integrations"
-      ],
-      "proofPointId": "sports_benchmark",
-      "touchpoints": [
-        "live_events",
-        "sponsorship",
-        "ticketing"
-      ],
-      "kpis": [
-        "Pilot opt-ins vs target",
-        "Attributed ticket and hospitality revenue",
-        "Sponsors onboarded to the Workspace"
-      ],
-      "timing": {
-        "urgency": "next_event_cycle",
-        "window": "Pitch right after race week, for the 2027 season",
-        "keyDate": null
-      },
-      "buyer": "Emily Prazer's commercial team (LVGP CEO and F1 CCO)",
-      "signalIds": [
-        "S8",
-        "S2",
-        "S10"
-      ],
-      "ratings": {
-        "timeliness": {
-          "score": 3,
-          "why": "post-race planning window"
-        },
-        "scale": {
-          "score": 5,
-          "why": "the whole F1 calendar if it spreads"
-        },
-        "fit": {
-          "score": 4,
-          "why": "governance and attribution fit, but a bigger sale"
-        },
-        "access": {
-          "score": 3,
-          "why": "one senior buyer, high bar"
-        }
-      },
-      "caveats": [
-        "F1 Unlocked already captures fans for Formula 1. Frame Flowcode as the measurement and promoter-identity layer that sits alongside it.",
-        "The size of the sale makes this slower than the race-week idea."
-      ],
-      "id": "O4",
-      "rank": 4,
-      "evidenceIds": [
-        "E14",
-        "E15",
-        "E3",
-        "E16",
-        "E13"
-      ],
-      "score": {
-        "total": 70,
-        "components": {
-          "timeliness": 3,
-          "scale": 5,
-          "fit": 4,
-          "evidence": 4,
-          "access": 3
-        },
-        "adjustments": [
-          "5 source domains, newest signal 5 mo old"
+        "verdict": "partial",
+        "issues": [
+          "Sphere Exosphere and LED display placement for Rocket Mortgage and Redfin is not in the evidence snippets; only trackside signage (E31) is confirmed.",
+          "The claim that the Heineken Stage hosts Q&As with all 22 drivers is not in the evidence snippets; it comes only from a signal (S18).",
+          "The three-year Rocket partnership, LVCVA $10M a year through 2037, and the T-Mobile and Heineken stage titles are supported."
         ]
-      },
-      "verification": {
-        "verdict": "unchecked",
-        "issues": []
       }
     },
     {
-      "title": "Trade general admission fans up to hospitality",
-      "businessUnit": "Ticketing and hospitality",
-      "whatsHappening": "Prices run from $50 single days to $28,885 for Gordon Ramsay at F1 Garage, and single-day hospitality launched at the 100-days-out mark to lower the entry point.",
-      "whyFlowcode": "General admission and grandstand fans are on site and within sight of the clubs. A code on their screens leading to next-day or 2027 single-day hospitality, tied to FlowID, shows who is ready to trade up, and CRM sync lets sales follow up after the race.",
+      "title": "Fill Grand Prix Plaza after the Jan 8, 2027 reopening by retargeting race-week fans",
+      "businessUnit": "Grand Prix Plaza real estate",
+      "whatsHappening": "Grand Prix Plaza is closed until Jan 8, 2027 and reopens with Kids Karts, an indoor playground and three new private event spaces. Karting is $99 per driver. Q3 Plaza rental income was $6M versus $7M a year earlier, and the app has a Plaza mode switcher.",
+      "whyFlowcode": "Codes captured during race week can be redirected after the race to Plaza reopening offers, karting bookings and private-event inquiries, with no reprint. FlowID lets the Plaza re-engage race visitors who scanned anywhere on the Strip. This builds a year-round audience and makes Plaza bookings attributable.",
       "play": [
-        "Put codes on general admission and grandstand screens promoting next-day or 2027 single-day hospitality.",
-        "Personalize the FlowHub by zone and ticket type.",
-        "Push high-intent scans to the hospitality sales queue in the CRM.",
-        "Measure trade-up rate by zone."
+        "Touchpoint: race-week codes plus Plaza exterior signage and Strip OOH during the closure period.",
+        "Routing: a FlowHub with a reopening countdown, a locals and military karting offer and a private-event inquiry form.",
+        "Data: interest type (karting, kids, corporate events), local versus visitor status and contact details.",
+        "Follow-up: a Jan 8 launch push via CRM, then routing on-site karting codes to repeat-visit offers."
       ],
       "products": [
         "flowcodes",
@@ -664,352 +1278,1770 @@
       ],
       "proofPointId": null,
       "touchpoints": [
-        "ticketing",
-        "hospitality",
-        "live_events"
+        "venue_signage",
+        "ooh",
+        "live_events",
+        "email_crm"
       ],
       "kpis": [
-        "Hospitality leads from scans",
-        "Trade-up revenue",
-        "Lead-to-sale rate"
+        "Reopening bookings attributed to scans",
+        "Private-event inquiries",
+        "Local repeat visits"
       ],
       "timing": {
-        "urgency": "now",
-        "window": "Race week, then the 2027 on-sale",
-        "keyDate": "2026-11-19"
+        "urgency": "next_90_days",
+        "window": "Closure period through the Jan 8, 2027 reopening",
+        "keyDate": "2027-01-08"
       },
-      "buyer": "Head of ticketing and hospitality sales",
+      "buyer": "Grand Prix Plaza GM and marketing",
       "signalIds": [
-        "S6",
-        "S1"
+        "S22",
+        "S23",
+        "S25"
       ],
       "ratings": {
         "timeliness": {
           "score": 4,
-          "why": "race week, then on-sale"
+          "why": "Reopening is about 7 weeks out"
         },
         "scale": {
           "score": 3,
-          "why": "premium segment only"
+          "why": "Plaza revenue is modest relative to the race"
         },
         "fit": {
           "score": 4,
-          "why": "identity plus CRM sync"
+          "why": "Reusable codes and retargeting suit a year-round venue"
         },
         "access": {
-          "score": 3,
-          "why": "ticketing may sit with F1 systems"
+          "score": 4,
+          "why": "F1-owned asset with a clear owner"
         }
       },
       "caveats": [
-        "Hospitality for this weekend may already be sold out. Fall back to the 2027 presale."
+        "The rental income dip may reflect tenant factors unrelated to marketing (inferred)."
       ],
       "id": "O5",
       "rank": 5,
       "evidenceIds": [
-        "E9",
-        "E10",
-        "E11",
-        "E18",
-        "E2",
-        "E6"
+        "E67",
+        "E68",
+        "E69",
+        "E70",
+        "E71",
+        "E6",
+        "E96",
+        "E97",
+        "E13",
+        "E98",
+        "E99",
+        "E108",
+        "E109",
+        "E110",
+        "E111",
+        "E112",
+        "E113",
+        "E114",
+        "E61",
+        "E11"
       ],
       "score": {
-        "total": 70,
+        "total": 74,
         "components": {
           "timeliness": 4,
           "scale": 3,
           "fit": 4,
           "evidence": 5,
-          "access": 3
+          "access": 4
         },
         "adjustments": [
-          "6 source domains, newest signal fresh"
+          "13 source domains, newest signal fresh"
         ]
       },
       "verification": {
-        "verdict": "unchecked",
-        "issues": []
+        "verdict": "partial",
+        "issues": [
+          "The claim that the reopened Plaza adds three new private event spaces is not in the evidence snippets; it comes only from a signal (S22).",
+          "The Jan 8, 2027 reopening, Kids Karts, indoor playground, $99 karting price, Q3 rental income of $6M versus $7M, and the app's Plaza mode switcher are supported."
+        ]
+      }
+    },
+    {
+      "title": "Turn the F1 Business Summit audience into a pipeline for 2027 corporate hospitality and partnerships",
+      "businessUnit": "Event and promotion (hospitality and sponsorship)",
+      "whatsHappening": "The F1 Business Summit runs Nov 19 at Caesars Palace's Colosseum, with Standard Chartered as Presenting Partner and SPORT BEACH presenting the keynote panel, followed by a Post-Summit Social at F1 Arcade. Insight Enterprises just signed on to use the race for premium client experiences.",
+      "whyFlowcode": "Flowcodes on summit screens, badges and session slides can capture corporate guests' interest in 2027 hospitality, single-day suites and partner packages. Each lead is attributed to the session that produced it and synced to the sales CRM. Hospitality runs up to $28,885 per guest, so even a few qualified leads carry real revenue.",
+      "play": [
+        "Touchpoint: Flowcodes on Colosseum screens between sessions, on badges and at the F1 Arcade social.",
+        "Routing: a FlowHub offering 2027 hospitality packages, a partnership inquiry form and session content downloads.",
+        "Data: company, role, interest (hospitality or partnership) and session attended.",
+        "Follow-up: CRM sync for sales outreach before 2027 hospitality deposits open."
+      ],
+      "products": [
+        "flowcodes",
+        "flowhubs",
+        "analytics_integrations"
+      ],
+      "proofPointId": null,
+      "touchpoints": [
+        "live_events",
+        "hospitality",
+        "sponsorship"
+      ],
+      "kpis": [
+        "Qualified B2B leads",
+        "Hospitality pipeline value",
+        "Partnership inquiries"
+      ],
+      "timing": {
+        "urgency": "now",
+        "window": "Summit day, Nov 19",
+        "keyDate": "2026-11-19"
+      },
+      "buyer": "Hospitality sales and partnerships leadership",
+      "signalIds": [
+        "S5",
+        "S6",
+        "S13"
+      ],
+      "ratings": {
+        "timeliness": {
+          "score": 5,
+          "why": "Summit is in two days"
+        },
+        "scale": {
+          "score": 2,
+          "why": "Small audience, high value per lead"
+        },
+        "fit": {
+          "score": 4,
+          "why": "Straightforward lead capture and CRM sync"
+        },
+        "access": {
+          "score": 2,
+          "why": "Hard to insert this late"
+        }
+      },
+      "caveats": [
+        "Summit attendance size is not in the signals.",
+        "More realistic as a 2027 summit play if the 2026 run of show is locked."
+      ],
+      "id": "O6",
+      "rank": 6,
+      "evidenceIds": [
+        "E81",
+        "E82",
+        "E11",
+        "E63",
+        "E40",
+        "E83",
+        "E9",
+        "E10",
+        "E42",
+        "E43",
+        "E1"
+      ],
+      "score": {
+        "total": 68,
+        "components": {
+          "timeliness": 5,
+          "scale": 2,
+          "fit": 4,
+          "evidence": 5,
+          "access": 2
+        },
+        "adjustments": [
+          "7 source domains, newest signal fresh"
+        ]
+      },
+      "verification": {
+        "verdict": "partial",
+        "issues": [
+          "SPORT BEACH presenting the keynote panel is not in any evidence snippet; it comes only from a signal (S5).",
+          "The Post-Summit Social at F1 Arcade is not in any evidence snippet; it comes only from a signal (S5).",
+          "The Nov 19 date at Caesars Palace's Colosseum, Standard Chartered as Presenting Partner, and Insight's official partnership are supported."
+        ]
       }
     }
   ],
   "followOnLeads": [
     {
-      "brand": "Heineken",
-      "role": "Title sponsor and Koval Zone naming partner",
-      "why": "Global packaging and on-premise brand that could carry race-season codes on pack and in bars, measured end to end.",
+      "brand": "Rocket Companies (Rocket Mortgage and Redfin)",
+      "role": "Three-year homeownership partner debuting on trackside and Sphere signage",
+      "why": "Lead-gen brands can tie Flowcodes on Sphere and trackside creative to mortgage and home-search sign-ups with attribution.",
       "signalIds": [
-        "S1",
-        "S6"
-      ]
-    },
-    {
-      "brand": "T-Mobile",
-      "role": "Names a general admission zone and the zone at Sphere",
-      "why": "Telecom buyer for whom scan-to-offer attribution in a fan zone maps straight to switching campaigns.",
-      "signalIds": [
-        "S4"
+        "S3"
       ]
     },
     {
       "brand": "Zoox",
-      "role": "Williams F1 team partner at all three US races, Las Vegas ride-hail partner from Nov 2026",
-      "why": "Needs rider sign-ups in Vegas. Codes at race-week activations can drive and attribute app installs.",
-      "signalIds": [
-        "S5"
-      ]
-    },
-    {
-      "brand": "Sphere Entertainment",
-      "role": "Venue partner through 2030, hosts the F1 Afterparty",
-      "why": "Runs the Exosphere screen and residencies. Measurable response from its screens is a direct Flowcode use case.",
+      "role": "Official Autonomous Ride Hail Partner; Plaza pickup zone from 2027",
+      "why": "Codes at race-week activations and the 2027 pickup zone can drive app downloads and ride bookings.",
       "signalIds": [
         "S4"
       ]
     },
     {
-      "brand": "Hilton Grand Vacations (HGV)",
-      "role": "Runs the HGV Clubhouse hospitality",
-      "why": "Timeshare sales run on lead capture, so hospitality guests who scan become named prospects.",
+      "brand": "Qualcomm Snapdragon",
+      "role": "Race-timed campaign with Kimi Antonelli, shut out of U.S. broadcast ads",
+      "why": "Without U.S. broadcast inventory, Snapdragon needs measurable offline-to-online touchpoints that QR and FlowURLs provide.",
       "signalIds": [
-        "S6"
+        "S10"
+      ]
+    },
+    {
+      "brand": "Apple TV",
+      "role": "Exclusive U.S. broadcaster streaming the race free; Grindin Coffee Strip activations",
+      "why": "Codes at Strip activations and on-screen can drive and attribute Apple TV sign-ups beyond the free race.",
+      "signalIds": [
+        "S9"
+      ]
+    },
+    {
+      "brand": "Heineken",
+      "role": "Heineken Stage and grandstand naming",
+      "why": "A CPG brand with stage and grandstand presence can link venue exposure to first-party data and retail offers.",
+      "signalIds": [
+        "S13",
+        "S18"
+      ]
+    },
+    {
+      "brand": "T-Mobile",
+      "role": "T-Mobile Stage at Sphere and T-Mobile Zone packages",
+      "why": "Stage screens offer a ready moment to capture switching-offer leads with attribution.",
+      "signalIds": [
+        "S8",
+        "S18"
+      ]
+    },
+    {
+      "brand": "adidas Motorsport",
+      "role": "Vegas 'Neon Lights' and 'After Hours' collections for Mercedes and Audi",
+      "why": "Product tags and pop-ups can link Vegas merch shoppers to e-commerce and drop alerts.",
+      "signalIds": [
+        "S11"
+      ]
+    },
+    {
+      "brand": "LVCVA",
+      "role": "$100M, 10-year race sponsor; runs the 'Pack for Vegas' campaign",
+      "why": "A destination marketer spending on TV and influencers can use QR and FlowURLs to attribute visitor intent from its campaigns.",
+      "signalIds": [
+        "S2",
+        "S28"
       ]
     }
   ],
   "evidence": [
     {
       "id": "E1",
-      "url": "https://www.fox5vegas.com/2026/07/09/sphere-f1-las-vegas-grand-prix-extend-partnership-through-2030/",
-      "title": "Sphere, F1 Las Vegas Grand Prix extend partnership through 2030",
-      "domain": "fox5vegas.com",
+      "url": "https://corp.formula1.com/formula-1-heineken-las-vegas-grand-prix-announces-on-sale-ticket-timeline-and-ticket-options-for-2026-race-november-19-21/",
+      "title": "Formula 1 Heineken Las Vegas Grand Prix announces on-sale ticket timeline and ticket options for 2026 race, November 19",
+      "domain": "corp.formula1.com",
       "snippets": [
-        "agreed to extend their partnership for five years",
-        "expands collaboration on fan experiences and cross-promotional programming"
+        "- Practice (Thursday, Nov. 19): starting at $50 including taxes and fees Qualifying (Friday, Nov. 20): starting at $99 including taxes and fees\n\n- Gra...",
+        "- Ticket Prices Start at $50 for Single-Day General Admission and $492 for Three-Day General Admission in Flamingo Zone by Caesars Rewards®\n- Flexible...",
+        "- **Luxury Hospitality:**\n  - Gordon Ramsay at F1® Garage (starting at $28,885 including taxes and fees)\n\n- Wynn Grid Club (starting at $25,997 includ..."
       ],
-      "pageAge": "2026-07-09",
-      "lens": "partnerships"
+      "pageAge": "231 days ago",
+      "lens": "profile"
     },
     {
       "id": "E2",
-      "url": "https://www.sportsdestinations.com/destinations/nevada/news/f1-grand-prix-vegas-ready-roll-37722",
-      "title": "F1 Grand Prix in Vegas is Ready to Roll",
-      "domain": "sportsdestinations.com",
+      "url": "https://www.mercedesamgf1.com/news/six-things-you-didnt-know-about-the-las-vegas-gp-2026",
+      "title": "Six Things You Didn't Know About the Las Vegas GP 2026 - Mercedes-AMG PETRONAS F1 Team",
+      "domain": "mercedesamgf1.com",
       "snippets": [
-        "the West Harmon Zone will now also be connected",
-        "unlocking access between the three fan zones"
+        "### Building a Future in Vegas\nThe Las Vegas Grand Prix is unique in many instances, but did you know that the sport’s owners Liberty Media are the pr...",
+        "### It’s the F1 Academy Finale\nThis weekend in Las Vegas also marks the end of another superb F1 Academy season.",
+        "The race, which will take place on Saturday at 20:00 local time, is one of the fastest on the calendar, with speeds similar to Monza.",
+        "They wish to have a long-term future in the Entertainment Capital of the World, and it’s easy to see why, with 38.5 million visitors in 2025."
       ],
-      "pageAge": "2026-06-30",
-      "lens": "experiences"
+      "pageAge": "1 days ago",
+      "lens": "profile"
     },
     {
       "id": "E3",
-      "url": "https://press.lvcva.com/news-releases/formula-1-to-race-on-the-streets-of-las-vegas-through-2037/s/ba32db95-048c-4dc2-b5cb-7ac745c4a557",
-      "title": "Formula 1 to race on the streets of Las Vegas through 2037",
-      "domain": "press.lvcva.com",
+      "url": "https://www.reviewjournal.com/sports/motor-sports/formula-1/las-vegas-grand-prix-extended-through-2027-via-20m-lvcva-sponsorship-deal-3420740/",
+      "title": "F1, Las Vegas agree to continue Grand Prix through 2027",
+      "domain": "reviewjournal.com",
       "snippets": [
-        "$3.2 billion in cumulative economic impact for Southern Nevada",
-        "all three races from 2023 through 2025 selling out"
+        "“We’re thrilled with the Las Vegas Convention and Visitors Authority’s action today, officially approving our continued partnership with the destinati...",
+        "The LVCVA Board of Directors voted unanimously to spend $10 million per year to sponsor the 2026 and 2027 races."
       ],
-      "pageAge": "2026-06-04",
-      "lens": "strategy"
+      "pageAge": "461 days ago",
+      "lens": "profile"
     },
     {
       "id": "E4",
-      "url": "https://www.autoracing1.com/?p=465947",
-      "title": "Grand Prix Plaza In Las Vegas To Reopen With Big Upgrades",
-      "domain": "autoracing1.com",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001560385/000156038526000022/lmca-20260806xex99d1.htm",
+      "title": "Liberty Media Corp - Form 8-K - FY2026",
+      "domain": "sec.gov",
       "snippets": [
-        "North America's largest and most dynamic Formula 1 attraction",
-        "will officially reopen in Las Vegas, Jan. 30, 2026"
+        "Headlines include (1):\n\n| ● | Formula 1 |\n\n| o | With 4 fewer races held for the three months ended June 30, 2026, revenue decreased 38% to $764 milli..."
       ],
       "pageAge": null,
-      "lens": "experiences"
+      "lens": "profile"
     },
     {
       "id": "E5",
-      "url": "https://boardroom.tv/las-vegas-grand-prix-business-formula-1-f1-racing/",
-      "title": "Lights, Brands, Action: The Growing Business of the Las Vegas Grand Prix",
-      "domain": "boardroom.tv",
+      "url": "https://en.wikipedia.org/wiki/Las_Vegas_Grand_Prix",
+      "title": "Las Vegas Grand Prix",
+      "domain": "en.wikipedia.org",
       "snippets": [
-        "Brands look for layered touchpoints",
-        "gives fans year-round touchpoints with the sport"
+        "[[1]](./Las_Vegas_Grand_Prix#cite_note-2037contract-1)\nThe\n\n[[6]](./Las_Vegas_Grand_Prix#cite_note-6)\n\n[[7]](./Las_Vegas_Grand_Prix#cite_note-7) On Ju..."
       ],
       "pageAge": null,
-      "lens": "partnerships"
+      "lens": "profile"
     },
     {
       "id": "E6",
-      "url": "https://www.sphereentertainmentco.com/?p=7091",
-      "title": "Backstreet Boys To Headline Official F1 Afterparty At Sphere During Formula 1 Heineken Las Vegas Grand Prix 2026",
-      "domain": "sphereentertainmentco.com",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001560385/000156038526000028/lmca-ex99d1.htm",
+      "title": "Liberty Media Corp - Form 8-K - FY2026",
+      "domain": "sec.gov",
       "snippets": [
-        "the Official Post-Race Show of the FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX",
-        "Returning Nov. 19-21 after a sold-out 2025 event",
-        "Exclusive Ticket Packages and Add-On Options Give Fans the Opportunity to Extend Race Weekend"
+        "Exhibit 99.1\n\nLIBERTY MEDIA CORPORATION REPORTS THIRD QUARTER 2026 FINANCIAL AND OPERATING RESULTS Englewood, Colorado, November 5, 2026 - Liberty Med...",
+        "Headlines include (1):\n\n| ● | Formula 1 |\n\n| o | With one more race held during the three months ended September 30, 2026, revenue increased 28% to $1..."
       ],
-      "pageAge": "2026-07-09",
-      "lens": "experiences"
+      "pageAge": null,
+      "lens": "profile"
     },
     {
       "id": "E7",
-      "url": "https://recommend.com/destinations/sean-paul-ja-rule-join-vegas-grand-prix-music-lineup/",
-      "title": "Sean Paul, Ja Rule Join Vegas Grand Prix Music Lineup",
-      "domain": "recommend.com",
+      "url": "https://www.tickets.gp/en/f1/f1lasvegas/las-vegas-grand-prix-guide/schedule",
+      "title": "`2026 Las Vegas Grand Prix weekend timetable",
+      "domain": "tickets.gp",
       "snippets": [
-        "T-Mobile Zone at Sphere has become one of the most dynamic fan experiences"
+        "The race is scheduled over 50 laps of the 6.201-kilometre Las Vegas Strip Circuit, covering a total distance of approximately 309.958 kilometres.",
+        "There is no Sprint race scheduled for the Las Vegas weekend.",
+        "| Friday, November 20 | F1 Academy - Reverse Race | 6:15 – 6:50 PM |\n\n| Saturday, November 21 | F1 Academy - Feature Race | 4:20 – 4:55 PM |\n\n| Saturd..."
       ],
       "pageAge": null,
-      "lens": "experiences"
+      "lens": "profile"
     },
     {
       "id": "E8",
-      "url": "https://news3lv.com/news/local/zoox-robotaxi-rides-to-grand-prix-plaza-set-to-roll-out-in-2027-under-new-f1-deal",
-      "title": "Zoox robotaxi rides to Grand Prix Plaza set to roll out in 2027 under new F1 deal",
-      "domain": "news3lv.com",
+      "url": "https://experiencesxo.substack.com/p/las-vegas-grand-prix-f1-business",
+      "title": "Las Vegas Grand Prix 2026: Who Gets Paid",
+      "domain": "experiencesxo.substack.com",
       "snippets": [
-        "official autonomous ride-hail partner of the Formula 1 Heineken Las Vegas Grand Prix",
-        "rides to and from Grand Prix Plaza planned to begin in 2027"
+        "At most races, a local promoter sells the tickets and pays F1 a hosting fee, while F1 runs the Paddock Club and keeps its revenue.  In Las Vegas, F1 k...",
+        "F1 says the race produced $3.2B of cumulative impact for 2023 through 2025."
       ],
-      "pageAge": "2026-11-05",
-      "lens": "partnerships"
+      "pageAge": "5 days ago",
+      "lens": "profile"
     },
     {
       "id": "E9",
-      "url": "https://www.8newsnow.com/sports/f1-las-vegas/f1-las-vegas-grand-prix-ticket-prices-for-2026-begin-at-50-3-day-general-admission-from-492/amp/",
-      "title": "F1 Las Vegas Grand Prix ticket prices for 2026 begin at $50",
-      "domain": "8newsnow.com",
+      "url": "https://www.f1lasvegasgp.com/2026/03/formula-1-heineken-las-vegas-grand-prix-announces-on-sale-ticket-timeline-and-ticket-options-for-2026-race-nov-19-21/",
+      "title": "FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX ANNOUNCES ON-SALE TICKET TIMELINE AND TICKET OPTIONS FOR 2026 RACE, NOV. 19-21 - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
       "snippets": [
-        "HGV Clubhouse starts at $3,728",
-        "Skybox with Heineken Silver Main Grandstand starts at $8,377"
+        "- **T-Mobile General Admission** (starting at $809 including taxes and fees)\n- **Flamingo General Admission**\n  - **Three-Day Tickets** (starting at $...",
+        "Interested guests can secure the year’s lowest prices on F1LasVegasGP.com when public sales open Thursday, May 7 at 10 a.m. PDT.",
+        "Luxury Hospitality: **Gordon Ramsay at F1® Garage (starting at $28,885 including taxes and fees)** · **Wynn Grid Club (starting at $25,997 including t...",
+        "… **Heineken® Silver Main Grandstand (starting at $2,051 including taxes and fees)**\n\n# FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX ANNOUNCES ON-SALE TICK..."
       ],
-      "pageAge": null,
-      "lens": "commerce"
+      "pageAge": "194 days ago",
+      "lens": "profile"
     },
     {
       "id": "E10",
-      "url": "https://lifestyle.filmtelevisionauditions.com/story/45901/formula-1-heineken-las-vegas-grand-prix-announces-on-sale-ticket-timeline-and-ticket-options-for-2026-race-nov-19-21/",
-      "title": "Formula 1 Heineken Las Vegas Grand Prix announces on-sale ticket timeline and ticket options for 2026 race (PR Newswire release)",
-      "domain": "lifestyle.filmtelevisionauditions.com",
+      "url": "https://www.si.com/onsi/f1/las-vegas-grand-prix-2026-unveils-ticket-options-for-every-type-of-f1-fan-exclusive",
+      "title": "Las Vegas Grand Prix 2026 Unveils Ticket Options for Every Type of F1 Fan [Exclusive]",
+      "domain": "si.com",
       "snippets": [
-        "single-day tickets start at $50",
-        "Gordon Ramsay at F1 Garage (starting at $28,885",
-        "Wynn Grid Club (starting at $25,997"
+        "- Gordon Ramsay at F1® Garage (starting at $28,885 including taxes and fees)\n- Wynn Grid Club (starting at $25,997 including taxes and fees)\n- Tracksi...",
+        "## 2026 Las Vegas Grand Prix Ticket Options: From Entry-Level to Ultra Premium\n### General Admission (Three-Day + Select Single-Day)\n**T-Mobile Genera...",
+        "Experiences include Gordon Ramsay at F1 Garage, Wynn Grid Club, Bellagio Fountain Club and Paddock Club rooftop offerings, alongside club-style hospit..."
       ],
-      "pageAge": "2026-03-31",
-      "lens": "commerce"
+      "pageAge": "231 days ago",
+      "lens": "profile"
     },
     {
       "id": "E11",
-      "url": "https://news3lv.com/features/formula-vegas/las-vegas-grand-prix-marks-100-days-out-as-single-day-tickets-go-on-sale",
-      "title": "Las Vegas Grand Prix marks 100 days out as single-day tickets go on sale",
-      "domain": "news3lv.com",
+      "url": "https://www.f1lasvegasgp.com/2026/",
+      "title": "2026 - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
       "snippets": [
-        "The new single-day Hospitality experiences offer premium trackside views",
-        "Club Paris: Single-day tickets start at $382"
+        "Single-day tickets for the **FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX 2026** are officially on sale.",
+        "The 2026 single-day race tickets will start at $81 including taxes and fees and feature access to live entertainment, interactive fan activations and ...",
+        "Fans will have more flexibility than ever to experience the race in 2026, with single-day General Admission, Grandstand and – for the first time – sel...",
+        "# STEVE AOKI, MORTEN TO LIGHT UP THE GRID AND JORDIN SPARKS TO PERFORM NATIONAL ANTHEM AT FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX, SATURDAY, NOV. 21\nF..."
       ],
       "pageAge": null,
-      "lens": "commerce"
+      "lens": "profile"
     },
     {
       "id": "E12",
-      "url": "https://lvsportsbiz.com/?p=85297",
-      "title": "Grand Prix Plaza and ticket pricing (Las Vegas Sports Business)",
-      "domain": "lvsportsbiz.com",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/formula-one-group-fwon-k-211331857.html",
+      "title": "Formula One Group (FWON.K) Revenue Outlook Improves On Las Vegas Grand Prix Demand",
+      "domain": "finance.yahoo.com",
       "snippets": [
-        "reduced ticket prices this year after there were complaints from locals",
-        "there are discounts for locals"
+        "- Paddock Club packages for the Las Vegas race are already sold out, pointing to solid premium hospitality income for the event.\n- Sponsorship revenue..."
       ],
-      "pageAge": null,
-      "lens": "customer"
+      "pageAge": "20 days ago",
+      "lens": "profile"
     },
     {
       "id": "E13",
-      "url": "https://www.formula1.com/en/information/formula-1-2025-fan-zone-qr-code-prize-draw-2-terms-and-conditions.2QTAxm7ZGICwbeFAmETmYp",
-      "title": "Formula 1 2025 F1 Unlocked QR Code Prize Draw: terms and conditions",
-      "domain": "formula1.com",
+      "url": "https://www.benzinga.com/news/26/11/62931308/liberty-media-q3-2026-earnings-call-transcript",
+      "title": "Liberty Media Q3 2026 Earnings Call Transcript - Liberty Media (NASDAQ:FWONK) - Benzinga",
+      "domain": "benzinga.com",
       "snippets": [
-        "scan one of the four (4) QR codes available during the relevant entry time period",
-        "have access to the internet and an F1 Unlocked account or F1.com account"
+        "Looking briefly at Corporate and Other results, year-to-date revenue was $18 million, which relates to rental income generated by Grand Prix Plaza in ...",
+        "Looking ahead, the Las Vegas Grand Prix remains a key not just to our local community partners for whom it has generated over $3 billion in cumulative...",
+        "Corporate and Other Adjusted OIBDA was a loss of $36 million, and this includes the Grand Prix Plaza rental income as well as corporate expenses."
       ],
-      "pageAge": "2025",
-      "lens": "customer"
+      "pageAge": "12 days ago",
+      "lens": "profile"
     },
     {
       "id": "E14",
-      "url": "https://www.thecurrent.com/video-las-vegas-grand-prix-transformed-strip-formula-1-biggest-marketing-vehicle",
-      "title": "How the Las Vegas Grand Prix transformed the Strip into Formula 1's biggest marketing vehicle",
-      "domain": "thecurrent.com",
+      "url": "https://d1io3yog0oux5.cloudfront.net/_5bbf8d0e1e7c330484038abcb44c17ba/libertymedia/db/2011/24696/earnings_release/LMC_3Q-26_Earnings_PR_vFF.pdf",
+      "title": "1 LIBERTY MEDIA CORPORATION REPORTS",
+      "domain": "d1io3yog0oux5.cloudfront.net",
       "snippets": [
-        "president and CEO of the Las Vegas Grand Prix and chief commercial officer of Formula 1"
+        "licensing revenue and growth in activities at Grand Prix Plaza in Las Vegas."
       ],
       "pageAge": null,
-      "lens": "strategy"
+      "lens": "profile"
     },
     {
       "id": "E15",
-      "url": "https://www.si.com/onsi/f1/las-vegas-grand-prix-2026-unveils-ticket-options-for-every-type-of-f1-fan-exclusive",
-      "title": "Las Vegas Grand Prix 2026 unveils ticket options for every type of F1 fan",
-      "domain": "si.com",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001560385/000156038526000015/lmca-20260507xex99d1.htm",
+      "title": "Liberty Media Corp - Form 8-K - FY2026",
+      "domain": "sec.gov",
       "snippets": [
-        "a proving ground for new strategies rolled out across the F1 calendar"
+        "Primary MotoGP revenue increased in the three months ended March 31, 2026 primarily due to increased race promotion fees related to a different mix of..."
+      ],
+      "pageAge": null,
+      "lens": "profile"
+    },
+    {
+      "id": "E16",
+      "url": "https://www.casinocitytimes.com/news/article/las-vegas-gears-up-for-another-formula-1-race-weekend-265007",
+      "title": "Las Vegas gears up for another Formula 1 race weekend",
+      "domain": "casinocitytimes.com",
+      "snippets": [
+        "Articles G aming N ews Las Vegas gears up for another Formula 1 race weekend 9 November 2026 (PRESS RELEASE) -- The FORMULA 1 HEINEKEN LAS VEGAS GRAND...",
+        "As the series prepares for its show-stopping conclusion, F1 ACADEMY will continue its groundbreaking partnership with Hello Kitty, which will include ...",
+        "Wynn Grid Club is a stunning hospitality suite within the Paddock Club that offers e premium views of the track, including private terraces overlookin...",
+        "Returning for 2026, guests will once again have the opportunity to enjoy a specially curated four-course menu by Chef Gordon Ramsay at his famed HELL’..."
+      ],
+      "pageAge": "8 days ago",
+      "lens": "profile"
+    },
+    {
+      "id": "E17",
+      "url": "https://scuderiafans.com/2026-las-vegas-gp-sees-huge-security-operation-as-ticket-demand-surges/",
+      "title": "2026 Las Vegas GP sees huge security operation as ticket demand surges",
+      "domain": "scuderiafans.com",
+      "snippets": [
+        "The fourth edition of the event, **organised by Liberty Media**, will bring tens of thousands of Formula 1 fans to Nevada for three days of track acti..."
+      ],
+      "pageAge": "0 days ago",
+      "lens": "profile"
+    },
+    {
+      "id": "E18",
+      "url": "https://www.crash.net/f1/news/1110116/1/what-time-next-f1-race-las-vegas-gp-dates-and-full-schedule",
+      "title": "What time is the next F1 race? Las Vegas GP dates and full schedule",
+      "domain": "crash.net",
+      "snippets": [
+        "Remaining 2026 F1 calendar\n\n- 21 · Las Vegas · Las Vegas · 19-21 November\n- 22 · Qatar · Lusail · 27-29 November\n- 23 · Abu Dhabi · Yas Marina · 04-06..."
+      ],
+      "pageAge": "0 days ago",
+      "lens": "profile"
+    },
+    {
+      "id": "E19",
+      "url": "https://www.racefans.net/2026/11/17/an-early-season-finale-five-talking-points-for-the-2026-las-vegas-grand-prix/",
+      "title": "An early season finale? Five talking points for the 2026 Las Vegas Grand Prix",
+      "domain": "racefans.net",
+      "snippets": [
+        "Five talking points for the 2026 Las Vegas Grand Prix\n### Formula 1\nFormula 1 heads to Las Vegas this weekend for what is supposed to be the first of ..."
+      ],
+      "pageAge": "0 days ago",
+      "lens": "profile"
+    },
+    {
+      "id": "E20",
+      "url": "https://www.formula1.com/en/racing/2027",
+      "title": "F1 Schedule 2027 - Official Calendar of Grand Prix Races",
+      "domain": "formula1.com",
+      "snippets": [
+        "FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX 2027\n\n# 2027 FIA Formula One World Championship™ Race Calendar\nLas Vegas\n\nFORMULA 1 HEINEKEN LAS VEGAS GRAND P..."
+      ],
+      "pageAge": "8 days ago",
+      "lens": "profile"
+    },
+    {
+      "id": "E21",
+      "url": "https://oversteer48.com/las-vegas-f1-schedule/",
+      "title": "2026 Las Vegas F1 Schedule: Vegas Grand Prix Start Time",
+      "domain": "oversteer48.com",
+      "snippets": [
+        "To capture both the late-night USA fans and early morning European viewers it was decided to hold the race at 8pm local time on Saturday evening."
+      ],
+      "pageAge": "6 days ago",
+      "lens": "profile"
+    },
+    {
+      "id": "E22",
+      "url": "https://www.flowcode.com/blog/how-flowcode-created-the-biggest-qr-code-in-the-sky",
+      "title": "How Flowcode Created The Biggest QR Code In The Sky",
+      "domain": "flowcode.com",
+      "snippets": [
+        "The Jonas Brothers team partnered with Flowcode to develop and execute one of their biggest activations yet – a giant floating QR code formed by a con...",
+        "In just 30 minutes and with roughly 200 attendees, the Flowcode generated over 1,000 scans.",
+        "# How Flowcode Created The Biggest QR Code In The Sky\n## The quickest path to your custom demo starts here\nThe 2023 Miami Grand Prix last weekend host...",
+        "To pull this off, the Flowcode team worked with Sky Elements, a drone specialty company, to transition a perfectly arranged QR code pattern into a liv..."
+      ],
+      "pageAge": "652 days ago",
+      "lens": "relationship"
+    },
+    {
+      "id": "E23",
+      "url": "https://www.flowcode.com/company/team",
+      "title": "Meet Our Team",
+      "domain": "flowcode.com",
+      "snippets": [
+        "Flowcode custom QR code for McLaren F1 team in signature papaya orange with racing stripe border design\n\n## Got it."
+      ],
+      "pageAge": "305 days ago",
+      "lens": "relationship"
+    },
+    {
+      "id": "E24",
+      "url": "https://flowcode.com/industries/finance",
+      "title": "QR Codes for Finance, Banking & Insurance",
+      "domain": "flowcode.com",
+      "snippets": [
+        "Smartphone screen showing a Liberty Mutual Insurance contact card for Jane Sample with photo and contact options."
+      ],
+      "pageAge": "649 days ago",
+      "lens": "relationship"
+    },
+    {
+      "id": "E25",
+      "url": "https://www.flowcode.com/page/daeventslv",
+      "title": "DIVERSION AMUSEMENTS's Flowpage",
+      "domain": "flowcode.com",
+      "snippets": [
+        "Join the fun at Las Vegas Premier Event Space!"
+      ],
+      "pageAge": null,
+      "lens": "relationship"
+    },
+    {
+      "id": "E26",
+      "url": "https://www.flowcode.com/page/cabinkeycnftcon",
+      "title": "CabinKey Productions is a proud sponsor at cNFTcon 2022's Flowpage",
+      "domain": "flowcode.com",
+      "snippets": [
+        "CabinKey Productions is going to Las Vegas for CNFT Con and is sponsoring the CabinKey Theatre there at the Las Vegas Convention Center."
+      ],
+      "pageAge": null,
+      "lens": "relationship"
+    },
+    {
+      "id": "E27",
+      "url": "https://www.motorsport.com/f1/news/apple-tv-confirms-free-f1-las-vegas-grand-prix-coverage-how-to-watch-in-the-us/10873443/",
+      "title": "Apple TV confirms free F1 Las Vegas Grand Prix coverage: How to watch in the US",
+      "domain": "motorsport.com",
+      "snippets": [
+        "F1 announced a five-year partnership with Apple to become the championship's exclusive United States broadcast partner from 2026, taking over from ESP...",
+        "# Apple TV confirms free F1 Las Vegas Grand Prix coverage: How to watch in the US\n## Apple TV will stream the entire 2026 Las Vegas Grand Prix weekend..."
+      ],
+      "pageAge": "8 days ago",
+      "lens": "campaigns"
+    },
+    {
+      "id": "E28",
+      "url": "https://sports.yahoo.com/articles/apple-tv-confirms-free-f1-175651649.html",
+      "title": "Apple TV confirms free F1 Las Vegas Grand Prix coverage: How to watch in the US - Yahoo Sports",
+      "domain": "sports.yahoo.com",
+      "snippets": [
+        "Apple TV will stream the entire 2026 Las Vegas Grand Prix weekend for free to viewers in the United States, with no subscription required\n\nApple TV wi..."
+      ],
+      "pageAge": "8 days ago",
+      "lens": "campaigns"
+    },
+    {
+      "id": "E29",
+      "url": "https://apple.com/newsroom/2026/11/formula-1-las-vegas-grand-prix-streams-live-on-apple-tv-this-weekend",
+      "title": "Formula 1® Las Vegas Grand Prix™ streams live on Apple TV this weekend - Apple",
+      "domain": "apple.com",
+      "snippets": [
+        "## Media\n**More Ways to Watch the Las Vegas Grand Prix with Univision** Univision will simulcast Apple TV’s broadcast of the Formula 1 Las Vegas Grand...",
+        "ET, featuring dedicated pre- and post-race programming to bring the excitement of F1 to Spanish-speaking audiences across the U.S. **Tubi\n\nHosted by Y...",
+        "Apple TV is teaming up with Grindin Coffee — the premium coffee brand created by hip-hop icons Pusha T and Pharrell Williams in collaboration with leg..."
+      ],
+      "pageAge": "0 days ago",
+      "lens": "campaigns"
+    },
+    {
+      "id": "E30",
+      "url": "https://www.marketingdive.com/news/why-qualcomm-teamed-with-f1s-new-star-in-race-for-sports-marketing-roi/874895/",
+      "title": "Why Qualcomm teamed with F1’s new star in race for sports marketing ROI",
+      "domain": "marketingdive.com",
+      "snippets": [
+        "The video is part of a campaign timed to the 2026 Las Vegas Grand Prix on Nov. 21. It will run on F1 broadcasts outside the U.S. on Sky, on digital an...",
+        "Apple TV is the exclusive broadcast partner of F1 in the U.S., which prevents brands like Snapdragon from running traditional broadcast ads around the...",
+        "“We've got creators involved, we've got remixing involved, we have slipstreaming involved… hopefully turning it into an anthem for him that has really..."
+      ],
+      "pageAge": "0 days ago",
+      "lens": "campaigns"
+    },
+    {
+      "id": "E31",
+      "url": "https://finance.yahoo.com/real-estate/articles/rocket-mortgage-redfin-become-first-161500354.html",
+      "title": "Rocket Mortgage and Redfin Become First Homeownership Partners of FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX 2026",
+      "domain": "finance.yahoo.com",
+      "snippets": [
+        "# Rocket Mortgage and Redfin Become First Homeownership Partners of FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX 2026\n## Trading disclosure\nDETROIT and LAS...",
+        "Fans will see Rocket Mortgage and Redfin across the event footprint Nov. 19-21, with trackside signage along the 3.8-mile circuit and a dedicated pres..."
+      ],
+      "pageAge": "1 days ago",
+      "lens": "campaigns"
+    },
+    {
+      "id": "E32",
+      "url": "https://www.formula1.com/en/latest/article/gallery-aston-martin-showcase-bespoke-livery-for-las-vegas-grand-prix.7f71lWPYrxvriroCo30iaY",
+      "title": "GALLERY: Aston Martin showcase bespoke livery for Las Vegas Grand Prix",
+      "domain": "formula1.com",
+      "snippets": [
+        "Aston Martin will run a special livery on the AMR26 for the Las Vegas Grand Prix weekend. … As well as adorning the AMR26, the design will also featur..."
+      ],
+      "pageAge": "0 days ago",
+      "lens": "campaigns"
+    },
+    {
+      "id": "E33",
+      "url": "https://www.gpfans.com/en/f1-news/1092995/ferrari-f1-team-kit-hamilton-leclerc-las-vegas-grand-prix-2026/?language=en&page=article&uid=1092995",
+      "title": "Lewis Hamilton and Ferrari unveil striking 'night mode' for Las Vegas GP",
+      "domain": "gpfans.com",
+      "snippets": [
+        "Ferrari have released promotional images on social media showcasing a special team kit for the upcoming Las Vegas night race.",
+        "## Ferrari in the black for Vegas weekend\nThe Scuderia have chosen a striking black collection with yellow accents for the race in the American gambli..."
+      ],
+      "pageAge": "0 days ago",
+      "lens": "campaigns"
+    },
+    {
+      "id": "E34",
+      "url": "https://houseofheat.co/adidas/2026-las-vegas-grand-prix-mercedes-audi-f1-collections",
+      "title": "adidas Drops 2026 Las Vegas Grand Prix Gear for Mercedes & Audi F1 Teams",
+      "domain": "houseofheat.co",
+      "snippets": [
+        "adidas Motorsport is commemorating the 2026 Las Vegas Grand Prix with special fan collections for the Mercedes & Audi Formula 1 Teams. \"Neon Lights\" &...",
+        "Pricing ranges from $30-$200."
+      ],
+      "pageAge": "4 days ago",
+      "lens": "campaigns"
+    },
+    {
+      "id": "E35",
+      "url": "https://www.fanamp.com/tr/f1-las-vegas-grand-prix-fan-zones-events-concerts-2026",
+      "title": "The Best Las Vegas GP Fan Zones, Events, and Concerts (2026)",
+      "domain": "fanamp.com",
+      "snippets": [
+        "### Duracell Fan Prix 2026 in Nevada\nIn partnership with Duracell, the Williams F1 Team will be hosting a fan activation tour in Nevada from November ..."
+      ],
+      "pageAge": null,
+      "lens": "campaigns"
+    },
+    {
+      "id": "E36",
+      "url": "https://www.f1lasvegasgp.com/2026/10/f1-las-vegas-hub-returning-november-7/",
+      "title": "F1® HUB PRESENTED BY AMERICAN EXPRESS TO FEATURE NEW MERCHANDISE COLLABORATIONS AND RETURNING FAN FAVORITES, NOVEMBER 7 - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "# F1® HUB PRESENTED BY AMERICAN EXPRESS TO FEATURE NEW MERCHANDISE COLLABORATIONS AND RETURNING FAN FAVORITES, NOVEMBER 7\nF1® Las Vegas\n\n10.20.2026 LV..."
+      ],
+      "pageAge": "8 days ago",
+      "lens": "campaigns"
+    },
+    {
+      "id": "E37",
+      "url": "https://www.lasvegas.gp/en/fan-zones-39",
+      "title": "F1 circuit in Las Vegas",
+      "domain": "lasvegas.gp",
+      "snippets": [
+        "### F1 Hub at The Venetian - November 2026\n**Opening hours during race week (November 18-22):** 8:00 AM - 9:00 PM PT.",
+        "For 2026, the East Harmon, Koval and West Harmon zones are connected, allowing eligible ticket holders to explore all three areas and enjoy additional..."
+      ],
+      "pageAge": null,
+      "lens": "campaigns"
+    },
+    {
+      "id": "E38",
+      "url": "https://www.f1lasvegasgp.com/2026/05/tickets-on-sale-now/",
+      "title": "TICKETS ON SALE NOW FOR THE FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX 2026, SET FOR NOVEMBER 19-21 - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "Returning November 19-21 after a sold-out 2025 event, this year’s race will introduce a newly connected West Harmon Zone to the East Harmon Zone and K..."
+      ],
+      "pageAge": "194 days ago",
+      "lens": "campaigns"
+    },
+    {
+      "id": "E39",
+      "url": "https://digitalinteractive.co/rr-partners-and-the-las-vegas-grand-prix-brand-machine-what-the-100-day-countdown-reveals-about-agency-driven-recognition/",
+      "title": "R&R Partners and the Las Vegas Grand Prix Brand Machine: What the 100-Day Countdown Reveals About Agency-Driven Recognition - Digital Interactive",
+      "domain": "digitalinteractive.co",
+      "snippets": [
+        "On August 15, Grand Prix Plaza lit up with a 100-vehicle car show, a 15-foot branded slot machine, F1 Academy driver appearances, and partner activati...",
+        "**In May 2026, R&R launched “Pack for Vegas” for the LVCVA**, six 15-second comedic spots directed by Jody Hill (The Righteous Gemstones, Eastbound an...",
+        "The campaign ran across the NBA Playoffs, NBA Finals, WNBA All-Star game, and the Big Brother season premiere."
+      ],
+      "pageAge": "92 days ago",
+      "lens": "campaigns"
+    },
+    {
+      "id": "E40",
+      "url": "https://fabulousnevada.com/see-do/las-vegas-grand-prix-announces-new-2026-experiences/",
+      "title": "Las Vegas Grand Prix Announces New 2026 Experiences - Fabulous Nevada",
+      "domain": "fabulousnevada.com",
+      "snippets": [
+        "21, the Las Vegas Grand Prix will once again bring Formula 1 racing to the Las Vegas Strip, accompanied by concerts, fan experiences, community progra...",
+        "Skip to content\n\nformula 1 las vegas\n\n# Las Vegas Grand Prix Announces New 2026 Experiences\n**The Formula 1 Heineken Las Vegas Grand Prix expands its ...",
+        "General admission tickets start at $81, while grandstand tickets begin at $102.",
+        "Hosted by Heather McMahan, the event will bring together executives and other figures from sports, business, technology, and entertainment for discuss..."
+      ],
+      "pageAge": "41 days ago",
+      "lens": "campaigns"
+    },
+    {
+      "id": "E41",
+      "url": "https://lasvegassun.com/news/2026/jan/18/influencers-quiet-disclosures-lagged-behind-lvcvas/",
+      "title": "Influencers’ quiet disclosures lagged behind LVCVA’s loud promotion of Formula One race - Las Vegas Sun News",
+      "domain": "lasvegassun.com",
+      "snippets": [
+        "#### LVCVA Las Vegas Grand Prix social media influencers\nThe LVCVA has been working with influencers to promote the weekend since the Las Vegas Strip ...",
+        "# Influencers’ quiet disclosures lagged behind LVCVA’s loud promotion of Formula One race\nLVCVA influencers\n\nFans gather Nov. 20, 2025, in the pit are...",
+        "Photo by:\n\nHannah Stocking, a comedian with more than 68 million collective social media followers, wore a VIP pass to the Las Vegas Grand Prix in Nov..."
+      ],
+      "pageAge": "303 days ago",
+      "lens": "campaigns"
+    },
+    {
+      "id": "E42",
+      "url": "https://www.reviewjournal.com/sports/motor-sports/formula-1/f1-las-vegas-grand-prix-tickets-to-go-on-sale-in-may-50-single-day-option-returns-3731754/",
+      "title": "Formula One Las Vegas Grand Prix ticket on-sale date announced with the return of the $50 single-day option",
+      "domain": "reviewjournal.com",
+      "snippets": [
+        "A special presale will go live for American Express members at 10 a.m. on May 5.",
+        "Prices to the eight hospitality spaces are as followed, with fees and taxes included:\n\n— Gordon Ramsay at F1 Garage: Prices starting at $28,885;\n\n— Wy..."
+      ],
+      "pageAge": "231 days ago",
+      "lens": "commerce"
+    },
+    {
+      "id": "E43",
+      "url": "https://www.ticketnews.com/2026/04/las-vegas-grand-prix-sets-2026-ticket-on-sale-timeline-with-single-day-ga-starting-at-50/",
+      "title": "Las Vegas Grand Prix Sets 2026 Ticket On-Sale Timeline, With Single-Day GA Starting at $50",
+      "domain": "ticketnews.com",
+      "snippets": [
+        "Flamingo General Admission will again serve as the lowest-priced three-day option at $492, while single-day Flamingo tickets start at $50 for practice...",
+        "When organizers outlined plans for the 2024 race, single-day general admission tickets started at $150, meaning the newly announced $50 entry point fo...",
+        "Hospitality remains aimed squarely at the premium buyer, with products ranging from Club Paris at $2,542 and HGV Clubhouse at $3,728 to Bellagio Fount..."
+      ],
+      "pageAge": "230 days ago",
+      "lens": "commerce"
+    },
+    {
+      "id": "E44",
+      "url": "https://www.f1lasvegasgp.com/tickets/?amp=&amp=&amp=&amp=&amp=&amp=&amp=&gad_source=1",
+      "title": "2026 Tickets - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "… Get your General Admission or Grandstand tickets today and pay no ticket fees. Available now through Nov. 2 at 11:59PM PT\n\n# 2026 Tickets\n\n### Hospi...",
+        "Available now through Nov. 2 at 11:59PM PT\n\n# 2026 Tickets\n\n### Hospitality\n\nSingle-Day From $1,383\n\n**Access:** Premium seating in a refined setting\n..."
+      ],
+      "pageAge": "18 days ago",
+      "lens": "commerce"
+    },
+    {
+      "id": "E45",
+      "url": "https://www.thingsvegas.com/guides/f1-las-vegas-cost-guide-2026/",
+      "title": "How Much Does the F1 Las Vegas Grand Prix Cost? 2026 Price Guide",
+      "domain": "thingsvegas.com",
+      "snippets": [
+        "The original $50 Flamingo Zone Thursday tier sold out, so current Thursday single-day GA starts at $81.\n\n| Day | Session | Single-day GA from |\n| --- ..."
+      ],
+      "pageAge": "38 days ago",
+      "lens": "commerce"
+    },
+    {
+      "id": "E46",
+      "url": "https://bvmsports.com/2026/11/10/f1-hub-opens-at-venetian-las-vegas-with-exclusive-merch-and-events/",
+      "title": "F1 Hub Opens at Venetian Las Vegas With Exclusive Merch and Events - BVM Sports",
+      "domain": "bvmsports.com",
+      "snippets": [
+        "Several premium options, including the Paddock Club, Wynn Grid Club and Gordon Ramsay at F1 Garage, are already sold out.",
+        "The Venetian’s F1 Hub features new collections from Etai LA, Greg Yuna and Off Season, alongside returning brand collaborations and **official Grand P..."
+      ],
+      "pageAge": "7 days ago",
+      "lens": "commerce"
+    },
+    {
+      "id": "E47",
+      "url": "https://travel.yahoo.com/general/articles/massive-f1-pop-shop-takes-193100624.html",
+      "title": "Massive F1 Pop-Up Shop Takes Over a Major Vegas Resort",
+      "domain": "travel.yahoo.com",
+      "snippets": [
+        "# Massive F1 Pop-Up Shop Takes Over a Major Vegas Resort\n\n7 Grand Canal Shoppes Launch Anchors 2-Story F1 Retail Hub\nThe F1 HUB presented by American ...",
+        "## $20 Amex Statement Credits Anchor Custom F1 Merchandise Labs\n\nOne activation features a Hello Kitty-wrapped F1 Academy car, while the Las Vegas Gra...",
+        "## 4400 Koval Lane Grand Prix Plaza Remains Closed Until Jan.\n\nThe Venetian's F1 HUB should not be confused with the F1 HUB inside Grand Prix Plaza at..."
+      ],
+      "pageAge": "6 days ago",
+      "lens": "commerce"
+    },
+    {
+      "id": "E48",
+      "url": "https://www.licenseglobal.com/motorsport/formula-1-expands-merchandise-and-camera-partnerships-ahead-of-las-vegas-grand-prix",
+      "title": "Formula 1 Expands Merchandise and Camera Partnerships Ahead of Las Vegas Grand Prix",
+      "domain": "licenseglobal.com",
+      "snippets": [
+        "The F1 Hub spans two floors of retail space, including a World of F1 collection featuring merchandise tied to other races around the world.",
+        "The Formula 1 Heineken Las Vegas Grand Prix has announced its 2026 merchandise collections, which will debut at the F1 Hub presented by American Expre...",
+        "New collaborators include Etai LA, Greg Yuna and Off Season, alongside returning partners Disney, BAPE, the Vegas Golden Knights and Hello Kitty and F...",
+        "Etai LA x Formula 1 collection, F1 ACADEMY x Hello Kitty and Friends\n\nEtai LA x Formula 1 collection, F1 ACADEMY x Hello Kitty and FriendsFormula 1\n\nF..."
+      ],
+      "pageAge": "27 days ago",
+      "lens": "commerce"
+    },
+    {
+      "id": "E49",
+      "url": "https://www.f1lasvegasgp.com/merch/",
+      "title": "Merchandise - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "NOW OPEN\n\nPre-race\n\nNov 7 – 17\n\n10 AM – 9 PM\n\nRace Week\n\nNov 18 – 22\n\n8 AM – 9 PM\n\nPost Race\n\nNov 23 – 28\n\n10 AM – 7 PM\n\n(Closed on Thanksgiving)\n\n## ...",
+        "Las Vegas, NV (Entrance on 2nd floor)\n\nExclusive Merchandise\n\n## LEGO®\nLEGO® will showcase a new Formula 1-inspired collection at the F1 HUB. Featurin...",
+        "## BAPE®\nTokyo streetwear label A BATHING APE® returns to the F1 HUB with a collection created exclusively for the Las Vegas Grand Prix, built around ...",
+        "## F1 ACADEMY™ x Hello Kitty® and Friends\nSanrio®, the global lifestyle company behind iconic characters such as Hello Kitty®, Kuromi™, Cinnamoroll™, ..."
+      ],
+      "pageAge": "5 days ago",
+      "lens": "commerce"
+    },
+    {
+      "id": "E50",
+      "url": "https://corp.formula1.com/f1-hub-presented-by-american-express-in-las-vegas-to-feature-new-merchandise-collaborations-and-returning-fan-favorites-november-7/",
+      "title": "F1 HUB PRESENTED BY AMERICAN EXPRESS IN LAS VEGAS TO FEATURE NEW MERCHANDISE COLLABORATIONS AND RETURNING FAN FAVORITES, NOVEMBER 7",
+      "domain": "corp.formula1.com",
+      "snippets": [
+        "- **LVGP Collection** – The official Las Vegas Grand Prix merchandise program will feature three distinct lines including Classic Collection, Odds in ...",
+        "American Express Card Members and a guest will be able to access an Amex® Card Member Area in the HUB featuring exclusive merchandise for purchase (wh..."
+      ],
+      "pageAge": "28 days ago",
+      "lens": "commerce"
+    },
+    {
+      "id": "E51",
+      "url": "https://www.autoracing1.com/pl/509064/formula-1-news-f1-hub-by-american-express-opens-at-the-venetian-in-vegas/",
+      "title": "Formula 1 News: F1 Hub by American Express opens at the Venetian in Vegas",
+      "domain": "autoracing1.com",
+      "snippets": [
+        "These are joined by fresh collections from returning favorites, including **Disney, BAPE®, The LEGO Group, the Vegas Golden Knights and F1 ACADEMY™ x ...",
+        "Highlights include a neon Las Vegas Grand Prix photo moment, the LVGP Headwear Customization Lab and a Hello Kitty-wrapped F1 ACADEMY™ car complete wi..."
+      ],
+      "pageAge": "7 days ago",
+      "lens": "commerce"
+    },
+    {
+      "id": "E52",
+      "url": "https://shop.f1lasvegasgp.com/en/",
+      "title": "F1 Las Vegas Grand Prix Store",
+      "domain": "shop.f1lasvegasgp.com",
+      "snippets": [
+        "**Men's Black 2026 Las Vegas Grand Prix Collage Hoodie** … The 2026 Las Vegas Grand Prix collection is the official gear for the race this November 19...",
+        "Las Vegas Grand Prix\n\n2026 Merchandise\n\nShop Now\n\n2026 Las Vegas Grand Prix\n\n## Shop All\nMen's Black 2026 Las Vegas Grand Prix Suit Turn Half-Zip Hood..."
+      ],
+      "pageAge": null,
+      "lens": "commerce"
+    },
+    {
+      "id": "E53",
+      "url": "https://shop.f1lasvegasgp.com/en/men/ga-45+z-811776529-881130140",
+      "title": "F1 Las Vegas Grand Prix Mens Clothing, Formula 1 Las Vegas Mens Merchandise, Shop",
+      "domain": "shop.f1lasvegasgp.com",
+      "snippets": [
+        "**Men's Blue 2026 Las Vegas Grand Prix Flocked Allover Print Quarter-Zip Sweatshirt** … **Men's Black 2026 Las Vegas Grand Prix Steering T-Shirt** … M..."
+      ],
+      "pageAge": null,
+      "lens": "commerce"
+    },
+    {
+      "id": "E54",
+      "url": "https://shop.f1lasvegasgp.com/en/insomniac/br-2390952911+z-933535-1431532512",
+      "title": "F1 Las Vegas GP Insomniac Merchandise, Formula 1 Las Vegas Grand Prix Insomniac Apparel, Clothing",
+      "domain": "shop.f1lasvegasgp.com",
+      "snippets": [
+        "1 - 72 of 149\n\n149 Items 149 Items\n\nMen's Black 2026 Las Vegas Grand Prix Suit Turn Half-Zip Hoodie\n\n$125.00\n\nMen's Black 2026 Las Vegas Grand Prix Su..."
+      ],
+      "pageAge": null,
+      "lens": "commerce"
+    },
+    {
+      "id": "E55",
+      "url": "https://shop.f1lasvegasgp.com/en/mercedes-amg-petronas-f1-team/t-10977535+z-9539237-2587371245",
+      "title": "Mercedes-AMG Petronas Las Vegas GP Merchandise, Mercedes-AMG Petronas Las Vegas Apparel, Clothing",
+      "domain": "shop.f1lasvegasgp.com",
+      "snippets": [
+        "Kimi Antonelli - 2026 Formula 1® Topps NOW® - Card 71 - LOOK FOR AUTOS & SHORT PRINTS\n\nKimi Antonelli - 2026 Formula 1® Topps NOW® - Card 71 - LOOK FO..."
+      ],
+      "pageAge": null,
+      "lens": "commerce"
+    },
+    {
+      "id": "E56",
+      "url": "https://usf1store.formula1.com/en/",
+      "title": "F1 US Store",
+      "domain": "usf1store.formula1.com",
+      "snippets": [
+        "**Men's Puma Black Formula 1 2026 Las Vegas Grand Prix T-Shirt** … Men's Puma Black Scuderia Ferrari 2026 Las Vegas Grand Prix Replica T-Shirt … **Men..."
+      ],
+      "pageAge": "979 days ago",
+      "lens": "commerce"
+    },
+    {
+      "id": "E57",
+      "url": "https://shop-us.mercedesamgf1.com/",
+      "title": "Official Mercedes-AMG PETRONAS F1 Team Store",
+      "domain": "shop-us.mercedesamgf1.com",
+      "snippets": [
+        "- Team Water Bottle Team Water Bottle £28.00 GBP\n- Logo Keyring Logo Keyring £25.00 GBP\n- 2026 Team Driver Cap Black 2026 Team Driver Cap Black £40.00..."
+      ],
+      "pageAge": "155 days ago",
+      "lens": "commerce"
+    },
+    {
+      "id": "E58",
+      "url": "https://seatgeek.com/formula-1-las-vegas-grand-prix-tickets/f1/2027-11-20-12-pm/18595083",
+      "title": "2027 Formula 1 Las Vegas Grand Prix - Saturday tickets in Las Vegas (F1 Las Vegas Strip Autodrome) - Nov 20, 2027 at 12:00pm",
+      "domain": "seatgeek.com",
+      "snippets": [
+        "\",\"offers\":{\"name\":\"General Tickets\",\"availability\":\"http://schema.org/InStock\",\"inventoryLevel\":{\"value\":4},\"validFrom\":\"2026-11-15\",\"validThrough\":\"..."
+      ],
+      "pageAge": "5110 days ago",
+      "lens": "commerce"
+    },
+    {
+      "id": "E59",
+      "url": "https://www.selectmotorracing.com/F1_Tickets/tickets_us-lasvegas.html",
+      "title": "2027 US Las Vegas Formula One Grand Prix, Race Tickets, F1 Paddock Club, ®F1 Experiences, Circuit Hospitality",
+      "domain": "selectmotorracing.com",
+      "snippets": [
+        "Grand Prix Tickets | Grandstands | ®F1 Paddock Club | ®F1 Experiences | Team Packages | Circuit Hospitality | ; See the price table below, scroll and ..."
+      ],
+      "pageAge": null,
+      "lens": "commerce"
+    },
+    {
+      "id": "E60",
+      "url": "https://www.t-mobile.com/dialed-in/tips-tricks/how-to-watch-f1-las-vegas-grand-prix",
+      "title": "How to Watch the 2026 Las Vegas Grand Prix: Schedule & Streaming",
+      "domain": "t-mobile.com",
+      "snippets": [
+        "Schedule, Streaming Options and What to Expect\n## Las Vegas Grand Prix schedule and race times for 2026\nThe FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX 20...",
+        "- **Heineken® Stage:** Over in the East Harmon Zone, Disco Dom and Icona Pop headline, with sets from LP Giobbi and Eli & Fur, plus performances from ...",
+        "- **F1 After Party:** The Backstreet Boys headline the official post-race show at Sphere on Saturday, November 21 - Note you will need to have a race ..."
+      ],
+      "pageAge": "34 days ago",
+      "lens": "experiences"
+    },
+    {
+      "id": "E61",
+      "url": "https://www.fox5vegas.com/2026/11/17/your-guide-2026-las-vegas-grand-prix-las-vegas/",
+      "title": "Las Vegas Grand Prix 2026: Race times, road closures and watch parties",
+      "domain": "fox5vegas.com",
+      "snippets": [
+        "# Your guide to the 2026 Las Vegas Grand Prix in Las Vegas\n## Weekend schedule\n**Saturday, Nov. 21**\n\n- **4:20–4:55 p.m.:** F1 Academy feature race.\n-...",
+        "- **8 p.m.:** **Las Vegas Grand Prix begins.**\n- **11 p.m.:** Gates close.",
+        "## Entertainment\n**T-Mobile Stage**\n\n- **Thursday:** Two Friends and Ja Rule.\n- **Friday:** Disclosure and Gorgon City.\n- **Saturday:** Sean Paul and ...",
+        "**Heineken Stage**\n\n- **Thursday:** Australian Bee Gees.\n- **Friday:** Icona Pop and Eli & Fur.\n- **Saturday:** Disco Dom and LP Giobbi."
+      ],
+      "pageAge": "0 days ago",
+      "lens": "experiences"
+    },
+    {
+      "id": "E62",
+      "url": "https://gpdestinations.com/trackside-las-vegas-grand-prix/",
+      "title": "Trackside - 2026 Las Vegas Grand Prix - GPDestinations.com",
+      "domain": "gpdestinations.com",
+      "snippets": [
+        "Sean Paul, Natasha Bedingfield and Disclosure are among the first trackside performances announced, The Australian Bee Gees Show, Icona Pop and Disco ..."
+      ],
+      "pageAge": "22 days ago",
+      "lens": "experiences"
+    },
+    {
+      "id": "E63",
+      "url": "https://travelprnews.com/article/las-vegas-sets-the-stage-for-2026-formula-1-grand-prix-with-concerts-dining-and-citywide-events/",
+      "title": "Travel PR News",
+      "domain": "travelprnews.com",
+      "snippets": [
+        "Wynn Golf Club’s November 18 THE GRID Pro-Am is invitation-only, while the November 19 F1 Business Summit at Caesars Palace focuses on the intersectio...",
+        "### KEY TAKEAWAYS\n\n- Downtown’s free and all-ages Neon City Festival runs November 20–22, alongside concerts and nightclub programmes across the Strip...",
+        "Concerts are scheduled across the Downtown Las Vegas Events Center and stages around the Fremont Street Experience, offering a major alternative for v...",
+        "The **Lewis Hamilton Grandstand** overlooks the approach along Harmon Straight towards the final corner, with access now extended across the East Harm..."
+      ],
+      "pageAge": "8 days ago",
+      "lens": "experiences"
+    },
+    {
+      "id": "E64",
+      "url": "https://www.identity.vegas/formula-1-las-vegas-grand-prix-2026-guide-experiences/",
+      "title": "Formula 1 Heineken Las Vegas Grand Prix 2026 Guide",
+      "domain": "identity.vegas",
+      "snippets": [
+        "# Formula 1 Heineken Las Vegas Grand Prix 2026 Guide\n\n### Mercedes-AMG PETRONAS F1 Team Fan Hub\nThe Mercedes-AMG PETRONAS F1 Team Fan Hub returns to B...",
+        "The Mercedes and Williams fan zones are explicitly advertised as complimentary.",
+        "MGM Zone is MGM Resorts’ collection of Formula 1-inspired experiences, including dining, fan activations, hospitality and entertainment.",
+        "Fontainebleau offers Race Club activations, LIV nightlife, upscale dining and stylish accommodations."
+      ],
+      "pageAge": "0 days ago",
+      "lens": "experiences"
+    },
+    {
+      "id": "E65",
+      "url": "https://sports.yahoo.com/articles/2026-f1-las-vegas-grand-142000612.html",
+      "title": "All About the 2026 F1 Las Vegas Grand Prix, From Top Drivers to Star-Studded Parties - Yahoo Sports",
+      "domain": "sports.yahoo.com",
+      "snippets": [
+        "It includes free entry, an F1 pitstop challenge, racing simulators, a show car, interactive team activations and team apparel.",
+        "The Atlassian Williams F1 Team Fan Zone is activating in Sin City at the Brooklyn Bridge on the Las Vegas Strip inside the New York-New York Hotel & C...",
+        "The BWT Alpine Formula One Team is an official partner of The Venetian Resort, which also doubles as the ultimate fan destination with hands-on activi..."
+      ],
+      "pageAge": "0 days ago",
+      "lens": "experiences"
+    },
+    {
+      "id": "E66",
+      "url": "https://www.wynnlasvegas.com/experiences/ultimate-race-week",
+      "title": "F1 Packages & Experiences 2026",
+      "domain": "wynnlasvegas.com",
+      "snippets": [
+        "## Wynn Racing Motors Lounge\n**November 18–22** Do you think you are as fast as an F1® pit crew? Experience the Red Bull Pit Stop Challenge—race again...",
+        "## More Retail Experiences\n### Las Vegas Grand Prix Merchandise Store\n\nNovember 18–22\n\nBringing more of the Las Vegas Grand Prix to our guests, Wynn w..."
+      ],
+      "pageAge": "351 days ago",
+      "lens": "experiences"
+    },
+    {
+      "id": "E67",
+      "url": "https://www.grandprixplaza.com/2026/01/grand-prix-plaza-reopens-in-las-vegas/",
+      "title": "GRAND PRIX PLAZA, THE WORLD’S LARGEST IMMERSIVE F1® ATTRACTION, REOPENS IN LAS VEGAS",
+      "domain": "grandprixplaza.com",
+      "snippets": [
+        "Set within the 39-acre, multi-use complex that houses the state-of-the-art Las Vegas Grand Prix Pit Building, the entertainment destination features m..."
+      ],
+      "pageAge": "291 days ago",
+      "lens": "experiences"
+    },
+    {
+      "id": "E68",
+      "url": "https://thebettervacation.com/las-vegas/grand-prix-plaza/",
+      "title": "Grand Prix Plaza Las Vegas: Tickets & Guide (2026)",
+      "domain": "thebettervacation.com",
+      "snippets": [
+        "Grand Prix Plaza reopened on January 30, 2026 after an upgrade, returning with a redesigned F1 Drive karting track layout, an upgraded F1 X 4D theater..."
+      ],
+      "pageAge": "48 days ago",
+      "lens": "experiences"
+    },
+    {
+      "id": "E69",
+      "url": "https://www.f1lasvegasgp.com/2026/01/2026-tickets-on-sale-now-for-grand-prix-plaza/",
+      "title": "TICKETS ON SALE NOW FOR GRAND PRIX PLAZA ATTRACTIONS, REOPENING JANUARY 30 - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "The Grand Prix package is **$99** per driver; local and military tickets are **$79**.",
+        "F1® SIMULATORS are available to add on to F1® X or F1® DRIVE tickets for **$10**."
+      ],
+      "pageAge": "299 days ago",
+      "lens": "experiences"
+    },
+    {
+      "id": "E70",
+      "url": "https://www.f1lasvegasgp.com/2026/01/grand-prix-plaza-reopens/",
+      "title": "GRAND PRIX PLAZA, THE WORLD’S LARGEST IMMERSIVE F1® ATTRACTION, REOPENS IN LAS VEGAS - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "- **Rooftop:** Grand Prix Plaza’s rooftop offers more than 71,000 square feet of open-air event space, boasting stunning views of the Las Vegas Strip ..."
+      ],
+      "pageAge": "291 days ago",
+      "lens": "experiences"
+    },
+    {
+      "id": "E71",
+      "url": "https://news3lv.com/news/local/f1s-grand-prix-plaza-sets-reopening-date-after-2026-race",
+      "title": "F1's Grand Prix Plaza sets reopening date after 2026 race",
+      "domain": "news3lv.com",
+      "snippets": [
+        "This season's public operations ended earlier this month to allow for Las Vegas Grand Prix preparations.",
+        "# F1's Grand Prix Plaza in Las Vegas sets reopening date after 2026 race\nGrand Prix Plaza in Las Vegas will reopen to the public on Jan. 8, 2027.",
+        "That includes Kids Karts and F1-Themed Indoor Playground at F1 Drive, giving younger visitors more ways to experience the excitement. Kids Karts will ..."
+      ],
+      "pageAge": "19 days ago",
+      "lens": "experiences"
+    },
+    {
+      "id": "E72",
+      "url": "https://unlvscarletandgray.com/metro/formula-1-grand-prix-returns-to-las-vegas-as-economic-impact-and-local-concerns-continue/",
+      "title": "Formula 1 Grand Prix returns to Las Vegas as economic impact and local concerns continue - UNLV Scarlet and Gray",
+      "domain": "unlvscarletandgray.com",
+      "snippets": [
+        "The 2026 Grand Prix anticipates over 100,000 visitors each day throughout the weekend.",
+        "Previous race weekends have seen up to 306,000 guests per weekend, with more than 175,000 of those visitors coming from out-of-state or internationall..."
+      ],
+      "pageAge": "1 days ago",
+      "lens": "experiences"
+    },
+    {
+      "id": "E73",
+      "url": "https://www.travelandtourworld.com/news/article/a3mq666vg4kr/",
+      "title": "United States And More Destinations Boost Luxury Travel As Las Vegas Grand Prix 2026 Returns With Glamorous Racing, Dining And Entertainment Experiences - Travel And Tour World",
+      "domain": "travelandtourworld.com",
+      "snippets": [
+        "Las Vegas Grand Prix 2026 boosts United States travel with luxury hotels, global dining, Formula One racing and exclusive entertainment from November ..."
+      ],
+      "pageAge": "9 days ago",
+      "lens": "experiences"
+    },
+    {
+      "id": "E74",
+      "url": "https://news3lv.com/news/local/las-vegas-grand-prix-returns-next-week-as-planners-aim-to-cut-corridor-disruptions",
+      "title": "Las Vegas Grand Prix returns next week as planners aim to cut corridor disruptions",
+      "domain": "news3lv.com",
+      "snippets": [
+        "Through the first three years combined, the Grand Prix has generated $3.2 billion in economic impact, along with hundreds of jobs and $43 million in t..."
+      ],
+      "pageAge": "4 days ago",
+      "lens": "experiences"
+    },
+    {
+      "id": "E75",
+      "url": "https://news3lv.com/news/local/lvcva-approves-100m-deal-to-keep-grand-prix-for-10-years",
+      "title": "LVCVA approves $100M deal to keep Grand Prix for 10 years",
+      "domain": "news3lv.com",
+      "snippets": [
+        "# LVCVA approves $100M deal to keep Grand Prix for 10 years\ntopics:\n- Las Vegas Grand Prix\n- LVCVA\n- Formula One\n\n- Economic impact\n\nLAS VEGAS (KSNV) ...",
+        "# LVCVA approves $100M deal to keep Grand Prix for 10 years\nLAS VEGAS (KSNV) — Las Vegas tourism officials have approved a new sponsorship agreement a...",
+        "Under the new agreement, the LVCVA will spend $10 million a year through 2037 to help cover goods and services required to host the race and will purc...",
+        "The agreement is the third sponsorship deal between the LVCVA and the Las Vegas Grand Prix since the race began, and it is the longest so far, coverin..."
+      ],
+      "pageAge": "125 days ago",
+      "lens": "experiences"
+    },
+    {
+      "id": "E76",
+      "url": "https://www.stocktitan.net/news/RKT/u-p-d-a-t-e-rocket-companies-rcc5dwimoag4.html",
+      "title": "The Las Vegas Grand Prix will get its first homeownership partners: Rocket Mortgage and Redfin.",
+      "domain": "stocktitan.net",
+      "snippets": [
+        "Rocket Companies (RKT) announced a three-year partnership bringing **Rocket Mortgage and Redfin** to the Formula 1 Las Vegas Grand Prix."
+      ],
+      "pageAge": "1 days ago",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E77",
+      "url": "https://www.prnewswire.com/news-releases/rocket-mortgage-and-redfin-become-first-homeownership-partners-of-formula-1-heineken-las-vegas-grand-prix-2026-302940683.html",
+      "title": "Rocket Mortgage and Redfin Become First Homeownership Partners of FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX 2026",
+      "domain": "prnewswire.com",
+      "snippets": [
+        "Rocket Mortgage and Redfin Become First Homeownership Partners of FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX 2026 Rocket Companies, Inc. logo\n\n# Rocket M...",
+        "The three-year partnership brings both brands to the Las Vegas Strip this November\n\nThe three-year partnership brings both brands to the Las Vegas Str..."
+      ],
+      "pageAge": "1 days ago",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E78",
+      "url": "https://finance.yahoo.com/technology/articles/zoox-las-vegas-grand-prix-160000819.html",
+      "title": "Zoox and Las Vegas Grand Prix, Inc. Announce Multi-Year Partnership",
+      "domain": "finance.yahoo.com",
+      "snippets": [
+        "Thu, November 5, 2026 at 8:00 AM PST 4 min read\n\n**SAN FRANCISCO, November 05, 2026**--(BUSINESS WIRE)--Zoox, the autonomous ride-hailing company, tod..."
+      ],
+      "pageAge": "12 days ago",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E79",
+      "url": "https://www.financialcontent.com/article/bizwire-2026-11-5-zoox-and-las-vegas-grand-prix-inc-announce-multi-year-partnership",
+      "title": "Zoox and Las Vegas Grand Prix, Inc. Announce Multi-Year Partnership",
+      "domain": "financialcontent.com",
+      "snippets": [
+        "*\n\n*Partnership brings Zoox to race week activations across Las Vegas, with rides to and from Grand Prix Plaza planned for 2027."
+      ],
+      "pageAge": "12 days ago",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E80",
+      "url": "https://www.8newsnow.com/news/local-news/zoox-las-vegas-grand-prix-announce-multi-year-partnerhsip/",
+      "title": "Zoox, Las Vegas Grand Prix announce multi-year partnerhsip",
+      "domain": "8newsnow.com",
+      "snippets": [
+        "Starting in 2027, Zoox said it plans to offer rides in its robotaxi to and from Grand Prix Plaza, with a dedicated pickup and drop-off zone."
+      ],
+      "pageAge": "11 days ago",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E81",
+      "url": "https://corp.formula1.com/formula-1-announces-standard-chartered-as-presenting-partner-of-the-f1-business-summit-in-las-vegas/",
+      "title": "Formula 1 ® announces Standard Chartered as Presenting Partner of the F1 Business Summit in Las Vegas",
+      "domain": "corp.formula1.com",
+      "snippets": [
+        "## Formula 1 ® announces Standard Chartered as Presenting Partner of the F1 Business Summit in Las Vegas\nFormula 1® today announced that global bank S...",
+        "This year’s Summit will feature an impressive lineup including Jan Metzger, Global Head, Coverage Banking at Standard Chartered, who will take to the ..."
+      ],
+      "pageAge": "25 days ago",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E82",
+      "url": "https://www.f1lasvegasgp.com/2025/10/f1-business-summit-announces-new-panel-panelists-and-ticketing-options-for-thursday-november-20-at-wynn-las-vegas/",
+      "title": "F1 Business Summit Announces New Panel, Panelists and Ticketing Options for Thursday, November 20 at Wynn Las Vegas - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "STANDARD CHARTERED, PRESENTING PARTNER OF THE F1 BUSINESS SUMMIT\n\n# F1 Business Summit Announces New Panel, Panelists and Ticketing Options for Thursd..."
+      ],
+      "pageAge": "396 days ago",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E83",
+      "url": "https://www.f1lasvegasgp.com/2026/10/insight-becomes-official-event-partner-of-the-formula-1-heineken-las-vegas-grand-prix-bringing-together-two-tech-forward-brands/",
+      "title": "Insight Becomes Official Event Partner of the FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX, Bringing Together Two Tech-Forward Brands - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "# Insight Becomes Official Event Partner of the FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX, Bringing Together Two Tech-Forward Brands\n10.19.2026 LVGP Pre...",
+        "Under the partnership agreement, Insight will serve as the official Technology Lifecycle Management Partner of the FORMULA 1 HEINEKEN LAS VEGAS GRAND ...",
+        "Through the FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX, Insight will have a new platform to deepen those relationships through premium experiences that b..."
+      ],
+      "pageAge": "25 days ago",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E84",
+      "url": "https://www.f1lasvegasgp.com/2026/06/sbi-holdings-inc-and-las-vegas-grand-prix-inc-enter-into-official-presenting-partner-agreement-for-the-formula-1-heineken-las-vegas-grand-prix-as-part-of-its-sbi-neo-media-ecosystem-strategy/",
+      "title": "SBI HOLDINGS INC. AND LAS VEGAS GRAND PRIX, INC. ENTER INTO OFFICIAL PRESENTING PARTNER AGREEMENT FOR THE FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX AS PART OF ITS SBI NEO-MEDIA ECOSYSTEM STRATEGY - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "ENTER INTO OFFICIAL PRESENTING PARTNER AGREEMENT FOR THE FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX AS PART OF ITS SBI NEO-MEDIA ECOSYSTEM STRATEGY\nSBI H..."
+      ],
+      "pageAge": "144 days ago",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E85",
+      "url": "https://www.f1lasvegasgp.com/2026/05/the-venetian-resort-las-vegas-extends-formula-1-heineken-las-vegas-grand-prix-partnership-welcomes-back-bwt-alpine-formula-one-team-and-unveils-exclusive-race-weekend-packages/",
+      "title": "THE VENETIAN RESORT LAS VEGAS EXTENDS FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX PARTNERSHIP, WELCOMES BACK BWT ALPINE FORMULA ONE TEAM, AND UNVEILS EXCLUSIVE RACE WEEKEND PACKAGES - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "The Venetian Resort Las Vegas is gearing up for an elite 2026 race weekend, announcing today a five-year Founding Partner agreement with FORMULA 1 HEI...",
+        "For 2026, The Venetian Resort once again partners with Vibee, the music-led destination experience company founded by Live Nation, to deliver official..."
+      ],
+      "pageAge": "188 days ago",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E86",
+      "url": "https://nevadabusiness.com/2026/05/the-venetian-resort-las-vegas-extends-formula-1-heineken-las-vegas-grand-prix-partnership-welcomes-back-bwt-alpine-formula-one-team-and-unveils-exclusive-race-weekend-packages/",
+      "title": "The Venetian Resort Las Vegas Extends Formula 1 Heineken Las Vegas Grand Prix Partnership, Welcomes Back BWT Alpine Formula One Team, and Unveils Exclusive Race Weekend Packages - Nevada Business Magazine",
+      "domain": "nevadabusiness.com",
+      "snippets": [
+        "Designed to immerse fans in the excitement of Formula 1, the packages include the choice of a three-day Grandstand ticket with assigned seating or gen..."
+      ],
+      "pageAge": "188 days ago",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E87",
+      "url": "https://www.reviewjournal.com/sports/motor-sports/formula-1/f1-lvcva-commit-to-10-year-las-vegas-grand-prix-extension-through-2037-3833366/",
+      "title": "Las Vegas Grand Prix extended through 2037 in new decade-long deal",
+      "domain": "reviewjournal.com",
+      "snippets": [
+        "The LVCVA is also paying F1 $10 million for this year’s race and the 2027 edition."
+      ],
+      "pageAge": "161 days ago",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E88",
+      "url": "https://www.f1lasvegasgp.com/",
+      "title": "Official site of the Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "Announce Multi-Year Partnership\n\n## Our Partners\n### Founding Partners\n### Title Partner\n\nCaesars logo\n\nMGM logo\n\nWynn Las Vegas logo\n\nVenetian logo\n\n...",
+        "Las Vegas Grand Prix - November 19-21, 2026\n\n## 2026 Tickets\n### Hospitality\nSingle-Day From $1,383\n\n**Access:** Premium seating in a refined setting\n..."
+      ],
+      "pageAge": "4 days ago",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E89",
+      "url": "https://www.f1lasvegasgp.com/tickets/hospitality/trackside-tavern/",
+      "title": "Trackside Tavern® presented by Paramount+ - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "**Trackside Tavern® presented by Paramount+** Heineken® Silver Main Grandstand Skybox **Wynn Grid Club Gordon Ramsay at F1® Garage**\n\n# Trackside Tave...",
+        "Select Your Ticket[s]\n\nTrackside Tavern® presented by Paramount+\n\n3-Day Tickets From $10,285.00\n\nSold Out\n\nSingle-Day Thursday\n\nSold Out\n\nSingle-Day T..."
+      ],
+      "pageAge": "8 days ago",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E90",
+      "url": "https://www.f1lasvegasgp.com/tickets/hospitality/ramsays-garage/",
+      "title": "Gordon Ramsay at F1® Garage - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "# Gordon Ramsay at F1® Garage\n\nOfficial Tickets\n\nFROM $31,774 (inclusive of taxes & fees)\n\nSold Out\n\nGordon Ramsay brings his culinary expertise to Pi..."
+      ],
+      "pageAge": "8 days ago",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E91",
+      "url": "https://www.formula.vegas/",
+      "title": "F1 Las Vegas Grand Prix 2026 Guide",
+      "domain": "formula.vegas",
+      "snippets": [
+        "Sean Paul, Disclosure and Two Friends headline the T-Mobile Stage at Sphere; the inaugural F1 Afterparty that night features the Backstreet Boys at Sp..."
+      ],
+      "pageAge": null,
+      "lens": "partnerships"
+    },
+    {
+      "id": "E92",
+      "url": "https://www.f1lasvegasgp.com/2026/06/formula-1-to-race-on-the-streets-of-las-vegas-through-2037/",
+      "title": "FORMULA 1 TO RACE ON THE STREETS OF LAS VEGAS THROUGH 2037 - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "# FORMULA 1 TO RACE ON THE STREETS OF LAS VEGAS THROUGH 2037\nFormula 1® will continue racing in Las Vegas, the Sports and Entertainment Capital of the...",
+        "**Emily Prazer, President and CEO of Las Vegas Grand Prix, Inc. said:** “Securing a 10-year extension through 2037 is a defining moment for the Las Ve...",
+        "**Steve Hill, President and CEO of LVCVA, said:** “Extending our partnership with Formula 1 for the next decade is a major moment for both Las Vegas a..."
+      ],
+      "pageAge": "165 days ago",
+      "lens": "strategy"
+    },
+    {
+      "id": "E93",
+      "url": "https://www.fox5vegas.com/2026/06/05/formula-1-extends-las-vegas-grand-prix-contract-through-2037/",
+      "title": "Formula 1 extends Las Vegas Grand Prix contract through 2037",
+      "domain": "fox5vegas.com",
+      "snippets": [
+        "Las Vegas Grand Prix, Inc., Clark County officials and the Las Vegas Convention and Visitors Authority have committed to the long-term future of the e...",
+        "“Since its debut in 2023, the event has been extraordinary, rapidly establishing itself as a premier destination for great racing, world-class enterta...",
+        "# Formula 1 extends Las Vegas Grand Prix contract through 2037\n##### Race has generated $3.2 billion in cumulative economic impact since 2023 debut\nFo..."
+      ],
+      "pageAge": "165 days ago",
+      "lens": "strategy"
+    },
+    {
+      "id": "E94",
+      "url": "https://lasvegassun.com/news/2026/may/19/clark-county-extends-las-vegas-grand-prix-through/",
+      "title": "Clark County extends Las Vegas Grand Prix through 2037 - Las Vegas Sun News",
+      "domain": "lasvegassun.com",
+      "snippets": [
+        "The Clark County Commission on Tuesday unanimously approved a resolution extending the Las Vegas Grand Prix’s presence on the Strip through 2037.",
+        "The 10-year extension keeps the Grand Prix locked into its annual November slot — the week before Thanksgiving — with race organizers committing to sm...",
+        "Attendance reached 306,000, with 175,000 unique out-of-town visitors spending an average of $2,400 per visit — nearly double what a typical Las Vegas ..."
+      ],
+      "pageAge": "181 days ago",
+      "lens": "strategy"
+    },
+    {
+      "id": "E95",
+      "url": "https://www.reviewjournal.com/sports/motor-sports/formula-1/f1-track-work-begins-next-week-bringing-strip-area-lane-closures-3871105/",
+      "title": "F1 Las Vegas Grand Prix road work starts next week",
+      "domain": "reviewjournal.com",
+      "snippets": [
+        "As part of the LVCVA deal, the city’s tourism arm will pay F1 $10 million annually to sponsor the race.",
+        "Formula One leaders are considering options if the war in the Mideast doesn’t end before races are scheduled in Qatar and Abu Dhabi in November and De..."
+      ],
+      "pageAge": "81 days ago",
+      "lens": "strategy"
+    },
+    {
+      "id": "E96",
+      "url": "https://www.gurufocus.com/news/9176491/liberty-media-corp-reports-q3-2026-eps-of-054-revenue-of-1115-million-misses-estimates",
+      "title": "Liberty Media Corp Reports Q3 2026 EPS of $0.54, Revenue of $1,115 Million Misses Estimates",
+      "domain": "gurufocus.com",
+      "snippets": [
+        "Revenue rose 28% to $1,115 million, operating income came in at $270 million, and Adjusted OIBDA increased 44% to $338 million compared with the same ..."
+      ],
+      "pageAge": "11 days ago",
+      "lens": "strategy"
+    },
+    {
+      "id": "E97",
+      "url": "https://www.sec.gov/Archives/edgar/data/1560385/000156038526000028/lmca-ex99d1.htm",
+      "title": "Sec",
+      "domain": "sec.gov",
+      "snippets": [
+        "There was $7 million and $6 million of rental income related to Grand Prix Plaza in Las Vegas in the three month periods of 2025 and 2026, respectivel..."
       ],
       "pageAge": null,
       "lens": "strategy"
     },
     {
-      "id": "E16",
-      "url": "https://www.williamsf1.com/articles/b38e45e0-01a9-4789-8c04-713a1fb5c9eb/las-vegas-grand-prix-calendar-spot-confirmed-to-2037",
-      "title": "Las Vegas Grand Prix to remain on F1 calendar until at least 2037",
-      "domain": "williamsf1.com",
+      "id": "E98",
+      "url": "https://gloom.sh/stocks/fwonk/transcripts/q3-2026",
+      "title": "Liberty Media (FWONK) Q3 2026 Earnings Call Transcript and Summary",
+      "domain": "gloom.sh",
       "snippets": [
-        "secured a 10-year contract extension to host Formula 1 Grands Prix through to 2037"
+        "Ticket revenue, including hospitality, is pacing ahead."
       ],
-      "pageAge": "2026-06-04",
+      "pageAge": "12 days ago",
       "lens": "strategy"
     },
     {
-      "id": "E17",
-      "url": "https://www.sportcal.com/?p=154816",
-      "title": "Zoox partners with Las Vegas Grand Prix",
-      "domain": "sportcal.com",
+      "id": "E99",
+      "url": "https://finance.yahoo.com/quote/LM0F.F/earnings/LM0F.F-Q3-2026-earnings_call-726471.html",
+      "title": "Liberty Media Corp. R (LM0F.F) Q3 FY2026 earnings call transcript",
+      "domain": "finance.yahoo.com",
       "snippets": [
-        "the two other US races in Austin and Miami"
+        "Looking ahead, the Las Vegas Grand Prix remains key, not just to our local community partners, for whom it has generated over $3 billion in cumulative...",
+        "With demand so strong, we are also exploring opportunities for adding Paddock Club capacity in 2027 at China, Silverstone, Austria, and several other ..."
       ],
-      "pageAge": "2026-11-05",
-      "lens": "partnerships"
+      "pageAge": null,
+      "lens": "strategy"
     },
     {
-      "id": "E18",
-      "url": "https://recommend.com/destinations/race-weekend-plans-rev-up-for-f1-2026-las-vegas-event/",
-      "title": "Race Weekend Plans Rev Up For F1 2026 Las Vegas Event",
-      "domain": "recommend.com",
+      "id": "E100",
+      "url": "https://www.ticketnews.com/2026/07/las-vegas-grand-prix-rolls-out-tickets-giveaway/",
+      "title": "Las Vegas Grand Prix Rolls Out $81 Single-Day Tickets, $100K Community Giveaway",
+      "domain": "ticketnews.com",
       "snippets": [
-        "T-Mobile General Admission begins at $809."
+        "The previously announced $50 Flamingo Zone single-day and three-day tickets have already sold out.",
+        "Single-day tickets go on sale to the general public Aug. 13 at 10 a.m. PDT, with prices starting at $81 including taxes and fees for Thursday admissio...",
+        "For the first time, fans can also buy select hospitality experiences without committing to the full three-day weekend."
       ],
-      "pageAge": "2026-03-31",
-      "lens": "commerce"
+      "pageAge": "109 days ago",
+      "lens": "strategy"
     },
     {
-      "id": "E19",
-      "url": "https://autonomousvehicleinternational.com/?p=19373",
-      "title": "Williams Racing partners with Zoox for multi-year agreement",
-      "domain": "autonomousvehicleinternational.com",
+      "id": "E101",
+      "url": "https://gpdestinations.com/tickets-f1-las-vegas-grand-prix/",
+      "title": "How to Buy F1 Tickets for the 2026 Las Vegas Grand Prix - GPDestinations.com",
+      "domain": "gpdestinations.com",
       "snippets": [
-        "Zoox will be involved with events in Las Vegas, Austin and Miami"
+        "# How to Buy F1 Tickets for the 2026 Las Vegas Grand Prix\n\n##### 2026 Las Vegas F1 Tickets / F1 Experiences / Vegas Hotels / Vegas F1 Facebook Group\nO...",
+        "We paid the priority list charge(not knowing the first tranch were to go to America Express card holders) got on Ticketmaster & everything offered was...",
+        "I kept getting the dreaded “Another fan beat you to those tickets etc…”."
       ],
-      "pageAge": "2024-11",
-      "lens": "partnerships"
+      "pageAge": "36 days ago",
+      "lens": "strategy"
+    },
+    {
+      "id": "E102",
+      "url": "https://www.8newsnow.com/sports/f1-las-vegas/las-vegas-hotel-rates-are-a-bargain-or-a-shock-during-f1-race-depending-where-you-look/",
+      "title": "Las Vegas hotel rates are a bargain or a shock during F1 race, depending where you look",
+      "domain": "8newsnow.com",
+      "snippets": [
+        "Prices recorded on Thursday, Nov. 12, averaged $118 across 11 hotels included in the survey.",
+        "# Las Vegas hotel rates are a bargain or a shock during F1 race, depending where you look\n### The bargain traveler\nThe “hotel compression index” offer..."
+      ],
+      "pageAge": "2 days ago",
+      "lens": "strategy"
+    },
+    {
+      "id": "E103",
+      "url": "https://travelhost.com/news/formula-1-las-vegas-rolls-out-81-tickets-as-local-doubts-grow",
+      "title": "Formula 1 Las Vegas rolls out $81 tickets as local doubts grow - TravelHost",
+      "domain": "travelhost.com",
+      "snippets": [
+        "“Hotel occupancy rate: down between 8 and 18 percentage points per night… Hotel revenue: up sharply for race night and the two preceding nights,” Step..."
+      ],
+      "pageAge": "110 days ago",
+      "lens": "strategy"
+    },
+    {
+      "id": "E104",
+      "url": "https://www.reviewjournal.com/local/traffic/las-vegas-grand-prix-circuit-prep-heading-down-final-stretch-before-race-week-3912174/",
+      "title": "Las Vegas Grand Prix road closures: What drivers should expect this week",
+      "domain": "reviewjournal.com",
+      "snippets": [
+        "**Zoox named official autonomous ride hail partner of Las Vegas Grand Prix** … Zoox will offer fans rides to and from the Las Vegas Grand Prix startin..."
+      ],
+      "pageAge": "8 days ago",
+      "lens": "strategy"
+    },
+    {
+      "id": "E105",
+      "url": "https://www.reviewjournal.com/sports/motor-sports/formula-1/f1-las-vegas-grand-prix-prep-work-adds-another-stretch-of-strip-as-flamingo-bridge-build-looms-3895898/",
+      "title": "Las Vegas Grand Prix circuit set up moves ahead toward start of Flamingo bridge build this weekend",
+      "domain": "reviewjournal.com",
+      "snippets": [
+        "## Harmon\nLas Vegas Grand Prix settles class action lawsuit over water valve cover incident\n\nLas Vegas Grand Prix’s and its parent company have agreed..."
+      ],
+      "pageAge": "41 days ago",
+      "lens": "strategy"
+    },
+    {
+      "id": "E106",
+      "url": "https://www.8newsnow.com/sports/vegas-full-throttle/f1-las-vegas-grand-prix-extended-to-2037-under-new-agreement/",
+      "title": "F1 Las Vegas Grand Prix extended to 2037 under new agreement",
+      "domain": "8newsnow.com",
+      "snippets": [
+        "The race hasn’t been without controversy, spawning lawsuits from business owners who said they lost millions because of accessibility issues.",
+        "An awkward bump in the road came when county officials were surprised they were expected to foot a $40 million bill for repaving costs, but F1 ended u..."
+      ],
+      "pageAge": "165 days ago",
+      "lens": "strategy"
+    },
+    {
+      "id": "E107",
+      "url": "https://lvsportsbiz.com/2026/08/25/f1-race-course-construction-starts-sept-2-in-strip-corridor-for-nov-19-21-event-circuit-dismantling-lasts-until-before-christmas/",
+      "title": "F1 Race Course Construction Starts Sept. 2 In Strip Corridor For Nov. 19-21 Event; Circuit Dismantling Lasts Until Before Christmas - LVSportsBiz",
+      "domain": "lvsportsbiz.com",
+      "snippets": [
+        "The Formula 1 Las Vegas car race will **start course construction** Sept. 2 in the Strip corridor and take two and a half months to build the 3.8-mile...",
+        "The dismantling starts Nov. 22 and goes more than a month to right before Christmas.",
+        "But locals and workers in the Strip corridor don’t like the event because of the extra traffic and access problems."
+      ],
+      "pageAge": "83 days ago",
+      "lens": "strategy"
+    },
+    {
+      "id": "E108",
+      "url": "https://apps.apple.com/app/id6449044191",
+      "title": "F1 Las Vegas",
+      "domain": "apps.apple.com",
+      "snippets": [
+        "As the official app of the FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX presented by T-Mobile, you can seamlessly manage tickets, navigate the circuit, sta...",
+        "App features: • Ticketing • Wayfinding • News & Results • Event Updates • Event Schedule & Guides • Partner Perks • Food & Beverage • Entertainment • ...",
+        "• Data Linked to You\n\n    The following data may be collected and linked to your identity:\n\n    • Location\n    • Contact Info\n    • User Content\n    •...",
+        "• Las Vegas Grand Prix, Inc.\n\n• This app may use your location even when it isn’t open, which can decrease device battery life."
+      ],
+      "pageAge": null,
+      "lens": "customer"
+    },
+    {
+      "id": "E109",
+      "url": "https://apps.apple.com/us/app/f1-las-vegas/id6449044191",
+      "title": "F1 Las Vegas App - App Store",
+      "domain": "apps.apple.com",
+      "snippets": [
+        "1.0.10 11/08/2025\n- Introducing a mode switcher that allows fans to seamlessly toggle between Las Vegas Grand Prix and Grand Prix Plaza content, enabl..."
+      ],
+      "pageAge": "1139 days ago",
+      "lens": "customer"
+    },
+    {
+      "id": "E110",
+      "url": "https://www.f1lasvegasgp.com/limited-drop-promo-rules/",
+      "title": "100 DAYS OUT LIMITED DROP PROMOTION - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "# 100 DAYS OUT LIMITED DROP PROMOTION\n\n(“YinzCam”), and is accessible via the Official F1 Las Vegas Mobile Application (“App”). For the avoidance of d...",
+        "Sweepstakes Start Date: August 13, 2026 at 12:00pm Pacific Time (“PT”). Sweepstakes End Date: August 13, 2026 at 12:20pm PT.",
+        "The Sweepstakes is open only to individuals who have the downloaded the App."
+      ],
+      "pageAge": "111 days ago",
+      "lens": "customer"
+    },
+    {
+      "id": "E111",
+      "url": "https://www.f1lasvegasgp.com/faqs/",
+      "title": "FAQ - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "At that time, please download the official F1 Las Vegas app and log into Account Manager. You will then be able to manage your event tickets with dire...",
+        "## Payment Plans\nTickets will be available to manage in the Fall and only after full payment is collected. You will not receive your tickets until the..."
+      ],
+      "pageAge": "46 days ago",
+      "lens": "customer"
+    },
+    {
+      "id": "E112",
+      "url": "https://www.f1lasvegasgp.com/know-before-you-go/",
+      "title": "Know Before You Go - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "Step 2: Tap on “Sign In” from the opening screen.",
+        "Step 3: Tap on “Ticketmaster” when prompted."
+      ],
+      "pageAge": "2 days ago",
+      "lens": "customer"
+    },
+    {
+      "id": "E113",
+      "url": "https://www.lasvegas.gp/en/entering-the-circuit-21",
+      "title": "F1 Las Vegas",
+      "domain": "lasvegas.gp",
+      "snippets": [
+        "All tickets for the 2026 Las Vegas Grand Prix are digital. Visitors must present a valid mobile ticket to enter the circuit.",
+        "** If you need to transfer a ticket to another person, use the official ticket transfer feature in the F1 Las Vegas app."
+      ],
+      "pageAge": null,
+      "lens": "customer"
+    },
+    {
+      "id": "E114",
+      "url": "https://963kklz.com/2026/11/16/las-vegas-lines-up-security-closures-and-transit-plans-for-grand-prix/",
+      "title": "Las Vegas Lines Up Security, Closures, and Transit Plans for Grand Prix - 96.3 KKLZ",
+      "domain": "963kklz.com",
+      "snippets": [
+        "Gates open daily at 2:30 p.m., with re-entry until 7 p.m. via mobile ticket."
+      ],
+      "pageAge": "1 days ago",
+      "lens": "customer"
+    },
+    {
+      "id": "E115",
+      "url": "https://www.visitlasvegas.com/f1-las-vegas-grand-prix/",
+      "title": "Formula 1 Las Vegas Grand Prix",
+      "domain": "visitlasvegas.com",
+      "snippets": [
+        "\",\"acceptedAnswer\":{\"text\":\"View the F1 Las Vegas Grand Prix 2026 Explorer Map <a href='https://connect.us.app.pam.co/?navmapId=f24bca8e-2656-4f56-bc3..."
+      ],
+      "pageAge": "724 days ago",
+      "lens": "customer"
+    },
+    {
+      "id": "E116",
+      "url": "https://www.f1lasvegasgp.com/amex-faq/",
+      "title": "AMEX® PRESALE FAQ - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "Deposit funds will be accessible on your LVGP Account Manager Ticketmaster account and can be applied to your Amex Presale Tickets® purchase."
+      ],
+      "pageAge": "105 days ago",
+      "lens": "customer"
+    },
+    {
+      "id": "E117",
+      "url": "https://www.f1lasvegasgp.com/amex-presale-signup/",
+      "title": "AMEX Presale Signup - Formula 1 Las Vegas Grand Prix",
+      "domain": "f1lasvegasgp.com",
+      "snippets": [
+        "Amex Signup 2026\n\nBy entering my details above and clicking Submit, I agree to receive the latest news, event details and offers relating to the FORMU...",
+        "American Express – Official Partner of F1® – is providing Card Members with early access to purchase tickets to the FORMULA 1 HEINEKEN LAS VEGAS GRAND..."
+      ],
+      "pageAge": "105 days ago",
+      "lens": "customer"
+    },
+    {
+      "id": "E118",
+      "url": "https://speedwaydigest.com/index.php/news/racing-news/880717-formula-1-heineken-las-vegas-grand-prix-announces-on-sale-ticket-timeline-and-ticket-options-for-2026-race-nov-19-21/",
+      "title": "Formula 1 Heineken Las Vegas Grand Prix announces on-sale ticket timeline and ticket options for 2026 race, Nov.19",
+      "domain": "speedwaydigest.com",
+      "snippets": [
+        "As the Official Payments Partner of Formula 1®, American Express will offer eligible Card Members exclusive 48‑hour presale access to all three‑day ti..."
+      ],
+      "pageAge": "231 days ago",
+      "lens": "customer"
+    },
+    {
+      "id": "E119",
+      "url": "https://corp.formula1.com/formula-1-heineken-las-vegas-grand-prix-announces-single-day-tickets-100-days-to-race-day-celebration-and-100k-for-100-days-community-giveaway/",
+      "title": "FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX ANNOUNCES SINGLE-DAY TICKETS, 100 DAYS TO RACE DAY CELEBRATION AND $100k FOR 100 DAYS COMMUNITY GIVEAWAY",
+      "domain": "corp.formula1.com",
+      "snippets": [
+        "One lucky winner will receive two three-day Skybox race tickets, round-trip flights and a hotel stay at The Venetian Resort Las Vegas."
+      ],
+      "pageAge": "110 days ago",
+      "lens": "customer"
+    },
+    {
+      "id": "E120",
+      "url": "https://play.google.com/store/apps/details?id=com.f1lv.venue.app&hl=en_US",
+      "title": "F1 Las Vegas - Apps on Google Play",
+      "domain": "play.google.com",
+      "snippets": [
+        "Super buggy. Its almost impossible to even open the app as it crashes immediately when trying to open, regardless of attempts.",
+        "They advertise tickets and prices then demand a non refundable deposit for a time slot to buy tickets. Up to, during, and after my time slot, the tick...",
+        "Now I out $100.",
+        "May 3, 2026\n\nWe are sorry to hear you are having trouble applying your deposit to your ticket."
+      ],
+      "pageAge": null,
+      "lens": "customer"
+    },
+    {
+      "id": "E121",
+      "url": "https://www.tickethold.com/sports/las-vegas-grand-prix-tickets/",
+      "title": "Las Vegas Grand Prix Tickets, 2025-2026 Auto Matches",
+      "domain": "tickethold.com",
+      "snippets": [
+        "The Las Vegas Grand Prix’s ticketing system had long queues, app freezes, and sold-out seats.",
+        "Early bird buyers faced a 2000+ queue, leading to disappointment and no ticket access.",
+        "Several felt the early ticket “donation” was pointless if it didn’t improve their chances of buying tickets."
+      ],
+      "pageAge": null,
+      "lens": "customer"
+    },
+    {
+      "id": "E122",
+      "url": "https://www.grandprix247.com/grand-prix-f1-weekend-news/las-vegas-grand-prix-give-more-freedom-to-fans-after-complaints-as-2026-tickets-go-on-sale",
+      "title": "Las Vegas Grand Prix give more freedom to fans after complaints as 2026 tickets go on sale",
+      "domain": "grandprix247.com",
+      "snippets": [
+        "In short, the 2026 updates look like a clear reaction to fan-access complaints, but track quality and city impact remain the biggest lingering negativ...",
+        "Las Vegas Grand Prix President and CEO Emily Prazer explained the reasoning behind the expanded zone access: “We’re continually looking for ways to ev..."
+      ],
+      "pageAge": "192 days ago",
+      "lens": "customer"
     }
   ],
   "quality": {
-    "evidenceCount": 19,
-    "distinctDomains": 17,
-    "signalsKept": 10,
+    "evidenceCount": 122,
+    "distinctDomains": 69,
+    "signalsKept": 30,
     "signalsDropped": [],
     "opportunitiesDropped": [],
-    "staleSignals": [
+    "staleSignals": []
+  },
+  "delta": {
+    "previousGeneratedAt": "2026-11-17T20:00:00.000Z",
+    "newSignalIds": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
       "S7",
-      "S10"
+      "S8",
+      "S9",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19",
+      "S20",
+      "S21",
+      "S22",
+      "S23",
+      "S24",
+      "S25",
+      "S26",
+      "S27",
+      "S28",
+      "S29",
+      "S30"
+    ],
+    "newOpportunityIds": [
+      "O1",
+      "O2",
+      "O3",
+      "O4",
+      "O5",
+      "O6"
     ]
   }
 }
