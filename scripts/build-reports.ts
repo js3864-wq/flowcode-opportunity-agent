@@ -13,7 +13,10 @@
  * npm run reports                                   build every research file
  * npm run reports -- --only las-vegas-grand-prix    build one
  * npm run reports -- --check-sources                fetch each cited page and confirm the quote
- * npm run reports -- --force                        overwrite reports from live API runs too
+ * npm run reports -- --force                        rebuild even when the saved report is newer
+ *
+ * A saved report is replaced only by research that is newer than it, and the new report marks
+ * what changed since the previous one ("New since last run" in the UI).
  */
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -32,7 +35,7 @@ import {
   type Evidence,
   type Report,
 } from "../src/agent/types";
-import { buildOpportunities, cleanSignals } from "../src/agent/verify";
+import { buildOpportunities, cleanSignals, computeDelta } from "../src/agent/verify";
 import { getReport, saveReport } from "../src/lib/store";
 
 const EvidenceSchema = z.object({
@@ -91,10 +94,19 @@ async function main() {
     }
     const ref = parsed.data;
 
+    // Which report wins when one already exists:
+    //  - research assembled by hand never replaces a live API or Claude Code report
+    //  - a Claude Code run replaces a hand-made report, or any report older than itself
+    // Timestamps come from the research file, because git checkouts reset them on pull.
     const existing = await getReport(slug);
-    if (existing?.run.mode === "live" && !force) {
-      console.log(`${slug}: skipped. A live API report already exists (use --force to overwrite it).`);
-      continue;
+    const producedByEarly = ref.producedBy ?? "manual";
+    if (existing && existing.run.mode !== "reference" && !force) {
+      const researchedAt = (await fs.stat(path.join(dir, file))).mtime;
+      const newer = producedByEarly === "claude-code" && ref.asOf >= existing.asOf && researchedAt > new Date(existing.generatedAt);
+      if (!newer) {
+        console.log(`${slug}: kept the saved ${existing.run.mode === "live" ? "live API" : "Claude Code"} report. This research file is not newer (use --force to rebuild).`);
+        continue;
+      }
     }
 
     let evidence: Evidence[] = ref.evidence.map((e) => ({ ...e, domain: e.domain || domainOf(e.url), pageAge: e.pageAge ?? null }));
@@ -163,11 +175,14 @@ async function main() {
         sourceCheck,
       },
     };
+    // Compare with the previous report so the UI can flag what is new since then.
+    if (existing && !(existing.run.mode === report.run.mode && existing.asOf === report.asOf)) report.delta = computeDelta(existing, report);
     await saveReport(report);
     const sc = sourceCheck ? ` Sources: ${sourceCheck.found} found, ${sourceCheck.close} close, ${sourceCheck.unreachable} unchecked, ${sourceCheck.notFound} dropped.` : "";
     console.log(
       `${slug}: ${opportunities.length} plays (${oppDropped.length} dropped), ${kept.length} signals (${dropped.length} dropped), ${evidence.length} sources.${sc} Top: ${opportunities[0]?.score.total ?? "-"} "${opportunities[0]?.title ?? ""}"`,
     );
+    if (report.delta) console.log(`  new since ${report.delta.previousGeneratedAt.slice(0, 10)}: ${report.delta.newSignalIds.length} signals, ${report.delta.newOpportunityIds.length} plays`);
     for (const d of [...dropped.map((d) => `signal ${d.id}: ${d.reason}`), ...oppDropped.map((d) => `play "${d.title}": ${d.reason}`)]) console.log(`  dropped ${d}`);
   }
   if (failed) process.exit(1);

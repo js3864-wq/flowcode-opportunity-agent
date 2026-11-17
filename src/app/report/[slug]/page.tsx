@@ -26,6 +26,7 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
   for (const e of r.evidence) if (!footnote.has(e.id)) footnote.set(e.id, footnote.size + 1);
   const sources = [...r.evidence].sort((a, b) => footnote.get(a.id)! - footnote.get(b.id)!);
   const newOpps = new Set(r.delta?.newOpportunityIds ?? []);
+  const newSignals = new Set(r.delta?.newSignalIds ?? []);
   const dated = [...r.signals].sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""));
 
   return (
@@ -124,7 +125,11 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
                   {r.run.usage.searches} searches, {Math.round(r.run.durationMs / 1000)}s, about ${r.run.estCostUsd.toFixed(2)}
                 </li>
               ) : null}
-              {r.delta ? <li>Compared with the run on {formatGeneratedAt(r.delta.previousGeneratedAt)}</li> : null}
+              {r.delta ? (
+                <li>
+                  Compared with the run on {formatGeneratedAt(r.delta.previousGeneratedAt)}: {r.delta.newSignalIds.length} new signals, {r.delta.newOpportunityIds.length} new plays
+                </li>
+              ) : null}
             </ul>
             {r.run.note ? <p className="mt-3 text-muted">{r.run.note}</p> : null}
             <p className="mt-4 flex gap-4">
@@ -151,6 +156,9 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
             <li key={s.id} className="grid gap-1 py-3 sm:grid-cols-[8rem_1fr] sm:gap-6">
               <span className="text-muted">{formatLooseDate(s.date)}</span>
               <span>
+                {newSignals.has(s.id) ? (
+                  <span className="mr-2 rounded bg-sector-good/15 px-1.5 py-0.5 text-xs font-medium text-sector-good-ink">New since last run</span>
+                ) : null}
                 <span className="font-medium">{s.title}.</span> <span className="text-muted">{s.summary}</span>
                 {s.evidenceIds.map((id) => (
                   <a key={id} href={`#source-${id}`} className="ml-0.5 align-super text-[11px] font-semibold text-sector-best-ink no-underline hover:underline">
