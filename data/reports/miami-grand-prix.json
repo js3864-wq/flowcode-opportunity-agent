@@ -1,0 +1,796 @@
+{
+  "schemaVersion": 1,
+  "slug": "miami-grand-prix",
+  "input": "Miami Grand Prix",
+  "generatedAt": "2026-11-17T20:00:00.000Z",
+  "asOf": "2026-11-17",
+  "run": {
+    "mode": "reference",
+    "models": {
+      "research": "claude-sonnet-5-5",
+      "synthesis": "claude-opus-5-5",
+      "fast": "claude-haiku-5-5"
+    },
+    "startedAt": "2026-11-17T20:00:00.000Z",
+    "durationMs": 0,
+    "usage": {
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cacheReadTokens": 0,
+      "searches": 0
+    },
+    "estCostUsd": 0,
+    "note": "Reference run. The research was gathered with live web search on Nov 17, 2026 and assembled into the agent's schema by hand. Scoring, ranking and verification ran through the agent's own code. Regenerate it end to end with: npm run batch -- data/targets/us-f1.json"
+  },
+  "entity": {
+    "name": "Miami Grand Prix",
+    "website": "https://www.f1miamigp.com",
+    "operator": "South Florida Motorsports",
+    "industry": "Live sports and entertainment",
+    "summary": "The Formula 1 Miami Grand Prix runs each spring on the Hard Rock Stadium campus in Miami Gardens, promoted by South Florida Motorsports. It earns from tickets, premium hospitality and sponsorship, with Hard Rock as title partner from 2027.",
+    "businessUnits": [
+      "Race weekend",
+      "Premium hospitality (Paddock Club, Beach Club)",
+      "Partnerships"
+    ],
+    "keyDates": [
+      {
+        "label": "Hard Rock title partnership begins",
+        "date": "2027",
+        "isUpcoming": true
+      },
+      {
+        "label": "Paddock Club extension opens",
+        "date": "2027",
+        "isUpcoming": true
+      },
+      {
+        "label": "2026 race (completed)",
+        "date": "2026-05-01",
+        "isUpcoming": false
+      }
+    ],
+    "audiences": [
+      "Visiting F1 fans",
+      "South Florida residents",
+      "Premium hospitality buyers",
+      "Sponsors"
+    ],
+    "aliases": [
+      "F1 Miami GP",
+      "Formula 1 Hard Rock Miami Grand Prix",
+      "Formula 1 Crypto.com Miami Grand Prix",
+      "f1miamigp.com",
+      "South Florida Motorsports"
+    ],
+    "evidenceIds": [
+      "E1",
+      "E7",
+      "E11"
+    ]
+  },
+  "relationship": {
+    "status": "none_found",
+    "summary": "No public Flowcode case study found for the race or South Florida Motorsports.",
+    "evidenceIds": []
+  },
+  "summary": {
+    "headline": "Miami is rebranding every title-sponsor asset from Crypto.com to Hard Rock for 2027, which is the cheapest moment to make its signage measurable.",
+    "bullets": [
+      "Hard Rock becomes title sponsor from 2027, with branding on track, paddock, fan-area and podium signage.",
+      "A three-storey Paddock Club extension and a revamped Beach Club open for the 2027 race.",
+      "F1 runs its own fan-zone QR draw in Miami, so promoter-owned fan data is the gap to close."
+    ]
+  },
+  "signals": [
+    {
+      "id": "S1",
+      "lens": "partnerships",
+      "title": "Hard Rock replaces Crypto.com as title sponsor from 2027",
+      "summary": "Announced Sep 2, 2026, the race becomes the Formula 1 Hard Rock Miami Grand Prix from 2027, with Hard Rock branding on track, paddock, fan-area and podium signage. Crypto.com's title deal ended after the May 3, 2026 race.",
+      "date": "2026-09-02",
+      "isUpcoming": false,
+      "channels": [
+        "sponsorship",
+        "venue_signage",
+        "live_events"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "Hard Rock",
+        "Crypto.com"
+      ],
+      "evidenceIds": [
+        "E1",
+        "E2"
+      ]
+    },
+    {
+      "id": "S2",
+      "lens": "commerce",
+      "title": "Paddock Club extension and Beach Club revamp open in 2027",
+      "summary": "A new three-storey Paddock Club extension overlooking Turns 1 to 3 opens for the 2027 race, making it one of the largest in F1. The Hard Rock-sponsored Beach Club is being revamped for 2027 with track-view cabanas and live performances.",
+      "date": "2027",
+      "isUpcoming": true,
+      "channels": [
+        "hospitality",
+        "ticketing"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "Hard Rock"
+      ],
+      "evidenceIds": [
+        "E3",
+        "E4",
+        "E1"
+      ]
+    },
+    {
+      "id": "S3",
+      "lens": "strategy",
+      "title": "Longest-contracted race on the calendar, through 2041",
+      "summary": "F1 extended Miami through 2041 in May 2025, the longest contract on the calendar. South Florida Motorsports was named 2024 Promoter of the Year.",
+      "date": "2025-05",
+      "isUpcoming": false,
+      "channels": [
+        "live_events"
+      ],
+      "scale": null,
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E5",
+        "E6"
+      ]
+    },
+    {
+      "id": "S4",
+      "lens": "experiences",
+      "title": "Record crowd of 275,000 in 2024",
+      "summary": "The 2024 race drew a record 275,000 attendees, up from over 240,000 at the 2022 debut.",
+      "date": "2024-05",
+      "isUpcoming": false,
+      "channels": [
+        "live_events"
+      ],
+      "scale": "275,000 attendees (2024)",
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E6",
+        "E11"
+      ]
+    },
+    {
+      "id": "S5",
+      "lens": "experiences",
+      "title": "2026 race ran May 1-3 with a Sprint",
+      "summary": "The 2026 race ran May 1-3 in Miami Gardens with the F1 Sprint for a third straight year, plus a headline music program.",
+      "date": "2026-05-01",
+      "isUpcoming": false,
+      "channels": [
+        "live_events"
+      ],
+      "scale": null,
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E7",
+        "E1"
+      ]
+    },
+    {
+      "id": "S6",
+      "lens": "partnerships",
+      "title": "Brands activated trackside in 2026",
+      "summary": "2026 race-week activations included Jack Daniel's trackside with Shaboozey and Loud Luxury, and trackside hospitality from Off Grid and Imperial Moto.",
+      "date": "2026-04",
+      "isUpcoming": false,
+      "channels": [
+        "sponsorship",
+        "hospitality",
+        "live_events"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "Jack Daniel's",
+        "Off Grid",
+        "Imperial Moto"
+      ],
+      "evidenceIds": [
+        "E8"
+      ]
+    },
+    {
+      "id": "S7",
+      "lens": "customer",
+      "title": "F1 runs its own fan-zone QR prize draw in Miami",
+      "summary": "Formula 1's F1 Unlocked program ran a QR-code prize draw in the fan zone at the 2025 Miami race. Entrants need an F1 Unlocked or F1.com account, and Formula One Management runs the draw.",
+      "date": "2025-05",
+      "isUpcoming": false,
+      "channels": [
+        "live_events",
+        "app_digital"
+      ],
+      "scale": null,
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E9"
+      ]
+    },
+    {
+      "id": "S8",
+      "lens": "partnerships",
+      "title": "Zoox active at the Miami race",
+      "summary": "Zoox, a Williams F1 team partner since 2024, is involved with events at the Miami and Austin races, and became the Las Vegas race's official ride-hail partner in Nov 2026.",
+      "date": "2026-11",
+      "isUpcoming": false,
+      "channels": [
+        "sponsorship"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "Zoox"
+      ],
+      "evidenceIds": [
+        "E10",
+        "E12"
+      ]
+    },
+    {
+      "id": "S9",
+      "lens": "strategy",
+      "title": "Backed by Stephen Ross, on the Hard Rock Stadium campus",
+      "summary": "South Florida Motorsports credits Stephen Ross for his investment in the event. The race is held on the Hard Rock Stadium campus, home of the NFL's Miami Dolphins, where Hard Rock has held stadium naming rights since 2016.",
+      "date": null,
+      "isUpcoming": false,
+      "channels": [
+        "venue_signage"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "Hard Rock"
+      ],
+      "evidenceIds": [
+        "E11",
+        "E1"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Make every new Hard Rock asset a dynamic code before 2027 production starts",
+      "businessUnit": "Race weekend",
+      "whatsHappening": "Hard Rock takes the title from 2027, so track, paddock, fan-area and podium signage changes from Crypto.com to Hard Rock branding. The race is contracted through 2041 and drew a record 275,000 fans in 2024.",
+      "whyFlowcode": "A rebrand forces a reprint, which is the cheapest moment to add codes. Flowcodes can be updated after printing, so assets made for 2027 keep working through 2041 instead of being reprinted per campaign. Co-branded codes can route to race and Hard Rock offers, with the promoter's opt-in first. C3 Presents ran this at festival scale with 1.3M+ scans in 2024.",
+      "play": [
+        "Get onto the 2027 signage brief now: wayfinding, fan-area, grandstand and podium-adjacent assets.",
+        "Design co-branded Flowcodes with Hard Rock's creative team.",
+        "Set routing rules per area and per day: schedule, food and drink, merch, then 2028 presale after the race.",
+        "Share a joint dashboard with Hard Rock to prove title-sponsor value."
+      ],
+      "products": [
+        "flowcodes",
+        "workspaces_api",
+        "analytics_integrations",
+        "flowhubs"
+      ],
+      "proofPointId": "c3_presents",
+      "touchpoints": [
+        "venue_signage",
+        "sponsorship",
+        "live_events"
+      ],
+      "kpis": [
+        "Codes deployed on new signage",
+        "Scans and opt-ins per area",
+        "Reprints avoided",
+        "Hard Rock offer redemptions"
+      ],
+      "timing": {
+        "urgency": "next_90_days",
+        "window": "Before 2027 signage production",
+        "keyDate": null
+      },
+      "buyer": "Miami GP commercial and marketing leads (president Katharina Nowak), with Hard Rock partnership marketing",
+      "signalIds": [
+        "S1",
+        "S3",
+        "S4"
+      ],
+      "ratings": {
+        "timeliness": {
+          "score": 5,
+          "why": "rebrand production happens this winter"
+        },
+        "scale": {
+          "score": 5,
+          "why": "275,000-fan record and a 2041 contract"
+        },
+        "fit": {
+          "score": 5,
+          "why": "dynamic codes on new physical assets"
+        },
+        "access": {
+          "score": 4,
+          "why": "promoter owns the signage and is mid-change"
+        }
+      },
+      "caveats": [
+        "The 2027 race date was not found in sources. Past races ran in early May.",
+        "Hard Rock creative approval adds a stakeholder."
+      ],
+      "id": "O1",
+      "rank": 1,
+      "evidenceIds": [
+        "E1",
+        "E2",
+        "E5",
+        "E6",
+        "E11"
+      ],
+      "score": {
+        "total": 96,
+        "components": {
+          "timeliness": 5,
+          "scale": 5,
+          "fit": 5,
+          "evidence": 5,
+          "access": 4
+        },
+        "adjustments": [
+          "5 source domains, newest signal fresh"
+        ]
+      },
+      "verification": {
+        "verdict": "unchecked",
+        "issues": []
+      }
+    },
+    {
+      "title": "Fill the new Paddock Club and Beach Club with identified prospects",
+      "businessUnit": "Premium hospitality",
+      "whatsHappening": "A three-storey Paddock Club extension overlooking Turns 1 to 3 opens for the 2027 race, one of the largest in F1, and the Hard Rock Beach Club is being revamped with track-view cabanas and live performances.",
+      "whyFlowcode": "New premium inventory needs buyers. Codes in general admission areas and on promotional assets route interested fans to hospitality offers, and FlowID plus CRM sync turn scans into named leads for the sales team instead of anonymous web traffic.",
+      "play": [
+        "Run codes on promotional assets and partner channels now, pointing to 2027 Paddock Club and Beach Club packages.",
+        "During 2027 race week, put codes on general admission screens promoting 2028 hospitality.",
+        "Score leads by repeat scans and push them to hospitality sales.",
+        "Track hospitality revenue influenced by scans."
+      ],
+      "products": [
+        "flowcodes",
+        "flowid",
+        "analytics_integrations",
+        "flowhubs"
+      ],
+      "proofPointId": null,
+      "touchpoints": [
+        "hospitality",
+        "ticketing",
+        "live_events"
+      ],
+      "kpis": [
+        "Hospitality leads captured",
+        "Lead-to-sale rate",
+        "Influenced hospitality revenue"
+      ],
+      "timing": {
+        "urgency": "next_90_days",
+        "window": "2027 hospitality sales cycle",
+        "keyDate": null
+      },
+      "buyer": "Premium hospitality sales lead, South Florida Motorsports",
+      "signalIds": [
+        "S2",
+        "S4"
+      ],
+      "ratings": {
+        "timeliness": {
+          "score": 4,
+          "why": "2027 inventory is selling now"
+        },
+        "scale": {
+          "score": 3,
+          "why": "premium segment only"
+        },
+        "fit": {
+          "score": 4,
+          "why": "identity and CRM sync"
+        },
+        "access": {
+          "score": 4,
+          "why": "promoter owns the inventory"
+        }
+      },
+      "caveats": [
+        "Capacity and price of the new Paddock Club space were not found in sources."
+      ],
+      "id": "O2",
+      "rank": 2,
+      "evidenceIds": [
+        "E3",
+        "E4",
+        "E1",
+        "E6",
+        "E11"
+      ],
+      "score": {
+        "total": 74,
+        "components": {
+          "timeliness": 4,
+          "scale": 3,
+          "fit": 4,
+          "evidence": 5,
+          "access": 4
+        },
+        "adjustments": [
+          "5 source domains, newest signal fresh"
+        ]
+      },
+      "verification": {
+        "verdict": "unchecked",
+        "issues": []
+      }
+    },
+    {
+      "title": "Own the fan relationship in the fan zone, alongside F1 Unlocked",
+      "businessUnit": "Fan marketing and CRM",
+      "whatsHappening": "Formula 1 ran its own QR prize draw in the Miami fan zone in 2025, with entries tied to F1 Unlocked or F1.com accounts run by Formula One Management. The race drew a record 275,000 fans in 2024.",
+      "whyFlowcode": "Fans who scan for F1's draw become F1's data. Promoter-owned codes with FlowID give South Florida Motorsports its own first-party list for renewals, hospitality and future events. Flowcode reports 75% higher than average first-party conversion in sports and entertainment.",
+      "play": [
+        "Agree placement with F1 so promoter codes sit alongside F1 Unlocked assets, not on top of them.",
+        "Offer a promoter-only reward, such as a paddock tour draw or an early presale window, behind a FlowHub opt-in.",
+        "Sync opt-ins to the promoter CRM with consent flags.",
+        "Track promoter list growth year over year."
+      ],
+      "products": [
+        "flowid",
+        "flowhubs",
+        "flowcodes",
+        "analytics_integrations"
+      ],
+      "proofPointId": "sports_benchmark",
+      "touchpoints": [
+        "live_events",
+        "venue_signage",
+        "email_crm"
+      ],
+      "kpis": [
+        "Promoter-owned opt-ins",
+        "Renewal rate of captured fans",
+        "Cost per captured fan vs paid media"
+      ],
+      "timing": {
+        "urgency": "next_event_cycle",
+        "window": "2027 race weekend, planned this winter",
+        "keyDate": null
+      },
+      "buyer": "Marketing and CRM leads, South Florida Motorsports",
+      "signalIds": [
+        "S7",
+        "S4"
+      ],
+      "ratings": {
+        "timeliness": {
+          "score": 3,
+          "why": "next race is spring 2027"
+        },
+        "scale": {
+          "score": 5,
+          "why": "275,000 attendees"
+        },
+        "fit": {
+          "score": 5,
+          "why": "owned identity is the core product"
+        },
+        "access": {
+          "score": 3,
+          "why": "F1 controls some fan-zone assets"
+        }
+      },
+      "caveats": [
+        "Fan-zone placement may be governed by F1 agreements.",
+        "The F1 Unlocked evidence is from 2025. Check whether it ran in 2026."
+      ],
+      "id": "O3",
+      "rank": 3,
+      "evidenceIds": [
+        "E9",
+        "E6",
+        "E11"
+      ],
+      "score": {
+        "total": 70,
+        "components": {
+          "timeliness": 2,
+          "scale": 5,
+          "fit": 5,
+          "evidence": 4,
+          "access": 3
+        },
+        "adjustments": [
+          "3 source domains, newest signal 19 mo old",
+          "Timeliness capped at 2: every linked signal is older than 12 months"
+        ]
+      },
+      "verification": {
+        "verdict": "unchecked",
+        "issues": []
+      }
+    },
+    {
+      "title": "Cross-sell the race across the Hard Rock Stadium calendar",
+      "businessUnit": "Hard Rock Stadium campus",
+      "whatsHappening": "The race is held on the Hard Rock Stadium campus, home of the Miami Dolphins, and the promoter credits Stephen Ross for his investment. Hard Rock has held the stadium naming rights since 2016 and now also takes the race title.",
+      "whyFlowcode": "Fans at Dolphins games and stadium concerts are the nearest audience to the race. One Workspace across the campus lets codes on stadium screens promote race tickets, with attribution back to the event that drove each sale. Flowcode's NFL Shop broadcast spot shows how strong that attribution can be.",
+      "play": [
+        "Validate shared ownership and data-sharing between the stadium, the Dolphins and the race.",
+        "Run race promo codes on stadium screens during Dolphins home games and concerts.",
+        "Use a separate code per event to see which crowds convert.",
+        "Feed results into the 2027 media plan."
+      ],
+      "products": [
+        "workspaces_api",
+        "flowcodes",
+        "analytics_integrations",
+        "flowid"
+      ],
+      "proofPointId": "nfl_shop",
+      "touchpoints": [
+        "venue_signage",
+        "live_events",
+        "ticketing"
+      ],
+      "kpis": [
+        "Race tickets attributed to stadium events",
+        "Conversion by event type"
+      ],
+      "timing": {
+        "urgency": "now",
+        "window": "Remaining Dolphins home games this season",
+        "keyDate": null
+      },
+      "buyer": "Hard Rock Stadium and South Florida Motorsports marketing",
+      "signalIds": [
+        "S9",
+        "S1"
+      ],
+      "ratings": {
+        "timeliness": {
+          "score": 4,
+          "why": "NFL season under way"
+        },
+        "scale": {
+          "score": 4,
+          "why": "stadium crowds all year"
+        },
+        "fit": {
+          "score": 3,
+          "why": "inferred link between the stadium and the race, needs validation"
+        },
+        "access": {
+          "score": 3,
+          "why": "needs a joint owner"
+        }
+      },
+      "caveats": [
+        "Inferred from shared venue and investor. Sources do not describe a joint marketing program, so validate before pitching.",
+        "The NFL appears among Flowcode's sports customers. Check whether the Dolphins already use Flowcode."
+      ],
+      "id": "O4",
+      "rank": 4,
+      "evidenceIds": [
+        "E11",
+        "E1",
+        "E2"
+      ],
+      "score": {
+        "total": 69,
+        "components": {
+          "timeliness": 4,
+          "scale": 4,
+          "fit": 3,
+          "evidence": 5,
+          "access": 3
+        },
+        "adjustments": [
+          "3 source domains, newest signal fresh"
+        ]
+      },
+      "verification": {
+        "verdict": "unchecked",
+        "issues": []
+      }
+    }
+  ],
+  "followOnLeads": [
+    {
+      "brand": "Hard Rock International",
+      "role": "Title sponsor from 2027, stadium naming partner since 2016",
+      "why": "Casinos, hotels and cafes with heavy physical footprints. Race-season codes across its properties can be measured end to end.",
+      "signalIds": [
+        "S1",
+        "S9"
+      ]
+    },
+    {
+      "brand": "Jack Daniel's",
+      "role": "Trackside activation with Shaboozey and Loud Luxury in 2026",
+      "why": "Spirits brand where on-pack and on-premise codes tie event moments to purchase.",
+      "signalIds": [
+        "S6"
+      ]
+    },
+    {
+      "brand": "Crypto.com",
+      "role": "Former title sponsor, F1's exclusive crypto partner through 2030",
+      "why": "Still an F1-wide partner. App sign-ups from physical touchpoints are a clean attribution story.",
+      "signalIds": [
+        "S1"
+      ]
+    },
+    {
+      "brand": "Zoox",
+      "role": "Williams F1 team partner at all three US races, Las Vegas ride-hail partner from Nov 2026",
+      "why": "Needs app sign-ups and rider trials. Codes at race activations can drive and attribute them.",
+      "signalIds": [
+        "S8"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E1",
+      "url": "https://www.the-race.com/business/miami-gp-changes-title-sponsor/",
+      "title": "Miami GP changes title sponsor",
+      "domain": "the-race.com",
+      "snippets": [
+        "will from 2027 be sponsored by Hard Rock",
+        "along with track, paddock, fan area, and podium signage",
+        "held the naming rights to the NFL's Miami Dolphins stadium since 2016"
+      ],
+      "pageAge": "2026-09-02",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E2",
+      "url": "https://www.sportcal.com/news/hard-rock-secures-title-rights-for-f1s-miami-gp-from-2027",
+      "title": "Hard Rock secures title rights for F1's Miami GP from 2027",
+      "domain": "sportcal.com",
+      "snippets": [
+        "signed with race promoter South Florida Motorsports",
+        "Its deal ended following this year's race on May 3.",
+        "exclusive crypto partner through 2030"
+      ],
+      "pageAge": "2026-09",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E3",
+      "url": "https://www.hok.com/news/2026-05/miami-to-expand-paddock-club-hospitality-with-new-extension-overlooking-turn-1-making-it-one-of-the-largest-in-formula-1/",
+      "title": "Miami to Expand Paddock Club Hospitality With New Extension Overlooking Turn 1",
+      "domain": "hok.com",
+      "snippets": [
+        "Expansion overlooking Turn 1, opening for the 2027 race"
+      ],
+      "pageAge": "2026-05",
+      "lens": "commerce"
+    },
+    {
+      "id": "E4",
+      "url": "https://www.motorsport.com/f1/news/f1-miami-gp-announces-major-paddock-club-expansion-for-2027/10816933/",
+      "title": "F1 Miami GP announces major Paddock Club expansion for 2027",
+      "domain": "motorsport.com",
+      "snippets": [
+        "a new three-storey hospitality extension overlooking Turns 1, 2 and 3"
+      ],
+      "pageAge": "2026-04",
+      "lens": "commerce"
+    },
+    {
+      "id": "E5",
+      "url": "https://www.formula1.com/en/latest/article/formula-1-to-race-in-miami-until-2041-as-new-extension-agreed.6rJEbQ5yl00iLsHLTtYoEV",
+      "title": "Formula 1 to race in Miami until 2041 as new extension agreed",
+      "domain": "formula1.com",
+      "snippets": [
+        "South Florida Motorsports was named 2024 Formula 1 Promoter of the Year"
+      ],
+      "pageAge": "2025-05",
+      "lens": "strategy"
+    },
+    {
+      "id": "E6",
+      "url": "https://ministryofsport.com/formula-1-agree-extension-to-race-in-miami-until-2041",
+      "title": "Formula 1 Agree Extension to race in Miami until 2041",
+      "domain": "ministryofsport.com",
+      "snippets": [
+        "The 2024 edition of the Grand Prix drew a record 275,000 attendees",
+        "making it the longest-contracted race on the F1 calendar"
+      ],
+      "pageAge": "2025-05",
+      "lens": "strategy"
+    },
+    {
+      "id": "E7",
+      "url": "https://www.local10.com/news/local/2025/10/29/start-your-engines-f1-sprint-race-returns-to-miami-grand-prix-for-2026-weekend",
+      "title": "Start your engines: F1 Sprint race returns to Miami Grand Prix for 2026 weekend",
+      "domain": "local10.com",
+      "snippets": [
+        "will return to Miami Gardens on May 1-3, 2026",
+        "the F1 Sprint race back for a third consecutive year"
+      ],
+      "pageAge": "2025-10-29",
+      "lens": "experiences"
+    },
+    {
+      "id": "E8",
+      "url": "https://themiamiguide.com/miami-expands-paddock-club-at-turn-1-becoming-one-of-formula-1s-largest-hospitality-experiences/",
+      "title": "Miami expands Paddock Club at Turn 1, becoming one of Formula 1's largest hospitality experiences",
+      "domain": "themiamiguide.com",
+      "snippets": [
+        "Jack Daniel's Goes Trackside at F1 Miami with Shaboozey and Loud Luxury",
+        "Off Grid & Imperial Moto Redefine Trackside Hospitality at Miami Grand Prix 2026"
+      ],
+      "pageAge": "2026-04",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E9",
+      "url": "https://www.formula1.com/en/information/formula-1-2025-fan-zone-qr-code-prize-draw-2-terms-and-conditions.2QTAxm7ZGICwbeFAmETmYp",
+      "title": "Formula 1 2025 F1 Unlocked QR Code Prize Draw: terms and conditions",
+      "domain": "formula1.com",
+      "snippets": [
+        "scan one of the four (4) QR codes available during the relevant entry time period",
+        "FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2025",
+        "have access to the internet and an F1 Unlocked account or F1.com account"
+      ],
+      "pageAge": "2025",
+      "lens": "customer"
+    },
+    {
+      "id": "E10",
+      "url": "https://www.sportcal.com/?p=154816",
+      "title": "Zoox partners with Las Vegas Grand Prix",
+      "domain": "sportcal.com",
+      "snippets": [
+        "the two other US races in Austin and Miami"
+      ],
+      "pageAge": "2026-11-05",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E11",
+      "url": "https://themiamiguide.com/f1s-staying-in-miami-the-grand-prix-extends-its-run-through-2041/",
+      "title": "F1's staying in Miami: the Grand Prix extends its run through 2041",
+      "domain": "themiamiguide.com",
+      "snippets": [
+        "drew over 240,000 spectators",
+        "Stephen Ross for his investment and commitment to growing this event"
+      ],
+      "pageAge": "2025-05",
+      "lens": "strategy"
+    },
+    {
+      "id": "E12",
+      "url": "https://autonomousvehicleinternational.com/?p=19373",
+      "title": "Williams Racing partners with Zoox for multi-year agreement",
+      "domain": "autonomousvehicleinternational.com",
+      "snippets": [
+        "Zoox will be involved with events in Las Vegas, Austin and Miami"
+      ],
+      "pageAge": "2024-11",
+      "lens": "partnerships"
+    }
+  ],
+  "quality": {
+    "evidenceCount": 12,
+    "distinctDomains": 9,
+    "signalsKept": 9,
+    "signalsDropped": [],
+    "opportunitiesDropped": [],
+    "staleSignals": [
+      "S3",
+      "S4",
+      "S7"
+    ]
+  }
+}

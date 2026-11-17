@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/*
+  Design notes
+  - One bold element: the timing tower. Ranked plays read like an F1 timing screen, and each
+    score component is a sector colored the way F1 colors sectors: purple best, green strong,
+    yellow middling, grey weak. Everything around it stays quiet ink on white.
+  - One family, two widths: Archivo expanded for headings, Archivo normal for reading.
+  - Pit-lane concrete background, white reading surfaces, asphalt only for the tower.
+*/
+
+@theme {
+  --font-sans: "Archivo Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-concrete: #e9ecef;
+  --color-paper: #ffffff;
+  --color-ink: #1a1c1f;
+  --color-muted: #5b616a;
+  --color-line: #d3d8dd;
+  --color-asphalt: #202326;
+  --color-asphalt-line: #34383d;
+  --color-on-asphalt: #f2f4f6;
+  --color-on-asphalt-muted: #9aa1a9;
+
+  --color-sector-best: #a35cff;
+  --color-sector-best-ink: #6f2bd1;
+  --color-sector-good: #26b866;
+  --color-sector-good-ink: #157a42;
+  --color-sector-mid: #f2c200;
+  --color-sector-mid-ink: #8a6d00;
+  --color-sector-low: #7d848c;
+
+  --color-flag: #d7263d;
+}
+
+html {
+  background: var(--color-concrete);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "tnum" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.display {
+  font-stretch: 125%;
+  font-weight: 760;
+  letter-spacing: -0.015em;
+  line-height: 1.02;
+}
+
+.subhead {
+  font-stretch: 112%;
+  font-weight: 680;
+  letter-spacing: -0.005em;
+}
+
+.prose-measure {
+  max-width: 68ch;
+}
+
+a {
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-sector-best-ink);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* The tower is the single orchestrated motion moment: rows settle into position on load. */
+@media (prefers-reduced-motion: no-preference) {
+  .tower-row {
+    animation: settle 520ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .tower-row:nth-child(2) { animation-delay: 60ms; }
+  .tower-row:nth-child(3) { animation-delay: 120ms; }
+  .tower-row:nth-child(4) { animation-delay: 180ms; }
+  .tower-row:nth-child(5) { animation-delay: 240ms; }
+  .tower-row:nth-child(6) { animation-delay: 300ms; }
+  .tower-row:nth-child(7) { animation-delay: 360ms; }
+}
+
+@keyframes settle {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}

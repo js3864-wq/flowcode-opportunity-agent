@@ -1,0 +1,8 @@
+{
+  "name": "US Formula 1 race promoters",
+  "targets": [
+    { "input": "Las Vegas Grand Prix", "note": "Las Vegas Grand Prix, Inc. (owned by Formula 1). Race week Nov 19-21, 2026." },
+    { "input": "Miami Grand Prix", "note": "South Florida Motorsports, at Hard Rock Stadium." },
+    { "input": "United States Grand Prix at Circuit of The Americas", "note": "Circuit of The Americas, Austin." }
+  ]
+}

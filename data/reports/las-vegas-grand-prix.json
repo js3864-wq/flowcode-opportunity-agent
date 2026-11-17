@@ -1,0 +1,1015 @@
+{
+  "schemaVersion": 1,
+  "slug": "las-vegas-grand-prix",
+  "input": "Las Vegas Grand Prix",
+  "generatedAt": "2026-11-17T20:00:00.000Z",
+  "asOf": "2026-11-17",
+  "run": {
+    "mode": "reference",
+    "models": {
+      "research": "claude-sonnet-5-5",
+      "synthesis": "claude-opus-5-5",
+      "fast": "claude-haiku-5-5"
+    },
+    "startedAt": "2026-11-17T20:00:00.000Z",
+    "durationMs": 0,
+    "usage": {
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cacheReadTokens": 0,
+      "searches": 0
+    },
+    "estCostUsd": 0,
+    "note": "Reference run. The research was gathered with live web search on Nov 17, 2026 and assembled into the agent's schema by hand. Scoring, ranking and verification ran through the agent's own code. Regenerate it end to end with: npm run batch -- data/targets/us-f1.json"
+  },
+  "entity": {
+    "name": "Las Vegas Grand Prix",
+    "website": "https://www.f1lasvegasgp.com",
+    "operator": "Las Vegas Grand Prix, Inc. (owned by Formula 1)",
+    "industry": "Live sports and entertainment",
+    "summary": "The Formula 1 Heineken Las Vegas Grand Prix is a night race on the Las Vegas Strip, promoted by Formula 1's own Las Vegas Grand Prix, Inc. It earns from tickets, hospitality, sponsorship and the year-round Grand Prix Plaza attraction.",
+    "businessUnits": [
+      "Race weekend",
+      "Hospitality",
+      "Grand Prix Plaza",
+      "Partnerships"
+    ],
+    "keyDates": [
+      {
+        "label": "2026 race week",
+        "date": "2026-11-19",
+        "isUpcoming": true
+      },
+      {
+        "label": "F1 Afterparty at Sphere",
+        "date": "2026-11-21",
+        "isUpcoming": true
+      },
+      {
+        "label": "Zoox rides to Grand Prix Plaza begin",
+        "date": "2027",
+        "isUpcoming": true
+      }
+    ],
+    "audiences": [
+      "Visiting F1 fans",
+      "Las Vegas locals",
+      "Premium hospitality buyers",
+      "Sponsors"
+    ],
+    "aliases": [
+      "LVGP",
+      "Formula 1 Heineken Las Vegas Grand Prix",
+      "f1lasvegasgp.com",
+      "Vegas GP"
+    ],
+    "evidenceIds": [
+      "E2",
+      "E6",
+      "E14"
+    ]
+  },
+  "relationship": {
+    "status": "none_found",
+    "summary": "No public Flowcode case study found for the race, its promoter or Formula 1.",
+    "evidenceIds": []
+  },
+  "summary": {
+    "headline": "Las Vegas starts race week in two days with three connected fan zones and a new Sphere afterparty, and its CEO also runs F1's commercial team, so a win here can spread across the calendar.",
+    "bullets": [
+      "Race week runs Nov 19-21 with all three fan zones connected for the first time and the first official F1 Afterparty at Sphere on Nov 21.",
+      "The race is locked in through 2037 after three sell-outs and $3.2B in economic impact, with a year-round Grand Prix Plaza beside it.",
+      "New partners keep arriving: Zoox signed on Nov 5 and Sphere extended through 2030."
+    ]
+  },
+  "signals": [
+    {
+      "id": "S1",
+      "lens": "experiences",
+      "title": "Race week Nov 19-21 with three connected fan zones",
+      "summary": "The 2026 race runs Nov 19-21 after a sold-out 2025. For the first time the West Harmon Zone connects to the East Harmon and Koval Zone by Heineken, opening access across all three fan zones.",
+      "date": "2026-11-19",
+      "isUpcoming": true,
+      "channels": [
+        "live_events",
+        "venue_signage",
+        "sponsorship"
+      ],
+      "scale": "Sold out in 2025",
+      "sponsorBrands": [
+        "Heineken"
+      ],
+      "evidenceIds": [
+        "E2",
+        "E6"
+      ]
+    },
+    {
+      "id": "S2",
+      "lens": "strategy",
+      "title": "Extended through 2037 after three sell-outs",
+      "summary": "F1 signed a 10-year extension in June 2026. Every race since 2023 has sold out, with $3.2B in cumulative economic impact for Southern Nevada.",
+      "date": "2026-06-04",
+      "isUpcoming": false,
+      "channels": [
+        "live_events"
+      ],
+      "scale": "$3.2B cumulative economic impact, 3 sell-outs",
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E3",
+        "E16"
+      ]
+    },
+    {
+      "id": "S3",
+      "lens": "experiences",
+      "title": "Grand Prix Plaza runs as a year-round F1 attraction",
+      "summary": "Grand Prix Plaza, billed as North America's largest F1 attraction, reopened Jan 30, 2026 with an upgraded 4D theater, a new karting layout and new event spaces, giving fans year-round touchpoints with the sport.",
+      "date": "2026-01-30",
+      "isUpcoming": false,
+      "channels": [
+        "venue_signage",
+        "live_events",
+        "ticketing"
+      ],
+      "scale": null,
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E4",
+        "E5"
+      ]
+    },
+    {
+      "id": "S4",
+      "lens": "partnerships",
+      "title": "Sphere partnership extended to 2030, F1 Afterparty on Nov 21",
+      "summary": "Sphere and the race extended their partnership for five years in July 2026, expanding fan experiences and cross-promotion. The Backstreet Boys headline the first official F1 Afterparty inside Sphere on Nov 21, and the T-Mobile Zone at Sphere is one of the main fan areas.",
+      "date": "2026-11-21",
+      "isUpcoming": true,
+      "channels": [
+        "live_events",
+        "ooh",
+        "ticketing",
+        "sponsorship"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "Sphere Entertainment",
+        "T-Mobile"
+      ],
+      "evidenceIds": [
+        "E1",
+        "E6",
+        "E7",
+        "E18"
+      ]
+    },
+    {
+      "id": "S5",
+      "lens": "partnerships",
+      "title": "Zoox named official autonomous ride-hail partner",
+      "summary": "Announced Nov 5, 2026: Zoox becomes the race's official autonomous ride-hail partner, with race-week activations now and rides to and from Grand Prix Plaza from 2027. Through its Williams F1 team deal, Zoox also shows up at the Austin and Miami races.",
+      "date": "2026-11-05",
+      "isUpcoming": false,
+      "channels": [
+        "sponsorship",
+        "app_digital",
+        "live_events"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "Zoox"
+      ],
+      "evidenceIds": [
+        "E8",
+        "E17",
+        "E19"
+      ]
+    },
+    {
+      "id": "S6",
+      "lens": "commerce",
+      "title": "Tickets run from $50 single days to $28,885 hospitality",
+      "summary": "Single-day tickets start at $50. Hospitality ranges from Club Paris single days at $382 to the HGV Clubhouse ($3,728), the Heineken Silver Skybox ($8,377), Wynn Grid Club ($25,997) and Gordon Ramsay at F1 Garage ($28,885). Single-day hospitality launched at the 100-days-out mark.",
+      "date": "2026-03-31",
+      "isUpcoming": false,
+      "channels": [
+        "ticketing",
+        "hospitality"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "Heineken",
+        "HGV",
+        "Wynn",
+        "Gordon Ramsay",
+        "T-Mobile"
+      ],
+      "evidenceIds": [
+        "E9",
+        "E10",
+        "E11",
+        "E18"
+      ]
+    },
+    {
+      "id": "S7",
+      "lens": "customer",
+      "title": "Local pushback led to lower prices and locals discounts",
+      "summary": "After complaints from locals that early tickets were too expensive, the race reduced prices, and Grand Prix Plaza offers discounts for locals.",
+      "date": "2025",
+      "isUpcoming": false,
+      "channels": [
+        "ticketing",
+        "venue_signage"
+      ],
+      "scale": null,
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E12"
+      ]
+    },
+    {
+      "id": "S8",
+      "lens": "strategy",
+      "title": "Vegas is F1's testing ground, run by F1's commercial chief",
+      "summary": "Emily Prazer is both CEO of Las Vegas Grand Prix, Inc. and Formula 1's chief commercial officer, and the race is described as a proving ground for strategies later rolled out across the F1 calendar.",
+      "date": "2026",
+      "isUpcoming": false,
+      "channels": [],
+      "scale": null,
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E14",
+        "E15"
+      ]
+    },
+    {
+      "id": "S9",
+      "lens": "partnerships",
+      "title": "Sponsors buy layered touchpoints across zones, clubs and the Strip",
+      "summary": "Brands at the race look for layered touchpoints: daytime visibility in fan zones, nighttime visibility in clubs and lounges, and integration across the Strip.",
+      "date": null,
+      "isUpcoming": false,
+      "channels": [
+        "sponsorship",
+        "ooh",
+        "hospitality"
+      ],
+      "scale": null,
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E5"
+      ]
+    },
+    {
+      "id": "S10",
+      "lens": "customer",
+      "title": "F1 already runs fan-zone QR prize draws",
+      "summary": "Formula 1's F1 Unlocked program ran QR-code prize draws in fan zones at several 2025 races. Entrants need an F1 Unlocked or F1.com account, so the data lands with Formula 1.",
+      "date": "2025",
+      "isUpcoming": false,
+      "channels": [
+        "live_events",
+        "app_digital"
+      ],
+      "scale": null,
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E13"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Race-week fan capture: live, routable codes on every screen across the three connected zones",
+      "businessUnit": "Race weekend",
+      "whatsHappening": "The race runs Nov 19-21 and, for the first time, all three fan zones are connected, so fans move freely between the Koval Zone by Heineken, East Harmon and West Harmon. The first official F1 Afterparty at Sphere follows on Nov 21.",
+      "whyFlowcode": "Codes on digital screens need no print run, so they can go live this week. FlowID ties each scan to a fan the promoter owns, and routing by zone and time lets one code sell Afterparty add-ons on Friday and capture 2027 presale sign-ups after the race. C3 Presents drove 1.3M+ scans across its 2024 festivals with this pattern.",
+      "play": [
+        "Run one Flowcode per zone on fan-zone and grandstand screens, so movement between the three zones becomes measurable.",
+        "Route by time: Afterparty add-on before Saturday's race, merch during sessions, 2027 presale and locals offers after the checkered flag.",
+        "Capture opt-in with FlowID on a FlowHub and sync to the promoter's CRM daily during race week.",
+        "Send each zone sponsor a scan report the Monday after the race."
+      ],
+      "products": [
+        "flowcodes",
+        "flowhubs",
+        "flowid",
+        "analytics_integrations"
+      ],
+      "proofPointId": "c3_presents",
+      "touchpoints": [
+        "live_events",
+        "venue_signage",
+        "ticketing",
+        "merchandise"
+      ],
+      "kpis": [
+        "Opt-ins captured per zone",
+        "Afterparty add-on revenue from scans",
+        "2027 presale sign-ups"
+      ],
+      "timing": {
+        "urgency": "now",
+        "window": "Race week, Nov 19-21 (screen content only, no print)",
+        "keyDate": "2026-11-19"
+      },
+      "buyer": "Marketing and fan experience leads at Las Vegas Grand Prix, Inc.",
+      "signalIds": [
+        "S1",
+        "S4",
+        "S2"
+      ],
+      "ratings": {
+        "timeliness": {
+          "score": 5,
+          "why": "race starts in two days"
+        },
+        "scale": {
+          "score": 5,
+          "why": "sold-out crowds three years running"
+        },
+        "fit": {
+          "score": 5,
+          "why": "screen codes plus owned identity is the core product"
+        },
+        "access": {
+          "score": 2,
+          "why": "two days of lead time"
+        }
+      },
+      "caveats": [
+        "Two days is very short for procurement. If race week is missed, lead the 2027 pitch with this year's gap.",
+        "Zones carry sponsor naming (Heineken, T-Mobile), so codes may need sponsor sign-off.",
+        "F1 already runs its own fan-zone QR draws through F1 Unlocked. Position Flowcode as the promoter's identity layer, not a competing prize draw."
+      ],
+      "id": "O1",
+      "rank": 1,
+      "evidenceIds": [
+        "E2",
+        "E6",
+        "E1",
+        "E7",
+        "E18",
+        "E3",
+        "E16"
+      ],
+      "score": {
+        "total": 89,
+        "components": {
+          "timeliness": 5,
+          "scale": 5,
+          "fit": 5,
+          "evidence": 5,
+          "access": 2
+        },
+        "adjustments": [
+          "6 source domains, newest signal fresh"
+        ]
+      },
+      "verification": {
+        "verdict": "unchecked",
+        "issues": []
+      }
+    },
+    {
+      "title": "Turn Grand Prix Plaza visits into 2027 race tickets",
+      "businessUnit": "Grand Prix Plaza",
+      "whatsHappening": "Grand Prix Plaza, billed as North America's largest F1 attraction, reopened Jan 30, 2026 with an upgraded 4D theater, a new karting layout and new event spaces. Zoox will run robotaxi rides to the Plaza from 2027, and the Plaza offers locals discounts after earlier pushback on ticket prices.",
+      "whyFlowcode": "People who karted or watched the 4D show in spring are the warmest 2027 ticket buyers. Public sources show no link between a Plaza visit and a race ticket, so this is worth validating. Codes on karting, theater and retail touchpoints feed a FlowHub with locals pricing and presale access, and analytics show which attraction converts. The Penguins saw 88% conversion from in-venue prompts.",
+      "play": [
+        "Place a distinct Flowcode at karting check-in, the 4D theater exit and retail.",
+        "Route locals to locals pricing and visitors to 2027 presale, with FlowID capturing who scanned.",
+        "Add a code at the Zoox pickup zone when rides start in 2027.",
+        "Report Plaza-to-ticket conversion monthly."
+      ],
+      "products": [
+        "flowcodes",
+        "flowhubs",
+        "flowid",
+        "analytics_integrations"
+      ],
+      "proofPointId": "pittsburgh_penguins",
+      "touchpoints": [
+        "venue_signage",
+        "ticketing",
+        "retail",
+        "live_events"
+      ],
+      "kpis": [
+        "Plaza visitors captured",
+        "Plaza-to-race-ticket conversion",
+        "Locals sign-ups"
+      ],
+      "timing": {
+        "urgency": "next_90_days",
+        "window": "Before the Plaza's 2027 season opens",
+        "keyDate": null
+      },
+      "buyer": "General manager, Grand Prix Plaza",
+      "signalIds": [
+        "S3",
+        "S5",
+        "S7"
+      ],
+      "ratings": {
+        "timeliness": {
+          "score": 4,
+          "why": "2027 season setup happens this winter"
+        },
+        "scale": {
+          "score": 3,
+          "why": "smaller daily traffic than race week"
+        },
+        "fit": {
+          "score": 5,
+          "why": "owned venue, clear funnel"
+        },
+        "access": {
+          "score": 4,
+          "why": "one owned venue, one decision maker"
+        }
+      },
+      "caveats": [
+        "The Plaza's 2027 opening date and visitor numbers were not found in sources."
+      ],
+      "id": "O2",
+      "rank": 2,
+      "evidenceIds": [
+        "E4",
+        "E5",
+        "E8",
+        "E17",
+        "E19",
+        "E12"
+      ],
+      "score": {
+        "total": 80,
+        "components": {
+          "timeliness": 4,
+          "scale": 3,
+          "fit": 5,
+          "evidence": 5,
+          "access": 4
+        },
+        "adjustments": [
+          "6 source domains, newest signal fresh"
+        ]
+      },
+      "verification": {
+        "verdict": "unchecked",
+        "issues": []
+      }
+    },
+    {
+      "title": "Sell sponsors measurable touchpoints, not just signage",
+      "businessUnit": "Partnerships",
+      "whatsHappening": "Sponsors at the race buy layered touchpoints across fan zones, clubs and the Strip. Heineken holds the title, T-Mobile names a general admission zone and the Sphere zone, HGV and Wynn run hospitality, and Zoox signed on Nov 5 with race-week activations.",
+      "whyFlowcode": "Each sponsor activation can carry its own code, and analytics give the promoter a per-sponsor engagement report to use in renewals. NFL Shop shows what attribution can prove: $250 revenue per scan from one broadcast spot.",
+      "play": [
+        "Bundle a measured-activation package into 2027 sponsor proposals.",
+        "Give each sponsor a Workspace with its own codes and live dashboard.",
+        "Route scans to sponsor offers after a promoter opt-in, so both sides get data.",
+        "Use the year-end report in renewal conversations."
+      ],
+      "products": [
+        "workspaces_api",
+        "flowcodes",
+        "analytics_integrations",
+        "flowid"
+      ],
+      "proofPointId": "nfl_shop",
+      "touchpoints": [
+        "sponsorship",
+        "live_events",
+        "hospitality"
+      ],
+      "kpis": [
+        "Scans and opt-ins per sponsor",
+        "Sponsor renewal rate",
+        "Revenue from measured packages"
+      ],
+      "timing": {
+        "urgency": "next_90_days",
+        "window": "2027 sponsor renewals and new deals",
+        "keyDate": null
+      },
+      "buyer": "Partnerships team, Las Vegas Grand Prix, Inc.",
+      "signalIds": [
+        "S9",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "ratings": {
+        "timeliness": {
+          "score": 4,
+          "why": "the Zoox deal shows sales are active now"
+        },
+        "scale": {
+          "score": 4,
+          "why": "every sponsor is a renewal"
+        },
+        "fit": {
+          "score": 4,
+          "why": "attribution and workspaces fit"
+        },
+        "access": {
+          "score": 3,
+          "why": "needs sponsor buy-in"
+        }
+      },
+      "caveats": [
+        "Data-sharing terms with each sponsor need legal review."
+      ],
+      "id": "O3",
+      "rank": 3,
+      "evidenceIds": [
+        "E5",
+        "E1",
+        "E6",
+        "E7",
+        "E18",
+        "E8",
+        "E17",
+        "E19",
+        "E9",
+        "E10",
+        "E11"
+      ],
+      "score": {
+        "total": 75,
+        "components": {
+          "timeliness": 4,
+          "scale": 4,
+          "fit": 4,
+          "evidence": 5,
+          "access": 3
+        },
+        "adjustments": [
+          "9 source domains, newest signal fresh"
+        ]
+      },
+      "verification": {
+        "verdict": "unchecked",
+        "issues": []
+      }
+    },
+    {
+      "title": "Pilot in Vegas, roll out across F1: a promoter-owned fan identity layer",
+      "businessUnit": "Las Vegas Grand Prix, Inc. and F1 commercial",
+      "whatsHappening": "Emily Prazer runs the Las Vegas race and is also Formula 1's chief commercial officer, and the race is described as a proving ground for strategies later used across the F1 calendar. The race is contracted through 2037.",
+      "whyFlowcode": "A win in Vegas can travel to the whole calendar. Workspaces let F1, each promoter and each sponsor run their own codes under one governance layer with shared reporting, which suits a multi-party event. A pilot with a written success bar matches how Vegas already tests ideas.",
+      "play": [
+        "Propose a 2027 Las Vegas pilot with a written success bar: opt-ins and attributed ticket and hospitality revenue.",
+        "Set up a Workspace with separate spaces for the promoter, F1 and each title or zone sponsor.",
+        "Standardize placement and reporting so the playbook can be copied to Miami and Austin.",
+        "Review results with the F1 commercial team after race week."
+      ],
+      "products": [
+        "workspaces_api",
+        "flowcodes",
+        "flowid",
+        "analytics_integrations"
+      ],
+      "proofPointId": "sports_benchmark",
+      "touchpoints": [
+        "live_events",
+        "sponsorship",
+        "ticketing"
+      ],
+      "kpis": [
+        "Pilot opt-ins vs target",
+        "Attributed ticket and hospitality revenue",
+        "Sponsors onboarded to the Workspace"
+      ],
+      "timing": {
+        "urgency": "next_event_cycle",
+        "window": "Pitch right after race week, for the 2027 season",
+        "keyDate": null
+      },
+      "buyer": "Emily Prazer's commercial team (LVGP CEO and F1 CCO)",
+      "signalIds": [
+        "S8",
+        "S2",
+        "S10"
+      ],
+      "ratings": {
+        "timeliness": {
+          "score": 3,
+          "why": "post-race planning window"
+        },
+        "scale": {
+          "score": 5,
+          "why": "the whole F1 calendar if it spreads"
+        },
+        "fit": {
+          "score": 4,
+          "why": "governance and attribution fit, but a bigger sale"
+        },
+        "access": {
+          "score": 3,
+          "why": "one senior buyer, high bar"
+        }
+      },
+      "caveats": [
+        "F1 Unlocked already captures fans for Formula 1. Frame Flowcode as the measurement and promoter-identity layer that sits alongside it.",
+        "The size of the sale makes this slower than the race-week idea."
+      ],
+      "id": "O4",
+      "rank": 4,
+      "evidenceIds": [
+        "E14",
+        "E15",
+        "E3",
+        "E16",
+        "E13"
+      ],
+      "score": {
+        "total": 70,
+        "components": {
+          "timeliness": 3,
+          "scale": 5,
+          "fit": 4,
+          "evidence": 4,
+          "access": 3
+        },
+        "adjustments": [
+          "5 source domains, newest signal 5 mo old"
+        ]
+      },
+      "verification": {
+        "verdict": "unchecked",
+        "issues": []
+      }
+    },
+    {
+      "title": "Trade general admission fans up to hospitality",
+      "businessUnit": "Ticketing and hospitality",
+      "whatsHappening": "Prices run from $50 single days to $28,885 for Gordon Ramsay at F1 Garage, and single-day hospitality launched at the 100-days-out mark to lower the entry point.",
+      "whyFlowcode": "General admission and grandstand fans are on site and within sight of the clubs. A code on their screens leading to next-day or 2027 single-day hospitality, tied to FlowID, shows who is ready to trade up, and CRM sync lets sales follow up after the race.",
+      "play": [
+        "Put codes on general admission and grandstand screens promoting next-day or 2027 single-day hospitality.",
+        "Personalize the FlowHub by zone and ticket type.",
+        "Push high-intent scans to the hospitality sales queue in the CRM.",
+        "Measure trade-up rate by zone."
+      ],
+      "products": [
+        "flowcodes",
+        "flowhubs",
+        "flowid",
+        "analytics_integrations"
+      ],
+      "proofPointId": null,
+      "touchpoints": [
+        "ticketing",
+        "hospitality",
+        "live_events"
+      ],
+      "kpis": [
+        "Hospitality leads from scans",
+        "Trade-up revenue",
+        "Lead-to-sale rate"
+      ],
+      "timing": {
+        "urgency": "now",
+        "window": "Race week, then the 2027 on-sale",
+        "keyDate": "2026-11-19"
+      },
+      "buyer": "Head of ticketing and hospitality sales",
+      "signalIds": [
+        "S6",
+        "S1"
+      ],
+      "ratings": {
+        "timeliness": {
+          "score": 4,
+          "why": "race week, then on-sale"
+        },
+        "scale": {
+          "score": 3,
+          "why": "premium segment only"
+        },
+        "fit": {
+          "score": 4,
+          "why": "identity plus CRM sync"
+        },
+        "access": {
+          "score": 3,
+          "why": "ticketing may sit with F1 systems"
+        }
+      },
+      "caveats": [
+        "Hospitality for this weekend may already be sold out. Fall back to the 2027 presale."
+      ],
+      "id": "O5",
+      "rank": 5,
+      "evidenceIds": [
+        "E9",
+        "E10",
+        "E11",
+        "E18",
+        "E2",
+        "E6"
+      ],
+      "score": {
+        "total": 70,
+        "components": {
+          "timeliness": 4,
+          "scale": 3,
+          "fit": 4,
+          "evidence": 5,
+          "access": 3
+        },
+        "adjustments": [
+          "6 source domains, newest signal fresh"
+        ]
+      },
+      "verification": {
+        "verdict": "unchecked",
+        "issues": []
+      }
+    }
+  ],
+  "followOnLeads": [
+    {
+      "brand": "Heineken",
+      "role": "Title sponsor and Koval Zone naming partner",
+      "why": "Global packaging and on-premise brand that could carry race-season codes on pack and in bars, measured end to end.",
+      "signalIds": [
+        "S1",
+        "S6"
+      ]
+    },
+    {
+      "brand": "T-Mobile",
+      "role": "Names a general admission zone and the zone at Sphere",
+      "why": "Telecom buyer for whom scan-to-offer attribution in a fan zone maps straight to switching campaigns.",
+      "signalIds": [
+        "S4"
+      ]
+    },
+    {
+      "brand": "Zoox",
+      "role": "Williams F1 team partner at all three US races, Las Vegas ride-hail partner from Nov 2026",
+      "why": "Needs rider sign-ups in Vegas. Codes at race-week activations can drive and attribute app installs.",
+      "signalIds": [
+        "S5"
+      ]
+    },
+    {
+      "brand": "Sphere Entertainment",
+      "role": "Venue partner through 2030, hosts the F1 Afterparty",
+      "why": "Runs the Exosphere screen and residencies. Measurable response from its screens is a direct Flowcode use case.",
+      "signalIds": [
+        "S4"
+      ]
+    },
+    {
+      "brand": "Hilton Grand Vacations (HGV)",
+      "role": "Runs the HGV Clubhouse hospitality",
+      "why": "Timeshare sales run on lead capture, so hospitality guests who scan become named prospects.",
+      "signalIds": [
+        "S6"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E1",
+      "url": "https://www.fox5vegas.com/2026/07/09/sphere-f1-las-vegas-grand-prix-extend-partnership-through-2030/",
+      "title": "Sphere, F1 Las Vegas Grand Prix extend partnership through 2030",
+      "domain": "fox5vegas.com",
+      "snippets": [
+        "agreed to extend their partnership for five years",
+        "expands collaboration on fan experiences and cross-promotional programming"
+      ],
+      "pageAge": "2026-07-09",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E2",
+      "url": "https://www.sportsdestinations.com/destinations/nevada/news/f1-grand-prix-vegas-ready-roll-37722",
+      "title": "F1 Grand Prix in Vegas is Ready to Roll",
+      "domain": "sportsdestinations.com",
+      "snippets": [
+        "the West Harmon Zone will now also be connected",
+        "unlocking access between the three fan zones"
+      ],
+      "pageAge": "2026-06-30",
+      "lens": "experiences"
+    },
+    {
+      "id": "E3",
+      "url": "https://press.lvcva.com/news-releases/formula-1-to-race-on-the-streets-of-las-vegas-through-2037/s/ba32db95-048c-4dc2-b5cb-7ac745c4a557",
+      "title": "Formula 1 to race on the streets of Las Vegas through 2037",
+      "domain": "press.lvcva.com",
+      "snippets": [
+        "$3.2 billion in cumulative economic impact for Southern Nevada",
+        "all three races from 2023 through 2025 selling out"
+      ],
+      "pageAge": "2026-06-04",
+      "lens": "strategy"
+    },
+    {
+      "id": "E4",
+      "url": "https://www.autoracing1.com/?p=465947",
+      "title": "Grand Prix Plaza In Las Vegas To Reopen With Big Upgrades",
+      "domain": "autoracing1.com",
+      "snippets": [
+        "North America's largest and most dynamic Formula 1 attraction",
+        "will officially reopen in Las Vegas, Jan. 30, 2026"
+      ],
+      "pageAge": null,
+      "lens": "experiences"
+    },
+    {
+      "id": "E5",
+      "url": "https://boardroom.tv/las-vegas-grand-prix-business-formula-1-f1-racing/",
+      "title": "Lights, Brands, Action: The Growing Business of the Las Vegas Grand Prix",
+      "domain": "boardroom.tv",
+      "snippets": [
+        "Brands look for layered touchpoints",
+        "gives fans year-round touchpoints with the sport"
+      ],
+      "pageAge": null,
+      "lens": "partnerships"
+    },
+    {
+      "id": "E6",
+      "url": "https://www.sphereentertainmentco.com/?p=7091",
+      "title": "Backstreet Boys To Headline Official F1 Afterparty At Sphere During Formula 1 Heineken Las Vegas Grand Prix 2026",
+      "domain": "sphereentertainmentco.com",
+      "snippets": [
+        "the Official Post-Race Show of the FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX",
+        "Returning Nov. 19-21 after a sold-out 2025 event",
+        "Exclusive Ticket Packages and Add-On Options Give Fans the Opportunity to Extend Race Weekend"
+      ],
+      "pageAge": "2026-07-09",
+      "lens": "experiences"
+    },
+    {
+      "id": "E7",
+      "url": "https://recommend.com/destinations/sean-paul-ja-rule-join-vegas-grand-prix-music-lineup/",
+      "title": "Sean Paul, Ja Rule Join Vegas Grand Prix Music Lineup",
+      "domain": "recommend.com",
+      "snippets": [
+        "T-Mobile Zone at Sphere has become one of the most dynamic fan experiences"
+      ],
+      "pageAge": null,
+      "lens": "experiences"
+    },
+    {
+      "id": "E8",
+      "url": "https://news3lv.com/news/local/zoox-robotaxi-rides-to-grand-prix-plaza-set-to-roll-out-in-2027-under-new-f1-deal",
+      "title": "Zoox robotaxi rides to Grand Prix Plaza set to roll out in 2027 under new F1 deal",
+      "domain": "news3lv.com",
+      "snippets": [
+        "official autonomous ride-hail partner of the Formula 1 Heineken Las Vegas Grand Prix",
+        "rides to and from Grand Prix Plaza planned to begin in 2027"
+      ],
+      "pageAge": "2026-11-05",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E9",
+      "url": "https://www.8newsnow.com/sports/f1-las-vegas/f1-las-vegas-grand-prix-ticket-prices-for-2026-begin-at-50-3-day-general-admission-from-492/amp/",
+      "title": "F1 Las Vegas Grand Prix ticket prices for 2026 begin at $50",
+      "domain": "8newsnow.com",
+      "snippets": [
+        "HGV Clubhouse starts at $3,728",
+        "Skybox with Heineken Silver Main Grandstand starts at $8,377"
+      ],
+      "pageAge": null,
+      "lens": "commerce"
+    },
+    {
+      "id": "E10",
+      "url": "https://lifestyle.filmtelevisionauditions.com/story/45901/formula-1-heineken-las-vegas-grand-prix-announces-on-sale-ticket-timeline-and-ticket-options-for-2026-race-nov-19-21/",
+      "title": "Formula 1 Heineken Las Vegas Grand Prix announces on-sale ticket timeline and ticket options for 2026 race (PR Newswire release)",
+      "domain": "lifestyle.filmtelevisionauditions.com",
+      "snippets": [
+        "single-day tickets start at $50",
+        "Gordon Ramsay at F1 Garage (starting at $28,885",
+        "Wynn Grid Club (starting at $25,997"
+      ],
+      "pageAge": "2026-03-31",
+      "lens": "commerce"
+    },
+    {
+      "id": "E11",
+      "url": "https://news3lv.com/features/formula-vegas/las-vegas-grand-prix-marks-100-days-out-as-single-day-tickets-go-on-sale",
+      "title": "Las Vegas Grand Prix marks 100 days out as single-day tickets go on sale",
+      "domain": "news3lv.com",
+      "snippets": [
+        "The new single-day Hospitality experiences offer premium trackside views",
+        "Club Paris: Single-day tickets start at $382"
+      ],
+      "pageAge": null,
+      "lens": "commerce"
+    },
+    {
+      "id": "E12",
+      "url": "https://lvsportsbiz.com/?p=85297",
+      "title": "Grand Prix Plaza and ticket pricing (Las Vegas Sports Business)",
+      "domain": "lvsportsbiz.com",
+      "snippets": [
+        "reduced ticket prices this year after there were complaints from locals",
+        "there are discounts for locals"
+      ],
+      "pageAge": null,
+      "lens": "customer"
+    },
+    {
+      "id": "E13",
+      "url": "https://www.formula1.com/en/information/formula-1-2025-fan-zone-qr-code-prize-draw-2-terms-and-conditions.2QTAxm7ZGICwbeFAmETmYp",
+      "title": "Formula 1 2025 F1 Unlocked QR Code Prize Draw: terms and conditions",
+      "domain": "formula1.com",
+      "snippets": [
+        "scan one of the four (4) QR codes available during the relevant entry time period",
+        "have access to the internet and an F1 Unlocked account or F1.com account"
+      ],
+      "pageAge": "2025",
+      "lens": "customer"
+    },
+    {
+      "id": "E14",
+      "url": "https://www.thecurrent.com/video-las-vegas-grand-prix-transformed-strip-formula-1-biggest-marketing-vehicle",
+      "title": "How the Las Vegas Grand Prix transformed the Strip into Formula 1's biggest marketing vehicle",
+      "domain": "thecurrent.com",
+      "snippets": [
+        "president and CEO of the Las Vegas Grand Prix and chief commercial officer of Formula 1"
+      ],
+      "pageAge": null,
+      "lens": "strategy"
+    },
+    {
+      "id": "E15",
+      "url": "https://www.si.com/onsi/f1/las-vegas-grand-prix-2026-unveils-ticket-options-for-every-type-of-f1-fan-exclusive",
+      "title": "Las Vegas Grand Prix 2026 unveils ticket options for every type of F1 fan",
+      "domain": "si.com",
+      "snippets": [
+        "a proving ground for new strategies rolled out across the F1 calendar"
+      ],
+      "pageAge": null,
+      "lens": "strategy"
+    },
+    {
+      "id": "E16",
+      "url": "https://www.williamsf1.com/articles/b38e45e0-01a9-4789-8c04-713a1fb5c9eb/las-vegas-grand-prix-calendar-spot-confirmed-to-2037",
+      "title": "Las Vegas Grand Prix to remain on F1 calendar until at least 2037",
+      "domain": "williamsf1.com",
+      "snippets": [
+        "secured a 10-year contract extension to host Formula 1 Grands Prix through to 2037"
+      ],
+      "pageAge": "2026-06-04",
+      "lens": "strategy"
+    },
+    {
+      "id": "E17",
+      "url": "https://www.sportcal.com/?p=154816",
+      "title": "Zoox partners with Las Vegas Grand Prix",
+      "domain": "sportcal.com",
+      "snippets": [
+        "the two other US races in Austin and Miami"
+      ],
+      "pageAge": "2026-11-05",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E18",
+      "url": "https://recommend.com/destinations/race-weekend-plans-rev-up-for-f1-2026-las-vegas-event/",
+      "title": "Race Weekend Plans Rev Up For F1 2026 Las Vegas Event",
+      "domain": "recommend.com",
+      "snippets": [
+        "T-Mobile General Admission begins at $809."
+      ],
+      "pageAge": "2026-03-31",
+      "lens": "commerce"
+    },
+    {
+      "id": "E19",
+      "url": "https://autonomousvehicleinternational.com/?p=19373",
+      "title": "Williams Racing partners with Zoox for multi-year agreement",
+      "domain": "autonomousvehicleinternational.com",
+      "snippets": [
+        "Zoox will be involved with events in Las Vegas, Austin and Miami"
+      ],
+      "pageAge": "2024-11",
+      "lens": "partnerships"
+    }
+  ],
+  "quality": {
+    "evidenceCount": 19,
+    "distinctDomains": 17,
+    "signalsKept": 10,
+    "signalsDropped": [],
+    "opportunitiesDropped": [],
+    "staleSignals": [
+      "S7",
+      "S10"
+    ]
+  }
+}

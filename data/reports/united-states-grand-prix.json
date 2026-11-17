@@ -1,0 +1,866 @@
+{
+  "schemaVersion": 1,
+  "slug": "united-states-grand-prix",
+  "input": "United States Grand Prix at Circuit of The Americas",
+  "generatedAt": "2026-11-17T20:00:00.000Z",
+  "asOf": "2026-11-17",
+  "run": {
+    "mode": "reference",
+    "models": {
+      "research": "claude-sonnet-5-5",
+      "synthesis": "claude-opus-5-5",
+      "fast": "claude-haiku-5-5"
+    },
+    "startedAt": "2026-11-17T20:00:00.000Z",
+    "durationMs": 0,
+    "usage": {
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cacheReadTokens": 0,
+      "searches": 0
+    },
+    "estCostUsd": 0,
+    "note": "Reference run. The research was gathered with live web search on Nov 17, 2026 and assembled into the agent's schema by hand. Scoring, ranking and verification ran through the agent's own code. Regenerate it end to end with: npm run batch -- data/targets/us-f1.json"
+  },
+  "entity": {
+    "name": "United States Grand Prix (Circuit of The Americas)",
+    "website": "https://circuitoftheamericas.com",
+    "operator": "Circuit of The Americas LLC",
+    "industry": "Live sports and entertainment venue",
+    "summary": "Circuit of The Americas (COTA) in Austin hosts the Formula 1 United States Grand Prix each October and is turning into a year-round entertainment campus. It earns from race tickets and hospitality, sponsorship, the COTALAND theme park, concerts and a new private members club.",
+    "businessUnits": [
+      "United States Grand Prix",
+      "COTALAND theme park",
+      "Concerts and events",
+      "The Circuit members club",
+      "Partnerships"
+    ],
+    "keyDates": [
+      {
+        "label": "Track becomes members-only outside select races and events",
+        "date": "2027-01",
+        "isUpcoming": true
+      },
+      {
+        "label": "2026 United States Grand Prix (completed)",
+        "date": "2026-10-22",
+        "isUpcoming": false
+      }
+    ],
+    "audiences": [
+      "F1 fans from across the US",
+      "Austin and Texas families",
+      "Premium members",
+      "Sponsors"
+    ],
+    "aliases": [
+      "COTA",
+      "Circuit of the Americas",
+      "US GP",
+      "USGP",
+      "Formula 1 MSC Cruises United States Grand Prix",
+      "circuitoftheamericas.com",
+      "Austin Grand Prix"
+    ],
+    "evidenceIds": [
+      "E1",
+      "E4"
+    ]
+  },
+  "relationship": {
+    "status": "none_found",
+    "summary": "No public Flowcode case study found for COTA or the United States Grand Prix.",
+    "evidenceIds": []
+  },
+  "summary": {
+    "headline": "Austin set a 467,000-fan record, added a fourth race day and is becoming a year-round venue, which gives it more fans to identify than any other US race.",
+    "bullets": [
+      "Record 467,000 fans in 2026 and a new Grand PrixView Thursday ticket.",
+      "The 'Biggest Weekend Ever' campaign ran on billboards, airport floor decals and online ads pointing to COTA's website.",
+      "From January 2027 COTA runs year-round: COTALAND, concerts and a members-only track."
+    ]
+  },
+  "signals": [
+    {
+      "id": "S1",
+      "lens": "experiences",
+      "title": "Record 467,000 fans across race week",
+      "summary": "The 2026 United States Grand Prix (Oct 22-25) drew a record 467,000 fans, Austin's largest race-weekend attendance since 2012, as reported by ESPN and cited by BizBash.",
+      "date": "2026-10-25",
+      "isUpcoming": false,
+      "channels": [
+        "live_events"
+      ],
+      "scale": "467,000 fans",
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E1",
+        "E12"
+      ]
+    },
+    {
+      "id": "S2",
+      "lens": "experiences",
+      "title": "Grand PrixView Thursday made it a four-day event",
+      "summary": "COTA added an affordable Thursday ticket with F1 Academy track action, fan villages (La Cantina, The Ranch, Lonestar Land), first access to the F1 Fan Zone, a pit lane walk and merch shopping. COTALAND admission is sold separately.",
+      "date": "2026-07-23",
+      "isUpcoming": false,
+      "channels": [
+        "live_events",
+        "ticketing",
+        "merchandise"
+      ],
+      "scale": null,
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E2",
+        "E3"
+      ]
+    },
+    {
+      "id": "S3",
+      "lens": "campaigns",
+      "title": "'Biggest Weekend Ever' campaign on airport decals, billboards and online ads",
+      "summary": "COTA promoted race weekend alongside a Texas vs Ole Miss football game and a Spurs vs Rockets game, using airport floor decals, billboards and online ads that linked to COTA's website.",
+      "date": "2026-10",
+      "isUpcoming": false,
+      "channels": [
+        "ooh",
+        "social",
+        "ticketing"
+      ],
+      "scale": null,
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E1"
+      ]
+    },
+    {
+      "id": "S4",
+      "lens": "partnerships",
+      "title": "Big-brand activations across Austin, with no data capture described",
+      "summary": "Red Bull Austin Race Nights drew 12,000+ guests to a free four-day fan zone with AT&T, Indeed, Ford Racing and McDonald's. Google Gemini and McLaren ran an apparel pop-up, and Delta with American Express drew 1,200+ guests. The BizBash recap does not describe attendee data capture at any of them.",
+      "date": "2026-10-22",
+      "isUpcoming": false,
+      "channels": [
+        "live_events",
+        "sponsorship",
+        "merchandise",
+        "retail"
+      ],
+      "scale": "12,000+ and 1,200+ guests at two activations",
+      "sponsorBrands": [
+        "Red Bull",
+        "AT&T",
+        "Indeed",
+        "Ford Racing",
+        "McDonald's",
+        "Google",
+        "McLaren",
+        "Delta Air Lines",
+        "American Express",
+        "Tecovas"
+      ],
+      "evidenceIds": [
+        "E1"
+      ]
+    },
+    {
+      "id": "S5",
+      "lens": "strategy",
+      "title": "COTA is becoming a year-round entertainment venue",
+      "summary": "COTA is completing its shift to year-round entertainment. COTALAND (30+ rides) is open, the Germania Amphitheater hosts concerts, and from 2027 the main track is limited to members of The Circuit (max 300) plus select races and events. The clubhouse sits above Turn 1, linked to the pit building by gondola.",
+      "date": "2027-01",
+      "isUpcoming": true,
+      "channels": [
+        "venue_signage",
+        "hospitality",
+        "ticketing"
+      ],
+      "scale": null,
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E4",
+        "E5",
+        "E6",
+        "E11"
+      ]
+    },
+    {
+      "id": "S6",
+      "lens": "partnerships",
+      "title": "MSC Cruises title sponsor for a second straight year",
+      "summary": "MSC Cruises was title sponsor of the 2026 race for the second consecutive year, is scheduled to title-sponsor three races in 2027, and runs year-round sailings from Galveston.",
+      "date": "2026-11-02",
+      "isUpcoming": false,
+      "channels": [
+        "sponsorship"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "MSC Cruises"
+      ],
+      "evidenceIds": [
+        "E7",
+        "E8"
+      ]
+    },
+    {
+      "id": "S7",
+      "lens": "strategy",
+      "title": "Demand held up under F1's 2026 rules",
+      "summary": "Race chief Bobby Epstein said he has seen no evidence that F1's 2026 rules turned fans off, ahead of a record crowd.",
+      "date": "2026-08",
+      "isUpcoming": false,
+      "channels": [],
+      "scale": null,
+      "sponsorBrands": [],
+      "evidenceIds": [
+        "E9",
+        "E12"
+      ]
+    },
+    {
+      "id": "S8",
+      "lens": "partnerships",
+      "title": "Zoox active at the Austin race",
+      "summary": "Zoox, a Williams F1 team partner since 2024, is involved with events at the Austin and Miami races, and became the Las Vegas race's official ride-hail partner in Nov 2026.",
+      "date": "2026-11",
+      "isUpcoming": false,
+      "channels": [
+        "sponsorship"
+      ],
+      "scale": null,
+      "sponsorBrands": [
+        "Zoox"
+      ],
+      "evidenceIds": [
+        "E10",
+        "E13"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Capture fan identity across four days and three fan villages",
+      "businessUnit": "United States Grand Prix",
+      "whatsHappening": "COTA added a Thursday ticket, making the race a four-day event with fan villages (La Cantina, The Ranch, Lonestar Land), F1 Academy sessions, a pit lane walk and merch shopping. A record 467,000 fans attended.",
+      "whyFlowcode": "Each village and day is a distinct moment, and a code per village shows where fans spend time and what they buy. FlowID turns a Thursday visitor into a known fan for COTALAND, concerts and next year's race. C3 Presents' 1.3M+ scans came from the same kind of multi-stage site.",
+      "play": [
+        "One code per village, day and screen, routed to that day's schedule, food and drink, and merch.",
+        "Offer a Thursday-only reward to grow the new day's audience.",
+        "Capture opt-ins with FlowID and sync to COTA's CRM.",
+        "Use location and time data to plan the 2027 village layout."
+      ],
+      "products": [
+        "flowcodes",
+        "flowhubs",
+        "flowid",
+        "analytics_integrations"
+      ],
+      "proofPointId": "c3_presents",
+      "touchpoints": [
+        "live_events",
+        "venue_signage",
+        "merchandise",
+        "ticketing"
+      ],
+      "kpis": [
+        "Opt-ins per village and day",
+        "Merch and food revenue from scans",
+        "Thursday ticket growth"
+      ],
+      "timing": {
+        "urgency": "next_event_cycle",
+        "window": "2027 race week, planned through spring",
+        "keyDate": null
+      },
+      "buyer": "Fan experience lead, Circuit of The Americas",
+      "signalIds": [
+        "S2",
+        "S1"
+      ],
+      "ratings": {
+        "timeliness": {
+          "score": 3,
+          "why": "next race is October 2027"
+        },
+        "scale": {
+          "score": 5,
+          "why": "467,000 fans, the largest US race"
+        },
+        "fit": {
+          "score": 5,
+          "why": "multi-zone festival pattern"
+        },
+        "access": {
+          "score": 4,
+          "why": "COTA runs its villages"
+        }
+      },
+      "caveats": [
+        "F1 controls the F1 Fan Zone and has run its own QR prize draws at other races."
+      ],
+      "id": "O1",
+      "rank": 1,
+      "evidenceIds": [
+        "E2",
+        "E3",
+        "E1",
+        "E12"
+      ],
+      "score": {
+        "total": 84,
+        "components": {
+          "timeliness": 3,
+          "scale": 5,
+          "fit": 5,
+          "evidence": 5,
+          "access": 4
+        },
+        "adjustments": [
+          "3 source domains, newest signal fresh"
+        ]
+      },
+      "verification": {
+        "verdict": "unchecked",
+        "issues": []
+      }
+    },
+    {
+      "title": "Tie COTALAND, concerts and the race into one fan record",
+      "businessUnit": "COTA campus",
+      "whatsHappening": "COTA is completing its move to a year-round entertainment venue. COTALAND with 30+ rides is open, the Germania Amphitheater hosts concerts, and from 2027 the main track is limited to members, select races and special events.",
+      "whyFlowcode": "Year-round venues need one view of the guest. Codes across the theme park, amphitheater and race assets in one Workspace connect a family's COTALAND visit to their race ticket, and two-way CRM sync lets each business market to the others' audience.",
+      "play": [
+        "Map touchpoints across COTALAND, the amphitheater and race assets.",
+        "Run one Workspace with shared reporting across the three businesses.",
+        "Route theme park guests to race-week family offers, and race fans to COTALAND bundles.",
+        "Report cross-sell revenue every quarter."
+      ],
+      "products": [
+        "workspaces_api",
+        "flowcodes",
+        "flowid",
+        "analytics_integrations"
+      ],
+      "proofPointId": null,
+      "touchpoints": [
+        "venue_signage",
+        "ticketing",
+        "retail",
+        "live_events"
+      ],
+      "kpis": [
+        "Cross-sell revenue between businesses",
+        "Share of race buyers who visited COTALAND"
+      ],
+      "timing": {
+        "urgency": "next_90_days",
+        "window": "Ahead of the January 2027 switch to a members-only track",
+        "keyDate": "2027-01"
+      },
+      "buyer": "COTA commercial and marketing leadership",
+      "signalIds": [
+        "S5"
+      ],
+      "ratings": {
+        "timeliness": {
+          "score": 4,
+          "why": "campus model changes in January"
+        },
+        "scale": {
+          "score": 4,
+          "why": "all campus businesses"
+        },
+        "fit": {
+          "score": 4,
+          "why": "workspaces plus identity"
+        },
+        "access": {
+          "score": 4,
+          "why": "one owner across the campus"
+        }
+      },
+      "caveats": [
+        "COTALAND attendance was not found in sources."
+      ],
+      "id": "O2",
+      "rank": 2,
+      "evidenceIds": [
+        "E4",
+        "E5",
+        "E6",
+        "E11"
+      ],
+      "score": {
+        "total": 79,
+        "components": {
+          "timeliness": 4,
+          "scale": 4,
+          "fit": 4,
+          "evidence": 5,
+          "access": 4
+        },
+        "adjustments": [
+          "4 source domains, newest signal fresh"
+        ]
+      },
+      "verification": {
+        "verdict": "unchecked",
+        "issues": []
+      }
+    },
+    {
+      "title": "Give every billboard and airport decal in the next campaign its own code, so each placement reports ticket sales",
+      "businessUnit": "United States Grand Prix marketing",
+      "whatsHappening": "COTA's 2026 'Biggest Weekend Ever' campaign ran on airport floor decals, billboards and online ads that linked to its website, and race week drew a record 467,000 fans.",
+      "whyFlowcode": "A billboard that points to a website cannot say which placement sold tickets. A Flowcode or FlowURL per placement attributes each scan to the decal, board or ad behind it, and the same codes can switch to 2027 offers without reprinting. CLEAR's 1.2M+ connections across 7,000+ airport touchpoints show the airport format works.",
+      "play": [
+        "Assign one code per placement: each airport decal set, each billboard, each digital ad.",
+        "Route to ticket offers by placement and date, with FlowID capturing who scanned.",
+        "Sync scan-to-purchase data to the ticketing CRM.",
+        "Move 2027 media spend toward the placements that sold."
+      ],
+      "products": [
+        "flowcodes",
+        "flowurls",
+        "flowid",
+        "analytics_integrations"
+      ],
+      "proofPointId": "clear",
+      "touchpoints": [
+        "ooh",
+        "ticketing",
+        "social"
+      ],
+      "kpis": [
+        "Ticket revenue per placement",
+        "Cost per ticket sold by channel",
+        "Scans per airport placement"
+      ],
+      "timing": {
+        "urgency": "next_event_cycle",
+        "window": "2027 campaign planning, ahead of next October's race",
+        "keyDate": null
+      },
+      "buyer": "Marketing lead for the United States Grand Prix at COTA",
+      "signalIds": [
+        "S3",
+        "S1"
+      ],
+      "ratings": {
+        "timeliness": {
+          "score": 3,
+          "why": "next campaign is months away"
+        },
+        "scale": {
+          "score": 4,
+          "why": "the campaign that filled a 467,000-fan week"
+        },
+        "fit": {
+          "score": 5,
+          "why": "OOH attribution is Flowcode's core pitch"
+        },
+        "access": {
+          "score": 4,
+          "why": "COTA owns its media plan"
+        }
+      },
+      "caveats": [
+        "Whether COTA already tracks placements with unique URLs is not public. Ask first."
+      ],
+      "id": "O3",
+      "rank": 3,
+      "evidenceIds": [
+        "E1",
+        "E12"
+      ],
+      "score": {
+        "total": 75,
+        "components": {
+          "timeliness": 3,
+          "scale": 4,
+          "fit": 5,
+          "evidence": 4,
+          "access": 4
+        },
+        "adjustments": [
+          "2 source domains, newest signal fresh"
+        ]
+      },
+      "verification": {
+        "verdict": "unchecked",
+        "issues": []
+      }
+    },
+    {
+      "title": "Help MSC prove title-sponsor ROI before it names its 2027 races",
+      "businessUnit": "Partnerships",
+      "whatsHappening": "MSC Cruises title-sponsored the race for a second straight year in 2026, runs year-round sailings from Galveston and is scheduled to title-sponsor three races in 2027.",
+      "whyFlowcode": "Title sponsors renew on evidence. Codes on MSC trackside branding and hospitality that route to Galveston sailing offers show bookings driven by the race, which helps COTA keep the title and gives MSC a reason to expand.",
+      "play": [
+        "Co-pitch COTA and MSC on measured title assets for 2027.",
+        "Route scans to Galveston sailing offers through a race-only code.",
+        "Report race-attributed cruise leads and bookings to both teams."
+      ],
+      "products": [
+        "flowcodes",
+        "flowhubs",
+        "analytics_integrations",
+        "flowid"
+      ],
+      "proofPointId": "nfl_shop",
+      "touchpoints": [
+        "sponsorship",
+        "venue_signage",
+        "hospitality"
+      ],
+      "kpis": [
+        "Cruise leads and bookings from race codes",
+        "Title renewal for 2027"
+      ],
+      "timing": {
+        "urgency": "next_90_days",
+        "window": "Before MSC confirms its 2027 races",
+        "keyDate": null
+      },
+      "buyer": "COTA partnerships with MSC Cruises USA marketing",
+      "signalIds": [
+        "S6"
+      ],
+      "ratings": {
+        "timeliness": {
+          "score": 4,
+          "why": "2027 races not yet named"
+        },
+        "scale": {
+          "score": 3,
+          "why": "one sponsor"
+        },
+        "fit": {
+          "score": 4,
+          "why": "offline-to-booking attribution"
+        },
+        "access": {
+          "score": 3,
+          "why": "two parties to align"
+        }
+      },
+      "caveats": [
+        "Sources do not say whether Austin is among MSC's three 2027 races."
+      ],
+      "id": "O4",
+      "rank": 4,
+      "evidenceIds": [
+        "E7",
+        "E8"
+      ],
+      "score": {
+        "total": 66,
+        "components": {
+          "timeliness": 4,
+          "scale": 3,
+          "fit": 4,
+          "evidence": 4,
+          "access": 3
+        },
+        "adjustments": [
+          "2 source domains, newest signal fresh"
+        ]
+      },
+      "verification": {
+        "verdict": "unchecked",
+        "issues": []
+      }
+    },
+    {
+      "title": "Offer race-week brands a measurement kit, then sell it to them directly",
+      "businessUnit": "Partnerships",
+      "whatsHappening": "Race week in Austin drew branded activations from Red Bull (12,000+ guests), Google Gemini with McLaren, and Delta with American Express (1,200+ guests), plus AT&T, Indeed and Ford Racing inside Red Bull's fan zone. The BizBash recap does not describe attendee data capture at any of them.",
+      "whyFlowcode": "Brands spend heavily on Austin race week, and the public recap shows no way they measured who came. COTA can bundle Flowcode measurement into official activations, and each brand is a Flowcode prospect in its own right. NFL Shop's $250 revenue per scan is the kind of number these brands want to report.",
+      "play": [
+        "Package a measured-activation add-on for brands activating on and around the COTA campus.",
+        "Give each brand its own codes and dashboard in a shared Workspace.",
+        "Pass brand contacts to Flowcode sales as follow-on prospects.",
+        "Publish a race-week engagement benchmark after 2027."
+      ],
+      "products": [
+        "workspaces_api",
+        "flowcodes",
+        "analytics_integrations"
+      ],
+      "proofPointId": "nfl_shop",
+      "touchpoints": [
+        "sponsorship",
+        "live_events",
+        "retail"
+      ],
+      "kpis": [
+        "Brands using the kit",
+        "Scans per activation",
+        "Follow-on deals"
+      ],
+      "timing": {
+        "urgency": "next_event_cycle",
+        "window": "2027 partner sales",
+        "keyDate": null
+      },
+      "buyer": "COTA partnerships team, and brand experiential leads directly",
+      "signalIds": [
+        "S4"
+      ],
+      "ratings": {
+        "timeliness": {
+          "score": 3,
+          "why": "2027 partner cycle"
+        },
+        "scale": {
+          "score": 3,
+          "why": "per-brand budgets"
+        },
+        "fit": {
+          "score": 4,
+          "why": "measurement is the missing piece"
+        },
+        "access": {
+          "score": 3,
+          "why": "several activations were off-site"
+        }
+      },
+      "caveats": [
+        "Several activations were off-site (East Austin, Domain NORTHSIDE), outside COTA's control.",
+        "A recap that does not mention data capture does not prove there was none."
+      ],
+      "id": "O5",
+      "rank": 5,
+      "evidenceIds": [
+        "E1"
+      ],
+      "score": {
+        "total": 56,
+        "components": {
+          "timeliness": 3,
+          "scale": 3,
+          "fit": 4,
+          "evidence": 3,
+          "access": 3
+        },
+        "adjustments": [
+          "1 source domain, newest signal fresh"
+        ]
+      },
+      "verification": {
+        "verdict": "unchecked",
+        "issues": []
+      }
+    }
+  ],
+  "followOnLeads": [
+    {
+      "brand": "MSC Cruises",
+      "role": "Title sponsor in 2025 and 2026, F1 global partner",
+      "why": "Cruise bookings from physical touchpoints are a clean attribution story across all its F1 races.",
+      "signalIds": [
+        "S6"
+      ]
+    },
+    {
+      "brand": "Red Bull",
+      "role": "Ran Austin Race Nights, a free four-day fan zone with 12,000+ guests",
+      "why": "Huge event footprint and cans as a packaging touchpoint, with no capture described in the recap.",
+      "signalIds": [
+        "S4"
+      ]
+    },
+    {
+      "brand": "Delta Air Lines and American Express",
+      "role": "'Claim Your Second' pop-up with 1,200+ guests",
+      "why": "Card and loyalty sign-ups are exactly what scan-level identity measures.",
+      "signalIds": [
+        "S4"
+      ]
+    },
+    {
+      "brand": "Google and McLaren",
+      "role": "Gemini x McLaren apparel pop-up",
+      "why": "Retail pop-up plus app experience, where codes can link in-store moments to app use.",
+      "signalIds": [
+        "S4"
+      ]
+    },
+    {
+      "brand": "AT&T",
+      "role": "Simulators and phone customization inside Red Bull's fan zone",
+      "why": "Telecom offers at events convert well with scan-to-offer routing.",
+      "signalIds": [
+        "S4"
+      ]
+    },
+    {
+      "brand": "Zoox",
+      "role": "Williams F1 team partner at all three US races, Las Vegas ride-hail partner from Nov 2026",
+      "why": "Needs app installs and rider trials in new cities.",
+      "signalIds": [
+        "S8"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E1",
+      "url": "https://www.bizbash.com/sporting-events/f1-austin-2026-see-the-races-newest-activations-by-delta-air-lines-google-red-bull-and-more",
+      "title": "F1 Austin 2026: See the Race's Newest Activations by Delta Air Lines, Google, Red Bull, and More",
+      "domain": "bizbash.com",
+      "snippets": [
+        "drew a record 467,000 fans to the Circuit of The Americas (COTA) this year"
+      ],
+      "pageAge": "2026-10",
+      "lens": "experiences"
+    },
+    {
+      "id": "E2",
+      "url": "https://racer.com/2026/07/23/cota-expands-usgp-weekend-with-grand-prixview-thursday-",
+      "title": "COTA expands USGP weekend with 'Grand PrixView Thursday'",
+      "domain": "racer.com",
+      "snippets": [
+        "gives fans an affordable way to explore the COTA campus before race weekend",
+        "fan villages across the property, first access to the F1 Fan Zone, a Formula 1 Pit Lane Walk"
+      ],
+      "pageAge": "2026-07-23",
+      "lens": "experiences"
+    },
+    {
+      "id": "E3",
+      "url": "https://www.the-race.com/extra/cota-expands-united-states-gp-access-with-new-thursday-ticket/",
+      "title": "COTA expands United States GP access with new Thursday ticket",
+      "domain": "the-race.com",
+      "snippets": [
+        "set to become a four-day event after COTA unveiled a new Thursday ticket"
+      ],
+      "pageAge": "2026-07-24",
+      "lens": "experiences"
+    },
+    {
+      "id": "E4",
+      "url": "https://www.autosport.com/f1/news/inside-cotas-turn-1-clubhouse-and-its-plans-to-build-a-second-track/10868244/",
+      "title": "Inside COTA's Turn 1 clubhouse and its plans to build a second track",
+      "domain": "autosport.com",
+      "snippets": [
+        "gradually completes its transition into a year-round entertainment venue",
+        "There will never be more than 300 members."
+      ],
+      "pageAge": "2026-10",
+      "lens": "strategy"
+    },
+    {
+      "id": "E5",
+      "url": "https://www.performanceracing.com/magazine/industry-news/10-20-2025/cota-build-private-members-club-name-turn-20-after-mario-andretti",
+      "title": "COTA to Build Private Members Club, Name Turn 20 After Mario Andretti",
+      "domain": "performanceracing.com",
+      "snippets": [
+        "Beginning in 2027, the track will be limited to members, select races and special events.",
+        "access to the members' box at the Germania Amphitheater"
+      ],
+      "pageAge": "2025-10-20",
+      "lens": "strategy"
+    },
+    {
+      "id": "E6",
+      "url": "https://cbsaustin.com/news/local/story/ribbon-cut-at-cotaland-as-thrill-seekers-get-first-look-at-new-theme-park",
+      "title": "Ribbon cut at COTALand as thrill-seekers get first look at new theme park",
+      "domain": "cbsaustin.com",
+      "snippets": [
+        "its more than 30 rides and attractions"
+      ],
+      "pageAge": null,
+      "lens": "experiences"
+    },
+    {
+      "id": "E7",
+      "url": "https://cruisemapper.com/news/16887-msc-cruises-title-sponsor-formula-1-united-states-grand-prix",
+      "title": "MSC Cruises returns as title sponsor of 2026 Formula 1 USA Grand Prix",
+      "domain": "cruisemapper.com",
+      "snippets": [
+        "for the second consecutive year",
+        "is also scheduled to sponsor three races in 2027"
+      ],
+      "pageAge": "2026-11-02",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E8",
+      "url": "https://www.mscpressarea.com/en_US/press-releases/msc-cruises-serves-as-title-sponsor-for-austin-2025-grand-prix-tm-announces-conti/",
+      "title": "MSC Cruises serves as title sponsor for Austin 2025 Grand Prix, announces continued partnership with Formula 1 for 2026 season",
+      "domain": "mscpressarea.com",
+      "snippets": [
+        "the start of year-round sailings from Galveston"
+      ],
+      "pageAge": "2025-10-20",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E9",
+      "url": "https://www.the-race.com/business/us-gp-chief-theory-for-f1-ticket-sales-boom/",
+      "title": "US GP chief's theory for F1 ticket sales boom",
+      "domain": "the-race.com",
+      "snippets": [
+        "has seen no evidence of fans being turned off by the 2026 rules"
+      ],
+      "pageAge": "2026-08",
+      "lens": "strategy"
+    },
+    {
+      "id": "E10",
+      "url": "https://www.sportcal.com/?p=154816",
+      "title": "Zoox partners with Las Vegas Grand Prix",
+      "domain": "sportcal.com",
+      "snippets": [
+        "the two other US races in Austin and Miami"
+      ],
+      "pageAge": "2026-11-05",
+      "lens": "partnerships"
+    },
+    {
+      "id": "E11",
+      "url": "https://www.si.com/onsi/f1/news/circuit-of-the-americas-reveals-plans-for-groundbreaking-private-members-club",
+      "title": "Circuit of the Americas Reveals Plans For \"Groundbreaking\" Private Members Club",
+      "domain": "si.com",
+      "snippets": [
+        "will be connected to the pit building by an aerial gondola"
+      ],
+      "pageAge": null,
+      "lens": "strategy"
+    },
+    {
+      "id": "E12",
+      "url": "https://racer.com/2026/08/04/us-gp-on-target-for-record-crowd",
+      "title": "US GP on target for record crowd",
+      "domain": "racer.com",
+      "snippets": [
+        "closing in on a record attendance for this year's race"
+      ],
+      "pageAge": "2026-08-04",
+      "lens": "strategy"
+    },
+    {
+      "id": "E13",
+      "url": "https://autonomousvehicleinternational.com/?p=19373",
+      "title": "Williams Racing partners with Zoox for multi-year agreement",
+      "domain": "autonomousvehicleinternational.com",
+      "snippets": [
+        "Zoox will be involved with events in Las Vegas, Austin and Miami"
+      ],
+      "pageAge": "2024-11",
+      "lens": "partnerships"
+    }
+  ],
+  "quality": {
+    "evidenceCount": 13,
+    "distinctDomains": 11,
+    "signalsKept": 8,
+    "signalsDropped": [],
+    "opportunitiesDropped": [],
+    "staleSignals": []
+  }
+}
