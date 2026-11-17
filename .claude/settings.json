@@ -4,6 +4,7 @@
       "WebSearch",
       "WebFetch",
       "Bash(npm run reports *)",
+      "PowerShell(npm run reports *)",
       "Edit(/data/reference/**)"
     ],
     "deny": [

@@ -27,6 +27,8 @@ claude                                   # sign in with your claude.ai account
 npm run dev                              # http://localhost:3000
 ```
 
+The web app uses the same path. Run `npm run dev` on a machine where Claude Code is installed and signed in, open **Research a company**, and type any brand. The app starts Claude Code headless (`claude -p "/research <brand>"`), streams its progress into the page and opens the finished report. It removes `ANTHROPIC_API_KEY` from the environment it hands to Claude Code, so research always uses the plan, never API billing. Set `AGENT_RUNTIME=api` or `AGENT_RUNTIME=replay` to choose another engine. A hosted deployment without Claude Code replays saved reports.
+
 Claude Code does the research and the judgment and writes `data/reference/<slug>.json` in the agent's exact schema. Then `npm run reports -- --check-sources` does what the API path gets from citations: it **downloads every cited page and checks that the quoted text is really on it**. A source whose quote is missing is dropped, and any play left without a source is dropped with it. Scoring, ranking and rendering are the same code as the API path.
 
 ### On the Claude API (the production path)
@@ -165,6 +167,7 @@ src/agent/
   flowcode.ts        products and proof points, each sourced
   render.ts          Markdown output
   source-check.ts    downloads cited pages and confirms each quote is on them
+src/lib/claude-code.ts  runs /research through the Claude Code CLI for the web app
 src/app/             Next.js UI: watchlist, report, live run (streamed)
 .claude/skills/research/  the /research skill: the same pipeline inside Claude Code
 scripts/             run.ts (one company), batch.ts (many), build-reports.ts (research file to report)

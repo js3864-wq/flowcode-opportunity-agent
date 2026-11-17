@@ -2,7 +2,7 @@
 name: research
 description: Research a company's current campaigns, events, products and partnerships, and write a ranked, sourced report of where Flowcode could help. Use when asked to research a company, brand, event or website for Flowcode opportunities, or given a targets file from data/targets.
 argument-hint: <company name, website, or data/targets/*.json>
-allowed-tools: WebSearch, WebFetch, Read, Write, Edit, Glob, Bash(npm run reports *)
+allowed-tools: WebSearch, WebFetch, Read, Write, Edit, Glob, Bash(npm run reports *), PowerShell(npm run reports *)
 ---
 
 # Research a company for Flowcode opportunities
