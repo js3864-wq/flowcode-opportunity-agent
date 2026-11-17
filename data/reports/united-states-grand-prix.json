@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "slug": "united-states-grand-prix",
   "input": "United States Grand Prix",
-  "generatedAt": "2026-11-17T22:16:54.973Z",
+  "generatedAt": "2026-11-17T22:37:45.588Z",
   "asOf": "2026-11-17",
   "run": {
     "mode": "claude_code",
@@ -11,7 +11,7 @@
       "synthesis": "Claude Code session",
       "fast": "none"
     },
-    "startedAt": "2026-11-17T22:16:54.974Z",
+    "startedAt": "2026-11-17T22:37:45.588Z",
     "durationMs": 0,
     "usage": {
       "inputTokens": 0,
