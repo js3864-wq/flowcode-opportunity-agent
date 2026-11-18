@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { loadConfig } from "../src/agent/config";
-import { EvidenceLedger, normalizeUrl } from "../src/agent/evidence";
+import { EvidenceLedger, absolutePageAge, normalizeUrl } from "../src/agent/evidence";
 import { Llm, notesFromBlocks } from "../src/agent/llm";
 import { runAgent } from "../src/agent/pipeline";
 import { toMarkdown } from "../src/agent/render";
@@ -46,8 +46,16 @@ describe("evidence ledger", () => {
     );
     expect(notes).toBe("Claim one. [E1] Uncited filler.");
     expect(ledger.all()).toHaveLength(1);
-    expect(ledger.get("E1")?.pageAge).toBe("May 1, 2026");
+    expect(ledger.get("E1")?.pageAge).toBe("May 1, 2026"); // absolute dates pass through unchanged
     expect(ledger.get("E1")?.snippets).toEqual(["quote"]);
+  });
+
+  it("turns relative page ages into dates", () => {
+    const asOf = new Date("2026-11-17T00:00:00Z");
+    expect(absolutePageAge("194 days ago", asOf)).toBe("2026-05-07");
+    expect(absolutePageAge("2 weeks ago", asOf)).toBe("2026-11-03");
+    expect(absolutePageAge("April 30, 2025", asOf)).toBe("April 30, 2025");
+    expect(absolutePageAge(null, asOf)).toBeNull();
   });
 
   it("treats tracking params and trailing slashes as the same page", () => {

@@ -8,8 +8,7 @@ The demo account list is the three US Formula 1 races: **Las Vegas** (race week 
 
 **Sample outputs** (Markdown, ready to paste into an email or CRM note):
 [Las Vegas Grand Prix](data/reports/las-vegas-grand-prix.md) ·
-[Miami Grand Prix](data/reports/miami-grand-prix.md) ·
-[United States Grand Prix at COTA](data/reports/united-states-grand-prix.md)
+[Miami Grand Prix](data/reports/miami-grand-prix.md)
 
 > **About these samples.** Each report says how it was made: *Live API run* (the agent end to end on the Claude API), *Claude Code run* (the `/research` skill on a Claude plan, page-checked by code) or *Reference run* (research gathered with live web search on Nov 17, 2026 and written into the agent's schema by hand). All three kinds go through the same validation, scoring and ranking code.
 
@@ -42,7 +41,9 @@ npm run batch -- data/targets/us-f1.json   # many, with --concurrency and --skip
 
 API runs use the **lite** profile by default and stop at a **$0.75 spending cap per company**. Add `--full` for the Sonnet and Opus profile (about $2 per company, measured). The batch runner prints the profile, the search limit and the cap before it spends anything.
 
-Without a key, the app and `npm run agent -- "COTA" --mock` replay saved reports. `npm test` runs the pipeline against a fake API and the page check against fake pages.
+To share results without running the app, export the watchlist and every report into one self-contained web page: start the app with `STATIC_DATES=1` and run `python3 scripts/export_static.py http://localhost:3000`. The page lands in `dist/index.html`.
+
+Without a key, the app and `npm run agent -- "Las Vegas" --mock` replay saved reports. `npm test` runs the pipeline against a fake API and the page check against fake pages.
 
 ## How it works
 

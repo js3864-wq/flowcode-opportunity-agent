@@ -1,3 +1,4 @@
+import { absolutePageAge } from "./evidence";
 import { productName, proofPoint } from "./flowcode";
 import type { Report } from "./types";
 
@@ -87,7 +88,8 @@ export function toMarkdown(r: Report): string {
   lines.push("## Sources", "");
   for (const [id, n] of [...footnotes.entries()].sort((a, b) => a[1] - b[1])) {
     const e = ev.get(id);
-    if (e) lines.push(`${n}. [${e.title}](${e.url}) (${e.domain}${e.pageAge ? `, ${e.pageAge}` : ""})`);
+    const age = absolutePageAge(e?.pageAge, new Date(`${r.asOf}T00:00:00Z`));
+    if (e) lines.push(`${n}. [${e.title}](${e.url}) (${e.domain}${age ? `, ${age}` : ""})`);
   }
   lines.push("");
   return lines.join("\n");

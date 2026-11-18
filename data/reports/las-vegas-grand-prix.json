@@ -19,7 +19,8 @@
       "cacheReadTokens": 3555,
       "searches": 35
     },
-    "estCostUsd": 2.03
+    "estCostUsd": 2.03,
+    "note": "Edited after the run: removed key dates for other organizations' events (Qatar and Abu Dhabi Grands Prix) from the company profile. The profile prompt now prevents this. Research, plays and scores are unchanged."
   },
   "entity": {
     "name": "Las Vegas Grand Prix",
@@ -41,16 +42,6 @@
       {
         "label": "F1 Academy reverse race (Nov 20) and feature race (Nov 21)",
         "date": "2026-11-20",
-        "isUpcoming": true
-      },
-      {
-        "label": "Qatar (Lusail) Grand Prix, Nov 27–29, 2026",
-        "date": "2026-11-27",
-        "isUpcoming": true
-      },
-      {
-        "label": "Abu Dhabi (Yas Marina) Grand Prix, Dec 4–6, 2026",
-        "date": "2026-12-04",
         "isUpcoming": true
       },
       {

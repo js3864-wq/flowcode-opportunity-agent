@@ -62,6 +62,7 @@ export function daysBetween(from: Date, to: Date): number {
 }
 
 export function relativeDays(dateStr: string, now: Date): string | null {
+  if (process.env.STATIC_DATES === "1") return null; // static export: a fixed page cannot say "tomorrow"
   if (!/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) return null;
   const d = daysBetween(now, new Date(`${dateStr}T00:00:00Z`));
   if (d === 0) return "today";

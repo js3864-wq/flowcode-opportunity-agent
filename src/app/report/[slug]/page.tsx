@@ -5,6 +5,7 @@ import { OpportunityDetail } from "@/components/OpportunityDetail";
 import { ResearchAnalytics } from "@/components/ResearchAnalytics";
 import { TimingTower } from "@/components/TimingTower";
 import { CHECK_LABEL, MODE_LABEL, formatGeneratedAt, formatLooseDate, relativeDays } from "@/lib/format";
+import { absolutePageAge } from "@/agent/evidence";
 import { displayRefs } from "@/agent/render";
 import { getReport } from "@/lib/store";
 
@@ -190,7 +191,7 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
                 </a>{" "}
                 <span className="text-muted">
                   {e.domain}
-                  {e.pageAge ? `, ${formatLooseDate(e.pageAge)}` : ""}
+                  {e.pageAge ? `, ${formatLooseDate(absolutePageAge(e.pageAge, new Date(`${r.asOf}T00:00:00Z`)))}` : ""}
                   {e.check ? `, ${CHECK_LABEL[e.check.status]}` : ""}
                 </span>
                 {e.snippets.length ? <span className="block text-muted">&ldquo;{e.snippets.join("” / “")}&rdquo;</span> : null}

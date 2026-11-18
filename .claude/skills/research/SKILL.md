@@ -25,7 +25,7 @@ Today's date is the `asOf` date. Use it for "upcoming" and for how fresh each fa
 
 ## Step 1. Identify the company
 
-One or two searches. Find the official website, who operates or owns it, what it does and how it makes money, its business units, upcoming key dates in the next 12 months, and its audiences.
+One or two searches. Find the official website, who operates or owns it, what it does and how it makes money, its business units, upcoming key dates in the next 12 months for this organization's own events and milestones (not other companies' events, even in the same sport or venue), and its audiences.
 
 ## Step 2. Research the six lenses
 

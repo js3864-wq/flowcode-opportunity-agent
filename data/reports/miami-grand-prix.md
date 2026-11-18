@@ -2,6 +2,8 @@
 
 _As of 2026-11-17. Operated by South Florida Motorsports. Run mode: live. 108 sources, 30 signals._
 
+> Edited after the run: removed key dates for other organizations' events (2027 Miami ePrix) from the company profile and marked a past date as past. The profile prompt now prevents this. Research, plays and scores are unchanged.
+
 **With Hard Rock taking the title in 2027, the Paddock Club growing to about 9,000 tickets and a new Grandstand Membership launching, the Miami Grand Prix is reprinting and repackaging nearly every fan touchpoint for April 30 to May 2, and each one can capture first-party data and drive revenue.**
 
 - Hard Rock International replaces Crypto.com as title partner from 2027 under a multi-year naming deal (reported, unconfirmed, as eight figures a year). That means a full rebrand of event signage and the Fan Fest.
@@ -140,32 +142,32 @@ _As of 2026-11-17. Operated by South Florida Motorsports. Run mode: live. 108 so
 
 ## Sources
 
-1. [HARD ROCK® TAKES THE LEAD AS NEW TITLE PARTNER OF FORMULA 1 HARD ROCK MIAMI GRAND PRIX, UNITING TWO GLOBALLY RENOWNED BRANDS](http://www.prnewswire.com/news-releases/hard-rock-takes-the-lead-as-new-title-partner-of-formula-1-hard-rock-miami-grand-prix-uniting-two-globally-renowned-brands-302866658.html) (prnewswire.com, 77 days ago)
-2. [HARD ROCK® TAKES THE LEAD AS NEW TITLE PARTNER OF FORMULA 1 HARD ROCK MIAMI GRAND PRIX, UNITING TWO GLOBALLY RENOWNED BRANDS](https://www.hardrock.com/blog/hard-rock-formula-1-miami-grand-prix-title-partner) (hardrock.com, 77 days ago)
-3. [Formula 1 Miami Grand Prix 2027 & Hard Rock Make Major Moves](https://hauteliving.com/2026/09/fomrula-one-hard-rock-miami-grand-prix-2027/795275/) (hauteliving.com, 77 days ago)
-4. [Hard Rock secures title rights for F1's Miami GP from 2027](https://www.sportcal.com/news/hard-rock-secures-title-rights-for-f1s-miami-gp-from-2027/) (sportcal.com, 76 days ago)
-5. [Miami F1 Race Names Hard Rock Title Sponsor](https://www.browardist.com/p/miami-s-f1-spectacle-has-a-new-name) (browardist.com, 77 days ago)
-6. [Hard Rock's F1 Miami Title Deal: Casino Brands Are Rewriting Motorsport Sponsorship](https://www.sponsorflo.ai/blog/hard-rock-miami-f1-title-sponsorship-2027) (sponsorflo.ai, 74 days ago)
-7. [2027 F1 Hard Rock Miami Grand Prix Tickets on Sale](https://f1miamigp.com/news/press-release/tickets-on-sale-2027/) (f1miamigp.com, 54 days ago)
+1. [HARD ROCK® TAKES THE LEAD AS NEW TITLE PARTNER OF FORMULA 1 HARD ROCK MIAMI GRAND PRIX, UNITING TWO GLOBALLY RENOWNED BRANDS](http://www.prnewswire.com/news-releases/hard-rock-takes-the-lead-as-new-title-partner-of-formula-1-hard-rock-miami-grand-prix-uniting-two-globally-renowned-brands-302866658.html) (prnewswire.com, 2026-09-01)
+2. [HARD ROCK® TAKES THE LEAD AS NEW TITLE PARTNER OF FORMULA 1 HARD ROCK MIAMI GRAND PRIX, UNITING TWO GLOBALLY RENOWNED BRANDS](https://www.hardrock.com/blog/hard-rock-formula-1-miami-grand-prix-title-partner) (hardrock.com, 2026-09-01)
+3. [Formula 1 Miami Grand Prix 2027 & Hard Rock Make Major Moves](https://hauteliving.com/2026/09/fomrula-one-hard-rock-miami-grand-prix-2027/795275/) (hauteliving.com, 2026-09-01)
+4. [Hard Rock secures title rights for F1's Miami GP from 2027](https://www.sportcal.com/news/hard-rock-secures-title-rights-for-f1s-miami-gp-from-2027/) (sportcal.com, 2026-09-02)
+5. [Miami F1 Race Names Hard Rock Title Sponsor](https://www.browardist.com/p/miami-s-f1-spectacle-has-a-new-name) (browardist.com, 2026-09-01)
+6. [Hard Rock's F1 Miami Title Deal: Casino Brands Are Rewriting Motorsport Sponsorship](https://www.sponsorflo.ai/blog/hard-rock-miami-f1-title-sponsorship-2027) (sponsorflo.ai, 2026-09-04)
+7. [2027 F1 Hard Rock Miami Grand Prix Tickets on Sale](https://f1miamigp.com/news/press-release/tickets-on-sale-2027/) (f1miamigp.com, 2026-09-24)
 8. [Formula 1 Hard Rock Miami Grand Prix](https://www.miamiandbeaches.com/event/formula-1-hard-rock-miami-grand-prix/17794) (miamiandbeaches.com)
-9. [How to Buy F1 Tickets for the 2027 Miami Grand Prix - GPDestinations.com](https://gpdestinations.com/miami-grand-prix-tickets/) (gpdestinations.com, 126 days ago)
-10. [MIA Shop - New Merchandise Store - F1 Miami](https://shop.f1miamigp.com/) (shop.f1miamigp.com, 204 days ago)
+9. [How to Buy F1 Tickets for the 2027 Miami Grand Prix - GPDestinations.com](https://gpdestinations.com/miami-grand-prix-tickets/) (gpdestinations.com, 2026-07-14)
+10. [MIA Shop - New Merchandise Store - F1 Miami](https://shop.f1miamigp.com/) (shop.f1miamigp.com, 2026-04-27)
 11. [F1 Miami Collection, Miami Shirt, Miami Grand Prix Apparel](https://f1store3.formula1.com/en/miami/c-32087462+z-9073386-3222696164) (f1store3.formula1.com)
 12. [F1 Miami Grand Prix , F1 Racing Miami Grand Prix](https://usf1store.formula1.com/en/formula-1-merchandise/miami-grand-prix/t-10877721+c-1273818924+z-99-3814140268?sortOption=HighestPrice&_ref=p-CLP%3Am-SIDE_NAV) (usf1store.formula1.com)
-13. [Alpine F1 investor looking at Miami GP stake](https://www.the-race.com/business/outgoing-alpine-f1-investor-looking-at-miami-gp-stake/) (the-race.com, 45 days ago)
-14. [Miami Grand Prix Tickets 2027](https://f1salaries.com/tickets/miami-grand-prix/) (f1salaries.com, 32 days ago)
-15. [F1 Miami GP announces major Paddock Club expansion for 2027](https://www.motorsport.com/f1/news/f1-miami-gp-announces-major-paddock-club-expansion-for-2027/10816933/) (motorsport.com, 200 days ago)
-16. [Miami Grand Prix Paddock Club hospitality space expansion - Coliseum](https://www.coliseum-online.com/miami-grand-prix-paddock-club-hospitality-space-expansion/amp/) (coliseum-online.com, 179 days ago)
-17. [F1 Miami GP announces major Paddock Club expansion for 2027 - Yahoo Sports](https://sports.yahoo.com/articles/f1-miami-gp-announces-major-154459966.html) (sports.yahoo.com, 200 days ago)
-18. [Miami GP changes title sponsor](https://www.the-race.com/business/miami-gp-changes-title-sponsor/) (the-race.com, 76 days ago)
-19. [WRE News: Miami Grand Prix to Become Formula 1 Hard Rock Miami Grand Prix in 2027 - World Red Eye](https://worldredeye.com/2026/09/wre-news-miami-grand-prix-to-become-formula-1-hard-rock-miami-grand-prix-in-2027/) (worldredeye.com, 64 days ago)
-20. [Hard Rock Lands Title Rights to F1 Miami Grand Prix Starting 2027](https://rhfnews.com/article/hard-rock-lands-title-rights-to-f1-miami-grand-prix-starting-2027) (rhfnews.com, 77 days ago)
-21. [Hospitality - Formula 1 Hard Rock Miami Grand Prix](https://f1miamigp.com/tickets/hospitality/) (f1miamigp.com, 11 days ago)
-22. [Empower Takes the Wheel at Formula 1® Crypto.com Miami Grand Prix](https://www.empower.com/press-center/empower-takes-wheel-formula-1r-cryptocom-miami-grand-prix) (empower.com, 293 days ago)
+13. [Alpine F1 investor looking at Miami GP stake](https://www.the-race.com/business/outgoing-alpine-f1-investor-looking-at-miami-gp-stake/) (the-race.com, 2026-10-03)
+14. [Miami Grand Prix Tickets 2027](https://f1salaries.com/tickets/miami-grand-prix/) (f1salaries.com, 2026-10-16)
+15. [F1 Miami GP announces major Paddock Club expansion for 2027](https://www.motorsport.com/f1/news/f1-miami-gp-announces-major-paddock-club-expansion-for-2027/10816933/) (motorsport.com, 2026-05-01)
+16. [Miami Grand Prix Paddock Club hospitality space expansion - Coliseum](https://www.coliseum-online.com/miami-grand-prix-paddock-club-hospitality-space-expansion/amp/) (coliseum-online.com, 2026-05-22)
+17. [F1 Miami GP announces major Paddock Club expansion for 2027 - Yahoo Sports](https://sports.yahoo.com/articles/f1-miami-gp-announces-major-154459966.html) (sports.yahoo.com, 2026-05-01)
+18. [Miami GP changes title sponsor](https://www.the-race.com/business/miami-gp-changes-title-sponsor/) (the-race.com, 2026-09-02)
+19. [WRE News: Miami Grand Prix to Become Formula 1 Hard Rock Miami Grand Prix in 2027 - World Red Eye](https://worldredeye.com/2026/09/wre-news-miami-grand-prix-to-become-formula-1-hard-rock-miami-grand-prix-in-2027/) (worldredeye.com, 2026-09-14)
+20. [Hard Rock Lands Title Rights to F1 Miami Grand Prix Starting 2027](https://rhfnews.com/article/hard-rock-lands-title-rights-to-f1-miami-grand-prix-starting-2027) (rhfnews.com, 2026-09-01)
+21. [Hospitality - Formula 1 Hard Rock Miami Grand Prix](https://f1miamigp.com/tickets/hospitality/) (f1miamigp.com, 2026-11-06)
+22. [Empower Takes the Wheel at Formula 1® Crypto.com Miami Grand Prix](https://www.empower.com/press-center/empower-takes-wheel-formula-1r-cryptocom-miami-grand-prix) (empower.com, 2026-01-28)
 23. [www.businesswire.com](https://www.businesswire.com/news/home/20260128963618/en) (businesswire.com)
-24. [Trackside at Hard Rock Stadium - 2027 Miami Grand Prix - GPDestinations.com](https://gpdestinations.com/trackside-hard-rock-stadium-miami-grand-prix/) (gpdestinations.com, 58 days ago)
-25. [Waymo Drives Into F1 Miami Grand Prix Sponsorship Deal](https://wunderfan.com/news/waymo-accelerates-into-formula-1-with-miami-grand-prix-sponsorship-mopcd2qt) (wunderfan.com, 198 days ago)
+24. [Trackside at Hard Rock Stadium - 2027 Miami Grand Prix - GPDestinations.com](https://gpdestinations.com/trackside-hard-rock-stadium-miami-grand-prix/) (gpdestinations.com, 2026-09-20)
+25. [Waymo Drives Into F1 Miami Grand Prix Sponsorship Deal](https://wunderfan.com/news/waymo-accelerates-into-formula-1-with-miami-grand-prix-sponsorship-mopcd2qt) (wunderfan.com, 2026-05-03)
 26. [Post - Hear Our City](https://www.hearourcity.net/formula-10.html) (hearourcity.net)
-27. [Formula 1 Crypto.com Miami Grand Prix Hosts Free Fan Fest on Ocean Drive](https://miamibeachjournal.org/articles/formula-1-cryptocom-miami-grand-prix-hosts-free-fan-fest-on-ocean-drive) (miamibeachjournal.org, 213 days ago)
+27. [Formula 1 Crypto.com Miami Grand Prix Hosts Free Fan Fest on Ocean Drive](https://miamibeachjournal.org/articles/formula-1-cryptocom-miami-grand-prix-hosts-free-fan-fest-on-ocean-drive) (miamibeachjournal.org, 2026-04-18)
 28. [Buy ABB FIA Formula E World Championship Tickets](https://www.ticketmaster.com/abb-fia-formula-e-world-championship-tickets/artist/3304747) (ticketmaster.com)
 29. [Miami International Autodrome Tickets Miami Grand Prix Racing](https://www.axs.com/venues/128843/miami-international-autodrome-miami-gardens-tickets/staticDetails) (axs.com)

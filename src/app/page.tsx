@@ -34,7 +34,8 @@ export default async function Watchlist() {
       <section>
         <h1 className="display max-w-[18ch] text-4xl sm:text-6xl">US Formula 1 race promoters</h1>
         <p className="prose-measure mt-5 text-lg leading-relaxed text-muted">
-          Three accounts on the watchlist, {totalPlays} ranked plays, {totalSources} sources. Each account is researched from scratch, matched to
+          {["No", "One", "Two", "Three", "Four", "Five"][reports.length] ?? reports.length} account{reports.length === 1 ? "" : "s"} on the watchlist, {totalPlays} ranked plays,{" "}
+          {totalSources} sources. Each account is researched from scratch, matched to
           Flowcode products and proof points, and fact-checked before it gets here.
         </p>
       </section>

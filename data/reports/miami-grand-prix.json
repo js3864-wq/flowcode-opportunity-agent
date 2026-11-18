@@ -19,7 +19,8 @@
       "cacheReadTokens": 0,
       "searches": 35
     },
-    "estCostUsd": 2.03
+    "estCostUsd": 2.03,
+    "note": "Edited after the run: removed key dates for other organizations' events (2027 Miami ePrix) from the company profile and marked a past date as past. The profile prompt now prevents this. Research, plays and scores are unchanged."
   },
   "entity": {
     "name": "Miami Grand Prix",
@@ -37,16 +38,11 @@
       {
         "label": "Otro Capital reported in advanced talks to buy a 20% stake from Stephen Ross (pending, not finalized)",
         "date": "2026-09-24",
-        "isUpcoming": true
+        "isUpcoming": false
       },
       {
         "label": "Formula 1 Miami Grand Prix sixth edition (April 30 to May 2, 2027)",
         "date": "2027-04-30",
-        "isUpcoming": true
-      },
-      {
-        "label": "2027 Miami ePrix listed as next Formula E race at the autodrome (date not given)",
-        "date": "2027-01",
         "isUpcoming": true
       },
       {

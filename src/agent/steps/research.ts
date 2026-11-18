@@ -36,13 +36,14 @@ export async function resolveEntity(opts: {
     maxUses: config.resolveSearches,
     prompt: `Today is ${asOf}. Identify the organization behind this input: "${input}".
 Find: official website, who operates or owns it, what it does and how it makes money, its distinct business units or properties,
-upcoming key dates in the next 12 months (events, launches, seasons, earnings), and its main audiences.`,
+upcoming key dates in the next 12 months for this organization's own events, launches and milestones (not events run by other companies, even in the same sport or venue), and its main audiences.`,
   });
 
   const entity = await llm.structured({
     model: config.models.fast,
     schema: EntitySchema,
-    system: "Extract a company profile from research notes. Use only facts in the notes. Evidence ids appear in square brackets.",
+    system: `Extract a company profile from research notes. Use only facts in the notes. Evidence ids appear in square brackets.
+keyDates: only this organization's own events, launches and milestones, never other companies' events (for example other races on the same calendar or other series at the same venue). isUpcoming is true only when the date is after ${asOf}.`,
     prompt: `Input: "${input}"\nToday: ${asOf}\n\nNOTES\n${notes}\n\nReturn the profile. evidenceIds must be ids that appear in the notes.`,
     maxTokens: 6000,
   });

@@ -2,6 +2,24 @@ import type { Evidence, Lens } from "./types";
 
 const MAX_SNIPPETS = 4;
 
+/**
+ * The search API can report page age as relative text ("194 days ago"). Store and show it as a
+ * date instead, so a report read next week does not say the wrong thing.
+ */
+export function absolutePageAge(pageAge: string | null | undefined, asOf: Date): string | null {
+  if (!pageAge) return null;
+  const m = /^(\d+)\s+(minute|hour|day|week|month|year)s?\s+ago$/i.exec(pageAge.trim());
+  if (!m) return pageAge;
+  const n = Number(m[1]);
+  const d = new Date(asOf);
+  const unit = m[2].toLowerCase();
+  if (unit === "day") d.setUTCDate(d.getUTCDate() - n);
+  else if (unit === "week") d.setUTCDate(d.getUTCDate() - 7 * n);
+  else if (unit === "month") d.setUTCMonth(d.getUTCMonth() - n);
+  else if (unit === "year") d.setUTCFullYear(d.getUTCFullYear() - n);
+  return d.toISOString().slice(0, 10);
+}
+
 export function domainOf(url: string): string {
   try {
     return new URL(url).hostname.replace(/^www\./, "");
@@ -49,7 +67,7 @@ export class EvidenceLedger {
 
   /** Remember search results (title, page age) so citations can be enriched with them. */
   addResult(url: string, title: string, pageAge: string | null) {
-    this.seenResults.set(normalizeUrl(url), { title, pageAge });
+    this.seenResults.set(normalizeUrl(url), { title, pageAge: absolutePageAge(pageAge, new Date()) });
   }
 
   /** Register a citation and return its evidence id. */
