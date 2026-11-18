@@ -2,7 +2,7 @@
 
 An agent that takes a company name or website, researches what the company is doing right now, and returns a ranked list of places Flowcode could help. Each play says what is happening, why Flowcode fits, how to run it, who to pitch, and where every fact came from.
 
-The demo account list is the three US Formula 1 races: **Las Vegas** (race week starts Nov 19, 2026), **Miami** and **Austin (COTA)**. Each is run by a different company, which is a small version of the real job: many accounts, one method.
+The demo accounts are the US Formula 1 races, each run by a different company, which is a small version of the real job: many accounts, one method. **Las Vegas** (race week starts Nov 19, 2026) and **Miami** were researched end to end by the agent. **Austin (COTA)** is left off the watchlist to research live in the demo, and an earlier run is kept in `data/archive`.
 
 ![Watchlist](docs/watchlist.png)
 
@@ -10,7 +10,13 @@ The demo account list is the three US Formula 1 races: **Las Vegas** (race week 
 [Las Vegas Grand Prix](data/reports/las-vegas-grand-prix.md) ·
 [Miami Grand Prix](data/reports/miami-grand-prix.md)
 
-> **About these samples.** Each report says how it was made: *Live API run* (the agent end to end on the Claude API), *Claude Code run* (the `/research` skill on a Claude plan, page-checked by code) or *Reference run* (research gathered with live web search on Nov 17, 2026 and written into the agent's schema by hand). All three kinds go through the same validation, scoring and ranking code.
+> **About these samples.** Both are *live API runs*: the agent end to end on the Claude API, with no hand edits to the research, plays or scores. After the run, key dates for other organizations' events were removed from each company profile, and each report says so. Reports can also come from a *Claude Code run* (the `/research` skill on a Claude plan, page-checked by code). Every kind goes through the same validation, scoring and ranking code.
+
+## Where I spent the time
+
+1. **Research quality and sourcing, most of all.** In a sales tool, one wrong fact in an outreach email costs the meeting, and at thousands of accounts nobody checks by hand. Sources come only from the search API's own citations, or are checked on the page by code. Unsupported claims are dropped, a second model fact-checks each play, and stale facts are flagged.
+2. **An output a seller can act on.** Each play names what is happening, why Flowcode fits with a matching case study, the steps, the buyer, the timing window, the KPIs and what to confirm first. It ships as a web report, Markdown for email or CRM, and JSON.
+3. **Reasoning and ranking, kept simple on purpose.** The model rates four judgment calls with reasons. Code adds evidence strength, weights and guardrails. Transparent and tunable by a sales leader, and ready to learn from seller feedback.
 
 ## Two ways to run it
 
@@ -79,7 +85,7 @@ company name or URL
 | --- | --- | --- | --- | --- |
 | 25% | 25% | 20% | 15% | 15% |
 
-In the UI the five components appear as sectors on an F1 timing screen: purple is the best possible rating, green strong, yellow middling, grey weak. A seller can see at a glance why the Vegas race-week play leads despite poor access (two days of lead time), and why Miami's fan-data play ranks lower (its evidence is from 2025).
+In the UI the five components appear as sectors on an F1 timing screen: purple is the best possible rating, green strong, yellow middling, grey weak. A seller can see at a glance why the Vegas race-week play leads (top marks on timing, size, fit and evidence) and that its one weak sector is access to the buyer, with two days of lead time. Under each play, *Why it ranks here* lists every rating's reason and any guardrail that fired.
 
 **Two views built for a seller.** While research runs, the page shows it live: six lens tiles that light up like F1 sectors, counters for searches, pages read and distinct sites, a feed of every search and page, and the sites as they are found. Each finished report opens with a sources summary: how many sources and sites back it, how many quotes were confirmed, and the most cited sites.
 
@@ -87,14 +93,14 @@ In the UI the five components appear as sectors on an F1 timing screen: purple i
 
 ## What a play looks like
 
-From the Miami report, the top-ranked play (score 96):
+From the Las Vegas report, the top-ranked play (score 93):
 
-> **Make every new Hard Rock asset a dynamic code before 2027 production starts.**
-> *What's happening:* Hard Rock takes the title from 2027, so track, paddock, fan-area and podium signage changes from Crypto.com to Hard Rock branding. The race is contracted through 2041 and drew a record 275,000 fans in 2024. [1][2][3][4]
-> *Why Flowcode:* A rebrand forces a reprint, which is the cheapest moment to add codes. Flowcodes can be updated after printing, so assets made for 2027 keep working through 2041...
-> *Pitch to:* Miami GP commercial and marketing leads, with Hard Rock partnership marketing. *When:* before 2027 signage production.
+> **Turn race-night screens and the post-race moment into the 2027 deposit and priority list.**
+> *What's happening:* The 2027 race is confirmed for Nov 18-20, 2027. For 2026, fans placed deposits through April 30 for priority access... This year's weekend expects 100,000+ visitors a day.
+> *Why Flowcode:* Flowcodes on venue screens and the drivers'-parade and post-race moments can send fans to a FlowHub 2027 priority sign-up. FlowID captures identity at the moment demand is highest...
+> *Pitch to:* Ticketing and CRM lead. *When:* race week Nov 19-21 through the 2027 deposit window.
 
-Each report also lists **follow-on leads**: partner brands that are Flowcode prospects in their own right. The watchlist rolls these up across accounts. Zoox shows up at all three races, which makes it a warmer lead than any brand found once.
+Each report also lists **follow-on leads**: partner brands that are Flowcode prospects in their own right. The watchlist rolls these up across accounts. Heineken shows up at both Las Vegas and Miami, which makes it a warmer lead than any brand found once.
 
 ![Report](docs/report.png)
 
@@ -132,7 +138,7 @@ At scale:
 **Checking quality.**
 - By construction: every URL in a report came from the search API, every play has at least one source, every output passes a schema.
 - Per run: the fact-check verdict per play, dropped items with reasons, stale signal counts. All of it is in the report's quality section and visible in the UI.
-- Offline: the three reference reports in `data/reference` are a starting golden set. On every prompt or model change, rerun them and compare scores, coverage of known signals, and an LLM-graded rubric for specificity (does the play name a touchpoint, a moment and a buyer?).
+- Offline: the research files in `data/reference` and `data/archive` are a starting golden set. On every prompt or model change, rerun them and compare scores, coverage of known signals, and an LLM-graded rubric for specificity (does the play name a touchpoint, a moment and a buyer?).
 - Human: sample a small share of reports each week for review, and let sellers mark plays as used, wrong, or already known. Those labels tune the weights and become new eval cases.
 - The metric that matters: share of plays a seller acts on, and meetings booked from them.
 
@@ -154,7 +160,7 @@ At scale:
 2. **Scheduler** (a cron worker or a queue like Inngest or SQS) picks accounts due for a check based on tier and key dates.
 3. **Monitor pass** asks one cheap question per account: what is new since the last run? Only accounts with new evidence get the full six-lens run.
 4. **Diff and alert.** The change detector already in the pipeline decides what is new. A new play above a score threshold creates a CRM task for the account owner and a Slack message with the one-line headline and a link to the report.
-5. **Cross-account graph.** Sponsors found at one account become prospects, and a brand seen at several accounts moves up the list. Zoox at all three races is the first example.
+5. **Cross-account graph.** Sponsors found at one account become prospects, and a brand seen at several accounts moves up the list. Heineken at both Las Vegas and Miami is the first example.
 6. **Feedback loop.** Seller labels on each play flow back into the scoring weights and the eval set, so the ranking learns what this team actually acts on.
 
 ## Project layout
